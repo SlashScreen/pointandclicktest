@@ -36,7 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
+     <Compile Include="Assets\Scripts\DialogControllerComponent.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -253,35 +256,35 @@
     <Reference Include="nunit.framework">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="System.Reflection.TypeExtensions">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Compiler">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/Google.Protobuf.dll</HintPath>
-    </Reference>
     <Reference Include="Antlr4.Runtime.Standard">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/Antlr4.Runtime.Standard.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="CsvHelper">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/CsvHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Protobuf">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Memory">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="YarnSpinner">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/YarnSpinner.dll</HintPath>
-    </Reference>
     <Reference Include="System.Numerics.Vectors">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner.Compiler">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/PackageCache/dev.yarnspinner.unity@7e42641d65/Runtime/DLLs/YarnSpinner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:/Program Files/Unity Installs/2020.1.16f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -646,6 +649,9 @@
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="YarnSpinner.Unity.Editor">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/YarnSpinner.Unity.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
@@ -678,6 +684,9 @@
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner.Unity">
+        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/YarnSpinner.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
@@ -714,12 +723,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Unity.Editor">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/YarnSpinner.Unity.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner.Unity">
-        <HintPath>C:/Users/The Big Sister/Documents/Programs/Unity Projects/point and click 2/Library/ScriptAssemblies/YarnSpinner.Unity.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

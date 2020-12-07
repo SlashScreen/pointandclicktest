@@ -4239,6 +4239,7 @@ GameObject:
   - component: {fileID: 1669759206}
   - component: {fileID: 1669759205}
   - component: {fileID: 1669759207}
+  - component: {fileID: 1669759208}
   m_Layer: 0
   m_Name: Test Interactive
   m_TagString: Clickable
@@ -4337,6 +4338,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1669759208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669759204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab057f01a2c20643b0c8374e1eb77f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yarnStartNode: test.start
+  yarnDialog: {fileID: 2480198943629176163, guid: c0a6dbbc5bdaf094e84edb923b619447, type: 3}
+  dialog: {fileID: 6029810945743249528}
 --- !u!1 &1739034734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +4608,10 @@ PrefabInstance:
       value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 6029810945904022682, guid: 9a351807e13a8e046a76c06f517e8f86, type: 3}
+      propertyPath: dialogueContainer
+      value: 
+      objectReference: {fileID: 6029810945743249526}
+    - target: {fileID: 6029810945904022682, guid: 9a351807e13a8e046a76c06f517e8f86, type: 3}
       propertyPath: onLineStart.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4761,6 +4781,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a351807e13a8e046a76c06f517e8f86, type: 3}
+--- !u!1 &6029810945743249526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6029810945904022681, guid: 9a351807e13a8e046a76c06f517e8f86, type: 3}
+  m_PrefabInstance: {fileID: 6029810945743249525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6029810945743249527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6029810945904022661, guid: 9a351807e13a8e046a76c06f517e8f86, type: 3}
+  m_PrefabInstance: {fileID: 6029810945743249525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029810945743249526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6029810945743249528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6029810945743249526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa6bc0fec794a04d8fcb31ddfc14d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogRunner: {fileID: 6029810945743249527}
 --- !u!1001 &6781141105676972240
 PrefabInstance:
   m_ObjectHideFlags: 0
