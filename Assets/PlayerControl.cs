@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     bool reachedEndOfPath = false; //if reached end of path
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
+    bool inConversation = false;
 
     //Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
@@ -49,7 +50,14 @@ public class PlayerControl : MonoBehaviour
         removeItem(i2);
         addItem(r);
     }
+    //yarn conversation stuff
+    public void OnDialogStart(){
+        inConversation = true;
+    }
 
+    public void OnDialogEnd(){
+        inConversation = false;
+    }
     void Start()
     {
         //get components
@@ -59,6 +67,10 @@ public class PlayerControl : MonoBehaviour
 
     private void Update() //per frame updates
     {
+        if(inConversation){
+            return; 
+        }
+
         if(Input.GetKeyDown(KeyCode.Mouse0)) //when clicked
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
@@ -92,6 +104,9 @@ public class PlayerControl : MonoBehaviour
             return;
         }else{
             reachedEndOfPath = false;
+        }
+        if(inConversation){
+            return; 
         }
 
         //Moving player rigidbody
