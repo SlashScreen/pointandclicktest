@@ -4809,7 +4809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa6bc0fec794a04d8fcb31ddfc14d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogRunner: {fileID: 6029810945743249527}
+  dia: {fileID: 6029810945743249527}
 --- !u!1001 &6781141105676972240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4881,5 +4881,9 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6781141106083225342, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: d
+      value: 
+      objectReference: {fileID: 6029810945743249528}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}

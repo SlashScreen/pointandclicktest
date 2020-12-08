@@ -6,11 +6,12 @@ using Yarn.Unity;
 public class DialogControllerComponent : Singleton<DialogControllerComponent>
 {
     
-    public DialogueRunner dialogRunner;
+    public DialogueRunner dia;
 
     void Start()
     {
         Show();
+        dia = GetComponent<DialogueRunner>();
     }
 
     public void Show(){
@@ -20,5 +21,4 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
     public void Hide(){
         gameObject.SetActive(false);
     }
-
 }

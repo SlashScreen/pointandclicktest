@@ -10,9 +10,9 @@ public class InteractiveObject : MonoBehaviour
 
     private void Start()
     {
-        dialog.dialogRunner.Add(yarnDialog);
+        dialog.dia.Add(yarnDialog);
     }
     public void beginDialog(){
-        dialog.dialogRunner.StartDialogue(yarnStartNode);
+        dialog.dia.StartDialogue(yarnStartNode);
     }
 }

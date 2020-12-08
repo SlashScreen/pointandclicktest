@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     public float speed = 400f; //speed of player
     public List<int> inventory = new List<int>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
+    public DialogControllerComponent d;
     //Private vars
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
@@ -38,25 +39,24 @@ public class PlayerControl : MonoBehaviour
             currentWaypoint = 0; //reset current waypoint
         }
     }
-
     //Inventory management fucntions
-
-    public void addItem(int item){
-        inventory.Add(item);
+    public void addItem(string[] item){
+        inventory.Add(int.Parse(item[0]));
+        Debug.Log(inventory);
     }
 
-    public void removeItem(int item){
-        inventory.Remove(item);
+    public void removeItem(string[] item){
+        inventory.Remove(int.Parse(item[0]));
     }
 
-    public bool itemInInventory(int item){
-        return inventory.Contains(item);
+    public bool itemInInventory(string[] item){
+        return inventory.Contains(int.Parse(item[0]));
     }
-
-    public void combineItems(int i1, int i2, int r){ //"combines" item i1 and i2 to create r and adds r to inventory
-        removeItem(i1);
-        removeItem(i2);
-        addItem(r);
+    public void combineItems(string[] items){ 
+        //Combines first 2 strings into item 3 and adds to inventory
+        removeItem(new string[] {items[0]});
+        removeItem(new string[] {items[1]});
+        addItem(new string[] {items[2]});
     }
     //yarn conversation stuff
     public void OnDialogStart(){
@@ -71,6 +71,7 @@ public class PlayerControl : MonoBehaviour
         //get components
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        d.dia.AddCommandHandler("AddItem",addItem);
     }
 
     private void Update() //per frame updates
