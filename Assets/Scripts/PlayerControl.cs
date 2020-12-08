@@ -72,6 +72,8 @@ public class PlayerControl : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         d.dia.AddCommandHandler("AddItem",addItem);
+        d.dia.AddCommandHandler("RemoveItem",removeItem);
+        d.dia.AddCommandHandler("CombineItem",combineItems);
     }
 
     private void Update() //per frame updates
