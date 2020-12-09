@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
+    
     public string yarnStartNode;
     public YarnProgram yarnDialog;
     public DialogControllerComponent dialog;
     //used for interacting
-    public bool Lookable = true;
-    public bool Usable = false;
+    public option[] options;
+
+    [System.Serializable]
+    public struct option{
+        public string tooltip;
+        public string node;
+    }
+    
 
     //TODO: handle interacting with items
 
@@ -19,8 +26,8 @@ public class InteractiveObject : MonoBehaviour
         dialog.dia.AddCommandHandler("Show",Show);
         dialog.dia.AddCommandHandler("Hide",Hide);
     }
-    public void beginDialog(){
-        dialog.dia.StartDialogue(yarnStartNode);
+    public void beginDialog(string node){
+        dialog.dia.StartDialogue(node);
     }
 
     public void Show(string[] n){

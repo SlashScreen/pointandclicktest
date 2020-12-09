@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     public List<int> inventory = new List<int>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
     public DialogControllerComponent d;
+    public optionspanel opt;
     //Private vars
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
@@ -31,6 +32,7 @@ public class PlayerControl : MonoBehaviour
     //Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
+        Debug.Log("geneated path");
     }
 
     void OnPathComplete(Path p){ //initiates path follow
@@ -66,6 +68,21 @@ public class PlayerControl : MonoBehaviour
     public void OnDialogEnd(){
         inConversation = false;
     }
+    public void movePassTrough(string[] c){ //this is a workaround for IEnumerator shit
+        StartCoroutine(movePlayer(c));
+        Debug.Log("moved");
+    }
+    public IEnumerator movePlayer(string[] coords){ //moving the player via code
+        //TODO: Wait until moved to continue conversation
+        Debug.Log("begin yield");
+        Vector3 target = new Vector3();
+        target.x = float.Parse(coords[0]);
+        target.y = float.Parse(coords[1]);
+        GenPath(target);
+        yield return new WaitUntil(() => reachedEndOfPath);
+        Debug.Log("yield");
+    }
+
     void Start()
     {
         //get components
@@ -74,15 +91,16 @@ public class PlayerControl : MonoBehaviour
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItem",combineItems);
+        d.dia.AddCommandHandler("MovePlayer",movePassTrough);
     }
 
     private void Update() //per frame updates
     {
-        if(inConversation){
-            return; 
+        if (inConversation){
+            return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject) //when clicked and not actively going to an object
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject && ! inConversation) //when clicked and not actively going to an object
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
             Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
@@ -90,18 +108,19 @@ public class PlayerControl : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
             if (hit.collider != null) {
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
-                    Debug.Log(hit.collider.gameObject.name);
+                    if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
                     clickedObject = hit.collider.gameObject;
+
                     goingToObject = true;
+
                     GenPath(targetPosition);
+                    }
                 }else{
                     GenPath(targetPosition); //generate path to mouse point
                 }
             }else{
                 GenPath(targetPosition); //generate path to mouse point
             }
-
-            
         }
 
     }
@@ -115,15 +134,14 @@ public class PlayerControl : MonoBehaviour
             reachedEndOfPath = true;
             if (goingToObject){
                 goingToObject = false;
-                clickedObject.GetComponent<InteractiveObject>().beginDialog();
+                opt.setPosition(targetPosition);
+                opt.setButtons(clickedObject.GetComponent<InteractiveObject>());
+                opt.Show();
                 clickedObject = null;
             }
             return;
         }else{
             reachedEndOfPath = false;
-        }
-        if(inConversation){
-            return; 
         }
 
         //Moving player rigidbody
