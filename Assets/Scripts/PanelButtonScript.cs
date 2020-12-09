@@ -9,6 +9,7 @@ public class PanelButtonScript : MonoBehaviour
     string node;
     InteractiveObject o;
     public TMPro.TMP_Text text;
+    public optionspanel panel;
     void Start()
     {
         button = GetComponent<UnityEngine.UI.Button>();
@@ -22,6 +23,7 @@ public class PanelButtonScript : MonoBehaviour
 
     public void clickedBehavior(){
         o.beginDialog(node);
+        panel.Hide();
     }
 
 

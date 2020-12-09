@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     //Variables
     //Public vars
     public Vector3 targetPosition; //where the player will go to next
+    public Vector3 UIPosition;
     public float speed = 400f; //speed of player
     public List<int> inventory = new List<int>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
@@ -103,6 +104,7 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject && ! inConversation) //when clicked and not actively going to an object
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
+            UIPosition = Input.mousePosition; //set point where mouse clicked in world space
             Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
@@ -134,7 +136,7 @@ public class PlayerControl : MonoBehaviour
             reachedEndOfPath = true;
             if (goingToObject){
                 goingToObject = false;
-                opt.setPosition(targetPosition);
+                opt.setPosition(UIPosition);
                 opt.setButtons(clickedObject.GetComponent<InteractiveObject>());
                 opt.Show();
                 clickedObject = null;

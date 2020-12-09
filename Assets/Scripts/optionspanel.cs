@@ -14,11 +14,18 @@ public class optionspanel : MonoBehaviour
         gameObject.SetActive(false);
     }
     public void setPosition(Vector3 t){
+        Debug.Log("set positions");
         transform.position = t;
     }
 
     public void setButtons(InteractiveObject obj){
+        Debug.Log("set buttons");
         button1.setup(obj,obj.options[0]);
-        button1.setup(obj,obj.options[1]);
+        button2.setup(obj,obj.options[1]);
+    }
+
+    private void Start()
+    {
+        Hide();
     }
 }

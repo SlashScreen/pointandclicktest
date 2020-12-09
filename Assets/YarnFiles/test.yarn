@@ -1,13 +1,16 @@
-title: test.start
+title: test.look
 tags: 
 colorID: 0
 position: 861,403
 ---
-Test: This is test 1
+You look at the object.
+It's a green rounded square.
+===
+title: test.take
+tags:
+colorID: 0
+position: 861,403
+---
+You take the object.
 <<AddItem 1>>
-Test: This is test 2
-Test: Now go over there!!
-<<MovePlayer -1.0 -1.0>>
-<<Wait 4>>
-Test: Bwahahaha
 ===
