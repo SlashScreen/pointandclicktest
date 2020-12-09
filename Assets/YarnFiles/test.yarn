@@ -5,6 +5,8 @@ position: 861,403
 ---
 You look at the object.
 It's a green rounded square.
+<<MovePlayerTo -1.0 -1.0 >>
+...You step back from the square.
 ===
 title: test.take
 tags:

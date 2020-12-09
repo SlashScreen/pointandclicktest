@@ -69,19 +69,17 @@ public class PlayerControl : MonoBehaviour
     public void OnDialogEnd(){
         inConversation = false;
     }
-    public void movePassTrough(string[] c){ //this is a workaround for IEnumerator shit
-        StartCoroutine(movePlayer(c));
-        Debug.Log("moved");
-    }
-    public IEnumerator movePlayer(string[] coords){ //moving the player via code
+
+    public IEnumerator movePlayer(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
         //TODO: Wait until moved to continue conversation
         Debug.Log("begin yield");
         Vector3 target = new Vector3();
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
         GenPath(target);
-        yield return new WaitUntil(() => reachedEndOfPath);
+        yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         Debug.Log("yield");
+        onComplete(); //important for blocking
     }
 
     void Start()
@@ -92,7 +90,7 @@ public class PlayerControl : MonoBehaviour
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItem",combineItems);
-        d.dia.AddCommandHandler("MovePlayer",movePassTrough);
+        d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(movePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
 
     private void Update() //per frame updates
@@ -111,11 +109,11 @@ public class PlayerControl : MonoBehaviour
             if (hit.collider != null) {
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
-                    clickedObject = hit.collider.gameObject;
+                        clickedObject = hit.collider.gameObject;
 
-                    goingToObject = true;
+                        goingToObject = true;
 
-                    GenPath(targetPosition);
+                        GenPath(targetPosition);
                     }
                 }else{
                     GenPath(targetPosition); //generate path to mouse point
@@ -130,20 +128,28 @@ public class PlayerControl : MonoBehaviour
     {
         //Determining if player needs to move
         if(path == null){ //if invalid path, ignore 
+            reachedEndOfPath = false;
             return;
         }
         if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path,
+        
             reachedEndOfPath = true;
+            //Debug.Log("reached end of path");
+
             if (goingToObject){
+                //this is for the interact wheel
                 goingToObject = false;
                 opt.setPosition(UIPosition);
                 opt.setButtons(clickedObject.GetComponent<InteractiveObject>());
                 opt.Show();
                 clickedObject = null;
             }
+            
+            path = null;
             return;
         }else{
             reachedEndOfPath = false;
+            
         }
 
         //Moving player rigidbody
