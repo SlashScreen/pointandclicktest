@@ -14,10 +14,11 @@ public class PlayerControl : MonoBehaviour
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
     public DialogControllerComponent d;
     public optionspanel opt;
+    public DrawerScript drawer;
     //Private vars
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
-    bool reachedEndOfPath = false; //if reached end of path
+    public bool reachedEndOfPath = false; //if reached end of path
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
     bool inConversation = false;
@@ -33,7 +34,7 @@ public class PlayerControl : MonoBehaviour
     //Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
-        Debug.Log("geneated path");
+        //Debug.Log("generated path");
     }
 
     void OnPathComplete(Path p){ //initiates path follow
@@ -45,11 +46,12 @@ public class PlayerControl : MonoBehaviour
     //Inventory management fucntions
     public void addItem(string[] item){
         inventory.Add(int.Parse(item[0]));
-        Debug.Log(inventory);
+        drawer.updateInventory(inventory);
     }
 
     public void removeItem(string[] item){
         inventory.Remove(int.Parse(item[0]));
+        drawer.updateInventory(inventory);
     }
 
     public bool itemInInventory(string[] item){
@@ -72,13 +74,13 @@ public class PlayerControl : MonoBehaviour
 
     public IEnumerator movePlayer(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
         //TODO: Wait until moved to continue conversation
-        Debug.Log("begin yield");
+        //Debug.Log("begin yield");
         Vector3 target = new Vector3();
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
         GenPath(target);
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
-        Debug.Log("yield");
+        //Debug.Log("yield");
         onComplete(); //important for blocking
     }
 
@@ -107,7 +109,8 @@ public class PlayerControl : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
             if (hit.collider != null) {
-                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
+                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall" || hit.collider.tag == "UI"){ //if clicked object has tag "Clickable" or "Wall"
+
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
                         clickedObject = hit.collider.gameObject;
 
@@ -115,6 +118,7 @@ public class PlayerControl : MonoBehaviour
 
                         GenPath(targetPosition);
                     }
+
                 }else{
                     GenPath(targetPosition); //generate path to mouse point
                 }
