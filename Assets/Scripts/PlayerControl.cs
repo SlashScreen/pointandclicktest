@@ -54,8 +54,8 @@ public class PlayerControl : MonoBehaviour
         drawer.updateInventory(inventory);
     }
 
-    public bool itemInInventory(string[] item){
-        return inventory.Contains(int.Parse(item[0]));
+    public void itemInInventory(string[] item){ //yarn only
+        d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(inventory.Contains(int.Parse(item[0])))); //sets $haveInInventory to result of inventory check
     }
     public void combineItems(string[] items){ 
         //Combines first 2 strings into item 3 and adds to inventory
@@ -92,6 +92,7 @@ public class PlayerControl : MonoBehaviour
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItem",combineItems);
+        d.dia.AddCommandHandler("seeIfHasItem",itemInInventory);
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(movePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
 

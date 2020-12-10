@@ -1507,6 +1507,9 @@ MonoBehaviour:
   - name: selectedInventory
     value: 0
     type: 0
+  - name: haveInInventory
+    value: 0
+    type: 2
   debugTextView: {fileID: 5227774301668517368}
 --- !u!114 &1036555335515794096
 MonoBehaviour:

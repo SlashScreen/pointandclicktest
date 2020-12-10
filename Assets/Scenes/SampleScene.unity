@@ -4570,6 +4570,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6758958071428629555, guid: e47a056f7e8804d4bac3d84f7779a127, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38457632
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758958071428629555, guid: e47a056f7e8804d4bac3d84f7779a127, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758958071428629555, guid: e47a056f7e8804d4bac3d84f7779a127, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6758958072014274087, guid: e47a056f7e8804d4bac3d84f7779a127, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

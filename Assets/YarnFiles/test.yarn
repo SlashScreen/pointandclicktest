@@ -13,8 +13,14 @@ tags:
 colorID: 0
 position: 861,403
 ---
-You take a cube.
-<<AddItem 1>>
+<<seeIfHasItem 1>>
+<<if $haveInInventory == true>>
+    You already have one of those.
+    <<set $haveInInventory to false>>
+<<else>>
+    You take a cube.
+    <<AddItem 1>>
+<<endif>>
 ===
 title: test.use
 tags:
@@ -28,4 +34,5 @@ position: 861,403
 <<else>>
     Nothing happens.
 <<endif>>
+<<set $selectedInventory to 0>>
 ===
