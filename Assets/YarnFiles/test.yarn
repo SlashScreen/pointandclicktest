@@ -4,15 +4,28 @@ colorID: 0
 position: 861,403
 ---
 You look at the object.
-It's a green rounded square.
+It's an infinite number of green rounded squares occupying the same space.
 <<MovePlayerTo -1.0 -1.0 >>
-...You step back from the square.
+...You step back from the squares.
 ===
 title: test.take
 tags:
 colorID: 0
 position: 861,403
 ---
-You take the object.
+You take a cube.
 <<AddItem 1>>
+===
+title: test.use
+tags:
+colorID: 0
+position: 861,403
+---
+<<if $selectedInventory == 1>>
+    You use the square... on the square.
+    ...
+    ...Nothing happens.
+<<else>>
+    Nothing happens.
+<<endif>>
 ===

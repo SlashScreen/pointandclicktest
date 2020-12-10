@@ -109,7 +109,7 @@ public class PlayerControl : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
             if (hit.collider != null) {
-                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall" || hit.collider.tag == "UI"){ //if clicked object has tag "Clickable" or "Wall"
+                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall" || hit.collider.gameObject.tag == "UI"){ //if clicked object has tag "Clickable" or "Wall"
 
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
                         clickedObject = hit.collider.gameObject;
@@ -117,6 +117,11 @@ public class PlayerControl : MonoBehaviour
                         goingToObject = true;
 
                         GenPath(targetPosition);
+                    }
+
+                    if ( hit.collider.gameObject.tag == "UI"){
+                        Debug.Log("Hit UI");
+                        return;
                     }
 
                 }else{
@@ -143,9 +148,14 @@ public class PlayerControl : MonoBehaviour
             if (goingToObject){
                 //this is for the interact wheel
                 goingToObject = false;
-                opt.setPosition(UIPosition);
-                opt.setButtons(clickedObject.GetComponent<InteractiveObject>());
-                opt.Show();
+                if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item is selected
+                    clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
+                }else{//else
+                    opt.setPosition(UIPosition); //teleport wheel
+                    opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel
+                    opt.Show(); //show wheel
+                }
+                
                 clickedObject = null;
             }
             

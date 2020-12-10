@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3067258495234647346}
   m_Layer: 5
   m_Name: Debug
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5227774301668517368}
   m_Layer: 5
   m_Name: Debug
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 6758958070898089006}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 6758958071055137795}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 6758958071646529101}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 6758958072186732182}
   m_Layer: 0
   m_Name: Drawer
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 6758958072420028484}
   m_Layer: 0
   m_Name: UI
-  m_TagString: UI
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

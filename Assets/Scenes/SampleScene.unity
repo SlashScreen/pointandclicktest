@@ -4345,7 +4345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab057f01a2c20643b0c8374e1eb77f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnStartNode: test.start
+  useNode: test.use
   yarnDialog: {fileID: 2480198943629176163, guid: c0a6dbbc5bdaf094e84edb923b619447, type: 3}
   dialog: {fileID: 6029810945743249528}
   options:

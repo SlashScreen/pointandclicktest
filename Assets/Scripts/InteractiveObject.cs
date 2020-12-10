@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractiveObject : MonoBehaviour
 {
     
-    public string yarnStartNode;
+    public string useNode; //items used on the object
     public YarnProgram yarnDialog;
     public DialogControllerComponent dialog;
     //used for interacting
