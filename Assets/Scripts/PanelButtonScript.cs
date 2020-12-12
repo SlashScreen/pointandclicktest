@@ -26,7 +26,4 @@ public class PanelButtonScript : MonoBehaviour
         panel.Hide();
     }
 
-
-    // Update is called once per frame
-
 }

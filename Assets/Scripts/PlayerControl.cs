@@ -11,11 +11,12 @@ public class PlayerControl : MonoBehaviour
     public Vector3 targetPosition; //where the player will go to next
     public Vector3 UIPosition;
     public float speed = 400f; //speed of player
-    public List<int> inventory = new List<int>(); //list of item IDs for inventory
+    public List<drawerItem> inventory = new List<drawerItem>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
     public DialogControllerComponent d;
     public optionspanel opt;
     public DrawerScript drawer;
+    JSONItemParser JSON;
     //Private vars
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
@@ -45,18 +46,39 @@ public class PlayerControl : MonoBehaviour
         }
     }
     //Inventory management fucntions
+    drawerItem findItemWithID(int id){
+        foreach (var item in inventory){
+            if (item.id == id){
+                return item;
+            }else{
+                return new drawerItem();
+            }
+        }
+
+        return new drawerItem(); //if not found, return the default one
+    }
+
+    drawerItem newItem(int id){
+        foreach(var di in JSON.drawer.items){ //loop through item config JSON, find object in there with same ID as the inventory
+            if(di.id == id){
+                 return di;
+            }
+        }
+        return new drawerItem();
+    }
+
     public void addItem(string[] item){
-        inventory.Add(int.Parse(item[0]));
+        inventory.Add(newItem(int.Parse(item[0])));
         drawer.updateInventory(inventory);
     }
 
     public void removeItem(string[] item){
-        inventory.Remove(int.Parse(item[0]));
+        inventory.Remove(newItem(int.Parse(item[0])));
         drawer.updateInventory(inventory);
     }
 
     public void itemInInventory(string[] item){ //yarn only
-        d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(inventory.Contains(int.Parse(item[0])))); //sets $haveInInventory to result of inventory check
+        d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(findItemWithID(int.Parse(item[0])).id)); //sets $haveInInventory to result of inventory check
     }
     public void combineItems(string[] items){ 
         //Combines first 2 strings into item 3 and adds to inventory
@@ -90,6 +112,7 @@ public class PlayerControl : MonoBehaviour
         //get components
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        JSON = GetComponent<JSONItemParser>();
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItem",combineItems);
