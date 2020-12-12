@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Pathfinding;
 
 public class PlayerControl : MonoBehaviour
@@ -109,8 +110,16 @@ public class PlayerControl : MonoBehaviour
             Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
+
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
             if (hit.collider != null) {
-                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall" || hit.collider.gameObject.tag == "UI"){ //if clicked object has tag "Clickable" or "Wall"
+                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
+
+                    
 
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
                         clickedObject = hit.collider.gameObject;
@@ -118,11 +127,6 @@ public class PlayerControl : MonoBehaviour
                         goingToObject = true;
 
                         GenPath(targetPosition);
-                    }
-
-                    if ( hit.collider.gameObject.tag == "UI"){
-                        Debug.Log("Hit UI");
-                        return;
                     }
 
                 }else{
