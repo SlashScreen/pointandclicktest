@@ -24,6 +24,12 @@ public class optionspanel : MonoBehaviour
         button2.setup(obj,obj.options[1]);
     }
 
+    public void setButtons_NPC(NPCscript obj){
+        Debug.Log("set buttons");
+        button1.setup_NPC(obj,obj.options[0]);
+        button2.setup_NPC(obj,obj.options[1]);
+    }
+
     private void Start()
     {
         Hide();

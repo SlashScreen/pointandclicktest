@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6781141106021206956}
   - component: {fileID: 6781141106021206957}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6781141106083225341}
   - component: {fileID: 6781141106083225338}
   - component: {fileID: 6025986761378005173}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   UIPosition: {x: 0, y: 0, z: 0}
   speed: 400
-  inventory: 
+  inventory: []
   nextWaypoitDistance: 1
   d: {fileID: 0}
   opt: {fileID: 0}

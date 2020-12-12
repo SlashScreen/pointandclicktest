@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour
     //Variables
     //Public vars
     public Vector3 targetPosition; //where the player will go to next
-    public Vector3 UIPosition;
+    public Vector3 UIPosition; //options wheel position
     public float speed = 400f; //speed of player
     public List<drawerItem> inventory = new List<drawerItem>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
@@ -144,7 +144,7 @@ public class PlayerControl : MonoBehaviour
 
                     
 
-                    if (hit.collider.gameObject.GetComponent<InteractiveObject>()){
+                    if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>()){
                         clickedObject = hit.collider.gameObject;
 
                         goingToObject = true;
@@ -175,23 +175,33 @@ public class PlayerControl : MonoBehaviour
 
             if (goingToObject){
                 //this is for the interact wheel
+                //all the if/else is for InteractiveObject/NPCscript dispairity 
                 goingToObject = false;
                 if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item is selected
-                    clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
+                    //Start use script
+                    if(clickedObject.GetComponent<InteractiveObject>()){
+                        clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
+                    }else{
+                        clickedObject.GetComponent<NPCscript>().beginDialog(clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node
+                    }
+                    
                 }else{//else
+
                     opt.setPosition(UIPosition); //teleport wheel
-                    opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel
+                    if(clickedObject.GetComponent<InteractiveObject>()){
+                        opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel for Object. NTS: Could make as one function using a generic?...
+                    }else{
+                        opt.setButtons_NPC(clickedObject.GetComponent<NPCscript>()); //init wheel for NPC
+                    }
                     opt.Show(); //show wheel
                 }
                 
                 clickedObject = null;
             }
-            
             path = null;
             return;
         }else{
             reachedEndOfPath = false;
-            
         }
 
         //Moving player rigidbody

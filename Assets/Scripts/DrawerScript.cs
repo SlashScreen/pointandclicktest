@@ -16,6 +16,12 @@ public class DrawerScript : MonoBehaviour
         
     }
     public void updateInventory(List<drawerItem> inventory){ //probably inefficient, TODO: have it remove and add stuff as needed rather than regenerate
+        //Delete all
+        foreach(var item in items){
+            GameObject.Destroy(item); //destroy item
+            items.Remove(item);
+        }
+        //Create new
         int iter = 1; 
         items = new List<GameObject>();
         foreach (var i in inventory){

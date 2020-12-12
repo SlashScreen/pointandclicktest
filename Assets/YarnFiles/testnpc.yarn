@@ -1,0 +1,22 @@
+﻿title: npc.use
+tags:
+---
+<<seeIfHasItem 1>>
+<<if $haveInInventory == true>>
+    NPC: I don't want this.
+<<endif>>
+===
+title: npc.look
+tags:
+---
+It looks like you but... yellow.
+That must mean it isn't you.
+===
+title: npc.talk
+tags:
+---
+White: Hello.
+Yellow: ...Hi.
+White: ...
+Yellow: ...
+===

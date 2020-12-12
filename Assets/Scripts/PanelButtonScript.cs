@@ -7,7 +7,8 @@ public class PanelButtonScript : MonoBehaviour
 {
     UnityEngine.UI.Button button;
     string node;
-    InteractiveObject o;
+    InteractiveObject o = null;
+    NPCscript o_npc;
     public TMPro.TMP_Text text;
     public optionspanel panel;
     void Start()
@@ -21,8 +22,19 @@ public class PanelButtonScript : MonoBehaviour
         node = opt.node;
     }
 
+    public void setup_NPC(NPCscript obj, InteractiveObject.option opt){
+        text.text = opt.tooltip;
+        o_npc = obj;
+        node = opt.node;
+    }
+
     public void clickedBehavior(){
-        o.beginDialog(node);
+        if (o != null){
+            o.beginDialog(node);
+        }else{
+            o_npc.beginDialog(node);
+        }
+        
         panel.Hide();
     }
 
