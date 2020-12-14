@@ -28,8 +28,9 @@ public class PanelButtonScript : MonoBehaviour
 
     public void clickedBehavior(){
         //when clicked, move player, and once player is done moving, call beginDialogScripts
-        Debug.Log("moving to targetPosition");
+        panel.Hide();
         StartCoroutine(player.movePlayer(new string[] {player.targetPosition.x.ToString(),player.targetPosition.y.ToString(),player.targetPosition.z.ToString()},beginDialogScripts));
+        
     }
 
     public void beginDialogScripts(){
@@ -39,7 +40,6 @@ public class PanelButtonScript : MonoBehaviour
         }else{
             o_npc.beginDialog(node);
         }
-        panel.Hide();
     }
 
 }

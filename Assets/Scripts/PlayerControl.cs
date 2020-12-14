@@ -96,7 +96,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     public IEnumerator movePlayer(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
-        Debug.Log("begin yield");
+        //Debug.Log("begin yield");
         Vector3 target = new Vector3();
         //convert from string to float
         target.x = float.Parse(coords[0]);
@@ -107,6 +107,14 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
         onComplete(); //call this once done, important for blocking
+    }
+
+    public void startUseDialog(){
+        if(clickedObject.GetComponent<InteractiveObject>()){ //for objects
+            clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
+        }else{ //for NPCs
+            clickedObject.GetComponent<NPCscript>().beginDialog(clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node
+        }
     }
 
     //Unity loops
@@ -137,7 +145,7 @@ public class PlayerControl : MonoBehaviour
             UIPosition = Input.mousePosition; //set point where mouse clicked in world space
             Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Default")); //raycast to find clicked object. Only sees Default layer
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
 
             if (EventSystem.current.IsPointerOverGameObject()){
                 //if UI clicked, exit out of script
@@ -153,12 +161,8 @@ public class PlayerControl : MonoBehaviour
                         clickedObject = hit.collider.gameObject; //set clicked object
 
                         if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item in hand from inventory
-                            //Start use script
-                            if(clickedObject.GetComponent<InteractiveObject>()){ //for objects
-                                clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
-                            }else{ //for NPCs
-                                clickedObject.GetComponent<NPCscript>().beginDialog(clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node
-                            }
+                            //Start use script once movement complete
+                            StartCoroutine(movePlayer(new string[] {targetPosition.x.ToString(),targetPosition.y.ToString(),targetPosition.z.ToString()},startUseDialog));
                     
                         }else{//if no item in hand, set up wheel
                             opt.setPosition(UIPosition); //teleport wheel

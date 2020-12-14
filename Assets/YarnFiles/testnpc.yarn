@@ -4,6 +4,7 @@ tags:
 <<seeIfHasItem 1>>
 <<if $haveInInventory == true>>
     NPC: I don't want this.
+    <<set $selectedInventory to 0>>
 <<endif>>
 ===
 title: npc.look

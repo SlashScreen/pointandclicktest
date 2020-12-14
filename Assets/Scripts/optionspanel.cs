@@ -8,10 +8,12 @@ public class optionspanel : MonoBehaviour
     public PanelButtonScript button1;
     public PanelButtonScript button2;
     public void Show(){
-        gameObject.SetActive(true);
+        GetComponentInParent<Canvas>().enabled = true;
+        //gameObject.SetActive(true);
     }
     public void Hide(){
-        gameObject.SetActive(false);
+        GetComponentInParent<Canvas>().enabled = false;
+        //gameObject.SetActive(false);
     }
     public void setPosition(Vector3 t){
         Debug.Log("set positions");
