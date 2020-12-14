@@ -63,13 +63,16 @@ public class NPCscript : MonoBehaviour
     public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
         //TODO: Wait until moved to continue conversation
         //Debug.Log("begin yield");
-        Vector3 target = new Vector3();
-        target.x = float.Parse(coords[0]);
-        target.y = float.Parse(coords[1]);
-        GenPath(target);
-        yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
+        Debug.Log(coords[0]);
+        if(coords[0] == gameObject.name){
+            Vector3 target = new Vector3();
+            target.x = float.Parse(coords[1]);
+            target.y = float.Parse(coords[2]);
+            GenPath(target);
+            yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
-        onComplete(); //important for blocking
+            onComplete(); //important for blocking
+        }  
     }
 
     void Start()

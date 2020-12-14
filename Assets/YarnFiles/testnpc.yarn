@@ -17,6 +17,7 @@ tags:
 ---
 White: Hello.
 Yellow: ...Hi.
+<<MoveNPCTo NPC -2 -1>>
 White: ...
 Yellow: ...
 ===

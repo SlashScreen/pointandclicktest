@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
     //then generate a path and walk to the object, and ensure the player cannot click away
     //if at the object, only then start dialog and reset everything
 
-    //Functions
+    //Path Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
         //Debug.Log("generated path");
@@ -50,11 +50,8 @@ public class PlayerControl : MonoBehaviour
         foreach (var item in inventory){
             if (item.id == id){
                 return item;
-            }else{
-                return new drawerItem();
             }
         }
-
         return new drawerItem(); //if not found, return the default one
     }
 
@@ -68,16 +65,19 @@ public class PlayerControl : MonoBehaviour
     }
 
     public void addItem(string[] item){
+        //Adds item of ID item into inventory
         inventory.Add(newItem(int.Parse(item[0])));
         drawer.updateInventory(inventory);
     }
 
-    public void removeItem(string[] item){
+    public void removeItem(string[] item){ //POTENTIAL ISSUE: if there is no item of ID in inventory it errors out
+        //removes item of ID item
         inventory.Remove(newItem(int.Parse(item[0])));
         drawer.updateInventory(inventory);
     }
 
-    public void itemInInventory(string[] item){ //yarn only
+    public void itemInInventory(string[] item){ 
+        //Yarn wrapper for findItemWithID 
         d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(findItemWithID(int.Parse(item[0])).id)); //sets $haveInInventory to result of inventory check
     }
     public void combineItems(string[] items){ 
@@ -96,23 +96,27 @@ public class PlayerControl : MonoBehaviour
     }
 
     public IEnumerator movePlayer(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
-        //TODO: Wait until moved to continue conversation
-        //Debug.Log("begin yield");
+        Debug.Log("begin yield");
         Vector3 target = new Vector3();
+        //convert from string to float
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
+        //generate apth
         GenPath(target);
+        //stop script until reachedEndOfPath is true
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
-        onComplete(); //important for blocking
+        onComplete(); //call this once done, important for blocking
     }
 
+    //Unity loops
     void Start()
     {
         //get components
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         JSON = GetComponent<JSONItemParser>();
+        //set up yarn commands
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItem",combineItems);
@@ -123,40 +127,55 @@ public class PlayerControl : MonoBehaviour
     private void Update() //per frame updates
     {
         if (inConversation){
+            //nothing should happen if youre in a conversation
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject && ! inConversation) //when clicked and not actively going to an object
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject) //when clicked and not actively going to an object
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
             UIPosition = Input.mousePosition; //set point where mouse clicked in world space
             Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero); //raycast to find clicked object
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Default")); //raycast to find clicked object. Only sees Default layer
 
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
+            if (EventSystem.current.IsPointerOverGameObject()){
+                //if UI clicked, exit out of script
                 return;
             }
 
-            if (hit.collider != null) {
+            if (hit.collider != null) { //if something is clicked
+                
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
-
                     
-
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>()){
-                        clickedObject = hit.collider.gameObject;
+                        //If it is an interactive object or NPC
+                        clickedObject = hit.collider.gameObject; //set clicked object
 
-                        goingToObject = true;
-
-                        GenPath(targetPosition);
-                    }
+                        if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item in hand from inventory
+                            //Start use script
+                            if(clickedObject.GetComponent<InteractiveObject>()){ //for objects
+                                clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
+                            }else{ //for NPCs
+                                clickedObject.GetComponent<NPCscript>().beginDialog(clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node
+                            }
+                    
+                        }else{//if no item in hand, set up wheel
+                            opt.setPosition(UIPosition); //teleport wheel
+                            if(clickedObject.GetComponent<InteractiveObject>()){
+                                opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel for Object. NTS: Could make as one function using a generic?...
+                            }else{
+                                opt.setButtons_NPC(clickedObject.GetComponent<NPCscript>()); //init wheel for NPC
+                            }
+                            opt.Show(); //show wheel
+                        }
+                    }                
 
                 }else{
-                    GenPath(targetPosition); //generate path to mouse point
+                    GenPath(targetPosition); //generate path to mouse point if some other prop or whatever is clicked
                 }
             }else{
-                GenPath(targetPosition); //generate path to mouse point
+                GenPath(targetPosition); //generate path to mouse point if ground is clicked
             }
         }
 
@@ -164,40 +183,14 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate() //physics update
     {
         //Determining if player needs to move
+
         if(path == null){ //if invalid path, ignore 
             reachedEndOfPath = false;
             return;
         }
-        if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path,
-        
+
+        if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path, reach end of path and stop
             reachedEndOfPath = true;
-            //Debug.Log("reached end of path");
-
-            if (goingToObject){
-                //this is for the interact wheel
-                //all the if/else is for InteractiveObject/NPCscript dispairity 
-                goingToObject = false;
-                if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item is selected
-                    //Start use script
-                    if(clickedObject.GetComponent<InteractiveObject>()){
-                        clickedObject.GetComponent<InteractiveObject>().beginDialog(clickedObject.GetComponent<InteractiveObject>().useNode); //trigger Use node
-                    }else{
-                        clickedObject.GetComponent<NPCscript>().beginDialog(clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node
-                    }
-                    
-                }else{//else
-
-                    opt.setPosition(UIPosition); //teleport wheel
-                    if(clickedObject.GetComponent<InteractiveObject>()){
-                        opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel for Object. NTS: Could make as one function using a generic?...
-                    }else{
-                        opt.setButtons_NPC(clickedObject.GetComponent<NPCscript>()); //init wheel for NPC
-                    }
-                    opt.Show(); //show wheel
-                }
-                
-                clickedObject = null;
-            }
             path = null;
             return;
         }else{
