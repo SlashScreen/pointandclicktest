@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Pathfinding;
+using Yarn.Unity;
 
 public class NPCscript : MonoBehaviour
 {
@@ -48,16 +49,14 @@ public class NPCscript : MonoBehaviour
         d.dia.StartDialogue(node);
     }
 
-    public void Show(string[] n){
-        if(n[0] == name){
-            gameObject.SetActive(true);
-        }
+    [YarnCommand("Show")]
+    public void Show(){
+        gameObject.SetActive(true);
     }
 
-    public void Hide(string[] n){
-        if(n[0] == name){
-            gameObject.SetActive(false);
-        }
+    [YarnCommand("Hide")]
+    public void Hide(){
+        gameObject.SetActive(false);
     }
 
     public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking

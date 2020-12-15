@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,6 +17,8 @@ public class PlayerControl : MonoBehaviour
     public DialogControllerComponent d;
     public optionspanel opt;
     public DrawerScript drawer;
+    public List<string> activatedNodes = new List<string>();
+    public string room;
     JSONItemParser JSON;
     //Private vars
     Path path; //path player needs to take
@@ -87,6 +90,9 @@ public class PlayerControl : MonoBehaviour
         addItem(new string[] {items[2]});
     }
     //yarn conversation stuff
+    void addNode(String node){
+        activatedNodes.Add(node);
+    }
     public void OnDialogStart(){
         inConversation = true;
     }
