@@ -33,17 +33,26 @@ public class SaveManager : MonoBehaviour{
 
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
 
-        BinaryFormatter bf = new BinaryFormatter(); //do... formatting
-        FileStream file = File.Create(Application.persistentDataPath + "/saves/" + SaveName +".save"); //create savefile
-        bf.Serialize(file, sv); //inject data
-        file.Close(); //close
+        //BinaryFormatter bf = new BinaryFormatter(); //do... formatting
+        //FileStream file = File.Create(Application.persistentDataPath + "/saves/" + SaveName +".save"); //create savefile
+        //bf.Serialize(file, sv); //inject data
+        //file.Close(); //close
+
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
+        sw.Write(JSON);
+        sw.Close();
         Debug.Log("Game Saved.");
     }
 
     public void Load(string selectedFile, PlayerControl player){
         Debug.Log("Loading Game...");
         //LOAD game
-        SaveGame sv = JsonUtility.FromJson<SaveGame>(File.ReadAllText(Application.persistentDataPath + "/saves/" + selectedFile)); //create savegame from JSON from selectedFile
+        BinaryFormatter bf = new BinaryFormatter();
+        StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile);
+        //FileStream file = File.Open(Application.persistentDataPath + "/saves/" + selectedFile,FileMode.Open);
+        //Debug.Log(bf.Deserialize(file));
+        SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
+        sr.Close();
 
         player.room = sv.room; //set room
         SceneManager.LoadScene(sv.room);

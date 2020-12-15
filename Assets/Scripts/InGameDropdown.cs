@@ -3,20 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.IO;
+using System.Linq;
 
 public class InGameDropdown : MonoBehaviour
 {
     public PlayerControl player;
     public InputField input;
-    public void save(){
-        DateTime dt = DateTime.Now;
-        string defaultText = dt.ToString("yyyy-MM-dd-HH-mm-ss");
-        input.gameObject.SetActive(true);
-        input.text = defaultText;
+    public GameObject panel;
+    public Dropdown dropdown;
+    public void save(){ //called by button
+        DateTime dt = DateTime.Now; //get date time
+        string defaultText = dt.ToString("yyyy-MM-dd-HH-mm-ss"); //set default text to formatted date
+        input.gameObject.SetActive(true); //show input field
+        input.text = defaultText; //set text to date 
     }
 
-    public void completeSave(){
-        GetComponent<SaveManager>().Save(input.text,player);
-        input.gameObject.SetActive(false);
+    public void completeSave(){ //called once text inputted
+        GetComponent<SaveManager>().Save(input.text,player); //call save function
+        input.gameObject.SetActive(false); //get rid of input field 
+    }
+
+    public void beginLoad(){ //called by button
+        DirectoryInfo info = new DirectoryInfo(Application.persistentDataPath + "/saves"); //get all items in save directory
+        FileInfo[] files = info.GetFiles().OrderBy(p => p.CreationTime).ToArray(); //sort by creation time
+        Array.Reverse(files); //reverse array to make the most recent on top
+
+        List<Dropdown.OptionData> items = new List<Dropdown.OptionData>();
+        dropdown.ClearOptions();
+
+        foreach (FileInfo file in files){
+            Debug.Log(file.Name);
+            Dropdown.OptionData item = new Dropdown.OptionData();
+            item.text = file.Name;
+            items.Add(item);
+        }
+
+        dropdown.AddOptions(items);
+        panel.SetActive(true);
+    }
+
+    public void completeLoad(){ //called once savegame selected
+        panel.SetActive(false);
+        GetComponent<SaveManager>().Load(dropdown.options[dropdown.value].text, player); //Load from text of current selected option
     }
 }
