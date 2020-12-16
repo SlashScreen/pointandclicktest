@@ -12,6 +12,7 @@ public class SaveGame
     public List<int> inventory = new List<int>();
     public List<string> activatedNodes = new List<string>();
     public string room;
+    public Vector3 pos;
 }
 
 public class SaveManager : MonoBehaviour{
@@ -32,7 +33,8 @@ public class SaveManager : MonoBehaviour{
         }
         sv.activatedNodes = player.activatedNodes; //store nodes
         sv.room = SceneManager.GetActiveScene().name; //store room
-        sm.loadscene(sv.room);
+        sv.pos = player.transform.position; //store pos
+        sv.room = SceneManager.GetSceneAt(1).name; //store room
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
 
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
@@ -57,6 +59,7 @@ public class SaveManager : MonoBehaviour{
         foreach(var item in sv.inventory){
             player.addItem(new string[] { item.ToString() }); //Add item to inventory
         }
+        player.transform.position = sv.pos; //set pos
         Debug.Log("Game Loaded.");
     }
 

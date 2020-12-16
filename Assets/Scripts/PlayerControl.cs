@@ -61,7 +61,7 @@ public class PlayerControl : MonoBehaviour
     drawerItem newItem(int id){
         foreach(var di in JSON.drawer.items){ //loop through item config JSON, find object in there with same ID as the inventory
             if(di.id == id){
-                 return di;
+                return di;
             }
         }
         return new drawerItem();
