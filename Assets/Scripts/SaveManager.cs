@@ -15,6 +15,8 @@ public class SaveGame
 }
 
 public class SaveManager : MonoBehaviour{
+    public scenemanager sm;
+
     private void Start()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/saves");
@@ -30,13 +32,8 @@ public class SaveManager : MonoBehaviour{
         }
         sv.activatedNodes = player.activatedNodes; //store nodes
         sv.room = SceneManager.GetActiveScene().name; //store room
-
+        sm.loadscene(sv.room);
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
-
-        //BinaryFormatter bf = new BinaryFormatter(); //do... formatting
-        //FileStream file = File.Create(Application.persistentDataPath + "/saves/" + SaveName +".save"); //create savefile
-        //bf.Serialize(file, sv); //inject data
-        //file.Close(); //close
 
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
         sw.Write(JSON);
@@ -44,22 +41,43 @@ public class SaveManager : MonoBehaviour{
         Debug.Log("Game Saved.");
     }
 
-    public void Load(string selectedFile, PlayerControl player){
+    public  void Load(string selectedFile, PlayerControl player){
         Debug.Log("Loading Game...");
         //LOAD game
-        BinaryFormatter bf = new BinaryFormatter();
         StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile);
-        //FileStream file = File.Open(Application.persistentDataPath + "/saves/" + selectedFile,FileMode.Open);
-        //Debug.Log(bf.Deserialize(file));
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
         sr.Close();
 
         player.room = sv.room; //set room
-        SceneManager.LoadScene(sv.room);
+        //StartCoroutine(waitForFrames(sv.room)); //Wait 2 frames, because room actually loads on next frame
+        sm.loadscene(sv.room);
+        Debug.Log("Done");
+
         player.activatedNodes = sv.activatedNodes; //set activated nodes
         foreach(var item in sv.inventory){
             player.addItem(new string[] { item.ToString() }); //Add item to inventory
         }
         Debug.Log("Game Loaded.");
+    }
+
+    void finishLoad(SaveGame sv, PlayerControl player){
+        player.activatedNodes = sv.activatedNodes; //set activated nodes
+        foreach(var item in sv.inventory){
+            player.addItem(new string[] { item.ToString() }); //Add item to inventory
+        }
+        Debug.Log("Game Loaded.");
+    }
+
+    private IEnumerator waitForFrames(string name){
+        Debug.Log("Yielding");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(name);
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log("Not Done");
+            yield return null;
+        }
+        yield return 0;
+        Debug.Log("Done async");
+        
     }
 }

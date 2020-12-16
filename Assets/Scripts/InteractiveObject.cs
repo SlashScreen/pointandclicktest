@@ -24,6 +24,7 @@ public class InteractiveObject : MonoBehaviour
 
     private void Start()
     {
+        //dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
         dialog.dia.Add(yarnDialog);
     }
     public void beginDialog(string node){
