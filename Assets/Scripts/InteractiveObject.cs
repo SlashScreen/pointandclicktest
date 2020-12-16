@@ -9,7 +9,7 @@ public class InteractiveObject : MonoBehaviour
     
     public string useNode; //items used on the object
     public YarnProgram yarnDialog;
-    public DialogControllerComponent dialog;
+    DialogControllerComponent dialog;
     //used for interacting
     public option[] options;
     public UnityEvent customScript;
@@ -24,7 +24,7 @@ public class InteractiveObject : MonoBehaviour
 
     private void Start()
     {
-        //dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
+        dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
         dialog.dia.Add(yarnDialog);
     }
     public void beginDialog(string node){

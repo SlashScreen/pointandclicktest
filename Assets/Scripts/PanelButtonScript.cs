@@ -8,10 +8,14 @@ public class PanelButtonScript : MonoBehaviour
     string node;
     InteractiveObject o = null;
     NPCscript o_npc;
-    public PlayerControl player;
+    PlayerControl player;
     public TMPro.TMP_Text text;
     public optionspanel panel;
- 
+    
+    private void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<PlayerControl>();
+    }
     public void setup(InteractiveObject obj, InteractiveObject.option opt){
         //setup script for InteractiveObjects
         text.text = opt.tooltip;

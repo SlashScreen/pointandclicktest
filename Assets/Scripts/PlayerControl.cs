@@ -83,6 +83,11 @@ public class PlayerControl : MonoBehaviour
         //Yarn wrapper for findItemWithID 
         d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(findItemWithID(int.Parse(item[0])).id)); //sets $haveInInventory to result of inventory check
     }
+
+    public void addCompletedNode(string node){
+        activatedNodes.Add(node);
+    }
+
     public void combineItems(string[] items){ 
         //Combines first 2 strings into item 3 and adds to inventory
         removeItem(new string[] {items[0]});

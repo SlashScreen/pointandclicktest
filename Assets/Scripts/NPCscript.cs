@@ -12,7 +12,7 @@ public class NPCscript : MonoBehaviour
     public Vector3 targetPosition; //where the player will go to next
     public float speed = 400f; //speed of player
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
-    public DialogControllerComponent d;
+    DialogControllerComponent d;
     public YarnProgram yarnDialog;
     public string useNode; //items used on the object
     public InteractiveObject.option[] options; //options
@@ -79,6 +79,7 @@ public class NPCscript : MonoBehaviour
         //get components
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
         d.dia.Add(yarnDialog);
         //d.dia.AddCommandHandler("Show",Show);
         //d.dia.AddCommandHandler("Hide",Hide);
