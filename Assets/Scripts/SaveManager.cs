@@ -13,10 +13,21 @@ public class SaveGame
     public List<string> activatedNodes = new List<string>();
     public string room;
     public Vector3 pos;
+    public List<itemFlags> flags = new List<itemFlags>();
 }
 
+
+
 public class SaveManager : MonoBehaviour{
+    [System.Serializable]
+    public struct itemFlags
+    {
+        public string name;
+        public bool hidden;
+        public bool custom;
+    }
     public scenemanager sm;
+    List<itemFlags> flags = new List<itemFlags>();
 
     private void Start()
     {
@@ -35,6 +46,7 @@ public class SaveManager : MonoBehaviour{
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
+        sv.flags = flags;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
 
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
@@ -50,18 +62,39 @@ public class SaveManager : MonoBehaviour{
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
         sr.Close();
 
+        flags.Clear();
+
         player.room = sv.room; //set room
-        //StartCoroutine(waitForFrames(sv.room)); //Wait 2 frames, because room actually loads on next frame
         sm.loadscene(sv.room);
         Debug.Log("Done");
-        
+
         player.inventory.Clear();
 
         player.activatedNodes = sv.activatedNodes; //set activated nodes
+        flags = sv.flags;
         foreach(var item in sv.inventory){
             player.addItem(new string[] { item.ToString() }); //Add item to inventory
         }
         player.transform.position = sv.pos; //set pos
         Debug.Log("Game Loaded.");
+    }
+
+    public void updateFlags(string name, bool hidden, bool custom){ //change flags in internal database
+        itemFlags f = new itemFlags();
+        f.name = name;
+        f.hidden = hidden;
+        f.custom = custom;
+
+        if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
+            flags[flags.FindIndex(x => x.name == name)] = f;
+        }
+    }
+
+    public itemFlags pullFlags(string name){ //pull flags from savegame
+        if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
+            return flags[flags.FindIndex(x => x.name == name)];
+        }else{
+            return new itemFlags();
+        }
     }
 }

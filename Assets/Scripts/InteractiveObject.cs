@@ -13,6 +13,7 @@ public class InteractiveObject : MonoBehaviour
     //used for interacting
     public option[] options;
     public bool customFlag = false;
+    public bool hidden = false;
     public UnityEvent customScript;
     int sprite = 0;
     
@@ -28,17 +29,29 @@ public class InteractiveObject : MonoBehaviour
     {
         dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
         dialog.dia.Add(yarnDialog);
+        SaveManager.itemFlags flags = GameObject.Find("Menu").GetComponent<SaveManager>().pullFlags(gameObject.name);
+        hidden = flags.hidden;
+        customFlag = flags.custom;
+
+        if (hidden) {
+            gameObject.SetActive(false);
+        }
     }
+
     public void beginDialog(string node){
         dialog.dia.StartDialogue(node);
     }
     
     [YarnCommand("Show")]
     public void Show(){
+        hidden = false;
+        updateTheFlags();
         gameObject.SetActive(true);
     }
     [YarnCommand("Hide")]
     public void Hide(){
+        hidden = true;
+        updateTheFlags();
         gameObject.SetActive(false);
     }
     [YarnCommand("Invoke")]
@@ -52,6 +65,11 @@ public class InteractiveObject : MonoBehaviour
     [YarnCommand("setCustomFlag")]
     void setFlag(string[] b){
         customFlag = bool.Parse(b[0]);
+        updateTheFlags();
+    }
+
+    void updateTheFlags(){
+        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag);
     }
 
 
