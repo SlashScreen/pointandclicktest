@@ -54,6 +54,8 @@ public class SaveManager : MonoBehaviour{
         //StartCoroutine(waitForFrames(sv.room)); //Wait 2 frames, because room actually loads on next frame
         sm.loadscene(sv.room);
         Debug.Log("Done");
+        
+        player.inventory.Clear();
 
         player.activatedNodes = sv.activatedNodes; //set activated nodes
         foreach(var item in sv.inventory){
@@ -61,26 +63,5 @@ public class SaveManager : MonoBehaviour{
         }
         player.transform.position = sv.pos; //set pos
         Debug.Log("Game Loaded.");
-    }
-
-    void finishLoad(SaveGame sv, PlayerControl player){
-        player.activatedNodes = sv.activatedNodes; //set activated nodes
-        foreach(var item in sv.inventory){
-            player.addItem(new string[] { item.ToString() }); //Add item to inventory
-        }
-        Debug.Log("Game Loaded.");
-    }
-
-    private IEnumerator waitForFrames(string name){
-        Debug.Log("Yielding");
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(name);
-        while (!asyncLoad.isDone)
-        {
-            Debug.Log("Not Done");
-            yield return null;
-        }
-        yield return 0;
-        Debug.Log("Done async");
-        
     }
 }
