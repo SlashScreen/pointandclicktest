@@ -90,6 +90,7 @@ public class PlayerControl : MonoBehaviour
 
     public void combineItems(string[] items){ 
         //Combines first 2 strings into item 3 and adds to inventory
+        Debug.Log("combine items");
         removeItem(new string[] {items[0]});
         removeItem(new string[] {items[1]});
         addItem(new string[] {items[2]});
@@ -138,7 +139,7 @@ public class PlayerControl : MonoBehaviour
         //set up yarn commands
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
-        d.dia.AddCommandHandler("CombineItem",combineItems);
+        d.dia.AddCommandHandler("CombineItems",combineItems);
         d.dia.AddCommandHandler("seeIfHasItem",itemInInventory);
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(movePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }

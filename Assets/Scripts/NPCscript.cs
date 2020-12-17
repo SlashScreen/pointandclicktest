@@ -15,6 +15,7 @@ public class NPCscript : MonoBehaviour
     DialogControllerComponent d;
     public YarnProgram yarnDialog;
     public string useNode; //items used on the object
+    public bool customFlag;
     public InteractiveObject.option[] options; //options
 
     //Private vars
@@ -57,6 +58,11 @@ public class NPCscript : MonoBehaviour
     [YarnCommand("Hide")]
     public void Hide(){
         gameObject.SetActive(false);
+    }
+
+    [YarnCommand("setCustomFlag")]
+    void setFlag(string[] b){
+        customFlag = bool.Parse(b[0]);
     }
 
     public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking

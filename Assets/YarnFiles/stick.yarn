@@ -1,0 +1,30 @@
+title: stick.look
+tags: 
+colorID: 0
+position: 861,403
+---
+It's a stick.
+===
+title: stick.take
+tags:
+colorID: 0
+position: 861,403
+---
+<<seeIfHasItem 2>>
+<<if $haveInInventory == true>>
+    You already have one of those.
+    <<set $haveInInventory to false>>
+<<else>>
+    You take a stick.
+    <<AddItem 2>>
+    <<Hide stick>>
+<<endif>>
+===
+title: stick.use
+tags:
+colorID: 0
+position: 861,403
+---
+Nothing Happens.
+<<set $selectedInventory to 0>>
+===

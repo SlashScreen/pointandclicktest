@@ -2248,7 +2248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScripts: []
+  yarnScripts:
+  - {fileID: 2480198943629176163, guid: 8de39f7b19bf0b4438b4cc86e8e46000, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}
@@ -2422,6 +2423,9 @@ MonoBehaviour:
   - name: haveInInventory
     value: 0
     type: 2
+  - name: clickedID
+    value: 0
+    type: 0
   debugTextView: {fileID: 6592795899886633864}
 --- !u!114 &2130216241524067520
 MonoBehaviour:
@@ -3342,7 +3346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a2ee348eac2ce43ac837c7b0689161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   text: {fileID: 5638011374523710046}
   panel: {fileID: 5638011375366298710}
 --- !u!1 &5638011375075222081
@@ -3661,7 +3664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a2ee348eac2ce43ac837c7b0689161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   text: {fileID: 5638011373716439101}
   panel: {fileID: 5638011375366298710}
 --- !u!1 &5826631675426228628

@@ -19,8 +19,8 @@ public class DrawerScript : MonoBehaviour
         //Delete all
         foreach(var item in items){
             GameObject.Destroy(item); //destroy item
-            items.Remove(item);
         }
+        items.Clear();
         //Create new
         int iter = 1; 
         items = new List<GameObject>();

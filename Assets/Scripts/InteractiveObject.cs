@@ -12,8 +12,10 @@ public class InteractiveObject : MonoBehaviour
     DialogControllerComponent dialog;
     //used for interacting
     public option[] options;
+    public bool customFlag = false;
     public UnityEvent customScript;
     int sprite = 0;
+    
 
     [System.Serializable]
     public struct option{
@@ -47,6 +49,11 @@ public class InteractiveObject : MonoBehaviour
     void SetSprite(string[] sp){
         sprite = int.Parse(sp[0]);
     }
+    [YarnCommand("setCustomFlag")]
+    void setFlag(string[] b){
+        customFlag = bool.Parse(b[0]);
+    }
+
 
     int getSprite(){
         return sprite;

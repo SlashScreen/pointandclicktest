@@ -268,6 +268,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.data[2].name
+      value: toCombine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.data[2].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.data[2].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638011374486550067, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_Name
       value: UI
