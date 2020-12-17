@@ -13,7 +13,7 @@ public class SaveGame
     public List<string> activatedNodes = new List<string>();
     public string room;
     public Vector3 pos;
-    public List<itemFlags> flags = new List<itemFlags>();
+    public List<SaveManager.itemFlags> flags = new List<SaveManager.itemFlags>();
 }
 
 
@@ -46,6 +46,7 @@ public class SaveManager : MonoBehaviour{
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
+        Debug.Log(flags.Count);
         sv.flags = flags;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
 
@@ -87,6 +88,8 @@ public class SaveManager : MonoBehaviour{
 
         if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
             flags[flags.FindIndex(x => x.name == name)] = f;
+        }else{
+            flags.Add(f);
         }
     }
 

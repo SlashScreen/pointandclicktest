@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class InteractiveObject : MonoBehaviour
 {
@@ -23,31 +24,50 @@ public class InteractiveObject : MonoBehaviour
         public string tooltip;
         public string node;
     }
+
     
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLoad;
+    }
 
     private void Start()
     {
         dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
         dialog.dia.Add(yarnDialog);
+        
+    }
+
+    void OnLoad(Scene scene, LoadSceneMode sceneMode){
         SaveManager.itemFlags flags = GameObject.Find("Menu").GetComponent<SaveManager>().pullFlags(gameObject.name);
         hidden = flags.hidden;
         customFlag = flags.custom;
-
+        Debug.Log("Item is hidden: " + hidden);
         if (hidden) {
             gameObject.SetActive(false);
         }
+
     }
+        
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLoad;
+    }
+    
 
     public void beginDialog(string node){
         dialog.dia.StartDialogue(node);
     }
     
     [YarnCommand("Show")]
+
     public void Show(){
         hidden = false;
         updateTheFlags();
         gameObject.SetActive(true);
     }
+
     [YarnCommand("Hide")]
     public void Hide(){
         hidden = true;
