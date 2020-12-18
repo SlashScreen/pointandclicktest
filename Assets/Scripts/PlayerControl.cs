@@ -50,10 +50,8 @@ public class PlayerControl : MonoBehaviour
     }
     //Inventory management fucntions
     drawerItem findItemWithID(int id){
-        foreach (var item in inventory){
-            if (item.id == id){
-                return item;
-            }
+        if (inventory.Exists (x => x.id == id)){
+            return inventory[inventory.FindIndex(x => x.id == id)];
         }
         return new drawerItem(); //if not found, return the default one
     }
@@ -79,9 +77,9 @@ public class PlayerControl : MonoBehaviour
         drawer.updateInventory(inventory);
     }
 
-    public void itemInInventory(string[] item){ 
-        //Yarn wrapper for findItemWithID 
-        d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$haveInInventory", new Yarn.Value(findItemWithID(int.Parse(item[0])).id)); //sets $haveInInventory to result of inventory check
+    public bool itemInInventory(string[] item){ 
+        //Yarn wrapper for findItemWithID. sets variable based on whether it exists
+        return inventory.Exists (x => x.id == int.Parse(item[0]));
     }
 
     public void addCompletedNode(string node){
@@ -140,7 +138,7 @@ public class PlayerControl : MonoBehaviour
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItems",combineItems);
-        d.dia.AddCommandHandler("seeIfHasItem",itemInInventory);
+        //d.dia.AddFunction("seeIfHasItem", 1 , itemInInventory);
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(movePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
 

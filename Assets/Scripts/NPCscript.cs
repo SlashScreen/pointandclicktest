@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Pathfinding;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class NPCscript : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class NPCscript : MonoBehaviour
     DialogControllerComponent d;
     public YarnProgram yarnDialog;
     public string useNode; //items used on the object
+
+    public bool hidden;
     public bool customFlag;
+    int state;
     public InteractiveObject.option[] options; //options
 
     //Private vars
@@ -52,12 +56,22 @@ public class NPCscript : MonoBehaviour
 
     [YarnCommand("Show")]
     public void Show(){
+        hidden = false;
+        updateTheFlags();
         gameObject.SetActive(true);
     }
 
     [YarnCommand("Hide")]
     public void Hide(){
+        hidden = true;
+        updateTheFlags();
         gameObject.SetActive(false);
+    }
+
+    [YarnCommand("SetState")]
+    public void setState(string[] s){
+        state = int.Parse(s[0]);
+        updateTheFlags();
     }
 
     [YarnCommand("setCustomFlag")]
@@ -80,20 +94,29 @@ public class NPCscript : MonoBehaviour
         }  
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLoad;
+    }
+
     void Start()
     {
         //get components
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
-        d.dia.Add(yarnDialog);
-        //d.dia.AddCommandHandler("Show",Show);
-        //d.dia.AddCommandHandler("Hide",Hide);
-        d.dia.AddCommandHandler("MoveNPCTo", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete))); //Remember, this is used for blocking
+        try{
+            d.dia.Add(yarnDialog);
+            d.dia.AddCommandHandler("MoveNPCTo", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete))); //Remember, this is used for blocking
+        } catch {
+            
+        }
+        
     }
 
     void FixedUpdate() //physics update
     {
+        
         //Determining if player needs to move
         if(path == null){ //if invalid path, ignore 
             reachedEndOfPath = false;
@@ -119,5 +142,26 @@ public class NPCscript : MonoBehaviour
         }
 
         //TODO: Sprite direction calculation
+    }
+
+    void OnLoad(Scene scene, LoadSceneMode sceneMode){
+
+        if (this == null){
+            return;
+        }
+        
+        SaveManager.itemFlags flags = GameObject.Find("Menu").GetComponent<SaveManager>().pullFlags(gameObject.name);
+        hidden = flags.hidden;
+        customFlag = flags.custom;
+        state = flags.state;
+        Debug.Log("NPC is hidden: " + hidden);
+        if (hidden) {
+            gameObject.SetActive(false);
+        }
+
+    }
+
+    void updateTheFlags(){
+        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag, state);
     }
 }

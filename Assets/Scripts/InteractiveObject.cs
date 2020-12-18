@@ -35,8 +35,11 @@ public class InteractiveObject : MonoBehaviour
     private void Start()
     {
         dialog = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
-        dialog.dia.Add(yarnDialog);
-        
+        try{
+            dialog.dia.Add(yarnDialog);
+        } catch {
+            
+        }
     }
 
     void OnLoad(Scene scene, LoadSceneMode sceneMode){

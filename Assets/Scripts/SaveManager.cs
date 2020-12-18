@@ -25,6 +25,7 @@ public class SaveManager : MonoBehaviour{
         public string name;
         public bool hidden;
         public bool custom;
+        public int state;
     }
     public scenemanager sm;
     List<itemFlags> flags = new List<itemFlags>();
@@ -80,11 +81,12 @@ public class SaveManager : MonoBehaviour{
         Debug.Log("Game Loaded.");
     }
 
-    public void updateFlags(string name, bool hidden, bool custom){ //change flags in internal database
+    public void updateFlags(string name, bool hidden, bool custom, int state = 0){ //change flags in internal database
         itemFlags f = new itemFlags();
         f.name = name;
         f.hidden = hidden;
         f.custom = custom;
+        f.state = state;
 
         if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
             flags[flags.FindIndex(x => x.name == name)] = f;

@@ -33,7 +33,6 @@ public class InGameDropdown : MonoBehaviour
         dropdown.ClearOptions();
 
         foreach (FileInfo file in files){
-            Debug.Log(file.Name);
             Dropdown.OptionData item = new Dropdown.OptionData();
             item.text = file.Name;
             items.Add(item);
