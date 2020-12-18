@@ -105,13 +105,7 @@ public class NPCscript : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
-        try{
-            d.dia.Add(yarnDialog);
-            d.dia.AddCommandHandler("MoveNPCTo", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete))); //Remember, this is used for blocking
-        } catch {
-            
-        }
-        
+        d.dia.Add(yarnDialog);
     }
 
     void FixedUpdate() //physics update
@@ -149,7 +143,7 @@ public class NPCscript : MonoBehaviour
         if (this == null){
             return;
         }
-        
+
         SaveManager.itemFlags flags = GameObject.Find("Menu").GetComponent<SaveManager>().pullFlags(gameObject.name);
         hidden = flags.hidden;
         customFlag = flags.custom;
@@ -163,5 +157,11 @@ public class NPCscript : MonoBehaviour
 
     void updateTheFlags(){
         GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag, state);
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnLoad;
+        d.dia.RemoveCommandHandler("MoveNPCTo");
     }
 }

@@ -77,9 +77,9 @@ public class PlayerControl : MonoBehaviour
         drawer.updateInventory(inventory);
     }
 
-    public bool itemInInventory(string[] item){ 
+    public object itemInInventory(Yarn.Value[] item){ 
         //Yarn wrapper for findItemWithID. sets variable based on whether it exists
-        return inventory.Exists (x => x.id == int.Parse(item[0]));
+        return inventory.Exists (x => x.id == item[0].AsNumber);
     }
 
     public void addCompletedNode(string node){
@@ -138,7 +138,7 @@ public class PlayerControl : MonoBehaviour
         d.dia.AddCommandHandler("AddItem",addItem);
         d.dia.AddCommandHandler("RemoveItem",removeItem);
         d.dia.AddCommandHandler("CombineItems",combineItems);
-        //d.dia.AddFunction("seeIfHasItem", 1 , itemInInventory);
+        d.dia.AddFunction("seeIfHasItem", 1 , itemInInventory);
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(movePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
 

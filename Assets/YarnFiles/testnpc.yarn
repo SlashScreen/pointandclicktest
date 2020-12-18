@@ -1,9 +1,9 @@
 ﻿title: npc.use
 tags:
 ---
-<<seeIfHasItem 3>>
-<<if ($haveInInventory)>>
+<<if seeIfHasItem(3) is true>>
     What is this?...
+    This is an affront to god.
 <<else>>
     NPC: I don't want this.
 <<endif>>
