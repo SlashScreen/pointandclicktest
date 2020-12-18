@@ -103,9 +103,12 @@ public class NPCscript : MonoBehaviour
     {
         //get components
         seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
-        d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>();
-        d.dia.Add(yarnDialog);
+        rb = GetComponent<Rigidbody2D>(); 
+        d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>(); //get d (lmao)
+        if (!d.dia.NodeExists(useNode)){ //If the script isn't already loaded
+            d.dia.Add(yarnDialog); //load the script
+        }
+        
     }
 
     void FixedUpdate() //physics update
@@ -145,12 +148,13 @@ public class NPCscript : MonoBehaviour
         }
 
         SaveManager.itemFlags flags = GameObject.Find("Menu").GetComponent<SaveManager>().pullFlags(gameObject.name);
+        //set flags from save file
         hidden = flags.hidden;
         customFlag = flags.custom;
         state = flags.state;
         Debug.Log("NPC is hidden: " + hidden);
         if (hidden) {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); //if hidden at start, hide
         }
 
     }
