@@ -20,6 +20,8 @@ public class PlayerControl : MonoBehaviour
     public List<string> activatedNodes = new List<string>();
     public string room;
     public Vector2 direction = new Vector2();
+    public float perspective = .7f;
+    public float horizon;  //horizon line y 
     JSONItemParser JSON;
     //Private vars
     Path path; //path player needs to take
@@ -217,7 +219,7 @@ public class PlayerControl : MonoBehaviour
 
         //Moving player rigidbody
         Vector2 dir = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized; //find direction between next waypoint and current position
-        Vector2 force = dir * speed * Time.deltaTime; //calculate force vector
+        Vector2 force = dir * speed * Time.deltaTime * new Vector2(1, 1-((1/((Mathf.Abs(transform.position.y)-horizon))*2)) );//Mathf.Exp(Mathf.Abs( horizon - transform.position.y )-2f)*.3f ); //calculate force vector. changes y my e^x for perspective
         
         rb.AddForce(force); //apply force vector
         

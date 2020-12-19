@@ -141,6 +141,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1192694546796544543, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: minsize
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225337, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -155,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225340, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.38
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225340, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -201,6 +205,10 @@ PrefabInstance:
       propertyPath: drawer
       value: 
       objectReference: {fileID: 14393013}
+    - target: {fileID: 6781141106083225342, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: nextWaypoitDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
 --- !u!114 &280947024 stripped
