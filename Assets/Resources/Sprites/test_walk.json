@@ -1,0 +1,44 @@
+{ "frames": {
+   "test_walk 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 258, "h": 512 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 258, "h": 512 },
+    "sourceSize": { "w": 258, "h": 512 },
+    "duration": 100
+   },
+   "test_walk 1.aseprite": {
+    "frame": { "x": 258, "y": 0, "w": 258, "h": 512 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 258, "h": 512 },
+    "sourceSize": { "w": 258, "h": 512 },
+    "duration": 100
+   },
+   "test_walk 2.aseprite": {
+    "frame": { "x": 516, "y": 0, "w": 258, "h": 512 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 258, "h": 512 },
+    "sourceSize": { "w": 258, "h": 512 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.25",
+  "image": "test_walk.png",
+  "format": "RGBA8888",
+  "size": { "w": 774, "h": 512 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "walk", "from": 0, "to": 1, "direction": "pingpong" },
+   { "name": "idle", "from": 2, "to": 2, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

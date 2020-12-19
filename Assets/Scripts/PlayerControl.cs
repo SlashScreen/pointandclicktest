@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     public DrawerScript drawer;
     public List<string> activatedNodes = new List<string>();
     public string room;
+    public Vector2 direction = new Vector2();
     JSONItemParser JSON;
     //Private vars
     Path path; //path player needs to take
@@ -206,15 +207,20 @@ public class PlayerControl : MonoBehaviour
         if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path, reach end of path and stop
             reachedEndOfPath = true;
             path = null;
+            //Debug.Log("end of path");
+            direction = new Vector2();
             return;
         }else{
             reachedEndOfPath = false;
+            direction = rb.velocity;
         }
 
         //Moving player rigidbody
         Vector2 dir = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized; //find direction between next waypoint and current position
         Vector2 force = dir * speed * Time.deltaTime; //calculate force vector
+        
         rb.AddForce(force); //apply force vector
+        
 
         //seeing if waypoint reached
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]); //calculate distance between player and next waypoint

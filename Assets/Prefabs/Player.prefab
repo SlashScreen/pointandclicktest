@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6781141106021206956}
   - component: {fileID: 6781141106021206957}
+  - component: {fileID: 3818769783349749173}
   m_Layer: 10
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6781141106021206955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0127, y: 0.5376, z: 0}
-  m_LocalScale: {x: 4.448348, y: 11.328039, z: 4.6076}
+  m_LocalPosition: {x: 0.054, y: 0.891, z: 0}
+  m_LocalScale: {x: 0.5315284, y: 0.5315284, z: 0.5315284}
   m_Children: []
   m_Father: {fileID: 6781141106083225340}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 3537007604337478963, guid: 461d664dcd9fb064a9bdf8ecf503e7ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3818769783349749173
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781141106021206955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b74caaf380ce114dbff1a53167b4493, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6781141106083225337
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +116,7 @@ GameObject:
   - component: {fileID: 6781141106083225341}
   - component: {fileID: 6781141106083225338}
   - component: {fileID: 6025986761378005173}
+  - component: {fileID: 1192694546796544543}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -160,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   UIPosition: {x: 0, y: 0, z: 0}
-  speed: 400
+  speed: 500
   inventory: []
   nextWaypoitDistance: 1
   d: {fileID: 0}
@@ -168,6 +189,7 @@ MonoBehaviour:
   drawer: {fileID: 0}
   activatedNodes: []
   room: 
+  direction: {x: 0, y: 0}
   reachedEndOfPath: 0
 --- !u!50 &6781141106083225341
 Rigidbody2D:
@@ -182,7 +204,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3.4
+  m_LinearDrag: 6.19
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -221,3 +243,16 @@ MonoBehaviour:
   drawer:
     items: []
   JSONPath: Assets/MiscFiles/items.json
+--- !u!114 &1192694546796544543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781141106083225337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf5106e3a9dab449b5bb04826ebb931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3818769783349749173}
