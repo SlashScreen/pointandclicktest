@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     //Public vars
     public Vector3 targetPosition; //where the player will go to next
     public Vector3 UIPosition; //options wheel position
-    public float speed = 400f; //speed of player
+    public float speed = 650f; //speed of player
     public List<drawerItem> inventory = new List<drawerItem>(); //list of item IDs for inventory
     public float nextWaypoitDistance = 1f; //distance from path waypoint to be considered "arrived"
     public DialogControllerComponent d;
