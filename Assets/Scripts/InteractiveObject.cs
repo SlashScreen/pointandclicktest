@@ -16,6 +16,7 @@ public class InteractiveObject : MonoBehaviour
     public bool customFlag = false;
     public bool hidden = false;
     public UnityEvent customScript;
+    public Transform talkPoint;
     int sprite = 0;
     
 

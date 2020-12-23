@@ -26,6 +26,7 @@ public class NPCscript : MonoBehaviour
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
     public bool reachedEndOfPath = false; //if reached end of path
+    public Transform talkPoint;
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
     
@@ -108,7 +109,6 @@ public class NPCscript : MonoBehaviour
         if (!d.dia.NodeExists(useNode)){ //If the script isn't already loaded
             d.dia.Add(yarnDialog); //load the script
         }
-        
     }
 
     void FixedUpdate() //physics update

@@ -114,7 +114,8 @@ public class PlayerControl : MonoBehaviour
         //convert from string to float
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
-        //generate apth
+        //generate path
+        Debug.Log("going to point "+target);
         GenPath(target);
         //stop script until reachedEndOfPath is true
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
@@ -154,9 +155,8 @@ public class PlayerControl : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject) //when clicked and not actively going to an object
         {
-            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
             UIPosition = Input.mousePosition; //set point where mouse clicked in world space
-            Vector2 mousePos2D = new Vector2(targetPosition.x, targetPosition.y);
+            Vector2 mousePos2D = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
 
@@ -172,6 +172,12 @@ public class PlayerControl : MonoBehaviour
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>()){
                         //If it is an interactive object or NPC
                         clickedObject = hit.collider.gameObject; //set clicked object
+
+                        if(clickedObject.GetComponent<InteractiveObject>()){
+                            targetPosition = clickedObject.GetComponent<InteractiveObject>().talkPoint.position;
+                        }else{
+                            targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;
+                        }
 
                         if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item in hand from inventory
                             //Start use script once movement complete
@@ -189,9 +195,11 @@ public class PlayerControl : MonoBehaviour
                     }                
 
                 }else{
+                    targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
                     GenPath(targetPosition); //generate path to mouse point if some other prop or whatever is clicked
                 }
             }else{
+                targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
                 GenPath(targetPosition); //generate path to mouse point if ground is clicked
             }
         }
