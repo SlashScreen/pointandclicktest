@@ -145,6 +145,10 @@ PrefabInstance:
       propertyPath: minsize
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 1192694546796544543, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: animationData
+      value: 
+      objectReference: {fileID: 11400000, guid: e600722866072ba4bab8005fcffe4e46, type: 2}
     - target: {fileID: 6781141106083225337, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -291,6 +295,66 @@ PrefabInstance:
     - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: defaultVariables.Array.data[2].value
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDialogEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnDialogStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5638011374486550067, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_Name

@@ -1,7 +1,7 @@
 {
     "items":[
-        {"name":"cube","id":1,"iconPath":"Sprites/cube_temp"},
-        {"name":"stick","id":2,"iconPath":"Sprites/stick_temp"},
-        {"name":"stick and cube","id":3,"iconPath":"Sprites/stick_cube_temp"}
+        {"name":"cube","id":1,"iconPath":"Icons/cube_temp"},
+        {"name":"stick","id":2,"iconPath":"icons/stick_temp"},
+        {"name":"stick and cube","id":3,"iconPath":"Icons/stick_cube_temp"}
     ]
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Pathfinding;
+using Yarn.Unity;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerControl : MonoBehaviour
     public DrawerScript drawer;
     public List<string> activatedNodes = new List<string>();
     public string room;
+    
     public Vector2 direction = new Vector2();
     public float perspective = .7f;
     public float horizon;  //horizon line y 
@@ -67,6 +69,7 @@ public class PlayerControl : MonoBehaviour
         }
         return new drawerItem();
     }
+    
 
     public void addItem(string[] item){
         //Adds item of ID item into inventory
@@ -173,7 +176,7 @@ public class PlayerControl : MonoBehaviour
                         //If it is an interactive object or NPC
                         clickedObject = hit.collider.gameObject; //set clicked object
 
-                        if(clickedObject.GetComponent<InteractiveObject>()){
+                        if(clickedObject.GetComponent<InteractiveObject>()){ //gets talk points
                             targetPosition = clickedObject.GetComponent<InteractiveObject>().talkPoint.position;
                         }else{
                             targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;

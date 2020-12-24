@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3818769783349749173}
+  animationData: {fileID: 11400000, guid: e600722866072ba4bab8005fcffe4e46, type: 2}
   closePlane: -6.3
   minsize: 1
   dropshadow: {fileID: 6702512888269827504}

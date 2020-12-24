@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
-public class SpriteController : MonoBehaviour
+
+public class PlayerSpriteController : MonoBehaviour //NTS could absolutley extend a general sprite controller
 {
     PlayerControl player;
     public Animator animator;
+    public AnimControllerData animationData;
     float horizon;
     public float closePlane = -6.5f; // cole it can get to the 4th wall to be max size
     public float minsize = .2f; 
@@ -35,5 +38,10 @@ public class SpriteController : MonoBehaviour
         //animator.gameObject.GetComponent<SpriteRenderer>().sortingOrder =  (int)scale*-100;
         animator.gameObject.transform.localScale = new Vector3(scale, scale, scale); //set scale
         dropshadow.localScale = new Vector3(scale*2, scale*2, scale*2); //set scale dropshadow
+    }
+
+    [YarnCommand("SetSprite")]
+    void setSprite(string[] args){
+        animator.SetInteger("animation",animationData.getNumberOfState(args[0])); //sets animator to correspoding animation in animationdata table
     }
 }
