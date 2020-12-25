@@ -143,12 +143,40 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192694546796544543, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: minsize
-      value: 0.15
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1192694546796544543, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: animationData
       value: 
       objectReference: {fileID: 11400000, guid: e600722866072ba4bab8005fcffe4e46, type: 2}
+    - target: {fileID: 6702512888269827504, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702512888269827504, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106021206956, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.713
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Size.x
+      value: 4.3005776
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Size.y
+      value: 11.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 815424164945274260, guid: 5dbc2e649a9dd4d43b5eafa11d5f2246, type: 3}
+    - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225337, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_Name
       value: Player

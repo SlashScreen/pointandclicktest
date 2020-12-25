@@ -221,7 +221,7 @@ public class PlayerControl : MonoBehaviour
             reachedEndOfPath = true;
             path = null;
             //Debug.Log("end of path");
-            direction = new Vector2();
+            direction = Vector2.zero;
             return;
         }else{
             reachedEndOfPath = false;

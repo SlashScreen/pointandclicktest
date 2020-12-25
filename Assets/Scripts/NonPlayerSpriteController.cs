@@ -14,5 +14,6 @@ public class NonPlayerSpriteController : MonoBehaviour
     {
         float scale =  baseScale-((1/((Mathf.Abs(transform.position.y)-horizon))*3));
         transform.localScale = new Vector3(scale, scale, scale);
+        //transform.localPosition = new Vector3 (transform.localPosition.x,transform.localPosition.y, ((transform.position.y)*-1));
     }
 }
