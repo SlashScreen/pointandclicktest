@@ -168,7 +168,11 @@ public class PlayerControl : MonoBehaviour
                 return;
             }
 
+            
+
             if (hit.collider != null) { //if something is clicked
+
+                Debug.Log(hit.collider.gameObject.tag);
                 
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
                     
@@ -195,13 +199,19 @@ public class PlayerControl : MonoBehaviour
                             }
                             opt.Show(); //show wheel
                         }
-                    }                
+                    }
 
+                }else if (hit.collider.gameObject.tag == "Player"){  //if clicked self
+                    if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){
+                        d.dia.StartDialogue("player.use");
+                    }           
                 }else{
+                    d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0);
                     targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
                     GenPath(targetPosition); //generate path to mouse point if some other prop or whatever is clicked
                 }
             }else{
+                d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0);
                 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
                 GenPath(targetPosition); //generate path to mouse point if ground is clicked
             }
@@ -209,13 +219,6 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
-    {
-        if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){
-            d.dia.StartDialogue("player.use");
-
-        }
-    }
     void FixedUpdate() //physics update
     {
         //Determining if player needs to move
