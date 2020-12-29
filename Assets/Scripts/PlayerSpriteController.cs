@@ -52,7 +52,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
         //perspective
         float scale =  minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*3));
         float shadowScale = dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*3));
-        animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x,animator.gameObject.transform.position.y, animator.gameObject.transform.position.y);
+        animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x,animator.gameObject.transform.position.y, (horizon - animator.gameObject.transform.position.y) * -1);
         animator.gameObject.transform.localScale = new Vector3(scale, scale, scale); //set scale
         dropshadow.localScale = new Vector3(shadowScale, shadowScale, shadowScale); //set scale dropshadow
 

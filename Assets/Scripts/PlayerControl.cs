@@ -208,6 +208,14 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
+
+    private void OnMouseDown()
+    {
+        if (d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){
+            d.dia.StartDialogue("player.use");
+
+        }
+    }
     void FixedUpdate() //physics update
     {
         //Determining if player needs to move

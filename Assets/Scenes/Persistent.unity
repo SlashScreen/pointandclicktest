@@ -149,6 +149,10 @@ PrefabInstance:
       propertyPath: animationData
       value: 
       objectReference: {fileID: 11400000, guid: e600722866072ba4bab8005fcffe4e46, type: 2}
+    - target: {fileID: 6515057793420192292, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d7b9e64e4196232489ab4c5d8423ecba, type: 2}
     - target: {fileID: 6702512888269827504, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.124
@@ -160,6 +164,10 @@ PrefabInstance:
     - target: {fileID: 6781141106021206956, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.713
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6781141106021206957, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_Size.x
@@ -241,6 +249,18 @@ PrefabInstance:
       propertyPath: nextWaypoitDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7370631049503127624, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Size.y
+      value: 5.412175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370631049503127624, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.026975632
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370631049503127624, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.4998221
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
 --- !u!114 &280947024 stripped
@@ -308,6 +328,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: yarnScripts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: yarnScripts.Array.data[1]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 7014358777d585a4eb924c9bfee70972, type: 3}
     - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: defaultVariables.Array.size
       value: 3
