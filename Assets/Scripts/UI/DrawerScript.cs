@@ -28,7 +28,7 @@ public class DrawerScript : MonoBehaviour
             Vector3 place = new Vector3(offset*iter,transform.position.y,0.1f); //created the spot for the button to be placed based on which it is in the index (iter)
             GameObject item = Instantiate(prefab,place,Quaternion.identity); //refers to gameobject
             item.GetComponent<DrawerItemScript>().setUp(i, gameObject.GetComponent<DrawerScript>()); //run setup routine
-            item.transform.SetParent(gameObject.transform); //set parent
+            item.transform.SetParent(transform.Find("Viewport").Find("DrawerItems").transform); //set parent
             items.Add(item); //add to list
             iter++; //index increment
         }

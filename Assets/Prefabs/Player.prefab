@@ -211,17 +211,15 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   UIPosition: {x: 0, y: 0, z: 0}
   speed: 650
-  inventory: []
-  nextWaypoitDistance: 0.5
-  d: {fileID: 0}
-  opt: {fileID: 0}
-  drawer: {fileID: 0}
-  activatedNodes: []
-  room: 
+  nextWaypointDistance: 1
   direction: {x: 0, y: 0}
-  perspective: 0.7
   horizon: 0
   reachedEndOfPath: 0
+  opt: {fileID: 0}
+  drawer: {fileID: 0}
+  inventory: []
+  d: {fileID: 0}
+  activatedNodes: []
 --- !u!50 &6781141106083225341
 Rigidbody2D:
   serializedVersion: 4
@@ -380,6 +378,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6781141106083225340}
     m_Modifications:
+    - target: {fileID: 5627081470505349236, guid: 58d809c652bc70b41a1af5d4353e8bd0, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7187246644154635322, guid: 58d809c652bc70b41a1af5d4353e8bd0, type: 3}
       propertyPath: m_Name
       value: PlayerAudio

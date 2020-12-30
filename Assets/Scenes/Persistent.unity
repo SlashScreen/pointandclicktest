@@ -141,13 +141,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3952818527282967988, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225337, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781141106083225339, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: detailedGizmos
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6781141106083225340, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
       propertyPath: m_RootOrder
