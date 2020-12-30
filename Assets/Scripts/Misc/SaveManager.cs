@@ -60,22 +60,21 @@ public class SaveManager : MonoBehaviour{
     public  void Load(string selectedFile, PlayerControl player){
         Debug.Log("Loading Game...");
         //LOAD game
-        StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile);
+
+        //file loading
+        StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile); //open file
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
-        sr.Close();
+        sr.Close(); //close file
 
-        flags.Clear();
+        flags.Clear(); //clear flags list
+        player.inventory.Clear(); //clear inventory
 
-        player.room = sv.room; //set room
-        sm.loadscene(sv.room);
-        Debug.Log("Done");
-
-        player.inventory.Clear();
+        sm.loadscene(sv.room); //load the scene
 
         player.activatedNodes = sv.activatedNodes; //set activated nodes
-        flags = sv.flags;
-        foreach(var item in sv.inventory){
-            player.addItem(new string[] { item.ToString() }); //Add item to inventory
+        flags = sv.flags; //set flags
+        foreach(var item in sv.inventory){ //add all saved items
+            player.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
         player.transform.position = sv.pos; //set pos
         Debug.Log("Game Loaded.");
@@ -90,7 +89,7 @@ public class SaveManager : MonoBehaviour{
 
         if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
             flags[flags.FindIndex(x => x.name == name)] = f;
-        }else{
+        }else{ //else add it
             flags.Add(f);
         }
     }

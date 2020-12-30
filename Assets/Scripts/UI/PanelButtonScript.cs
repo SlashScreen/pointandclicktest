@@ -33,7 +33,7 @@ public class PanelButtonScript : MonoBehaviour
     public void clickedBehavior(){
         //when clicked, move player, and once player is done moving, call beginDialogScripts
         panel.Hide();
-        StartCoroutine(player.movePlayer(new string[] {player.targetPosition.x.ToString(),player.targetPosition.y.ToString()},beginDialogScripts));
+        StartCoroutine(player.MovePlayer(new string[] {player.targetPosition.x.ToString(),player.targetPosition.y.ToString()},beginDialogScripts));
         
     }
 
