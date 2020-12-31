@@ -11,21 +11,21 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     public float dropshadowSize = 2f;
     public float minsize = .2f; 
     public Transform dropshadow;
-    Vector2 dir = new Vector2();
-    PlayerControl player;
+    public Vector2 dir = new Vector2();
+    public PlayerControl player;
     
-    float horizon;
+    public float horizon;
 
-    void Start()
+    public virtual void Start()
     {
         //sert runtime stuff
         player = gameObject.GetComponent<PlayerControl>();
         horizon = player.horizon;
     }
 
-    private void Update()
+    public void Update()
     {
-        dir = player.direction;
+        getDir();
         //mirroring
 
         //this is probably able to be more elegant but dont change anything if it's 0
@@ -63,7 +63,11 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     }
 
     [YarnCommand("SetSprite")]
-    void setSprite(string[] args){
+    public void setSprite(string[] args){
         animator.SetInteger("animation",animationData.getNumberOfState(args[0])); //sets animator to correspoding animation in animationdata table
+    }
+
+    public virtual void getDir(){
+        dir = player.direction;
     }
 }

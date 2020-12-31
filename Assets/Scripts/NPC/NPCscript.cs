@@ -19,6 +19,7 @@ public class NPCscript : MonoBehaviour
 
     public bool hidden;
     public bool customFlag;
+    public Vector2 direction;
     int state;
     public InteractiveObject.option[] options; //options
 
@@ -122,9 +123,11 @@ public class NPCscript : MonoBehaviour
         if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path,
             reachedEndOfPath = true;
             path = null;
+            direction = Vector2.zero;
             return;
         }else{
             reachedEndOfPath = false;
+            direction = rb.velocity;
         }
 
         //Moving player rigidbody

@@ -5,9 +5,16 @@ using UnityEngine.InputSystem;
 
 public class SkipText : MonoBehaviour
 {
-    //Just a script to skip text when clicked, to be applied to the dialogue UI gameobject
+    //Just a script to skip text when clicked, to be applied to the Player
     public void OnMove(InputValue input){
-        Debug.Log("Skipped");
+        skip();
+    }
+
+    public void OnSkip(InputValue input){
+        skip();
+    }
+
+    void skip(){
         GameObject.Find("Dialogue").GetComponent<Yarn.Unity.DialogueUI>().MarkLineComplete();
     }
 }

@@ -11,6 +11,7 @@ public class optionspanel : MonoBehaviour
     
     public PanelButtonScript[] buttons;
     public bool hidden;
+    
     public void Show(){
         GetComponent<Image>().enabled = true;
         hidden = false;

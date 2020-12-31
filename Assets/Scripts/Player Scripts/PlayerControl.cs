@@ -41,6 +41,7 @@ public class PlayerControl : MonoBehaviour{
     Vector2 mouseP = new Vector2();
     bool inConversation = false; //is in a conversation
     bool goingToObject = false; //if the player is walking to an object rahter than a position
+    InGameDropdown dropdown;
     GameObject clickedObject = null; //an interactive object that is clicked
     //Explanation for clickedObject:
     //if an object that is clickable is clicked
@@ -149,6 +150,7 @@ public class PlayerControl : MonoBehaviour{
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         JSON = GetComponent<JSONItemParser>();
+        dropdown = GameObject.Find("Menu").GetComponent<InGameDropdown>();
         //set up yarn commands unique to this player
         d.dia.AddCommandHandler("AddItem",AddItem);
         d.dia.AddCommandHandler("RemoveItem",RemoveItem);
@@ -212,30 +214,28 @@ public class PlayerControl : MonoBehaviour{
                 }else if (hit.collider.gameObject.tag == "Player" && d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){  //if clicked self and something in hand
                     d.dia.StartDialogue("player.use"); //start use dialogue. yes it's hardcoded but i guess it doesnt matter         
                 }else{
-                    d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
-                    if (opt.hidden){
-                        targetPosition = Camera.main.ScreenToWorldPoint(mouseP); //set point where mouse clicked in world space
-                        GenPath(targetPosition); //generate path to mouse point if ground is clicked
-                    }else{
-                        opt.Hide();
-                    }
+                    WrapUpMouseCLick();
                 }
             }else{
                 //mmm yes I know its the same code
-                d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
-                if (opt.hidden){
-                    targetPosition = Camera.main.ScreenToWorldPoint(mouseP); //set point where mouse clicked in world space
-                    GenPath(targetPosition); //generate path to mouse point if ground is clicked
-                }else{
-                    opt.Hide();
-                }
+                WrapUpMouseCLick();
             }
+        }
+    }
+
+    void WrapUpMouseCLick(){
+        d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
+        if (opt.hidden && dropdown.hidden){
+            targetPosition = Camera.main.ScreenToWorldPoint(mouseP); //set point where mouse clicked in world space
+            GenPath(targetPosition); //generate path to mouse point if ground is clicked
+        }else{
+            opt.Hide();
+            dropdown.Cancel();
         }
     }
 
     void FixedUpdate(){ //physics update
         //Determining if player needs to move
-
         if(path == null){ //if invalid path, exit loop 
             reachedEndOfPath = false;
             return;

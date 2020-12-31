@@ -9,7 +9,7 @@ public class scenemanager : Singleton<MonoBehaviour>
     int ind;
     void Start()
     {
-        loadscene("Testrange");
+        //loadscene("Testrange");
         SceneManager.sceneLoaded += OnLoad;
     }
 
@@ -23,10 +23,15 @@ public class scenemanager : Singleton<MonoBehaviour>
             }
         }
         SceneManager.LoadScene(scene,LoadSceneMode.Additive);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
+        
+    }
+
+    public void InitialLoad(string s){
+        SceneManager.LoadScene("Persistent");
     }
 
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
         foreach(var point in GameObject.FindObjectsOfType<PlayerSpawn>()){ //setplayerposition
             Debug.Log(point.index);
             if (point.index == ind ){
