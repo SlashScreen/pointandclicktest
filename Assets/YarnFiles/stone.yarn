@@ -1,0 +1,13 @@
+title: stone.look
+tags:
+---
+<<SetSpeaker Zero>>
+It's a rock on the ground.
+===
+
+title: test.use
+tags:
+---
+<<SetSpeaker Zero>>
+It's a futile effort.
+===

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Pathfinding;
 using Yarn.Unity;
+using UnityEngine.InputSystem;
 
 //OK yes I know this is a disASter, orginizationally. at least im not yandev ok
 
@@ -37,6 +38,7 @@ public class PlayerControl : MonoBehaviour{
     int currentWaypoint = 0; //current target waypoint
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
+    Vector2 mouseP = new Vector2();
     bool inConversation = false; //is in a conversation
     bool goingToObject = false; //if the player is walking to an object rahter than a position
     GameObject clickedObject = null; //an interactive object that is clicked
@@ -155,16 +157,20 @@ public class PlayerControl : MonoBehaviour{
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(MovePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
 
-    private void Update(){ //per frame updates
+    public void OnMousePos(InputValue input){
+        mouseP = input.Get<Vector2>();
+    }
+
+    public void OnMove(InputValue input){
         if (inConversation){
             //nothing should happen if youre in a conversation
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !goingToObject) //when clicked and not actively going to an object
+        if(!goingToObject) //when clicked and not actively going to an object
         {
-            UIPosition = Input.mousePosition; //set point where mouse clicked in world space
-            Vector2 mousePos2D = Camera.main.ScreenToWorldPoint(Input.mousePosition); //gets mouse point in world space
+            UIPosition = mouseP; //set point where mouse clicked in world space
+            Vector2 mousePos2D = Camera.main.ScreenToWorldPoint(mouseP); //gets mouse point in world space
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
 
@@ -207,17 +213,24 @@ public class PlayerControl : MonoBehaviour{
                     d.dia.StartDialogue("player.use"); //start use dialogue. yes it's hardcoded but i guess it doesnt matter         
                 }else{
                     d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
-                    targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
-                    GenPath(targetPosition); //generate path to mouse point if some other prop or whatever is clicked
+                    if (opt.hidden){
+                        targetPosition = Camera.main.ScreenToWorldPoint(mouseP); //set point where mouse clicked in world space
+                        GenPath(targetPosition); //generate path to mouse point if ground is clicked
+                    }else{
+                        opt.Hide();
+                    }
                 }
             }else{
                 //mmm yes I know its the same code
                 d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
-                targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //set point where mouse clicked in world space
-                GenPath(targetPosition); //generate path to mouse point if ground is clicked
+                if (opt.hidden){
+                    targetPosition = Camera.main.ScreenToWorldPoint(mouseP); //set point where mouse clicked in world space
+                    GenPath(targetPosition); //generate path to mouse point if ground is clicked
+                }else{
+                    opt.Hide();
+                }
             }
         }
-
     }
 
     void FixedUpdate(){ //physics update

@@ -518,6 +518,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011375037021573, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011375037021574, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011375366298696, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011375366298711, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5638011375480712125, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: player
       value: 
