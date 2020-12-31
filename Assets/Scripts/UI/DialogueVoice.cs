@@ -11,10 +11,12 @@ public class DialogueVoice : MonoBehaviour
     AudioSource source;
     AudioClip[] clips;
     int lastClip;
+    bool silence; //true = no speaking, false = speaking
     
     private void Start(){
         source = GetComponent<AudioSource>(); //get audio source
-        SetSpeaker(speaker);
+        GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>().dia.AddCommandHandler("SetSilence",SetSilence); //add yarn command for set silence
+        SetSpeaker(speaker); //set speaker to default
     }
 
     public void BeginSpeaking(){ //wrapper for StartSpeaking
@@ -23,7 +25,7 @@ public class DialogueVoice : MonoBehaviour
 
     IEnumerator StartSpeaking(){
         isSpeaking = true;
-        while (isSpeaking){ //loop while speaking
+        while (isSpeaking && !silence){ //loop while speaking
             source.PlayOneShot(clips[RandomClip()]); //play the sound
             yield return new WaitUntil(() => source.isPlaying == false); //wait until sound is done
         }
@@ -45,5 +47,9 @@ public class DialogueVoice : MonoBehaviour
         }
         lastClip = n; //set last clip
         return n;
+    }
+
+    public void SetSilence(string[] s){
+        silence = bool.Parse(s[0]); //set to bool 
     }
 }
