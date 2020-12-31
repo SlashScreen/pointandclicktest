@@ -3,8 +3,10 @@ tags:
 colorID: 0
 position: 861,403
 ---
+<<FocusCamera MainCamera TestCube>>
 You look at the object.
 It's an infinite number of green rounded squares occupying the same space.
+<<FocusCamera MainCamera Player>>
 <<MovePlayerTo -1.0 -1.0 >>
 ...You step back from the squares.
 ===
