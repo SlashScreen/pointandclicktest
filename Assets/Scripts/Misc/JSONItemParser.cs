@@ -19,7 +19,7 @@ public class JSONItemParser : MonoBehaviour
     public drawerJSON drawer;
     public string JSONPath;
     string JSONs;
-    void Start()
+    public void Start()
     {
         JSONs = File.ReadAllText(JSONPath);
         drawer = JsonUtility.FromJson<drawerJSON>(JSONs);

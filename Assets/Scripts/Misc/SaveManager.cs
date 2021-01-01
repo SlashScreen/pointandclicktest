@@ -77,6 +77,7 @@ public class SaveManager : MonoBehaviour{
             player.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
         player.transform.position = sv.pos; //set pos
+        //player.drawer.updateInventory(player.inventory);
         Debug.Log("Game Loaded.");
     }
 
