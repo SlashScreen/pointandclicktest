@@ -12,6 +12,7 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
     {
         Show();
         dia = GetComponent<DialogueRunner>();
+        Time.timeScale = 1;
     }
 
     public void Show(){

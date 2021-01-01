@@ -28,7 +28,6 @@ public class CameraScript : MonoBehaviour
 
     [YarnCommand("FocusCamera")]
     public void FocusCamera(string[] target){
-        Debug.Log(target[0] + ", " + brain.name);
         try{
             brain.ActiveVirtualCamera.Follow = GameObject.Find(target[0]).transform; //set follow camera target to gameobject
         }catch (System.Exception e){
