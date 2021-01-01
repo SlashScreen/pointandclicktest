@@ -1,0 +1,8 @@
+title: testzone.hit
+tags:
+---
+<<StopPlayer>>
+<<SetSpeaker Zero>>
+I shouldn't walk off into the void.
+<<MovePlayerTo 0.0 0.0>>
+===

@@ -55,6 +55,10 @@ public class PlayerControl : MonoBehaviour{
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
     }
 
+    public void StopPlayer(string[] args){
+        currentWaypoint = path.vectorPath.Count; //by doing this i force the player to stop in its tracks
+    }
+
     void OnPathComplete(Path p){ //initiates path follow
         if(!p.error){ //if valid path
             path = p; //set path
@@ -162,6 +166,7 @@ public class PlayerControl : MonoBehaviour{
         d.dia.AddCommandHandler("AddItem",AddItem);
         d.dia.AddCommandHandler("RemoveItem",RemoveItem);
         d.dia.AddCommandHandler("CombineItems",CombineItems);
+        d.dia.AddCommandHandler("StopPlayer",StopPlayer);
         d.dia.AddFunction("seeIfHasItem", 1 , ItemInInventory);
         d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(MovePlayer(parameters, onComplete))); //Remember, this is used for blocking
     }
