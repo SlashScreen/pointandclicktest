@@ -491,6 +491,63 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 12.397011
   m_MaxDistanceOnly: 1
+--- !u!1001 &232481482689192595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0018450655
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6700588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.83694804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769441017792730818, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729241908283737816, guid: 43c893319357ba147b84955e74645115, type: 3}
+      propertyPath: m_Name
+      value: TestPickpocketManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43c893319357ba147b84955e74645115, type: 3}
 --- !u!1001 &3598824029908852117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +602,10 @@ PrefabInstance:
     - target: {fileID: 3598824029243154645, guid: 1d7744905994a3749bb8be77ab76acfc, type: 3}
       propertyPath: m_Name
       value: Grabbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953681590593328694, guid: 1d7744905994a3749bb8be77ab76acfc, type: 3}
+      propertyPath: goal
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d7744905994a3749bb8be77ab76acfc, type: 3}
