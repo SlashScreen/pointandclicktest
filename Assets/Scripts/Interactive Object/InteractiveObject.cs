@@ -81,15 +81,16 @@ public class InteractiveObject : MonoBehaviour
         gameObject.SetActive(false);
     }
     [YarnCommand("Invoke")]
-    void InvokeEvent(){
+    public void InvokeEvent(){
+        Debug.Log("Invoked");
         customScript.Invoke();
     }
     [YarnCommand("SetSprite")]
-    void SetSprite(string[] sp){
+    public void SetSprite(string[] sp){
         sprite = int.Parse(sp[0]);
     }
     [YarnCommand("setCustomFlag")]
-    void setFlag(string[] b){
+    public void setFlag(string[] b){
         customFlag = bool.Parse(b[0]);
         updateTheFlags();
     }

@@ -205,6 +205,10 @@ PrefabInstance:
       propertyPath: drawer
       value: 
       objectReference: {fileID: 14393013}
+    - target: {fileID: 6781141106083225342, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+      propertyPath: horizon
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
 --- !u!114 &280947024 stripped
@@ -286,6 +290,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: yarnScripts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: yarnScripts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 640fa1a464d642840ac26ab5db7cc0ab, type: 3}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.data[3].name
+      value: channel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: defaultVariables.Array.data[3].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5638011373541677143, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

@@ -40,6 +40,7 @@ public class PlayerControl : MonoBehaviour{
     Rigidbody2D rb; //rigidbody component
     Vector2 mouseP = new Vector2();
     bool inConversation = false; //is in a conversation
+    bool goingToTalkPoint = false;
     bool goingToObject = false; //if the player is walking to an object rahter than a position
     InGameDropdown dropdown;
     GameObject clickedObject = null; //an interactive object that is clicked
@@ -133,13 +134,14 @@ public class PlayerControl : MonoBehaviour{
         inConversation = false;
     }
 
-    public IEnumerator MovePlayer(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking;
+    public IEnumerator MovePlayer(string[] coords, System.Action onComplete, bool toTalkPoint = false){ //moving the player via code. 2,d argument important for blocking;
         Vector3 target = new Vector3(); //init target
         //convert from string to float
         target.x = float.Parse(coords[0]); //set target x
         target.y = float.Parse(coords[1]); //set target y
         //generate path
         Debug.Log("going to point "+target);
+        goingToTalkPoint = toTalkPoint;
         GenPath(target);
         //stop script until reachedEndOfPath is true
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
@@ -176,7 +178,7 @@ public class PlayerControl : MonoBehaviour{
     }
 
     public void OnMove(InputValue input){
-        if (inConversation){
+        if (inConversation || goingToTalkPoint){
             //nothing should happen if youre in a conversation
             return;
         }
@@ -203,7 +205,11 @@ public class PlayerControl : MonoBehaviour{
                         clickedObject = hit.collider.gameObject; //set clicked object
 
                         if(clickedObject.GetComponent<InteractiveObject>()){ //gets talk points (points in space that the player goes to to interact with object)
-                            targetPosition = clickedObject.GetComponent<InteractiveObject>().talkPoint.position;
+                            if (clickedObject.GetComponent<InteractiveObject>().talkPoint != null){ //if it has a talk point
+                                targetPosition = clickedObject.GetComponent<InteractiveObject>().talkPoint.position;
+                            }else{
+                                targetPosition = transform.position;
+                            }
                         }else{
                             targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;
                         }
@@ -256,6 +262,7 @@ public class PlayerControl : MonoBehaviour{
         if(currentWaypoint >= path.vectorPath.Count){ //if current waypoint to follow is beyond the end of the path, reach end of path and stop
             reachedEndOfPath = true; //reached end of path
             path = null; //clear path
+            goingToTalkPoint = false;
             direction = Vector2.zero; //direction is nothing (used for sprite direction control)
             return; //exit
         }else{

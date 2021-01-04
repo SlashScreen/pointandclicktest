@@ -2,6 +2,8 @@
     "items":[
         {"name":"cube","id":1,"iconPath":"Icons/cube_temp"},
         {"name":"stick","id":2,"iconPath":"icons/stick_temp"},
-        {"name":"stick and cube","id":3,"iconPath":"Icons/stick_cube_temp"}
+        {"name":"stick and cube","id":3,"iconPath":"Icons/stick_cube_temp"},
+        {"name":"phone","id":4,"iconPath":"Icons/phone"},
+        {"name":"keys","id":5,"iconPath":"Icons/keys"}
     ]
 }

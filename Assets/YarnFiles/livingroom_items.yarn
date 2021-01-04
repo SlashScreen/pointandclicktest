@@ -1,0 +1,160 @@
+title: tv.use
+tags: 
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 4>>
+    i don't have the right cable. not that i need to do that right now anyway.
+<<else>>
+    i can't plug that into that.
+<<endif>>
+<<set $selectedInventory to 0>>
+===
+
+title: tv.look
+tags:
+---
+<<SetSpeaker Zero>>
+i got a new tv recently. it's small, but it has nice speakers.
+===
+
+title: tv.channel
+tags:
+---
+<<SetSpeaker Zero>>
+<<ChangeChannel TVsprite>> //change channel
+<<if $channel == 0>>
+    there's a rat girl on tv. she needs to brush her hair. but the eyeshadow is on point.
+    wait, she just got 3 hours of sleep. like always.
+<<elseif $channel == 1>>
+    it's a segment dedicated to a magical money number that's supposed to make my life better if it goes up.
+    many people died during the ones above incident to keep it a big number. but my life didn't get any better.
+<<elseif $channel == 2>>
+    this channel showed up a while ago. it's just a video feed of organs or something.
+    its accompanied by a garbled mimicking of human speech. its usually nonsense, but recently it's gotten more coherent.
+    the tv started tuning itself to this channel sometimes after that gross stuff in my room showed up.
+<<elseif $channel == 3>>
+    it's the news. have you ever wanted depression to get beamed into your eyeballs, but didn't have a social media account. well worry no more.
+    right now they are covering a mass shooting that happened today. i guess they got bored of the one that happened yesterday.
+<<elseif $channel == 4>>
+    this is a cartoon i found on YouShare when i was 12, which prompted me to learn bass guitar.
+    looks like i caught the credits. what a shame.
+<<endif>>
+===
+
+
+
+title: box.use
+tags:
+---
+<<SetSpeaker Zero>>
+the box is totally full.
+<<set $selectedInventory to 0>>
+===
+
+title: box.look
+tags:
+---
+<<SetSpeaker Zero>>
+it's fully network crap from my last job. i got laid off a few months ago, and i haven't bothered to move the box.
+"Osmacorp: We Own You." quite the shift in tone from their old motto, "Evil Leads to Dispair."
+===
+
+
+
+title: couch.use
+tags:
+---
+<<SetSpeaker Zero>>
+why would i do that. i need that.
+<<set $selectedInventory to 0>>
+===
+
+title: couch.look
+tags:
+---
+<<SetSpeaker Zero>>
+this sofa has been through hell and back with me. no was am i selling it.
+not that anyone would want to buy a couch infused with my ass musk.
+<<SetSilence True>>
+...
+<<SetSilence False>>
+at least i hope not.
+===
+
+title: couch.sit
+tags:
+---
+if i sit down i will never get back up.
+===
+
+
+
+title: center.use
+tags:
+---
+<<SetSpeaker Zero>>
+it doesn't need any more crap on it.
+<<set $selectedInventory to 0>>
+===
+
+title: center.look
+tags:
+---
+<<SetSpeaker Zero>>
+this cable situation is out of control.
+also, i stopped drinking soda 4 months ago...
+===
+
+title: center.interact
+tags:
+---
+<<SetSpeaker Zero>>
+today is a day for pizza, not video games. ...well, maybe later.
+===
+
+title: laptop.use
+tags:
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 4>>
+    this isn't my work phone.
+<<elseif $selectedInventory == 5>>
+    i unlock my computer with a 2 factor authentication dongle thing, not my house keys.
+<<else>>
+    those two don't go together.
+<<endif>>
+<<set $selectedInventory to 0>>
+===
+
+title: laptop.look
+tags:
+---
+<<SetSpeaker Zero>>
+its a craptop from work. it just had spreadsheets and eclipse on it. nothing exciting, like rgb gamer shitbarf.
+===
+
+
+
+title: plate.use
+tags:
+---
+<<SetSpeaker Zero>>
+how would i do that.
+<<set $selectedInventory to 0>>
+===
+
+title: plate.look
+tags:
+---
+<<SetSpeaker Zero>>
+heh.
+it's genuine. im sure it's a felony to own this.
+it got off kilter about a year ago during a quake from the red zone. i haven't bothered to fix it.
+===
+
+title: plate.fix
+tags:
+---
+<<SetSpeaker Zero>>
+nah.
+===
