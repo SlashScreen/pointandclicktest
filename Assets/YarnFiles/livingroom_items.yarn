@@ -158,3 +158,38 @@ tags:
 <<SetSpeaker Zero>>
 nah.
 ===
+
+
+
+title: shoe.use
+tags:
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 5>>
+    i love putting my keys in the safest place: my shoes.
+<<else>>
+    they don't fit.
+<<endif>>
+===
+
+title: shoe.look
+tags:
+---
+<<SetSpeaker Zero>>
+ah, there's my shoe. how did that get there.
+===
+
+title: shoe.take
+tags:
+---
+<<SetSpeaker Zero>>
+ah, there's my left shoe.
+<<Hide Shoe1>>
+<<removeShoesLivingRoom>>
+<<AddItem 6>> //add the shoe 
+<<if seeIfHasItem(7) == true>>
+    now i've got both.
+<<else>>
+    that's one down.
+<<endif>>
+===
