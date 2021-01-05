@@ -7,6 +7,7 @@ public class scenemanager : Singleton<MonoBehaviour>
 {
     // Start is called before the first frame update
     int ind;
+    bool doOnLoadBehavior = true;
     void Start()
     {
         //loadscene("Testrange");
@@ -30,13 +31,23 @@ public class scenemanager : Singleton<MonoBehaviour>
         SceneManager.LoadScene("Persistent");
     }
 
+    public void LoadSceneAdditive(string s){ //meant for minigames
+        doOnLoadBehavior = false;
+        SceneManager.LoadScene(s,LoadSceneMode.Additive);
+    }
+
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
-        foreach(var point in GameObject.FindObjectsOfType<PlayerSpawn>()){ //setplayerposition
-            Debug.Log(point.index);
-            if (point.index == ind ){
-                GameObject.Find("Player").transform.position = point.transform.position;
+        if (doOnLoadBehavior){
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
+            foreach(var point in GameObject.FindObjectsOfType<PlayerSpawn>()){ //setplayerposition
+                Debug.Log(point.index);
+                if (point.index == ind ){
+                    GameObject.Find("Player").transform.position = point.transform.position;
+                }
             }
+        }
+        else{
+            doOnLoadBehavior = true;
         }
     }
 }

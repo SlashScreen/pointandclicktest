@@ -245,6 +245,8 @@ MonoBehaviour:
   options:
   - tooltip: Look
     node: bass.look
+  - tooltip: Play
+    node: bass.play
   customFlag: 0
   customScript:
     m_PersistentCalls:
@@ -983,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab057f01a2c20643b0c8374e1eb77f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useNode: graffiiti,use
+  useNode: graffiiti.use
   yarnDialog: {fileID: 0}
   options:
   - tooltip: Look
@@ -1674,6 +1676,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2020284487}
   - component: {fileID: 2020284488}
+  - component: {fileID: 2020284490}
+  - component: {fileID: 2020284489}
   m_Layer: 9
   m_Name: turntable
   m_TagString: Clickable
@@ -1721,6 +1725,49 @@ MonoBehaviour:
       m_Calls: []
   hidden: 0
   talkPoint: {fileID: 1976584605}
+--- !u!114 &2020284489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020284486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6480ff7f0cedf7c4e9f2d4c11ae0ecfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: Record
+--- !u!60 &2020284490
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020284486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 0.9510565, y: 0.30901712}
 --- !u!1001 &2022033643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1734,11 +1781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2668426
+      value: 1.2668436
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.112540066
+      value: -0.112499535
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.z
