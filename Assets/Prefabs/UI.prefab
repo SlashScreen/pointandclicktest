@@ -4084,6 +4084,8 @@ MonoBehaviour:
   yarnScripts:
   - {fileID: 2480198943629176163, guid: 8de39f7b19bf0b4438b4cc86e8e46000, type: 3}
   - {fileID: 2480198943629176163, guid: 7014358777d585a4eb924c9bfee70972, type: 3}
+  - {fileID: 2480198943629176163, guid: 640fa1a464d642840ac26ab5db7cc0ab, type: 3}
+  - {fileID: 2480198943629176163, guid: 65c2ff2a2353f684ea4784012adfd27a, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}

@@ -184,8 +184,8 @@ tags:
 ---
 <<SetSpeaker Zero>>
 ah, there's my left shoe.
+<<Invoke Shoe1>>
 <<Hide Shoe1>>
-<<removeShoesLivingRoom>>
 <<AddItem 6>> //add the shoe 
 <<if seeIfHasItem(7) == true>>
     now i've got both.

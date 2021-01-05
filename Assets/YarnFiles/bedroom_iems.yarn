@@ -1,0 +1,186 @@
+title: bass.use
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 5>>
+    now that i think about it, sliding my keys across the strings would make a cool noise. i would love to sample that.
+    i think that's similar to the technique they used to make the phone booth's time warp noise in Professor When.
+<<else>>
+    this doesn't make an appropriate guitar pick.
+<<endif>> 
+===
+
+title: bass.look
+---
+<<SetSpeaker Zero>>
+i learned how to play bass in middle school and high school. i don't really play anymore, but i still have my bass.
+very useful for whenever i need to making a track that sounds like a era 1 Grillboyz song.
+===
+
+title: bass.play
+---
+<<SetSpeaker Zero>>
+i lost my pick down the side of my bed and i can't be fucked to retrieve it. //TODO: play bass
+===
+
+
+
+title: poster.use
+---
+<<SetSpeaker Zero>>
+it looks good enough as-is.
+===
+
+title: poster.look
+---
+<<SetSpeaker Zero>>
+it's my poster for Das Ding, a fantastic german horror movie from the 80s by a guy named Johannes Tischler. the poster is famous for being shitty in a beautiful way.
+the monster in the movie looks like my dreams after i cross through the red zone. 
+===
+
+
+
+title:graffiti.use
+---
+<<SetSpeaker Zero>>
+i can't paint with this. well, maybe i can, with the right amount of force and willpower.
+===
+
+title: graffiti.look
+---
+<<SetSpeaker Zero>>
+a worrying amount of my decisions are fuelled purely by spite. i'm never gonna get back my deposit anyways.
+===
+
+
+title: phone.use
+---
+<<SetSpeaker Zero>>
+contrary to the popular saying, there is not, in fact, an app for that.
+===
+
+title: phone.look
+---
+<<SetSpeaker Zero>>
+it's my smartphone. it's served me well throughout the years, but planned obsolescence is starting to take its toll.
+===
+
+title: phone.take
+---
+<<SetSpeaker Zero>>
+<<Invoke phone>> //change background
+<<AddItem 4>> //add phone
+wouldn't want to leave home without my nightmare rectangle.
+===
+
+
+
+title: computer.use
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 4>>
+    i've already downloaded all the music that i've, erm, aquired.
+<<else>>
+    maybe in a world with a single universal cable standard.
+<<endif>>
+===
+
+title:computer.look
+---
+<<SetSpeaker Zero>>
+it's my computer and its desk. this is where i "pown" the "noobs" in an admirably epic manner. it's also where i code and make music. and the desk where i bang my head when nothing is working right.
+i want to get a computer case that's translucent plastic like late 90's computers. that's way more stylish than tempered glass side panels.
+it's been rather inconvenient to use since my chair disappeared last thursday.
+===
+
+title: computer.on
+---
+<<SetSpeaker Zero>>
+<<Invoke computer>> //toggle on and off
+ah yes, my favorite YouShare let's play series. i watch this particular series every time i'm feeling depressed.
+<<SetSilence True>>
+...
+<<SetSilence False>>
+i've binge watched it 5 times in the last month.
+===
+
+
+
+title: turntable.use
+---
+<<SetSpeaker Zero>>
+i can't play this medium with this player, unfortunately.
+===
+
+title: turntable.look
+---
+<<SetSpeaker Zero>>
+my bluetooth turntable, with my massive collection of records. it's like the library of alexandria up in this bitch.
+===
+
+title: turntable.browse
+---
+<<invoke turntable>> //TODO: turntable minigame
+===
+
+
+
+title: bed.use
+---
+<<SetSpeaker Zero>>
+inanimate objects do not need to sleep.
+===
+
+title: bed.look
+---
+<<SetSpeaker Zero>>
+my luxurious sleeping quarters. fit to accomodate me and me alone. 
+forever.
+===
+
+title: bed.lay
+---
+<<SetSpeaker Zero>>
+it took this much effort to get out of it, laying back down would be like that greek guy. what was his name. sissyphus. siphilis. sisophus. sis. boulder hill guy.
+===
+
+
+
+title: bra.use
+---
+<<SetSpeaker Zero>>
+this item does not have breasts.
+===
+
+title: bra.look
+---
+<<SetSpeaker Zero>>
+watch out boys. it's an article of clothing meant to contain breasts. titties, boobies, milkers, badonkadonk counterbalance, bazongas, bablambobinos. wowie zowie. make a single file line please. no pushing.
+===
+
+title: bra.wear
+---
+<<SetSpeaker Zero>>
+i've been wearing this one for a week already.
+===
+
+
+
+title: cover.use
+---
+<<SetSpeaker Zero>>
+the covering is barely secure as it is.
+===
+
+title:cover.look
+---
+<<SetSpeaker Zero>>
+a few months ago a hole appeared in my wall and this, uh, stuff started coming out of it. it was like, that kind of mold that's fluffy with long strands of hair that grows on spaghetti, but made out of skin instead.
+it smelled like water that a corpse has been rotting in. i talked to my landlord about it, but he was being really weird about it, and i gave up and nailed this plastic cover on it. it's worked so far.
+when it was uncovered, it kept giving me sleep paralysis, which was inconvenient.
+===
+
+title: cover.remove
+---
+<<SetSpeaker Zero>>
+i don't fancy stinking up the room again. besides, cleaning that crap is a nightmare. it leaves terrible stains.
+===

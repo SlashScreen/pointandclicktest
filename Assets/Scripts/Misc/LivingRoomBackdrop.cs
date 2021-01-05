@@ -5,11 +5,8 @@ using UnityEngine;
 public class LivingRoomBackdrop : MonoBehaviour
 {
     public Sprite noshoes;
-    private void Start()
-    {
-        GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>().dia.AddCommandHandler("removeShoesLivingRoom",removeShoes);
-    }
-    public void removeShoes(string[] s){
+    
+    public void removeShoes(){
         Debug.Log("shoes removed");
         GetComponent<SpriteRenderer>().sprite = noshoes;
     }
