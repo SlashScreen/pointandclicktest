@@ -7,6 +7,7 @@ public class UnloadScene : MonoBehaviour
 {
     public void Unload(){
         //unload scene this script is in
+        //GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>().dia.Stop();
         SceneManager.UnloadSceneAsync(gameObject.scene);
     }
 }

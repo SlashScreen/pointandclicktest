@@ -7,7 +7,8 @@ public class DoorScript : MonoBehaviour
 {
     public string room;
     public int spawnpoint = 0;
+    public scenemanager sm;
     public void OpenDoor(){
-        GameObject.Find("scenemanager").GetComponent<scenemanager>().loadscene(room,spawnpoint); //load scene "room" at spawnpoint "spawnpoint"
+        sm.loadscene(room,spawnpoint); //load scene "room" at spawnpoint "spawnpoint"
     }
 }

@@ -37,10 +37,9 @@ public class scenemanager : Singleton<MonoBehaviour>
     }
 
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
         if (doOnLoadBehavior){
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
             foreach(var point in GameObject.FindObjectsOfType<PlayerSpawn>()){ //setplayerposition
-                Debug.Log(point.index);
                 if (point.index == ind ){
                     GameObject.Find("Player").transform.position = point.transform.position;
                 }
@@ -49,5 +48,6 @@ public class scenemanager : Singleton<MonoBehaviour>
         else{
             doOnLoadBehavior = true;
         }
+        
     }
 }

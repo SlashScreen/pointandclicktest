@@ -193,3 +193,23 @@ ah, there's my left shoe.
     that's one down.
 <<endif>>
 ===
+
+
+
+title: halldoor.use
+---
+<<SetSpeaker Zero>>
+huh?
+===
+
+title: halldoor.look
+---
+<<SetSpeaker Zero>>
+it's the hallway.
+===
+
+title: halldoor.go
+---
+<<SetSpeaker Zero>>
+<<Invoke hallwaydoor>>
+===

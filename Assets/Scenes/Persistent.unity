@@ -286,18 +286,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 134594704882077901, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -750.2287
+      objectReference: {fileID: 0}
     - target: {fileID: 1954237764597574198, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
-    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
-      propertyPath: yarnScripts.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
-      propertyPath: yarnScripts.Array.data[2]
-      value: 
-      objectReference: {fileID: 2480198943629176163, guid: 640fa1a464d642840ac26ab5db7cc0ab, type: 3}
     - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: defaultVariables.Array.size
       value: 4
@@ -370,12 +366,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6613440185192896394, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613440185192896394, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7576369789822807729, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7576369789822807729, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576369789822807729, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8527834079761730990, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}

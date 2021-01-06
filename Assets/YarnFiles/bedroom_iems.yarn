@@ -119,7 +119,7 @@ my bluetooth turntable, with my massive collection of records. it's like the lib
 
 title: turntable.browse
 ---
-<<invoke turntable>> //TODO: turntable minigame
+<<Invoke turntable>> //TODO: turntable minigame
 ===
 
 

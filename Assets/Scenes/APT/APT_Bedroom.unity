@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2668212483872387586, guid: e3627d1dd55d0124dbb3ca500ddbdf97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.610897
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 2668212483872387586, guid: e3627d1dd55d0124dbb3ca500ddbdf97, type: 3}
       propertyPath: m_LocalPosition.z
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseScale: 1
-  sortingOffet: -0.1
+  sortingOffet: -0.97
   scaleToSize: 0
 --- !u!212 &509339591
 SpriteRenderer:
@@ -795,7 +795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9545655
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1463,11 +1463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9545655
+      value: -5.54
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8607085
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1578,7 +1578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -47
   m_Sprite: {fileID: 21300000, guid: d1c65696a7a24394c9310b584015ea92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1621,7 +1621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9545655
+      value: -7.82
       objectReference: {fileID: 0}
     - target: {fileID: 4844797431545563548, guid: ecdbb446be00b204fbbc5f641f3a9d59, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1678,6 +1678,7 @@ GameObject:
   - component: {fileID: 2020284488}
   - component: {fileID: 2020284490}
   - component: {fileID: 2020284489}
+  - component: {fileID: 2020284491}
   m_Layer: 9
   m_Name: turntable
   m_TagString: Clickable
@@ -1693,7 +1694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020284486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69543445, y: -0.76929164, z: -10.154776}
+  m_LocalPosition: {x: 0.69543445, y: -0.76929164, z: -3.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1976584605}
@@ -1722,7 +1723,19 @@ MonoBehaviour:
   customFlag: 0
   customScript:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2020284489}
+        m_TargetAssemblyTypeName: loadminigame, Assembly-CSharp
+        m_MethodName: LoadMinigame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hidden: 0
   talkPoint: {fileID: 1976584605}
 --- !u!114 &2020284489
@@ -1763,11 +1776,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -10.423465, y: -0.67236793}
+      - {x: -12.340459, y: -1.5507716}
+      - {x: -12.207859, y: -4.370008}
+      - {x: -9.210511, y: -4.54422}
+      - {x: -8.0479765, y: -3.750078}
+      - {x: -7.843292, y: -0.8010892}
+--- !u!114 &2020284491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020284486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb665fbfd404d8a4e81193a1f4d7e55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2022033643
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4114,7 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 5826631675426228628}
-  textSpeed: 0.05
+  textSpeed: 0.1
   optionButtons:
   - {fileID: 5638011373662537247}
   - {fileID: 190109001632886281}
