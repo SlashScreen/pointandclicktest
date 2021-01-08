@@ -183,11 +183,11 @@ title: shoe.take
 tags:
 ---
 <<SetSpeaker Zero>>
-ah, there's my left shoe.
+ah, there's my right shoe.
 <<Invoke Shoe1>>
 <<Hide Shoe1>>
-<<AddItem 6>> //add the shoe 
-<<if seeIfHasItem(7) == true>>
+<<AddItem 7>> //add the shoe 
+<<if seeIfHasItem(6) == true>>
     now i've got both.
 <<else>>
     that's one down.

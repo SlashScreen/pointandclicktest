@@ -9,6 +9,7 @@ public class DoorScript : MonoBehaviour
     public int spawnpoint = 0;
     public scenemanager sm;
     public void OpenDoor(){
+        Debug.Log("Oepning door to " + room);
         sm.loadscene(room,spawnpoint); //load scene "room" at spawnpoint "spawnpoint"
     }
 }

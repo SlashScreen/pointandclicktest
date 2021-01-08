@@ -1,0 +1,115 @@
+﻿title: knife.use
+tags:
+---
+<<SetSpeaker Zero>>
+i'd rather not stab this.
+===
+
+title: knife.look
+tags:
+---
+<<SetSpeaker Zero>>
+i was bored. good thing i'm not in europe, otherwise my knife would break before the house.
+===
+
+
+
+title: knifecan.use
+tags:
+---
+<<SetSpeaker Zero>>
+i don't need to do this.
+===
+
+title: knifecan.look
+tags:
+---
+<<SetSpeaker Zero>>
+it's an art piece. it's um. representative of. uh. jesus on the cross. and like. consumerism.
+...something like that.
+===
+
+
+
+title: cork.use
+tags:
+---
+<<SetSpeaker Zero>>
+i don't need to pin this to the board.
+===
+
+title: cork.look
+tags:
+---
+<<SetSpeaker Zero>>
+it's a corkboard i use for reminders. i hardly ever look at it.
+===
+
+
+
+title: bitch.use
+tags:
+---
+<<SetSpeaker Zero>>
+it would throw the composition off.
+===
+
+title: bitch.look
+tags:
+---
+<<SetSpeaker Zero>>
+those wooden letters from Mikhail's are an excellent investment.  
+===
+
+
+
+title:HallDoorGeneric.use
+---
+<<SetSpeaker Zero>>
+i would love to use this item on the abstract concept of a threshold, if i knew how.
+===
+
+
+
+title: HallBathDoor.look
+tags:
+---
+<<SetSpeaker Zero>>
+this goes to my bathroom.
+===
+
+title: HallBathDoor.go
+tags:
+---
+<<Invoke BathroomDoor>>
+===
+
+
+
+title: HallRoomDoor.look
+tags:
+---
+<<SetSpeaker Zero>>
+this goes to my bedroom.
+===
+
+title: HallRoomDoor.go
+tags:
+---
+<<Invoke RoomDoor>>
+===
+
+
+
+title: HallLivingDoor.look
+tags:
+---
+<<SetSpeaker Zero>>
+this goes to my living room.
+===
+
+title: HallLivingDoor.go
+tags:
+---
+<<Invoke LivingRoomDoor>>
+===

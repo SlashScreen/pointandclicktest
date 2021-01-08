@@ -6,6 +6,7 @@
         {"name":"phone","id":4,"iconPath":"Icons/phone"},
         {"name":"keys","id":5,"iconPath":"Icons/keys"},
         {"name":"shoel","id":6,"iconPath":"Icons/shoel"},
-        {"name":"shoel","id":7,"iconPath":"Icons/shoer"}
+        {"name":"shoel","id":7,"iconPath":"Icons/shoer"},
+        {"name":"tampon","id":8,"iconPath":"Icons/tampon"}
     ]
 }

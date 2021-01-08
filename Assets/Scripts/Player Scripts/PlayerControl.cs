@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using Pathfinding;
 using Yarn.Unity;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 //OK yes I know this is a disASter, orginizationally. at least im not yandev ok
 
@@ -111,6 +112,10 @@ public class PlayerControl : MonoBehaviour{
         return inventory.Exists (x => x.id == item[0].AsNumber);
     }
 
+    public bool ItemInInventory_NoYarn(int item){
+        return inventory.Exists (x => x.id == item);
+    }
+
     public void AddCompletedNode(string node){ //might not be necessary
         //adds completed node string name to the list. 
         activatedNodes.Add(node);
@@ -164,6 +169,7 @@ public class PlayerControl : MonoBehaviour{
         rb = GetComponent<Rigidbody2D>();
         JSON = GetComponent<JSONItemParser>();
         dropdown = GameObject.Find("Menu").GetComponent<InGameDropdown>();
+        SceneManager.sceneLoaded += OnLoad;
         //set up yarn commands unique to this player
         d.dia.AddCommandHandler("AddItem",AddItem);
         d.dia.AddCommandHandler("RemoveItem",RemoveItem);
@@ -251,6 +257,10 @@ public class PlayerControl : MonoBehaviour{
             dropdown.Cancel();
         }
     }
+
+     void OnLoad(Scene scene, LoadSceneMode sceneMode){
+        StopPlayer(new string[] {""});
+     }
 
     void FixedUpdate(){ //physics update
         //Determining if player needs to move

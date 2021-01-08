@@ -95,6 +95,7 @@ it's been rather inconvenient to use since my chair disappeared last thursday.
 title: computer.on
 ---
 <<SetSpeaker Zero>>
+<<PlaySFX SFXAudio SFX/grumps>>
 <<Invoke computer>> //toggle on and off
 ah yes, my favorite YouShare let's play series. i watch this particular series every time i'm feeling depressed.
 <<SetSilence True>>
@@ -183,4 +184,18 @@ title: cover.remove
 ---
 <<SetSpeaker Zero>>
 i don't fancy stinking up the room again. besides, cleaning that crap is a nightmare. it leaves terrible stains.
+===
+
+
+
+title: doortohall.look
+---
+<<SetSpeaker Zero>>
+this goes to the hallway.
+===
+
+title: doortohall.go
+---
+<<SetSpeaker Zero>>
+<<Invoke door>>
 ===

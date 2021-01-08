@@ -17,13 +17,16 @@ public class CameraScript : MonoBehaviour
     }
 
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
+        Debug.Log(scene);
         brain = GetComponent<CinemachineBrain>();
         StartCoroutine(FocusPlayer());
     }
 
     IEnumerator FocusPlayer(){
         yield return new WaitUntil(() => brain.ActiveVirtualCamera != null); //wait until camera exists
+        Debug.Log(brain.ActiveVirtualCamera);
         FocusCamera(new string[] {"Player"}); //when scene load, focus camera on player
+        Debug.Log(brain.ActiveVirtualCamera.Follow.gameObject.name);
     }
 
     [YarnCommand("FocusCamera")]

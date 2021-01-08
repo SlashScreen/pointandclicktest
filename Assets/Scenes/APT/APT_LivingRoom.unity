@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 1079007129}
   - component: {fileID: 1079007128}
   - component: {fileID: 1079007127}
+  - component: {fileID: 1079007130}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1538,6 +1539,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1079007130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079007126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5217bbbfcb225bd4f8626d11ccbdb514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1219290304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,8 +2397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a04a838a806fea47b37b50b07c66f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: APT_Bedroom
-  spawnpoint: 0
+  room: APT_Hallway
+  spawnpoint: 2
   sm: {fileID: 2006617224}
 --- !u!114 &2006617222
 MonoBehaviour:

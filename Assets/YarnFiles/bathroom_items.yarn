@@ -1,0 +1,84 @@
+title: shoel.use
+---
+<<SetSpeaker Zero>>
+i don't think my shoe would appreciate this gift.
+===
+
+title: shoel.look
+---
+<<SetSpeaker Zero>>
+i... don't remember putting this here?...
+===
+
+title: shoel.take
+tags:
+---
+<<SetSpeaker Zero>>
+ah, there's my left shoe.
+<<Invoke Shoe>>
+<<Hide Shoe>>
+<<AddItem 6>> //add the shoe 
+<<if seeIfHasItem(7) == true>>
+    now i've got both.
+<<else>>
+    that's one down.
+<<endif>>
+===
+
+
+
+title: tampon.use
+---
+<<SetSpeaker Zero>>
+<<if $selectedInventory == 8>>
+    i guess i don't need this.
+    <<RemoveItem 8>>
+<<else>>
+    contrary to first popular belief, a tampon box should only be used to store tampons.
+<<endif>>
+===
+
+title: tampon.look
+---
+<<SetSpeaker Zero>>
+these come in handy when my uterus decides to shed its lining, making me miserable in the process.
+===
+
+title: tampon.take
+---
+<<SetSpeaker Zero>>
+<<if seeIfHasItem(8)>>
+    i already grabbed one.
+<<else>>
+    can't hurt to take one with me.
+<<endif>>
+===
+
+
+
+title: towel.use
+---
+<<SetSpeaker Zero>>
+nothing i have needs to be dried.
+===
+
+title: towel.look
+---
+<<SetSpeaker Zero>>
+it's a bit stiff. i might need to do laundry at some point.
+===
+
+
+
+title: BathDoorToHallway.look
+---
+<<SetSpeaker Zero>>
+this portal leads to the hallway.
+you know, it's entirely possible that this room is drifting in space and is just surrounded by a portal connecting to my apartment.
+there's no real way to prove otherwise.
+===
+
+title: BathDoorToHallway.go
+---
+<<Invoke door>>
+===
