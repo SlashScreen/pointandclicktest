@@ -13,9 +13,8 @@ public class PlayerYarn : MonoBehaviour
     private void Start()
     {
         main = GetComponent<PlayerMain>();
+        main.d.dia.AddFunction("Visited",1,IsNodeVisited);
     }
-
-
     //yarn conversation stuff
     void AddNode(String node){
         activatedNodes.Add(node);
@@ -28,9 +27,15 @@ public class PlayerYarn : MonoBehaviour
         inConversation = false;
     }
 
-    public void AddCompletedNode(string node){ //might not be necessary
+    public void AddCompletedNode(){ //might not be necessary
         //adds completed node string name to the list. 
-        activatedNodes.Add(node);
+        if (!activatedNodes.Contains(main.d.dia.CurrentNodeName)){
+            activatedNodes.Add(main.d.dia.CurrentNodeName);
+        }
+    }
+
+    public object IsNodeVisited(Yarn.Value[] name){ //returns if node already visited
+        return activatedNodes.Contains(name[0].AsString);
     }
 
     public void StartUseDialog(){

@@ -225,13 +225,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
 --- !u!114 &280947024 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6781141106083225342, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2566233211481953684, guid: 2f189882127d0d047bcbdc80b4f430bb, type: 3}
   m_PrefabInstance: {fileID: 280947023}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661c70f581d51794ab810991a63d6a36, type: 3}
+  m_Script: {fileID: 11500000, guid: d4cb88f755d609849aa0566ce1dcf46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &280947025 stripped
@@ -317,6 +317,34 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 280947024}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280947025}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCompletedNode
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerYarn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638011373541677128, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
+      propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5638011373541677142, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: defaultVariables.Array.size
       value: 4
