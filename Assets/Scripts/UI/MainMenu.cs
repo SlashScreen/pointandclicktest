@@ -54,7 +54,7 @@ public class MainMenu : MonoBehaviour
                 sm.loadscene(firstLevel);
 
             }else if (mode == "Load"){
-                GameObject.Find("Menu").GetComponent<SaveManager>().Load(s,GameObject.Find("Player").GetComponent<PlayerControl>());
+                GameObject.Find("Menu").GetComponent<SaveManager>().Load(s,GameObject.Find("Player").GetComponent<PlayerMain>());
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
         }else if(scene.name == firstLevel){

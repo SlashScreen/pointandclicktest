@@ -37,16 +37,16 @@ public class SaveManager : MonoBehaviour{
         Directory.CreateDirectory(Application.persistentDataPath + "/saves");
     }
 
-    public void Save(string SaveName, PlayerControl player){
+    public void Save(string SaveName, PlayerMain player){
         Debug.Log("Saving Game...");
         //SAVE game
         //TODO: Save custom states for interactive objects
         SaveGame sv = new SaveGame(); //create object
 
-        foreach(var item in player.inventory){ //store item IDs (saves on space and processing time)
+        foreach(var item in player.inventory.inventory){ //store item IDs (saves on space and processing time)
             sv.inventory.Add(item.id);
         }
-        sv.activatedNodes = player.activatedNodes; //store nodes
+        sv.activatedNodes = player.yarn.activatedNodes; //store nodes
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
@@ -61,22 +61,22 @@ public class SaveManager : MonoBehaviour{
         Debug.Log("Game Saved.");
     }
 
-    public void Load(string selectedFile, PlayerControl player){
+    public void Load(string selectedFile, PlayerMain player){
         Debug.Log("Loading Game...");
         //LOAD game
 
         //file loading
         flagsl.Clear(); //clear flags list
-        player.inventory.Clear(); //clear inventory
+        player.inventory.inventory.Clear(); //clear inventory
         StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile); //open file
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
         sr.Close(); //close file
 
-        player.activatedNodes = sv.activatedNodes; //set activated nodes
+        player.yarn.activatedNodes = sv.activatedNodes; //set activated nodes
         flagsl = sv.flags; //set flags
 
         foreach(var item in sv.inventory){ //add all saved items
-            player.AddItem(new string[] { item.ToString() }); //Add item to inventory
+            player.inventory.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
 
         sm.loadscene(sv.room); //load the scene

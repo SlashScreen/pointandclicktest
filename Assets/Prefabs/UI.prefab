@@ -5542,7 +5542,7 @@ GameObject:
   - component: {fileID: 5638011375366298711}
   - component: {fileID: 5638011375366298710}
   m_Layer: 5
-  m_Name: options panel
+  m_Name: optionspanel
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5995,7 +5995,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7576369789822807729}
   m_Direction: 0
   m_Value: -0.000000081355395
-  m_Size: 0.5951439
+  m_Size: 0.60180527
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6415,6 +6415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
+  flagsl: []
 --- !u!1 &6838740989968074182
 GameObject:
   m_ObjectHideFlags: 0

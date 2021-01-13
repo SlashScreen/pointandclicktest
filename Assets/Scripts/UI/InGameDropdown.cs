@@ -8,7 +8,7 @@ using System.Linq;
 
 public class InGameDropdown : MonoBehaviour
 {
-    public PlayerControl player;
+    public PlayerMain player;
     public InputField input;
     public GameObject panel;
     public Dropdown dropdown;
