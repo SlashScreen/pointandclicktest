@@ -29,6 +29,6 @@ public class MainMenuLoadDropdown : MonoBehaviour
     }
 
     public void PassItThrough(){
-        GameObject.Find("Menu").GetComponent<MainMenu>().completeLoad(dropdown.options[dropdown.value].text);
+        GameObject.Find("MainMenu").GetComponent<MainMenu>().completeLoad(dropdown.options[dropdown.value].text);
     }
 }

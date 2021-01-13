@@ -1720,7 +1720,7 @@ GameObject:
   - component: {fileID: 1851990915}
   - component: {fileID: 1851990914}
   m_Layer: 0
-  m_Name: bedroom_bg_phone
+  m_Name: BadBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

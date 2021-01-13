@@ -2652,7 +2652,7 @@ GameObject:
   - component: {fileID: 1827758800}
   - component: {fileID: 1827758801}
   m_Layer: 5
-  m_Name: Menu
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2783,6 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 1827758800}
+  flagsl: []
 --- !u!1 &1899181352
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,12 +28,15 @@ public class SaveManager : MonoBehaviour{
         public int state;
     }
     public scenemanager sm;
-    List<itemFlags> flags = new List<itemFlags>();
+
+    public List<itemFlags> flagsl = new List<itemFlags>();
+    List<itemFlags> flagslCache = new List<itemFlags>();
 
     private void Start()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/saves");
     }
+
     public void Save(string SaveName, PlayerControl player){
         Debug.Log("Saving Game...");
         //SAVE game
@@ -47,35 +50,37 @@ public class SaveManager : MonoBehaviour{
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
-        Debug.Log(flags.Count);
-        sv.flags = flags;
+
+        sv.flags = flagsl;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
 
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
         sw.Write(JSON);
         sw.Close();
+
         Debug.Log("Game Saved.");
     }
 
-    public  void Load(string selectedFile, PlayerControl player){
+    public void Load(string selectedFile, PlayerControl player){
         Debug.Log("Loading Game...");
         //LOAD game
 
         //file loading
+        flagsl.Clear(); //clear flags list
+        player.inventory.Clear(); //clear inventory
         StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile); //open file
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
         sr.Close(); //close file
 
-        flags.Clear(); //clear flags list
-        player.inventory.Clear(); //clear inventory
-
-        sm.loadscene(sv.room); //load the scene
-
         player.activatedNodes = sv.activatedNodes; //set activated nodes
-        flags = sv.flags; //set flags
+        flagsl = sv.flags; //set flags
+
         foreach(var item in sv.inventory){ //add all saved items
             player.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
+
+        sm.loadscene(sv.room); //load the scene
+
         player.transform.position = sv.pos; //set pos
         //player.drawer.updateInventory(player.inventory);
         Debug.Log("Game Loaded.");
@@ -88,16 +93,17 @@ public class SaveManager : MonoBehaviour{
         f.custom = custom;
         f.state = state;
 
-        if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
-            flags[flags.FindIndex(x => x.name == name)] = f;
+        if(flagsl.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
+            flagsl[flagsl.FindIndex(x => x.name == name)] = f;
         }else{ //else add it
-            flags.Add(f);
+            flagsl.Add(f);
         }
     }
 
     public itemFlags pullFlags(string name){ //pull flags from savegame
-        if(flags.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
-            return flags[flags.FindIndex(x => x.name == name)];
+        //PROBLEM: Flags cleared at this function. i dont know why.
+        if(flagsl.Exists(x => x.name == name)){ //if item with that name exists, return said item
+            return flagsl[flagsl.FindIndex(x => x.name == name)];
         }else{
             return new itemFlags();
         }

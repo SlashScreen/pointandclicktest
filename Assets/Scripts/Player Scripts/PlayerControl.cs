@@ -86,7 +86,6 @@ public class PlayerControl : MonoBehaviour{
         foreach(var di in JSON.drawer.items){ //loop through item config JSON, find object in there with same ID as the inventory
             //nts could be a lambda predicante
             if(di.id == id){//if id matches
-                Debug.Log("Added "+di.id);
                 return di; // return
             }
         }
@@ -98,7 +97,6 @@ public class PlayerControl : MonoBehaviour{
         //Adds item of ID item into inventory
         inventory.Add(NewItem(int.Parse(item[0]))); //calls function with int argument from string 
         drawer.updateInventory(inventory); //updates
-        Debug.Log(inventory.Count);
     }
 
     public void RemoveItem(string[] item){ //POTENTIAL ISSUE: if there is no item of ID in inventory it errors out

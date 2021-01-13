@@ -18,13 +18,12 @@ public class scenemanager : Singleton<MonoBehaviour>
         ind = index;
         
         for(int i=0; i<SceneManager.sceneCount;i++){
-            Debug.Log(SceneManager.GetSceneAt(i).name);
+            //Debug.Log(SceneManager.GetSceneAt(i).name);
             if (SceneManager.GetSceneAt(i).name != "Persistent"){
                 SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i).name);
             }
         }
         SceneManager.LoadScene(scene,LoadSceneMode.Additive);
-        
     }
 
     public void InitialLoad(string s){

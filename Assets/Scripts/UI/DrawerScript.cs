@@ -34,13 +34,10 @@ public class DrawerScript : MonoBehaviour
             items.Add(item); //add to list
             iter++; //index increment
         }
-        Debug.Log("Count " + items.Count);
     }
 
     public void passSelectedItem(int n){
-        Debug.Log("passSelectedItem");
         varstore.SetValue("$selectedInventory", new Yarn.Value(n));
-        Debug.Log(varstore.GetValue("$selectedInventory"));
     }
 
 }

@@ -53,7 +53,6 @@ public class InteractiveObject : MonoBehaviour
         if (hidden) { //if hidden in the save game, hide it
             gameObject.SetActive(false);
         }
-
     }
         
     void OnDisable()

@@ -32,7 +32,6 @@ public class MainMenu : MonoBehaviour
 
     public void load(){
         dropdown.SetActive(true);
-        
     }
 
     public void options(){
@@ -55,7 +54,7 @@ public class MainMenu : MonoBehaviour
                 sm.loadscene(firstLevel);
 
             }else if (mode == "Load"){
-                saveManager.Load(s,GameObject.Find("Player").GetComponent<PlayerControl>());
+                GameObject.Find("Menu").GetComponent<SaveManager>().Load(s,GameObject.Find("Player").GetComponent<PlayerControl>());
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
         }else if(scene.name == firstLevel){

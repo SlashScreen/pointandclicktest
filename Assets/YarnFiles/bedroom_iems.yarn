@@ -68,6 +68,7 @@ title: phone.take
 ---
 <<SetSpeaker Zero>>
 <<Invoke phone>> //change background
+<<Hide phone>>
 <<AddItem 4>> //add phone
 wouldn't want to leave home without my nightmare rectangle.
 ===
