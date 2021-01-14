@@ -37,9 +37,14 @@ public class PlayerUIInteraction : MonoBehaviour
         if(!main.control.goingToObject) //when clicked and not actively going to an object
         {
             UIPosition = main.control.mouseP; //set point where mouse clicked in world space
-            Vector2 mousePos2D = Camera.main.ScreenToWorldPoint(main.control.mouseP); //gets mouse point in world space
-
+            Vector3 mousePos2D = Camera.main.ScreenToWorldPoint(main.control.mouseP); //gets mouse point in world space
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
+
+            //mousePos2D.z = GameObject.FindGameObjectWithTag("BG").transform.position.z - Camera.main.transform.position.z;
+            //Ray ray = Camera.main.ScreenPointToRay(mousePos2D);
+            //RaycastHit hit;
+
+            Debug.DrawRay(Camera.main.transform.position, mousePos2D,Color.green,2);
 
             if (EventSystem.current.IsPointerOverGameObject()){
                 //if any UI clicked, exit out of script
@@ -47,8 +52,11 @@ public class PlayerUIInteraction : MonoBehaviour
             }
 
             if (hit.collider != null) { //if something is clicked on layer clickable
+                Debug.Log(hit.collider.gameObject.tag);
+                
 
                 if (hit.collider.gameObject.tag == "Minigame"){ //if minigame
+                    Debug.Log("Hit minigame surface");
                     return;
                 }
                 

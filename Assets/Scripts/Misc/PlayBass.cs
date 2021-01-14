@@ -28,9 +28,7 @@ public class PlayBass : MonoBehaviour
     }
 
     void Play(int i, string s){
-        Debug.Log(active);
         if(active){
-            Debug.Log(s);
             strings[i].Twang();
             string[] sfx = new string[1];
             sfx[0] = s;

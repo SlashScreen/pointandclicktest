@@ -635,11 +635,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0940094
+      value: -0.3078289
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28952003
+      value: 0.29016423
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 1796178415}
   m_Layer: 0
   m_Name: hallway_bg
-  m_TagString: Untagged
+  m_TagString: BG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 31621808}
   m_Layer: 0
   m_Name: bathroom_shoe
-  m_TagString: Untagged
+  m_TagString: BG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,11 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0202564
+      value: 0.96683824
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.92350805
+      value: 0.92323434
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.z

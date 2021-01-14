@@ -12,7 +12,12 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
     {
         Show();
         dia = GetComponent<DialogueRunner>();
+        dia.AddCommandHandler("Close",HideText);
         Time.timeScale = 1;
+    }
+
+    public void HideText(string[] args){
+        GameObject.Find("Dialogue Container").SetActive(false);
     }
 
     public void Show(){
