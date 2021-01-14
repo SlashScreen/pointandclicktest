@@ -44,7 +44,6 @@ public class PlayerUIInteraction : MonoBehaviour
             //Ray ray = Camera.main.ScreenPointToRay(mousePos2D);
             //RaycastHit hit;
 
-            Debug.DrawRay(Camera.main.transform.position, mousePos2D,Color.green,2);
 
             if (EventSystem.current.IsPointerOverGameObject()){
                 //if any UI clicked, exit out of script
