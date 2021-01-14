@@ -47,10 +47,14 @@ public class PlayerUIInteraction : MonoBehaviour
             }
 
             if (hit.collider != null) { //if something is clicked on layer clickable
+
+                if (hit.collider.gameObject.tag == "Minigame"){ //if minigame
+                    return;
+                }
                 
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
                     //"Clickable" *tag* is interactive objects, thats not totally clear
-                    
+
                     if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>()){ 
                         //If it is an interactive object or NPC
                         clickedObject = hit.collider.gameObject; //set clicked object

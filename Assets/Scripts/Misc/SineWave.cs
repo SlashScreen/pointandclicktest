@@ -8,6 +8,7 @@ public class SineWave : MonoBehaviour
     public float length = 5;
     public float amplitude;
     public bool reversed;
+    public float modifier = 1f;
     LineRenderer line;
     Vector3[] pts;
     void Start()
@@ -20,13 +21,8 @@ public class SineWave : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < pts.Length; i++){
-            pts[i].x = transform.position.x + ((length/length)*i); //set x
-            if(!reversed){ //vibrate string 
-                pts[i].y = Mathf.Sin(pts[i].x)*amplitude;
-            }else{
-                pts[i].y = Mathf.Sin(pts[i].x)*amplitude*-1;
-            }
-            
+            pts[i].x = transform.position.x + ((length/points)*i); //set x
+            pts[i].y = Mathf.Sin(pts[i].x)*amplitude*modifier;
             pts[i].z = transform.position.z;
         }
 

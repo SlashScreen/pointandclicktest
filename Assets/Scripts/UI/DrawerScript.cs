@@ -7,7 +7,7 @@ public class DrawerScript : MonoBehaviour
     List<GameObject> items = new List<GameObject>();//item buttons
     public GameObject prefab;
     public float offset = 100f;
-    public float shift = -400f;
+    public float shift = -850f;
     public GameObject dialogueObject;
     Yarn.VariableStorage varstore;
     
@@ -26,7 +26,7 @@ public class DrawerScript : MonoBehaviour
         int iter = 1; 
         items = new List<GameObject>();
         foreach (var i in inventory){
-            Vector3 place = new Vector3(shift + (offset*iter),-60,0.1f); //created the spot for the button to be placed based on which it is in the index (iter)
+            Vector3 place = new Vector3((offset*iter),-60,0.1f); //created the spot for the button to be placed based on which it is in the index (iter)
             GameObject item = Instantiate(prefab,place,Quaternion.identity); //refers to gameobject
             item.GetComponent<DrawerItemScript>().setUp(i, gameObject.GetComponent<DrawerScript>()); //run setup routine
             item.transform.SetParent(transform.Find("Viewport").Find("DrawerItems").transform); //set parent

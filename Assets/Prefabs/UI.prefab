@@ -4864,7 +4864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1285092099733972053, guid: 13a67875a9b9d594c8b58b6f20f72f58, type: 3}
   offset: 100
-  shift: -400
+  shift: -850
   dialogueObject: {fileID: 5638011373541677140}
 --- !u!114 &5833906939343841536
 MonoBehaviour:

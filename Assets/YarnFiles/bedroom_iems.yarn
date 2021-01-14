@@ -19,7 +19,9 @@ very useful for whenever i need to making a track that sounds like a era 1 Grill
 title: bass.play
 ---
 <<SetSpeaker Zero>>
-i lost my pick down the side of my bed and i can't be fucked to retrieve it. //TODO: play bass
+sure, i can plink at it for a bit.
+i haven't played it in a while. it's probably out of tune.
+<<LoadMinigame bass>>
 ===
 
 
@@ -121,7 +123,7 @@ my bluetooth turntable, with my massive collection of records. it's like the lib
 
 title: turntable.browse
 ---
-<<Invoke turntable>> //TODO: turntable minigame
+<<LoadMinigame turntable>> //TODO: turntable minigame
 ===
 
 

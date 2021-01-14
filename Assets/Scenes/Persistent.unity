@@ -391,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5638011374250088678, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: shift
-      value: -400
+      value: -850
       objectReference: {fileID: 0}
     - target: {fileID: 5638011374486550067, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_Name
