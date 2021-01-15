@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: b81b01b96927d9e49a36c93c07cf882e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2298928781048314655
+    second: NEsheet_0
+  - first:
+      213: -7327251877349753294
+    second: NEsheet_1
+  - first:
+      213: 1831492410163288301
+    second: NEsheet_2
+  - first:
+      213: 2449042231750942904
+    second: NEsheet_3
+  - first:
+      213: 1937372830135147347
+    second: NEsheet_4
+  - first:
+      213: -2363088484680716202
+    second: NEsheet_5
+  - first:
+      213: -1202201508237584954
+    second: NEsheet_6
+  - first:
+      213: 633781570747333798
+    second: NEsheet_7
+  - first:
+      213: -7618660444445304991
+    second: NEsheet_8
+  - first:
+      213: -5599341046298762313
+    second: NEsheet_9
+  - first:
+      213: 1820928718423059244
+    second: NEsheet_10
+  - first:
+      213: -5428406971135897161
+    second: NEsheet_11
+  - first:
+      213: -9162295659443999197
+    second: NEsheet_12
+  - first:
+      213: -1828829292250273862
+    second: NEsheet_13
+  - first:
+      213: -479414762520225089
+    second: NEsheet_14
+  - first:
+      213: -3375353075296548204
+    second: NEsheet_15
+  - first:
+      213: -2049539573654760121
+    second: NEsheet_16
+  - first:
+      213: -4796246908426040198
+    second: NEsheet_17
+  - first:
+      213: -8612523095191408668
+    second: NEsheet_18
+  - first:
+      213: 2717061168555992636
+    second: NEsheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NEsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b7e4ecb8f67ef10800000000000000
+      internalID: 2298928781048314655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ef0ce2d3f505a90800000000000000
+      internalID: -7327251877349753294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_2
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de85b94b4a4ca6910800000000000000
+      internalID: 1831492410163288301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_3
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0e1772feebcf120800000000000000
+      internalID: 2449042231750942904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_4
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd2b9035ee2ea10800000000000000
+      internalID: 1937372830135147347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6503ac91b8f943fd0800000000000000
+      internalID: -2363088484680716202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_6
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c55f09091ce05fe0800000000000000
+      internalID: -1202201508237584954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_7
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac759d0bf4abc800800000000000000
+      internalID: 633781570747333798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_8
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1679480f0b4154690800000000000000
+      internalID: -7618660444445304991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_9
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b329172cf42b42b0800000000000000
+      internalID: -5599341046298762313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2be9ee850d354910800000000000000
+      internalID: 1820928718423059244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_11
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1d035ee9c6aa4b0800000000000000
+      internalID: -5428406971135897161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_12
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32eacb344acf8d080800000000000000
+      internalID: -9162295659443999197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_13
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7e790c271be96e0800000000000000
+      internalID: -1828829292250273862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_14
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba57e340d6c859f0800000000000000
+      internalID: -479414762520225089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a4d6be2465821d0800000000000000
+      internalID: -3375353075296548204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_16
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745d33fdd929e83e0800000000000000
+      internalID: -2049539573654760121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_17
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c433039de407db0800000000000000
+      internalID: -4796246908426040198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_18
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efa44340eb2a7880800000000000000
+      internalID: -8612523095191408668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NEsheet_19
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36a9c8bcb0f4b520800000000000000
+      internalID: 2717061168555992636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

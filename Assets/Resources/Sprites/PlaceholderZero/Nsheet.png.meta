@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: dde6b9a7368a5214d87298628ce1fd29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7835759286383970769
+    second: Nsheet_0
+  - first:
+      213: -3773742153792871448
+    second: Nsheet_1
+  - first:
+      213: -6006774045480314808
+    second: Nsheet_2
+  - first:
+      213: 954903853165795445
+    second: Nsheet_3
+  - first:
+      213: -6868945483831123904
+    second: Nsheet_4
+  - first:
+      213: -2112226160112536256
+    second: Nsheet_5
+  - first:
+      213: -2282573237147186428
+    second: Nsheet_6
+  - first:
+      213: 1691724826645648241
+    second: Nsheet_7
+  - first:
+      213: -1144810745776565745
+    second: Nsheet_8
+  - first:
+      213: -4712337015267023139
+    second: Nsheet_9
+  - first:
+      213: 6727612550880431604
+    second: Nsheet_10
+  - first:
+      213: 815860006994739120
+    second: Nsheet_11
+  - first:
+      213: 4078827850733523362
+    second: Nsheet_12
+  - first:
+      213: -8923458476428111775
+    second: Nsheet_13
+  - first:
+      213: -5794538798388293413
+    second: Nsheet_14
+  - first:
+      213: 4776463839188159554
+    second: Nsheet_15
+  - first:
+      213: -7022977032061603025
+    second: Nsheet_16
+  - first:
+      213: 5851433345782698314
+    second: Nsheet_17
+  - first:
+      213: -4347736026513110580
+    second: Nsheet_18
+  - first:
+      213: -5653329793262825853
+    second: Nsheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9826a2e853ebc60800000000000000
+      internalID: 7835759286383970769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e322495189f0abc0800000000000000
+      internalID: -3773742153792871448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_2
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8481c15b4d6a3aca0800000000000000
+      internalID: -6006774045480314808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_3
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5785992ceff704d00800000000000000
+      internalID: 954903853165795445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_4
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 3246
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040e8b6c97a9ca0a0800000000000000
+      internalID: -6868945483831123904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04574399f7ddfa2e0800000000000000
+      internalID: -2112226160112536256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_6
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b47020cbba250e0800000000000000
+      internalID: -2282573237147186428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_7
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1735ce544c63a7710800000000000000
+      internalID: 1691724826645648241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_8
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0210f231b0dc10f0800000000000000
+      internalID: -1144810745776565745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_9
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 2164
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6a51f937a6a9eb0800000000000000
+      internalID: -4712337015267023139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd00b978f74d5d50800000000000000
+      internalID: 6727612550880431604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_11
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf7e5f8a54825b00800000000000000
+      internalID: 815860006994739120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_12
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a111f6d158ea9830800000000000000
+      internalID: 4078827850733523362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_13
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160dd805bc1892480800000000000000
+      internalID: -8923458476428111775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_14
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 1082
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0d8d4e9a9a59fa0800000000000000
+      internalID: -5794538798388293413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c0f411e88694240800000000000000
+      internalID: 4776463839188159554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_16
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23bd32499f598e90800000000000000
+      internalID: -7022977032061603025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_17
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41d04230a7743150800000000000000
+      internalID: 5851433345782698314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_18
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc984828e1db9a3c0800000000000000
+      internalID: -4347736026513110580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nsheet_19
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 0
+        width: 1009
+        height: 1082
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ecf6271865b81b0800000000000000
+      internalID: -5653329793262825853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
