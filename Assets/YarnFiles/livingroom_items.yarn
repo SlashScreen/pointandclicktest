@@ -213,3 +213,25 @@ title: halldoor.go
 <<SetSpeaker Zero>>
 <<Invoke hallwaydoor>>
 ===
+
+
+
+title: key.use
+---
+<<SetSpeaker Zero>>
+huh?
+===
+
+title: key.look
+---
+<<SetSpeaker Zero>>
+ah, there's my keys. better get those before i leave.
+===
+
+title: key.take
+---
+<<SetSpeaker Zero>>
+shouldn't leave home without this. 
+<<Hide key>>
+<<AddItem 5>>
+===

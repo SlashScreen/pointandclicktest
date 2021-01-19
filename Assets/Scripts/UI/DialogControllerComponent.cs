@@ -27,4 +27,25 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
     public void Hide(){
         gameObject.SetActive(false);
     }
+
+    public void BeginSpeakingAnimations(){
+        Debug.Log("Begin Speaking Animations");
+
+        if (GetComponent<SetSpeaker>().voice.GetSilence()){ //if silent, just skip everything 
+            return;
+        }
+
+        string sp = GetComponent<SetSpeaker>().getSpeaker();
+
+        if (sp.ToLower() == "zero"){
+            Debug.Log("zero animation");
+            GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"1"}); //yeah hardcoded but w/e
+        }
+        //TODO: NPC stuff
+    }
+
+    public void StopSpeakingAnimation(){
+        GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"0"}); //yeah hardcoded but w/e
+    }
+    //TODO: NPC stuff
 }

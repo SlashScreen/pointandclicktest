@@ -25,4 +25,8 @@ public class SetSpeaker : MonoBehaviour
             }
     }
 
+    public string getSpeaker(){
+        return speaker;
+    }
+
 }

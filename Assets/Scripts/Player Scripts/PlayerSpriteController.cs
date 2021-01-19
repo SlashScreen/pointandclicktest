@@ -12,6 +12,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     public float minsize = .2f; 
     public Transform dropshadow;
     public Vector2 dir = new Vector2();
+    public float baseSize = 3f;
     public PlayerControl player;
     
     public float horizon;
@@ -30,9 +31,9 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
 
         //this is probably able to be more elegant but dont change anything if it's 0
         if (dir.x < 0){
-            animator.SetBool("mirrored", true);
+            animator.SetBool("facing_left", true);
         }else if (dir.x > 0){
-            animator.SetBool("mirrored", false);
+            animator.SetBool("facing_left", false);
         }
 
         //Sprite direction
@@ -52,8 +53,8 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
         }
 
         //perspective
-        float scale =  minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*3)); //set scale to 1/(y-horizon)*3
-        float shadowScale = dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*3)); //set scale for shadow
+        float scale =  minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale to 1/(y-horizon)*3
+        float shadowScale = dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale for shadow
         //sorting order
         animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x,animator.gameObject.transform.position.y, (horizon - animator.gameObject.transform.position.y) * -1);
         
@@ -64,7 +65,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
 
     [YarnCommand("SetSprite")]
     public void setSprite(string[] args){
-        animator.SetInteger("animation",animationData.getNumberOfState(args[0])); //sets animator to correspoding animation in animationdata table
+        animator.SetInteger("animation",int.Parse(args[0])); //sets animator to correspoding animation in animationdata table
     }
 
     public virtual void getDir(){

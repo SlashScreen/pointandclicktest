@@ -8,12 +8,56 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - livingroom_items-tv.use-0
+  - livingroom_items-tv.use-1
+  - livingroom_items-tv.look-2
+  - livingroom_items-tv.channel-3
+  - livingroom_items-tv.channel-4
+  - livingroom_items-tv.channel-5
+  - livingroom_items-tv.channel-6
+  - livingroom_items-tv.channel-7
+  - livingroom_items-tv.channel-8
+  - livingroom_items-tv.channel-9
+  - livingroom_items-tv.channel-10
+  - livingroom_items-tv.channel-11
+  - livingroom_items-tv.channel-12
+  - livingroom_items-tv.channel-13
+  - livingroom_items-box.use-14
+  - livingroom_items-box.look-15
+  - livingroom_items-box.look-16
+  - livingroom_items-couch.use-17
+  - livingroom_items-couch.look-18
+  - livingroom_items-couch.look-19
+  - livingroom_items-couch.look-20
+  - livingroom_items-couch.look-21
+  - livingroom_items-couch.sit-22
+  - livingroom_items-center.use-23
+  - livingroom_items-center.look-24
+  - livingroom_items-center.look-25
+  - livingroom_items-center.interact-26
+  - livingroom_items-laptop.use-27
+  - livingroom_items-laptop.use-28
+  - livingroom_items-laptop.use-29
+  - livingroom_items-laptop.look-30
+  - livingroom_items-plate.use-31
+  - livingroom_items-plate.look-32
+  - livingroom_items-plate.look-33
+  - livingroom_items-plate.look-34
+  - livingroom_items-plate.fix-35
+  - livingroom_items-shoe.use-36
+  - livingroom_items-shoe.use-37
+  - livingroom_items-shoe.look-38
+  - livingroom_items-shoe.take-39
+  - livingroom_items-shoe.take-40
+  - livingroom_items-shoe.take-41
+  - livingroom_items-halldoor.use-42
+  - livingroom_items-halldoor.look-43
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: "Error on line 4 at position 13:\nmismatched input 'Zero'
     expecting FORMAT_FUNCTION_EXPRESSION_START\r\n[SetSpeaker Zero]\r\r\n           
     ^^^^"
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 640fa1a464d642840ac26ab5db7cc0ab, type: 3}
   localizations: []

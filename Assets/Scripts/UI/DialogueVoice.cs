@@ -52,4 +52,8 @@ public class DialogueVoice : MonoBehaviour
     public void SetSilence(string[] s){
         silence = bool.Parse(s[0]); //set to bool 
     }
+
+    public bool GetSilence(){
+        return silence;
+    }
 }
