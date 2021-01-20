@@ -11,6 +11,7 @@ public class cursor : MonoBehaviour
     Texture2D active;
     Vector2 cursorOffset;
     Texture2D cache;
+    bool waiting = false;
 
     void Start(){
     active = neutral;
@@ -23,6 +24,10 @@ public class cursor : MonoBehaviour
   }
 
   public void OnMousePos(InputValue input){
+    if (waiting){
+        return;
+    }
+
     Vector3 mousePos2D = Camera.main.ScreenToWorldPoint(input.Get<Vector2>()); //gets mouse point in world space
     RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
     if (hit.collider != null){
@@ -44,8 +49,10 @@ public class cursor : MonoBehaviour
   }
 
   IEnumerator wait(){
-        yield return new WaitForSeconds(.5f);
+        waiting = true;
+        yield return new WaitForSeconds(.2f);
         active = canClick;
         Cursor.SetCursor(active, cursorOffset, CursorMode.Auto);
+        waiting = false;
   }
 }

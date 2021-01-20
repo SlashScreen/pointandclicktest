@@ -102,7 +102,7 @@ public class PlayerControl : MonoBehaviour{
             return; //exit
         }else{
             reachedEndOfPath = false; //not reached end of path (set here every frame i believe to stop some problems)
-            direction = rb.velocity; //direction is vague movement (used for sprite direction control)
+            direction = rb.velocity;//Vector2.MoveTowards (direction,rb.velocity,5f * Time.deltaTime); //direction is vague movement (used for sprite direction control)
         }
 
         //Moving player rigidbody
