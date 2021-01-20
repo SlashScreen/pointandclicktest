@@ -308,6 +308,7 @@ MonoBehaviour:
   animationData: {fileID: 11400000, guid: e600722866072ba4bab8005fcffe4e46, type: 2}
   dropshadowSize: 2
   minsize: 1.15
+  vOffset: 1.4
   dropshadow: {fileID: 6702512888269827504}
   dir: {x: 0, y: 0}
   baseSize: -0.5
