@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "ShowInteractive",
+                    "type": "Button",
+                    "id": "da11361c-a27e-45a1-bbf9-1480800aa6d6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -156,6 +164,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Bass4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdac15dd-d4e2-4ee8-9396-0df9ab37145e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowInteractive",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
