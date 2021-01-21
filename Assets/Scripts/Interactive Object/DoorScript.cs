@@ -6,7 +6,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public string room;
-    public int spawnpoint = 0;
+    public int spawnpoint;
     public scenemanager sm;
     public void OpenDoor(){
         Debug.Log("Oepning door to " + room);

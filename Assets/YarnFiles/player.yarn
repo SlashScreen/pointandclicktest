@@ -3,6 +3,19 @@ tags:
 colorID: 0
 position: 861,403
 ---
-I don't need this.
+<<SetSpeaker Zero>>
+
+<<if $selectedInventory == 9>> //if shoes
+    it's a good idea to put these on if i want to go outside.
+    socks are for fools and the lazy.
+    also i have no socks that don't smell like the distilled scent of a boy's locker room.
+    <<Show Player_Shoes>>
+    <<RemoveItem 9>>
+<<elseif $selectedInventory == 6 or $selectedInventory == 7>>
+    i need to put this with the other shoe first. it's awkward to wear just a single shoe.
+<<else>>
+    I don't need this.
+<<endif>>
+
 <<set $selectedInventory to 0>>
 ===

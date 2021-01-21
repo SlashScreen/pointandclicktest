@@ -15,7 +15,7 @@ public class scenemanager : Singleton<MonoBehaviour>
     }
 
     public void loadscene(string scene, int index = 0){
-        ind = index;
+        GameObject.Find("Player").GetComponent<PlayerControl>().ind = index;
         
         for(int i=0; i<SceneManager.sceneCount;i++){
             //Debug.Log(SceneManager.GetSceneAt(i).name);
@@ -39,7 +39,7 @@ public class scenemanager : Singleton<MonoBehaviour>
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Persistent"));
         if (doOnLoadBehavior){
             foreach(var point in GameObject.FindObjectsOfType<PlayerSpawn>()){ //setplayerposition
-                if (point.index == ind ){
+                if (point.index == GameObject.Find("Player").GetComponent<PlayerControl>().ind ){
                     GameObject.Find("Player").transform.position = point.transform.position;
                 }
             }
@@ -47,6 +47,5 @@ public class scenemanager : Singleton<MonoBehaviour>
         else{
             doOnLoadBehavior = true;
         }
-        
     }
 }

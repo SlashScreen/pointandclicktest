@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour{
     public Vector2 mouseP = new Vector2();
     public bool goingToTalkPoint = false;
     public bool goingToObject = false; //if the player is walking to an object rahter than a position
+    public int ind;
     
     //Private vars
     

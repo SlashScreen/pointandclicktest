@@ -13,6 +13,9 @@ public class SaveGame
     public List<string> activatedNodes = new List<string>();
     public string room;
     public Vector3 pos;
+    public bool pizzaflag;
+    public bool wearingShoes = false;
+    public bool wearingMask = false;
     public List<SaveManager.itemFlags> flags = new List<SaveManager.itemFlags>();
 }
 
@@ -31,6 +34,8 @@ public class SaveManager : MonoBehaviour{
 
     public List<itemFlags> flagsl = new List<itemFlags>();
     List<itemFlags> flagslCache = new List<itemFlags>();
+    bool shoes;
+    bool mask;
 
     private void Start()
     {
@@ -50,6 +55,9 @@ public class SaveManager : MonoBehaviour{
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
+        //clothes
+        sv.wearingShoes = !player.accessories.shoes.hidden;
+        sv.wearingMask = !player.accessories.mask.hidden;
 
         sv.flags = flagsl;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
@@ -78,6 +86,9 @@ public class SaveManager : MonoBehaviour{
         foreach(var item in sv.inventory){ //add all saved items
             player.inventory.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
+
+        player.accessories.shoes.hidden = !sv.wearingShoes;
+        player.accessories.mask.hidden = !sv.wearingMask;
 
         sm.loadscene(sv.room); //load the scene
 

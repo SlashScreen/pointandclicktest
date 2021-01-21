@@ -235,3 +235,51 @@ shouldn't leave home without this.
 <<Hide key>>
 <<AddItem 5>>
 ===
+
+
+
+title: frontdoorinterior.use
+---
+<<SetSpeaker Zero>>
+i can't use that on the door.
+===
+
+title: frontdoorinterior.look
+---
+<<SetSpeaker Zero>>
+this is the sole portal in and out of my fortress of depression into the unforgiving hellscape of Metropol.
+well, my window goes out onto the fire escape. but that's dangerous. 
+===
+
+title: frontdoorinterior.go
+---
+<<SetSpeaker Zero>>
+i need my keys, my phone, and to get my shoes on if i want to leave.
+
+hmm, let's see... 
+<<if seeIfHasItem(5) == true>> 
+    i have my keys.
+<<else>>
+    i still need to grab my keys. 
+<<endif>>
+    
+<<if HasShoes() == true>> 
+    i got my shoes on.
+<<else>>
+    my feet are bare.
+<<endif>>
+
+<<if seeIfHasItem(4) == true>>
+    i have been bephoned.
+<<else>>
+    i am phoneless.
+<<endif>>
+
+
+<<if seeIfHasItem(5) and seeIfHasItem(4) and HasShoes()>>
+    hell yeah, that's everything. in the words of an overalls-clad italian public utilities worker, let's-a-go.
+    <<Invoke FrontDoor>>
+<<else>>
+    unfortunately, i am still unequipped to face the outside world.
+<<endif>>
+===

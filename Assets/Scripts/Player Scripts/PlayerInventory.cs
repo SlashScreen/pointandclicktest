@@ -23,6 +23,7 @@ public class PlayerInventory : MonoBehaviour
         main.d.dia.AddCommandHandler("RemoveItem",RemoveItem);
         main.d.dia.AddCommandHandler("CombineItems",CombineItems);
         main.d.dia.AddFunction("seeIfHasItem", 1 , ItemInInventory);
+        main.d.dia.AddFunction("TryCombine", 2 , ItemUsedOnItem);
     }
 
     //Inventory management fucntions
@@ -77,5 +78,18 @@ public class PlayerInventory : MonoBehaviour
         RemoveItem(new string[] {items[0]});
         RemoveItem(new string[] {items[1]});
         AddItem(new string[] {items[2]});
+    }
+
+    public object ItemUsedOnItem(Yarn.Value[] items){ //if these 2 items are combined
+        int selected = Mathf.FloorToInt(main.d.dia.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber); //item in hand
+        int combine = Mathf.FloorToInt(main.d.dia.GetComponent<Yarn.VariableStorage>().GetValue("$toCombine").AsNumber); //item clicked
+        int item1 = Mathf.FloorToInt(items[0].AsNumber);
+        int item2 = Mathf.FloorToInt(items[1].AsNumber);
+
+        if ((selected == item1 && combine == item2) || (selected == item2 && combine == item1)){ //there has to be a better way to do this. maybe like, find in list or something, idk
+            return true;
+        }else{
+            return false;
+        }
     }
 }

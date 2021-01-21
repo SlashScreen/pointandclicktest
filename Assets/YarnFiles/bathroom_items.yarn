@@ -82,3 +82,18 @@ title: BathDoorToHallway.go
 ---
 <<Invoke door>>
 ===
+
+
+
+title: bath.use
+---
+<<SetSpeaker Zero>>
+this doesn't go in there.
+===
+
+title: bath.look
+---
+<<SetSpeaker Zero>>
+the baaaath!!!
+this is the area where i, while nude, bombard myself with pressurized water for 10-20 minutes in an effort to rid myself of my Gamer Grease.
+===

@@ -1,0 +1,17 @@
+title: item.use
+tags:
+---
+<<if TryCombine(1,2) == true>> //combine stick and cube. leftover from testing phase
+    You combine the items to make... whatever this is.
+    <<CombineItems 1 2 3>>
+<<elseif TryCombine(6,7) == true>> //combine both shoes
+    star-crossed lovers, reunited at last.
+    it's almost as if they were made to be together.
+    <<CombineItems 6 7 9>>
+<<else>>
+    that doesn't go with that.
+<<endif>>
+
+<<set $selectedInventory to 0>>
+<<set $toCombine to 0>>
+===
