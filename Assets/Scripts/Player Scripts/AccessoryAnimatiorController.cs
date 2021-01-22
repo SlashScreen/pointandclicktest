@@ -9,12 +9,13 @@ public class AccessoryAnimatiorController : MonoBehaviour
     public bool hidden;
     Animator accessoryAnimator;
     SpriteRenderer r;
+    Vector3 offset;
 
     private void Start()
     {
         accessoryAnimator = GetComponent<Animator>();
         r = GetComponent<SpriteRenderer>();
-        
+        offset = transform.localPosition;
     }
 
     void Update()
@@ -23,6 +24,7 @@ public class AccessoryAnimatiorController : MonoBehaviour
         accessoryAnimator.SetBool("facing_left", playerAnimator.GetBool("facing_left"));
         accessoryAnimator.SetBool("walking", playerAnimator.GetBool("walking"));
         transform.localScale = playerAnimator.gameObject.transform.localScale;
+        transform.position = playerAnimator.gameObject.transform.position + new Vector3(0,0,-0.1f);// + offset;
         r.enabled = !hidden; //dont like calling this every frame but its not a huge issue
     }
 
