@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public SaveManager saveManager;
     public scenemanager sm;
     public GameObject dropdown;
+    public Dropdown debugDropdown;
     public string firstLevel = "Testrange";
     string mode;
     string s;
@@ -40,6 +41,12 @@ public class MainMenu : MonoBehaviour
 
     public void quit(){
         Application.Quit();
+    }
+
+    public void loadDebug(){
+        s = "debug/" + debugDropdown.options[debugDropdown.value].text + ".save";
+        mode = "Load";
+        SceneManager.LoadScene("Persistent",LoadSceneMode.Additive);
     }
 
     public void completeLoad(string save){

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -18,6 +19,13 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     
     public float horizon;
 
+    GameObject horizonLine;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLoad;
+    }
+
     public virtual void Start()
     {
         //sert runtime stuff
@@ -25,8 +33,17 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
         horizon = player.horizon;
     }
 
+    void OnLoad(Scene scene, LoadSceneMode sceneMode){
+        horizonLine = GameObject.Find("HorizonLine");
+    }
+
     public void Update()
     {
+        if (horizonLine != null){
+            horizonLine = GameObject.Find("HorizonLine");
+        }
+
+
         getDir();
         //mirroring
 
@@ -53,14 +70,15 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
             animator.SetInteger("direction", spritedir);
         }
 
-        //perspective
-        float scale =  minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale to 1/(y-horizon)*3
-        float shadowScale = dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale for shadow
         //sorting order
-        animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x, animator.gameObject.transform.position.y, (horizon - animator.gameObject.transform.position.y) * -1);
-        
-        animator.gameObject.transform.localScale = new Vector3(scale, scale, scale); //set scale
-        dropshadow.localScale = new Vector3(shadowScale, shadowScale, shadowScale); //set scale dropshadow
+        animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x, animator.gameObject.transform.position.y, (horizonLine.transform.position.y - animator.gameObject.transform.position.y) * -1);
+
+        //perspective
+        float scale = Mathf.Pow(Mathf.Abs(animator.gameObject.transform.position.y-horizonLine.transform.position.y/2),.8f) * baseSize;//1/Mathf.Abs(transform.position.z + animator.gameObject.transform.position.z);//1/( 15 - Mathf.Abs(animator.gameObject.transform.position.z))*baseSize; //minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale to 1/(y-horizon)*3
+        float shadowScale = scale; //dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale for shadow
+
+        transform.localScale = new Vector3(scale, scale, scale); //set scale
+        //dropshadow.localScale = new Vector3(shadowScale, shadowScale, shadowScale); //set scale dropshadow
         dropshadow.position = animator.gameObject.transform.position + new Vector3(0,vOffset,0);
 
     }

@@ -1,0 +1,41 @@
+title:hands.use
+---
+<<SetSpeaker Zero>>
+this item doesn't need any iron oxide.
+===
+
+title:hands.look
+---
+<<SetSpeaker Zero>>
+don't worry, it's only rust.
+===
+
+
+
+title:fcknzi.use
+---
+<<SetSpeaker Zero>>
+how would i do that.
+===
+
+title:fcknzi.look
+---
+<<SetSpeaker Zero>>
+it's scary to think that there are nazis that live among us.
+in my own building, no less.
+what i wouldn't give to drag them all to point nemo and leave them there to drown.
+===
+
+
+
+title:hallcorner1.use
+---
+<<SetSpeaker Zero>>
+a corner is simply a construct created by the brain's interperetation of the layout of a structure.
+all this to say i cannot use an item on this corner.
+===
+
+title:hallcorner1.go
+---
+<<Invoke corner>>
+===
