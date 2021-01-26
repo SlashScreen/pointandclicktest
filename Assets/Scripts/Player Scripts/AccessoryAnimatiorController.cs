@@ -23,6 +23,7 @@ public class AccessoryAnimatiorController : MonoBehaviour
         accessoryAnimator.SetInteger("direction", playerAnimator.GetInteger("direction"));
         accessoryAnimator.SetBool("facing_left", playerAnimator.GetBool("facing_left"));
         accessoryAnimator.SetBool("walking", playerAnimator.GetBool("walking"));
+        accessoryAnimator.SetInteger("animation", playerAnimator.GetInteger("animation"));
         transform.localScale = playerAnimator.gameObject.transform.localScale;
         transform.position = playerAnimator.gameObject.transform.position + new Vector3(0,0,-0.1f);// + offset;
         r.enabled = !hidden; //dont like calling this every frame but its not a huge issue

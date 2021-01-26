@@ -386,7 +386,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 134594704882077901, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -750.2287
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 1954237764597574198, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: player
@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613440185192896394, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.60180527
       objectReference: {fileID: 0}
     - target: {fileID: 6613440185192896394, guid: f187dbc51393dab40a41b29e6d9cf5ae, type: 3}
       propertyPath: m_Value

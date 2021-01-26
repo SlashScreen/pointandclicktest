@@ -283,3 +283,18 @@ hmm, let's see...
     unfortunately, i am still unequipped to face the outside world.
 <<endif>>
 ===
+
+
+
+title: firstmask.use
+---
+<<SetSpeaker Zero>>
+that won't fix it.
+===
+
+title: firstmask.look
+---
+<<SetSpeaker Zero>>
+it's my respirator for when the air quality gets bad, or a pathogen-laden mist rolls in again.
+the strap is broken, though.
+===
