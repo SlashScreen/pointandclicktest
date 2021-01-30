@@ -57,7 +57,20 @@ public class PlayerControl : MonoBehaviour{
         target.x = float.Parse(coords[0]); //set target x
         target.y = float.Parse(coords[1]); //set target y
         //generate path
-        Debug.Log("going to point "+target);
+        goingToTalkPoint = toTalkPoint;
+        GenPath(target);
+        //stop script until reachedEndOfPath is true
+        yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
+        onComplete(); //call this once done, important for blocking
+    }
+
+    public IEnumerator MovePlayerToObject(string[] obj, System.Action onComplete, bool toTalkPoint = false){
+        Vector3 target = new Vector3(); //init target
+        GameObject o = GameObject.Find(obj[0]);
+        //convert from string to float
+        target.x = o.transform.position.x; //set target x
+        target.y = o.transform.position.y; //set target y
+        //generate path
         goingToTalkPoint = toTalkPoint;
         GenPath(target);
         //stop script until reachedEndOfPath is true
@@ -78,6 +91,7 @@ public class PlayerControl : MonoBehaviour{
         
         main.d.dia.AddCommandHandler("StopPlayer",StopPlayer);
         main.d.dia.AddCommandHandler("MovePlayerTo", (parameters, onComplete) => StartCoroutine(MovePlayer(parameters, onComplete))); //Remember, this is used for blocking
+        main.d.dia.AddCommandHandler("GoToObject", (parameters, onComplete) => StartCoroutine(MovePlayerToObject(parameters, onComplete))); //Remember, this is used for blocking
     }
 
     public void OnMousePos(InputValue input){

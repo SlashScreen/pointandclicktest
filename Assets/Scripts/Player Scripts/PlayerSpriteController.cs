@@ -39,7 +39,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
 
     public void Update()
     {
-        if (horizonLine != null){
+        if (horizonLine == null){
             horizonLine = GameObject.Find("HorizonLine");
         }
 
@@ -71,6 +71,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
         }
 
         //sorting order
+        //Debug.Log(horizonLine);
         animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x, animator.gameObject.transform.position.y, (horizonLine.transform.position.y - animator.gameObject.transform.position.y) * -1);
 
         //perspective

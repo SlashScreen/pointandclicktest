@@ -8,6 +8,8 @@
         {"name":"shoel","id":6,"iconPath":"Icons/shoel"},
         {"name":"shoel","id":7,"iconPath":"Icons/shoer"},
         {"name":"tampon","id":8,"iconPath":"Icons/tampon"},
-        {"name":"shoes","id":9,"iconPath":"Icons/shoes"}
+        {"name":"shoes","id":9,"iconPath":"Icons/shoes"},
+        {"name":"broken mask","id":10,"iconPath":"Icons/brokenmask"},
+        {"name":"mask","id":11,"iconPath":"Icons/mask"}
     ]
 }

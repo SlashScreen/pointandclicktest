@@ -82,6 +82,7 @@ public class NPCscript : MonoBehaviour
     }
 
     public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
+        Debug.Log(coords);
         //TODO: Wait until moved to continue conversation
         //Debug.Log("begin yield");
         Debug.Log(coords[0]);
@@ -107,6 +108,7 @@ public class NPCscript : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>(); 
         d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>(); //get d (lmao)
+        d.dia.AddCommandHandler("MoveNPC", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete)));
         if (!d.dia.NodeExists(useNode)){ //If the script isn't already loaded
             d.dia.Add(yarnDialog); //load the script
         }

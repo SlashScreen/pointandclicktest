@@ -19,3 +19,9 @@ position: 861,403
 
 <<set $selectedInventory to 0>>
 ===
+
+title: genericUse
+---
+<<SetSpeaker Zero>>
+i don't need to do this.
+===
