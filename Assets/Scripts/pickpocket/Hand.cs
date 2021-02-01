@@ -7,16 +7,37 @@ public class Hand : MonoBehaviour
 {
     public float maxArmDistance = 11f;
     public Transform endOfArms;
+    public Camera portalCamera;
+    public GameObject portal;
+    public Sprite openHand;
+    public Sprite closeHand;
     Vector2 pos;
     Rigidbody2D rb;
     GameObject grabbable;
     bool grabbed = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
     public void OnMousePos(InputValue input){
-        pos = Camera.main.ScreenToWorldPoint(input.Get<Vector2>());
+
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(input.Get<Vector2>());
+        
+        // do we hit our portal plane?
+        if (Physics.Raycast(ray, out hit)) {
+            Debug.Log(hit.collider.gameObject.name + ", " + portal.name);
+            if (hit.collider.gameObject == portal){
+
+                var localPoint = hit.textureCoord;
+                Debug.Log(hit.textureCoord);
+                // convert the hit texture coordinates into camera coordinates
+                //portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight))
+                //RaycastHit2D portalHit = Physics2D.Raycast(portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight)), Vector2.zero, Mathf.Infinity);
+                pos = portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight));
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -52,6 +73,7 @@ public class Hand : MonoBehaviour
             if(grabbable != null){
                 grabbed = true;
                 Debug.Log("Grabbed");
+                GetComponent<SpriteRenderer>().sprite = closeHand;
                 GetComponent<RelativeJoint2D>().enabled = true;
                 GetComponent<RelativeJoint2D>().connectedBody = grabbable.GetComponent<Rigidbody2D>();
             }
@@ -59,6 +81,7 @@ public class Hand : MonoBehaviour
             if(grabbed){
                 grabbed = false;
                 Debug.Log("Let go");
+                GetComponent<SpriteRenderer>().sprite = openHand;
                 GetComponent<RelativeJoint2D>().connectedBody = null;
                 GetComponent<RelativeJoint2D>().enabled = false;
             }
