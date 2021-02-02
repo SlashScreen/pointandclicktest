@@ -39,3 +39,22 @@ title:hallcorner1.go
 ---
 <<Invoke corner>>
 ===
+
+
+
+title: 404door.use
+---
+<<SetSpeaker Zero>>
+i don't need to fuck up my door.
+===
+
+title: 404door.look
+---
+<<SetSpeaker Zero>>
+apartment 404: zero not found.
+===
+
+title: 404door.go
+---
+<<Invoke 404door>>
+===

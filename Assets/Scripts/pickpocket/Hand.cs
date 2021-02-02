@@ -11,6 +11,8 @@ public class Hand : MonoBehaviour
     public GameObject portal;
     public Sprite openHand;
     public Sprite closeHand;
+    public FixedJoint2D fixedMouse;
+    public RelativeJoint2D fixedGrab;
     Vector2 pos;
     Rigidbody2D rb;
     GameObject grabbable;
@@ -42,15 +44,8 @@ public class Hand : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /* Vector2 endPos = endOfArms.position;
-        Vector2 dist = (pos - endPos);
-        Vector2 finalPos = new Vector2();
-        float sinMaxX = Mathf.Cos(Vector2.Angle(Vector2.right,pos)) * maxArmDistance;
-        float sinMaxY = Mathf.Sin(Vector2.Angle(Vector2.right,pos)) * maxArmDistance;
-        Debug.Log(dist + ", " + sinMaxX + ", " + sinMaxY);
-        finalPos.x = Mathf.Clamp(dist.x+Camera.main.rect.xMin,0,sinMaxX);
-        finalPos.y = Mathf.Clamp(dist.y-Camera.main.rect.yMax,0,sinMaxY); */
-        rb.position = pos;
+        fixedMouse.connectedAnchor = pos;
+        //rb.position = pos;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -69,21 +64,21 @@ public class Hand : MonoBehaviour
 
     void OnPickUp(InputValue input){
         Debug.Log(input.Get<float>());
-        if (input.Get<float>() > 0f){
+        if (input.Get<float>() > 0f){ //if clicked
+        GetComponent<SpriteRenderer>().sprite = closeHand;
             if(grabbable != null){
                 grabbed = true;
                 Debug.Log("Grabbed");
-                GetComponent<SpriteRenderer>().sprite = closeHand;
-                GetComponent<RelativeJoint2D>().enabled = true;
-                GetComponent<RelativeJoint2D>().connectedBody = grabbable.GetComponent<Rigidbody2D>();
+                fixedGrab.enabled = true;
+                fixedGrab.connectedBody = grabbable.GetComponent<Rigidbody2D>();
             }
         }else{
+            GetComponent<SpriteRenderer>().sprite = openHand;
             if(grabbed){
                 grabbed = false;
                 Debug.Log("Let go");
-                GetComponent<SpriteRenderer>().sprite = openHand;
-                GetComponent<RelativeJoint2D>().connectedBody = null;
-                GetComponent<RelativeJoint2D>().enabled = false;
+                fixedGrab.connectedBody = null;
+                fixedGrab.enabled = false;
             }
         }
     }

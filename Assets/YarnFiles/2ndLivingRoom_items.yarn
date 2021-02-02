@@ -1,0 +1,40 @@
+title: couchminigame.start
+---
+<<if visited("couchminigame.start") == true>>
+    i've already got the tape.
+<<else>>
+    <<Invoke MinigameStart>>
+<<endif>>
+===
+
+title: couchminigame.end
+---
+<<AddItem 12>>
+<<Invoke MinigameEnd>>
+<<SetSpeaker Zero>>
+nice. i got the tape. now to give it to that witchy lady.
+===
+
+
+
+title: mask2.look
+---
+<<SetSpeaker Zero>>
+it's the broken mask the witchy lady said she would fix for me.
+===
+
+title: mask2.take
+---
+<<SetSpeaker Zero>>
+yoink.
+<<AddItem 10>>
+===
+
+
+
+title: lv2.look
+---
+<<SetSpeaker Zero>>
+shouldn't mess with that right now.
+===
+

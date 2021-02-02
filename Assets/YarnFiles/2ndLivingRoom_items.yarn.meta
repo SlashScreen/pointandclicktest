@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 46085916880ba264ca79e62f7d880b49
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - 2ndLivingRoom_items-couchminigame.end-0
+  - 2ndLivingRoom_items-mask2.look-1
+  - 2ndLivingRoom_items-mask2.take-2
+  - 2ndLivingRoom_items-lv2.look-3
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

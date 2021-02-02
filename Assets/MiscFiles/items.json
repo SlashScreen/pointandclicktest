@@ -10,6 +10,7 @@
         {"name":"tampon","id":8,"iconPath":"Icons/tampon"},
         {"name":"shoes","id":9,"iconPath":"Icons/shoes"},
         {"name":"broken mask","id":10,"iconPath":"Icons/brokenmask"},
-        {"name":"mask","id":11,"iconPath":"Icons/mask"}
+        {"name":"mask","id":11,"iconPath":"Icons/mask"},
+        {"name":"tape","id":12,"iconPath":"Icons/tape"}
     ]
 }
