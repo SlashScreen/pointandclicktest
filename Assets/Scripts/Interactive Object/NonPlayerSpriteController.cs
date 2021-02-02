@@ -25,6 +25,10 @@ public class NonPlayerSpriteController : MonoBehaviour
     }
     void Update()
     {
+        if (horizonLine == null){
+            horizonLine = GameObject.Find("HorizonLine");
+        }
+        
         if (scaleToSize){
             float scale =  Mathf.Pow(Mathf.Abs(transform.position.y-horizonLine.transform.position.y),1.1f) * baseScale; //calculate scale
             transform.localScale = new Vector3(scale, scale, scale); //set scale

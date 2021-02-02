@@ -1,6 +1,7 @@
 title: couchminigame.start
 ---
-<<if visited("couchminigame.start") == true>>
+<<SetSpeaker Zero>>
+<<if seeIfHasItem(10)>>
     i've already got the tape.
 <<else>>
     <<Invoke MinigameStart>>
@@ -37,4 +38,3 @@ title: lv2.look
 <<SetSpeaker Zero>>
 shouldn't mess with that right now.
 ===
-

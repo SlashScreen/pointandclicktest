@@ -4231,6 +4231,7 @@ MonoBehaviour:
   - {fileID: 2480198943629176163, guid: a169b64c0a39239449888e6e8836cd79, type: 3}
   - {fileID: 2480198943629176163, guid: 52a64ced15bbf134ab035adf630bb800, type: 3}
   - {fileID: 2480198943629176163, guid: f7b21218a43287249968d68e3efd5716, type: 3}
+  - {fileID: 2480198943629176163, guid: 46085916880ba264ca79e62f7d880b49, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}
