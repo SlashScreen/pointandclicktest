@@ -8,17 +8,52 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - elevator_items-elevator.use-0
+  - elevator_items-elevator.look-1
+  - elevator_items-elevator.go-2
+  - elevator_items-elevator.go-3
+  - elevator_items-elevator.go-4
+  - elevator_items-elevator.go-5
+  - elevator_items-elevator.go-6
+  - elevator_items-elevator.go-7
+  - elevator_items-elevator.go-8
+  - elevator_items-elevator.go-9
+  - elevator_items-elevator.go-10
+  - elevator_items-elevator.go-11
+  - elevator_items-elevator.go-12
+  - elevator_items-elevator.go-13
+  - elevator_items-elevator.go-14
+  - elevator_items-elevator.go-15
+  - elevator_items-elevator.go-16
+  - elevator_items-elevator.go-17
+  - elevator_items-elevator.go-18
+  - elevator_items-elevator.go-19
+  - elevator_items-elevator.go-20
+  - elevator_items-elevator.go-21
+  - elevator_items-elevator.go-22
+  - elevator_items-elevator.go-23
+  - elevator_items-elevator.go-24
+  - elevator_items-elevator.go-25
+  - elevator_items-stairs.use-26
+  - elevator_items-stairs.look-27
+  - elevator_items-stairs.go-28
+  - elevator_items-four.use-29
+  - elevator_items-four.look-30
+  - elevator_items-four.look-31
+  - elevator_items-oldman.use-32
+  - elevator_items-oldman.look-33
+  - elevator_items-oldman.look-34
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 1 at position 1:
 
     mismatched input
     ''<EOF>'' expecting {ID, HASHTAG}
 
-    
+
 
 '
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: f7b21218a43287249968d68e3efd5716, type: 3}
   localizations: []

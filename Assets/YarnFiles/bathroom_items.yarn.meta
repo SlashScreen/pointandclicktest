@@ -8,17 +8,35 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - bathroom_items-shoel.use-0
+  - bathroom_items-shoel.look-1
+  - bathroom_items-shoel.take-2
+  - bathroom_items-shoel.take-3
+  - bathroom_items-shoel.take-4
+  - bathroom_items-tampon.use-5
+  - bathroom_items-tampon.use-6
+  - bathroom_items-tampon.look-7
+  - bathroom_items-tampon.take-8
+  - bathroom_items-tampon.take-9
+  - bathroom_items-towel.use-10
+  - bathroom_items-towel.look-11
+  - bathroom_items-BathDoorToHallway.look-12
+  - bathroom_items-BathDoorToHallway.look-13
+  - bathroom_items-BathDoorToHallway.look-14
+  - bathroom_items-bath.use-15
+  - bathroom_items-bath.look-16
+  - bathroom_items-bath.look-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 1 at position 1:
 
     mismatched input
     ''<EOF>'' expecting {ID, HASHTAG}
 
-    
+
 
 '
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: a169b64c0a39239449888e6e8836cd79, type: 3}
   localizations: []

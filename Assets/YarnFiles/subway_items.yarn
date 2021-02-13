@@ -1,0 +1,133 @@
+title: map.look
+---
+<<Invoke map>> //look at the map
+===
+
+
+title: subwaygraffiti.look
+---
+<<SetSpeaker Zero>>
+many say that these cave scrawlings offered some sort of religious value, while others argue that they simply depicted daily life.
+perhaps it's a byproduct of boredom and the city's failure to protect its poorer citizens from resorting to gangs for financial
+support and some semblance of a family, or simply a way to leave their mark on a world they feel they are powerless in. 
+we may never know.
+===
+
+
+
+title: trash.look
+---
+<<SetSpeaker Zero>>
+woah.
+it's a pile of trash.
+//TODO: nice coin
+===
+
+
+
+title: meat.look
+---
+<<SetSpeaker Zero>>
+subway flesh, this far from the red zone? that's a little worrying.
+better not touch it. i don't want those nightmares again.
+===
+
+
+
+title: poster.bra.look
+---
+<<SetSpeaker Zero>>
+don't they know there are plenty of normal looking woman who look smoking hot in underwear. i can attest to that myself.
+===
+
+
+
+title: poster.army.look
+---
+<<SetSpeaker Zero>>
+dedicate your life to being a person in a suit with a flag on it shooting other people in suits with a different flag on it 
+in the pursuit of that scrumptious ooooooiiiiiillllll.
+if you survive, they could pay for your college that is mysteriously very expensive.
+===
+
+
+
+title: poster.loyalty.look
+---
+<<SetSpeaker Zero>>
+an ad for a loyalty program at your friendly neighborhood gigacorporation.
+capitalism's unquenchable thirst for innovation at its zenith here, unquestionably.
+sure thing boss. i will pick from 30 brands of the exact same kind of cheese from *your* aisles.
+god bless the land of the free.
+===
+
+
+
+title: crowd.look
+---
+<<SetSpeaker Zero>>
+the station is busier than normal today. are they tossing the ol pigskin again downtown?
+i like crowds, even though i spend most of my time in my room. it's lovely to see a cross section of the different kinds of
+people that live in the city, from all walks of life. and i mean that in all earnesty.
+sometimes i think about how each and every one of those people has a life story, loved ones, favorite shows, insecurities,
+secrets, stories, regrets, likes, dislikes. just like me, but times nealry 8 billion.
+and i get overwhelmed and run back to my hidey hole.
+===
+
+
+
+title: washer.look
+---
+<<SetSpeaker Zero>>
+oooh! a washer! i want it.
+jesus christ, what am i, a crow?...
+===
+
+title: washer.take
+---
+<<SetSpeaker Zero>>
+heeeeelll yeah. washer time.
+<<AddItem 13>>
+===
+
+
+
+title: turnstile.n.go
+---
+<<SetSpeaker Zero>>
+<<GoToObject CatchHerselfPoint>>
+...wait a minute.
+that's the wrong platform.
+glad i caught myself there.
+===
+
+
+
+title: cultist.look
+---
+<<SetSpeaker Zero>>
+ugh, another one of the conehead cultists. better not talk to him.
+===
+
+
+
+title: kit.look
+---
+<<SetSpeaker Zero>>
+she looks totally confused and disoriented.
+...honestly, she's kinda cute...
+===
+
+title: kit.use
+---
+<<SetSpeaker Kit>>
+<<if $selectedInventory == 14>>
+    <<if Visited("kit.talk")>>
+        Oh, is this for the acne guy you mentioned? Thanks!
+    <<else>>
+        ...No thanks. I’ve never even heard of this brand…
+    <<endif>>
+<<else>>
+    <<SetSpeaker Zero>>
+    i should probably hold on to that.
+<<endif>>

@@ -11,6 +11,8 @@
         {"name":"shoes","id":9,"iconPath":"Icons/shoes"},
         {"name":"broken mask","id":10,"iconPath":"Icons/brokenmask"},
         {"name":"mask","id":11,"iconPath":"Icons/mask"},
-        {"name":"tape","id":12,"iconPath":"Icons/tape"}
+        {"name":"tape","id":12,"iconPath":"Icons/tape"},
+        {"name":"washer","id":13,"iconPath":"Icons/washer"},
+        {"name":"dr plibby","id":14,"iconPath":"Icons/plibby"}
     ]
 }
