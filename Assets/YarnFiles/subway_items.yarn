@@ -98,6 +98,7 @@ title: turnstile.n.go
 ...wait a minute.
 that's the wrong platform.
 glad i caught myself there.
+<<EarnMedal train>>
 ===
 
 
@@ -123,6 +124,7 @@ title: kit.use
 <<if $selectedInventory == 14>>
     <<if Visited("kit.talk")>>
         Oh, is this for the acne guy you mentioned? Thanks!
+        <<EarnMedal kit>>
     <<else>>
         ...No thanks. I’ve never even heard of this brand…
     <<endif>>
@@ -303,4 +305,5 @@ And thanks for dinner.
 Oh hell no. I have some self respect. There's a food truck down the street that sells burritos.
 <<SetSpeaker Zero>>
 thank god.
+<<EarnMedal infirm>>
 ===

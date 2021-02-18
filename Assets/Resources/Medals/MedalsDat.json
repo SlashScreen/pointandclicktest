@@ -10,6 +10,7 @@
         {"id":"flcl","title":"Never Knows Best","description":"Catch the tail end of a show.","icon":"Medals/Icons/flcl"},
         {"id":"popo","title":"Eff the Po-lice!","description":"Slip by unnoticed.","icon":"Medals/Icons/popo"},
         {"id":"apartment","title":"The Barrier is Psychological","description":"Leave the safety of your abode.","icon":"Medals/Icons/apartment"},
-        {"id":"shine","title":"Rise and Shine","description":"Awaken on a train.","icon":"Medals/Icons/shine"}
+        {"id":"shine","title":"Rise and Shine","description":"Awaken on a train.","icon":"Medals/Icons/shine"},
+        {"id":"kit","title":"Sugary Discount","description":"Give the girl from out of town some soda.","icon":"Medals/Icons/kit"}
     ]
 }

@@ -38,6 +38,7 @@ tags:
 <<elseif $channel == 4>>
     this is a cartoon i found on YouShare when i was 12, which prompted me to learn bass guitar.
     looks like i caught the credits. what a shame.
+    <<EarnMedal flcl>>
 <<endif>>
 ===
 
@@ -278,6 +279,7 @@ hmm, let's see...
 
 <<if seeIfHasItem(5) and seeIfHasItem(4) and HasShoes()>>
     hell yeah, that's everything. in the words of an overalls-clad italian public utilities worker, let's-a-go.
+    <<EarnMedal apartment>>
     <<Invoke FrontDoor>>
 <<else>>
     unfortunately, i am still unequipped to face the outside world.

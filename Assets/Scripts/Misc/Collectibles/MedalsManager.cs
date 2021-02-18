@@ -24,6 +24,7 @@ public class MedalsManager : MonoBehaviour
     public UnityEvent<string[]> OnEarned;
     public List<string> medals;
     public string JSONPath;
+    public Animator UIAnimator;
     PlayerMain playerMain;
     medalsObject trophycase;
     // Start is called before the first frame update
@@ -55,6 +56,8 @@ public class MedalsManager : MonoBehaviour
             dat.Add(m.title);
             dat.Add(m.description);
             dat.Add(m.icon);
+
+            UIAnimator.SetTrigger("get");
 
             //pass data to invoked events
             OnEarned.Invoke(dat.ToArray());

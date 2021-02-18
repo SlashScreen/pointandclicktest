@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class collectibles
 {
-    public List<string> cards = new List<string>();
+    public List<int> cards = new List<int>();
     public List<string> medals = new List<string>();
     public string t;
 }
