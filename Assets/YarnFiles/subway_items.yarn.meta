@@ -8,10 +8,44 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - subway_items-subwaygraffiti.look-0
+  - subway_items-subwaygraffiti.look-1
+  - subway_items-trash.look-2
+  - subway_items-trash.look-3
+  - subway_items-meat.look-4
+  - subway_items-meat.look-5
+  - subway_items-poster.bra.look-6
+  - subway_items-poster.army.look-7
+  - subway_items-poster.army.look-8
+  - subway_items-poster.army.look-9
+  - subway_items-poster.loyalty.look-10
+  - subway_items-poster.loyalty.look-11
+  - subway_items-poster.loyalty.look-12
+  - subway_items-poster.loyalty.look-13
+  - subway_items-crowd.look-14
+  - subway_items-crowd.look-15
+  - subway_items-crowd.look-16
+  - subway_items-crowd.look-17
+  - subway_items-crowd.look-18
+  - subway_items-crowd.look-19
+  - subway_items-washer.look-20
+  - subway_items-washer.look-21
+  - subway_items-washer.take-22
+  - subway_items-turnstile.n.go-23
+  - subway_items-turnstile.n.go-24
+  - subway_items-turnstile.n.go-25
+  - subway_items-cultist.look-26
+  - subway_items-kit.look-27
+  - subway_items-kit.look-28
+  - subway_items-kit.use-29
+  - subway_items-kit.use-30
+  - subway_items-kit.use-31
+  - subway_items-bathrooms.look-32
+  - subway_items-bathrooms.look-33
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 3d233203170cef84a91d6acd0441bac7, type: 3}
   localizations: []

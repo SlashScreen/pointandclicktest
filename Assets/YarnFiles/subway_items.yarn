@@ -8,8 +8,6 @@ title: subwaygraffiti.look
 ---
 <<SetSpeaker Zero>>
 many say that these cave scrawlings offered some sort of religious value, while others argue that they simply depicted daily life.
-perhaps it's a byproduct of boredom and the city's failure to protect its poorer citizens from resorting to gangs for financial
-support and some semblance of a family, or simply a way to leave their mark on a world they feel they are powerless in. 
 we may never know.
 ===
 
@@ -87,6 +85,7 @@ title: washer.take
 ---
 <<SetSpeaker Zero>>
 heeeeelll yeah. washer time.
+<<Hide Washer>>
 <<AddItem 13>>
 ===
 
@@ -131,4 +130,177 @@ title: kit.use
     <<SetSpeaker Zero>>
     i should probably hold on to that.
 <<endif>>
+===
+
+title: kit.talk
+---
+<<SetSpeaker Zero>>
+hey. you look lost. what's up.
+<<SetSpeaker Kit>>
+Hey, can I ask a weird question?
+<<SetSpeaker Zero>>
+shoot
+<<SetSpeaker Kit>>
+Am I dreaming?
+<<SetSpeaker Zero>>
+dreaming?
+===
+
+
+
+title: bathrooms.look
+---
+<<SetSpeaker Zero>>
+if this was the last bathroom on earth...
+...i would go in the woods.
+===
+
+
+
+title: argument.look
+---
+<<SetSpeaker Zero>>
+looks like this girl is getting harassed by this asshole. she looks so uncomfortable.
+should i intervene?
+[[Intervene.|intervene]]
+[[Don't intervene.|dontIntervene]]
+===
+
+title: intervene
+---
+<<Hide Argument>>
+<<SetSpeaker Zero>>
+<<GoToObject argPoint>>
+hey tic tac dick. she clearly doesn't want your ass. get lost.
+<<SetSpeaker Asshole>>
+Hey! Fuck you! we're having a conversation here!
+<<SetSpeaker Zero>>
+it seems rather one sided. let me put this way. buzz off or i rub dirt on your shoes.
+<<SetSpeaker Asshole>>
+You wouldn't dare!
+...ugh, fine. If I see you later, you're dead, though.
+//Todo: move NPC and keep \him there
+<<SetSpeaker Damsel>>
+Oh, thank you. Here, this is all I can spare right now.
+<<AddItem 15>>
+<<SetSpeaker Zero>>
+oh, that's not necessary.
+<<SetSpeaker Damsel>>
+I insist!
+<<SetSpeaker Zero>>
+alrighty then.
+===
+
+title: dontIntervene
+---
+<<stop>>
+===
+
+
+
+title: sodamachine.use
+---
+<<SetSpeaker Zero>>
+<<if $selectedinventory == 13>>
+    <<if Visited("sodamachine.look")>>
+        free soda time baby.
+    <<else>>
+        i'm glad i ah, fixed. this machine. to accept coin-like objects.
+    <<endif>>
+
+    <<RemoveItem 13>> //remove washer
+    <<AddItem 14>> //add soda
+<<else>>
+    <<if Visited("sodamachine.look")>>
+        i'd need a coin like object to put in the slot.
+    <<else>>
+        [[sodamachine.look]]
+    <<endif>>
+<<endif>>
+===
+
+title: sodamachine.look
+---
+<<SetSpeaker Zero>>
+it's a soda machine. it sells dr. plibby and some snacks.
+i came down here a few months ago at like 3 am and uh. fixed. this machine.
+it used to accept only coins. now it'll accept any coin-like object. much better.
+===
+
+
+title: homeless.use
+---
+<<if $selectedInventory == 15>>
+    [[giveMoney]]
+<<else>>
+    i should probably hang on to that.
+<<endif>>
+===
+
+title: homeless.look
+---
+<<SetSpeaker Zero>>
+a homeless guy, seeking shelter from the shitty air outside. 
+who can blame him. i don't want cancer either.
+===
+
+title: homeless.talk
+---
+<<if Visited("homeless.talk")>>
+    <<SetSpeaker Zero>>
+    <<if seeIfHasItem(15)>>
+        [[giveMoney]]
+    <<else>>
+        he probably wants money. who can blame him. being poor is expensive.
+    <<endif>>
+<<else>>
+    <<SetSpeaker Zero>>
+    hey dude.
+    <<SetSpeaker Homeless>>
+    Yes?...
+    <<SetSpeaker Zero>>
+    so uh. im trying to get on the train. and uh. i was wondering if. um.
+    <<SetSpeaker Homeless>>
+    Out with it. 
+    <<SetSpeaker Zero>>
+    i was wondering if you knew a way that i could slip past that officer there.
+    <<SetSpeaker Homeless>>
+    Aaaah. Hmm. Nope. No can do.
+    <<SetSpeaker Zero>>
+    ah well. thanks anywa-
+    <<SetSpeaker Homeless>>
+    But... if I had something to jog my memory...
+    <<SetSpeaker Zero>>
+    huh?
+    oh.
+    i see.
+    yeah that's fair. 
+    alright. ill go find some cash.
+<<endif>>
+===
+
+title: giveMoney
+---
+<<SetSpeaker Zero>>
+<<RemoveItem 15>>
+alright, here you go. does this jog your memory.
+<<SetSpeaker Homeless>>
+Ah! Yes. Now I remember. Hmm, let's see...
+See that cultist over there?...
+In every cultist's pocket is a bejewelled dagger. 
+If he finds that dagger missing, and perhaps, in somebody else's pocket, he'll be sure to get very upset, and cause a scene.
+<<SetSpeaker Zero>>
+aaah, and distract the officer.
+<<SetSpeaker Homeless>>
+Smart cookie.
+<<SetSpeaker Zero>>
+thanks for the tip.
+<<SetSpeaker Homeless>>
+And thanks for dinner.
+<<SetSpeaker Zero>>
+...tell me youre not going to waste that on a super dog.
+<<SetSpeaker Homeless>>
+Oh hell no. I have some self respect. There's a food truck down the street that sells burritos.
+<<SetSpeaker Zero>>
+thank god.
 ===
