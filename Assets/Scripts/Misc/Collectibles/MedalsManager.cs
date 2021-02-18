@@ -30,10 +30,8 @@ public class MedalsManager : MonoBehaviour
     void Start()
     {
         string JSONs = File.ReadAllText(JSONPath);
-        Debug.Log(JSONs);
         medals = new List<string>();
         trophycase = JsonUtility.FromJson<medalsObject>(JSONs);
-        Debug.Log(trophycase.medals);//[0].id);
         playerMain = GameObject.Find("Player").GetComponent<PlayerMain>();
         playerMain.d.dia.AddCommandHandler("EarnMedal",earnMedal);
     }

@@ -12,7 +12,7 @@ public class collectibles
 {
     public List<string> cards = new List<string>();
     public List<string> medals = new List<string>();
-    public DateTime modified = new DateTime();
+    public string t;
 }
 
 public class CollectiblesSaver : MonoBehaviour
@@ -42,12 +42,12 @@ public class CollectiblesSaver : MonoBehaviour
         sr.Close();
         DateTime lastMod = File.GetLastWriteTime(Application.persistentDataPath + "/saves/collect.ibles");
         //TODO: fix tampering
-        //if (col.modified != lastMod){
-            //Debug.Log("Tampered!!");
-        //}else{
+        if (col.t != lastMod.ToString("yyyyMMddHHmmss")){
+            Debug.Log("Tampered!!");
+        }else{
             medals.setMedals(col.medals);
             cards.setCards(col.cards);
-        //}
+        }
     }
 
     public void Save(){ //nts call from save manager
@@ -55,7 +55,7 @@ public class CollectiblesSaver : MonoBehaviour
 
         col.medals = medals.medals; //sync medals
         col.cards = cards.cards; //sync cards
-        col.modified = DateTime.Now; //get now for tamper protection
+        col.t = DateTime.Now.ToString("yyyyMMddHHmmss"); //get now for tamper protection
 
         sw.Write(JsonUtility.ToJson(col)); //write to file in hopefully the same second as now
         sw.Close(); //close file.

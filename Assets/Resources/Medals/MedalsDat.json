@@ -5,7 +5,7 @@
         {"id":"abiding","title":"Law Abiding Citizen","description":"Attempt to beard the train the boring way.","icon":"Medals/Icons/abiding"},
         {"id":"train","title":"She Took the Midnight Train","description":"Almost board the wrong train.","icon":"Medals/Icons/train"},
         {"id":"denizen","title":"True Denizen","description":"Make a friend.","icon":"Medals/Icons/denizen"},
-        {"id":"dang","title":"Dang it.","description":"Miss an opportunity.","icon":"Medals/Icons/dang"},
+        {"id":"dang","title":"Dang It.","description":"Miss an opportunity.","icon":"Medals/Icons/dang"},
         {"id":"pizza","title":"Pizza Time","description":"Eat a hard won pizza.","icon":"Medals/Icons/pizza"},
         {"id":"flcl","title":"Never Knows Best","description":"Catch the tail end of a show.","icon":"Medals/Icons/flcl"},
         {"id":"popo","title":"Eff the Po-lice!","description":"Slip by unnoticed.","icon":"Medals/Icons/popo"},
