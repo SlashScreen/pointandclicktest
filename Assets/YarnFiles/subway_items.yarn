@@ -116,6 +116,7 @@ title: kit.look
 <<SetSpeaker Zero>>
 she looks totally confused and disoriented.
 ...honestly, she's kinda cute...
+wait. both of those sentiments together sound creepy. i didn't mean it like that.
 ===
 
 title: kit.use
@@ -136,16 +137,74 @@ title: kit.use
 
 title: kit.talk
 ---
+<<if Visited("kit.talk")>>
+    <<SetSpeaker Kit>>
+    Hey Zero. Don't you have a train to catch?
+    <<stop>>
+<<endif>>
+//cringe cringe cringe 
 <<SetSpeaker Zero>>
 hey. you look lost. what's up.
 <<SetSpeaker Kit>>
 Hey, can I ask a weird question?
 <<SetSpeaker Zero>>
-shoot
+shoot.
 <<SetSpeaker Kit>>
 Am I dreaming?
 <<SetSpeaker Zero>>
 dreaming?
+<<SetSpeaker Kit>>
+I fell asleep on the train, and I woke up… in this city. I have no idea where I am or how I knew what bus to get on to get to this subway station. 
+Suburban blocks seemed to be repeating, some buildings were… upside down. The layout of everything makes no sense. The air here is so awful, 
+I feel like I saw a building split in two. I don’t feel right- it’s like I’m… following myself? I feel like I’m losing my mind! 
+<<SetSpeaker Zero>>
+nah, you’re awake. this town has that effect. strangers like you tend to stumble across this shithole and turn themselves into the psych ward. this is Metropol, in California.
+<<SetSpeaker Kit>>
+California?! Oh, shit...
+<<SetSpeaker Zero>>
+uh oh. where are you from then?
+<<SetSpeaker Kit>>
+New York. Shit, shit, shit, how am I gonna get home?...
+<<SetSpeaker Zero>>
+damn dude, you must have conked out big time. tickets are real pricey because public transit sucks but if you see a guy at the tickets counter who has blonde hair and a 
+lot of acne you can give him a can of Dr. Plibby and he’ll give you a huge discount. 
+<<SetSpeaker Kit>>
+Thanks. Also, uh, how can I get to the train station? The subway map is complete spaghetti.
+<<SetSpeaker Zero>>
+the shortest path is to take the A line up to vermilion street station and walk towards the tower that looks like a huge dick until you reach the train station, but that goes under the red zone, 
+so i’d recommend taking the D line to tulsey street and then the B line to vermillion. 
+<<SetSpeaker Kit>>
+...uh. Red zone? Like, Fukushima red zone?
+<<SetSpeaker Zero>>
+nah, it’s an area in the city center that’s covered in skin or something and if you go near it you can get subway dreams, which is like… uh. a nightmare/astral projection, but not really. 
+it would probably traumatize you. you kind of have to experience one, but i wouldn’t recommend it. here, see that like, growth of throbbing meat on the ceiling? 
+<<FocusCamera MainCamera meat>>
+<<wait 2>>
+<<FocusCamera MainCamera Player>>
+<<SetSpeaker Kit>>
+Wh-what the fuck?! What the fuck is that?!
+<<SetSpeaker Zero>>
+no idea, but it bleeds and it comes from the red zone.
+<<SetSpeaker Kit>>
+What the hell kind of place is this? What happened here? How have I never heard of this place?!
+<<SetSpeaker Zero>>
+i dunno. what am i, a scientist. i just live here, man.
+<<SetSpeaker Kit>>
+Why are you being so cryptic?! It’s like im the protagonist of a puzzle game or something and have to figure out everything that happened from the shady locals.
+<<SetSpeaker Zero>>
+i don’t really know what to tell you, sorry. i was in school one day and shit started going down outside and now this place is like, a fold in space time or some shit. 
+as i said, im not some government scientist or something. this is just my life. you adapt pretty quickly. 
+<<SetSpeaker Kit>>
+Damn, uh, okay... What do I do now that I know this place exists?...
+<<SetSpeaker Zero>>
+don’t worry, you’ll forget about it after you leave. anyway, i’ve got a train to dodge the fares of, so i’ll catch you later. nice talkin to you, uh…
+<<SetSpeaker Kit>>
+Kit. (forget?...)
+<<SetSpeaker Zero>>
+zero. seeya.
+<<SetSpeaker Kit>>
+Bye, I guess?...
+<<SetSpeaker Zero>>
 ===
 
 
@@ -226,7 +285,7 @@ title: sodamachine.look
 <<SetSpeaker Zero>>
 it's a soda machine. it sells dr. plibby and some snacks.
 i came down here a few months ago at like 3 am and uh. fixed. this machine.
-it used to accept only coins. now it'll accept any coin-like object. much better.
+it used to only accept coins. now it'll accept any coin-like object. much better.
 ===
 
 
