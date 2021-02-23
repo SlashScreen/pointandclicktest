@@ -109,6 +109,49 @@ title: cultist.look
 ugh, another one of the conehead cultists. better not talk to him.
 ===
 
+title: cultist.pickpocket
+---
+<<SetSpeaker Zero>>
+alright. here goes nothing.
+<<Invoke cultist>>
+===
+
+title: cultist.talk
+---
+<<if Visited("asshole.pickpocket")>>
+    <<SetSpeaker Zero>>
+    hey dude. i saw that guy with the white shoes take some sort of, jeweled thing out of your pocket.
+    <<SetSpeaker Cultist>>
+    ...Thank you for letting me know. At last, a test, afforded to me by the apostles...
+    //TODO: finish argument
+<<else>>
+    <<SetSpeaker Zero>>
+    hello?
+    <<SetSpeaker Cultist>>
+    I feel the breath of GOD and His apostles at the back of my neck. With His grace I feel the breathing wheel of time
+    throbbing as His tender touch caresses my abdomen. Can you feel your house stretching?
+    <<SetSpeaker Zero>>
+    okay dude, uh- 
+    <<SetSpeaker Cultist>>
+    The eyes of those around us pierce through my soul. We cannot see them, for they simply stand around us.
+    But I know they are there. They always have been, and always will be. My soul is theirs and theirs alone.
+    <<SetSpeaker Zero>>
+    look-
+    <<SetSpeaker Cultist>>
+    They tell me whispers. Whispers of flesh and blood, of time and breath, of sea and sight, of life and fields.
+    If The Impaled is truly dead, then why does She look just like the thing I saw in my nightmares last night?
+    <<SetSpeaker Zero>>
+    i'm just gonna, go-
+    <<SetSpeaker Cultist>>
+    To drink the waters of the flesh is to be closer to Heaven. Heaven's gate stands at the place where skin meets asphalt.
+    Where the tower splits. Where She hangs. Where the water trickles. Where the breath of time and space ebbs and flows.
+    I'm sure you feel it too. In the ash carried on the wind, the way the north breeze rushes through the skyscraper canyons.
+    <<SetSpeaker Zero>>
+    <<GoToObject stepAwayPoint>>
+    aaaaand that's why i never go near those guys.
+<<endif>>
+===
+
 
 
 title: kit.look
