@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SetSpeaker : MonoBehaviour
 {
     public DialogueVoice voice;
+    public TalkingHeadsController headsController;
     public Text text;
     string speaker; 
     void Start(){
@@ -13,8 +14,9 @@ public class SetSpeaker : MonoBehaviour
     }
 
     public void SetSpeakerTo(string[] s){ //potential problem: if not called before start voice voice will be wrong
-        if (s[0] != speaker){ //makes sure it isnt unnecessarily leading stuff
+        if (s[0] != speaker){ //makes sure it isnt unnecessarily loading stuff
             voice.SetSpeaker(s[0]); //set voice
+            headsController.SetSpeaker(s[0]);
             speaker = s[0]; 
         }
 
