@@ -171,6 +171,7 @@ title: bra.wear
 i've been wearing this one for a week already.
 ive got a hoodie on, none will be the wiser.
 <<EarnCard 0>>
+<<call AddJournalEntry ("fooly cooly")>>
 ===
 
 

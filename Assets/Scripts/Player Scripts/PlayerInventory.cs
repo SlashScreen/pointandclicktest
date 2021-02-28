@@ -65,7 +65,6 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public object ItemInInventory(Yarn.Value[] item){ 
-        //Yarn wrapper for findItemWithID. sets variable based on whether it exists
         return inventory.Exists (x => x.id == item[0].AsNumber);
     }
 
