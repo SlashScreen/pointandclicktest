@@ -40,6 +40,7 @@ public class CardsManager : MonoBehaviour
     }
 
     public void earnCard(string[] c){
+        Debug.Log("Earning card...");
         int toFind = int.Parse(c[0]);
         if (! cards.Contains(toFind)){
 
@@ -56,6 +57,9 @@ public class CardsManager : MonoBehaviour
             //pass data to invoked events
             OnEarned.Invoke(dat.ToArray());
             GetComponent<CollectiblesSaver>().Save();
+        }else{
+            Debug.Log("Card already earned.");
+            Debug.Log(cards[0]);
         }
         
     }
