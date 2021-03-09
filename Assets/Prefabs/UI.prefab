@@ -916,10 +916,10 @@ RectTransform:
   m_Father: {fileID: 1244245083708239887}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -786.05, y: 111.2}
-  m_SizeDelta: {x: 54.499435, y: 30}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 36.94995, y: 111.2}
+  m_SizeDelta: {x: 54.49945, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2028604154386683893
 CanvasRenderer:
@@ -3317,8 +3317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.5}
-  m_SizeDelta: {x: 56.529617, y: 23.529678}
+  m_AnchoredPosition: {x: -0.13198, y: 0.3}
+  m_SizeDelta: {x: 35.15146, y: 15.167553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4854342393775662589
 CanvasRenderer:
@@ -4863,6 +4863,7 @@ GameObject:
   - component: {fileID: 3300731176908704631}
   - component: {fileID: 342407904644628716}
   - component: {fileID: 962104909733961598}
+  - component: {fileID: 6631253600767114260}
   m_Layer: 0
   m_Name: Scrollbar Vertical
   m_TagString: Untagged
@@ -4976,6 +4977,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6631253600767114260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683433409038498219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6ccf07651a5c64e83b18760e53dd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 3247589284907380232}
+  clip: {fileID: 8300000, guid: f418958216c73394cbc59ce514fdb3d0, type: 3}
+  bar: {fileID: 962104909733961598}
+  multiplier: 7.5
 --- !u!1 &4746104418719591802
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,7 +5347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00006371617}
+  m_AnchoredPosition: {x: 0, y: 0.0000016514114}
   m_SizeDelta: {x: 0, y: 272.9685}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &5111553349549253266
@@ -6103,6 +6120,7 @@ MonoBehaviour:
   - {fileID: 2480198943629176163, guid: 52a64ced15bbf134ab035adf630bb800, type: 3}
   - {fileID: 2480198943629176163, guid: f7b21218a43287249968d68e3efd5716, type: 3}
   - {fileID: 2480198943629176163, guid: 46085916880ba264ca79e62f7d880b49, type: 3}
+  - {fileID: 2480198943629176163, guid: 3d233203170cef84a91d6acd0441bac7, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}
@@ -7353,8 +7371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.75001, y: -18.1}
-  m_SizeDelta: {x: 56.529594, y: 22.028873}
+  m_AnchoredPosition: {x: -0.13198, y: -15.1}
+  m_SizeDelta: {x: 35.151413, y: 15.700832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5638011375037021575
 CanvasRenderer:
@@ -7581,8 +7599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -682.19995, y: -335.3}
-  m_SizeDelta: {x: 94.53784, y: 103.81653}
+  m_AnchoredPosition: {x: -696.9, y: -318.97}
+  m_SizeDelta: {x: 65.14693, y: 71.15991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5638011375366298696
 CanvasRenderer:
@@ -7695,8 +7713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 21.3}
-  m_SizeDelta: {x: 56.529617, y: 23.529678}
+  m_AnchoredPosition: {x: -0.13195, y: 15.35}
+  m_SizeDelta: {x: 35.151413, y: 15.1501465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5638011375480712112
 CanvasRenderer:
@@ -8421,8 +8439,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2148228409176762742}
   m_HandleRect: {fileID: 7576369789822807729}
   m_Direction: 0
-  m_Value: -0.0000001627108
-  m_Size: 0.38793004
+  m_Value: -0.0000000813554
+  m_Size: 0.3882874
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8647,12 +8665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'lorem ipsum dolor
-
-    sit amet
-
-    maybe i should work on actually like
-    finishing the game before working on polish like this'
+  m_text: -find phone, keys, and shoes in the apartment so i can leave.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd2fc9549f9dfb649ba58ca89b7140bf, type: 2}
   m_sharedMaterial: {fileID: -2359895451827533600, guid: fd2fc9549f9dfb649ba58ca89b7140bf, type: 2}

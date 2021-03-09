@@ -29,7 +29,7 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
     }
 
     public void BeginSpeakingAnimations(){
-        Debug.Log("Begin Speaking Animations");
+        //Debug.Log("Begin Speaking Animations");
 
         if (GetComponent<SetSpeaker>().voice.GetSilence()){ //if silent, just skip everything 
             return;

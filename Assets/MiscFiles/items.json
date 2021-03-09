@@ -14,6 +14,7 @@
         {"name":"tape","id":12,"iconPath":"Icons/tape"},
         {"name":"washer","id":13,"iconPath":"Icons/washer"},
         {"name":"dr plibby","id":14,"iconPath":"Icons/plibby"},
-        {"name":"money","id":15,"iconPath":"Icons/money"}
+        {"name":"money","id":15,"iconPath":"Icons/money"},
+        {"name":"dagger","id":16,"iconPath":"Icons/dagger"}
     ]
 }

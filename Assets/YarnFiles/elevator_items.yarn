@@ -75,6 +75,7 @@ title: elevator.go
     yikes. what a nutjob. looks like he isn't gonna budge.
     i have a respirator hanging in the living room, but it's broken.
     i should grab it and find someone who can fix it.
+    <<AddOption OldMan Talk oldman.talk>>
 <<endif>>
 ===
 
@@ -133,4 +134,9 @@ title: oldman.look
 <<SetSpeaker Zero>>
 oh, i think i've seen this guy on tv.
 i dont know who he is, though.
+===
+
+title: oldman.talk
+---
+[[elevator.go]]
 ===

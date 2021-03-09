@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using Pathfinding;
 using Yarn.Unity;
 using UnityEngine.SceneManagement;
@@ -21,13 +22,14 @@ public class NPCscript : MonoBehaviour
     public bool customFlag;
     public Vector2 direction;
     int state;
-    public InteractiveObject.option[] options; //options
+    public List<InteractiveObject.option> options = new List<InteractiveObject.option>(); //options
 
     //Private vars
     Path path; //path player needs to take
     int currentWaypoint = 0; //current target waypoint
     public bool reachedEndOfPath = false; //if reached end of path
     public Transform talkPoint;
+    public UnityEvent customScript;
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
     
@@ -80,21 +82,20 @@ public class NPCscript : MonoBehaviour
     void setFlag(string[] b){
         customFlag = bool.Parse(b[0]);
     }
-
+    [YarnCommand("MoveNPC")]
     public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
         Debug.Log(coords);
         //TODO: Wait until moved to continue conversation
         //Debug.Log("begin yield");
-        Debug.Log(coords[0]);
-        if(coords[0] == gameObject.name){
-            Vector3 target = new Vector3();
-            target.x = float.Parse(coords[1]);
-            target.y = float.Parse(coords[2]);
-            GenPath(target);
-            yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
+        Debug.Log("coords " + coords[0]);
+        Vector3 target = new Vector3();
+        target.x = float.Parse(coords[0]);
+        target.y = float.Parse(coords[1]);
+        GenPath(target);
+        yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
-            onComplete(); //important for blocking
-        }  
+        onComplete(); //important for blocking
+          
     }
 
     private void OnEnable()
@@ -108,10 +109,11 @@ public class NPCscript : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>(); 
         d = GameObject.Find("Dialogue").GetComponent<DialogControllerComponent>(); //get d (lmao)
-        d.dia.AddCommandHandler("MoveNPC", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete)));
-        if (!d.dia.NodeExists(useNode)){ //If the script isn't already loaded
-            d.dia.Add(yarnDialog); //load the script
-        }
+        //Debug.Log(d);
+        //d.dia.AddCommandHandler("MoveNPC", (parameters, onComplete) => StartCoroutine(moveNPC(parameters, onComplete)));
+        //if (!d.dia.NodeExists(useNode)){ //If the script isn't already loaded
+        //    d.dia.Add(yarnDialog); //load the script
+        //}
     }
 
     void FixedUpdate() //physics update
@@ -172,5 +174,28 @@ public class NPCscript : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnLoad;
         d.dia.RemoveCommandHandler("MoveNPCTo");
+    }
+
+    [YarnCommand("Invoke")]
+    public void InvokeScript(string[] s){
+        customScript.Invoke();
+    }
+
+    [YarnCommand("RemoveOption")]
+    public void RemoveOption(string[] s){
+        options.Remove(options.Find(x => x.tooltip == s[0]));
+    }
+
+    [YarnCommand("AddOption")]
+    public void AddOption(string[] s){
+        InteractiveObject.option opt;
+        opt.tooltip = s[0];
+        opt.node = s[1];
+        options.Add(opt);
+    }
+
+    [YarnCommand("AddOption")]
+    public void ClearOptions(string[] s){
+        options.Clear();
     }
 }

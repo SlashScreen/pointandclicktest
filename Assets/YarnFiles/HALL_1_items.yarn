@@ -58,3 +58,43 @@ title: 404door.go
 ---
 <<Invoke 404door>>
 ===
+
+title: witchdoor.look
+---
+<<SetSpeaker Zero>>
+this is where my neighbor lives. she's a weird sorta witch. her apartment is full of all sorts of crap.
+she's pretty cool.
+===
+
+title: witchdoor.knock
+---
+<<if Visited("elevator.go")>>
+    <<if seeIfHasItem(10) and seeIfHasItem(12)>>
+        <<SetSpeaker Zero>>
+        hey. i have the tape n all that.
+        <<SetSpeaker Witch>>
+        Aaah. That'll work.
+        <<CombineItems 10 12 11>>
+        <<SetSpeaker Zero>>
+        thanks a million. i owe you one.
+        <<SetSpeaker Witch>>
+        No problem.
+        <<SetSpeaker Zero>>
+    <<else>>
+    <<if Visited("witchdoor.knock")>>
+        <<SetSpeaker Witch>>
+        Sorry. I can't do anything for you without tape.
+        <<SetSpeaker Zero>>
+        alright.
+        <<stop>>
+    <<endif>>
+
+    
+    <<end>>
+
+    <<endif>>
+<<else>>
+    <<SetSpeaker Zero>>
+    no need to disturb her.
+<<endif>>
+===

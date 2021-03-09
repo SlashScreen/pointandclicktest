@@ -1,3 +1,9 @@
+title: inAHurry
+---
+<<SetSpeaker Zero>>
+this is my only opportunity to slip by. i shouldn't waste time.
+===
+
 title: map.look
 ---
 <<Invoke map>> //look at the map
@@ -103,6 +109,40 @@ glad i caught myself there.
 
 
 
+title: asshole.look
+---
+<<SetSpeaker Zero>>
+i wouldn't invest in white shoes, personally.
+===
+
+title: asshole.talk
+---
+<<SetSpeaker Zero>>
+this is one of the few types of people who i can say with certainty have nothing interesting to say.
+just regurgitating memes on repeat and talking about the sports game they bought that's exactly the same as
+last year's.
+===
+
+title: asshole.pickpocket
+---
+<<SetSpeaker Zero>>
+aah, now here's a guy who has it coming.
+time to be the hand of karma.
+<<RemoveOption Kit Pickpocket>>
+<<RemoveOption Damsel Pickpocket>>
+<<RemoveOption Homeless Pickpocket>>
+<<Invoke Asshole>>
+===
+
+title: finishAssholePickpocket
+---
+<<RemoveItem 16>>
+<<Invoke Hider>>
+<<SetSpeaker Zero>>
+and planted. i'm ready to join the thieves guild.
+now i just have to let the cult guy over there know that his precious thing was stolen.
+===
+
 title: cultist.look
 ---
 <<SetSpeaker Zero>>
@@ -113,8 +153,24 @@ title: cultist.pickpocket
 ---
 <<SetSpeaker Zero>>
 alright. here goes nothing.
-<<Invoke cultist>>
+<<Invoke Cultist>>
 ===
+
+title: finishCultPickpocket
+---
+<<AddItem 16>>
+<<Invoke Hider>>
+<<SetSpeaker Zero>>
+awesome. i managed to get the dagger without him noticing.
+now. who should i give this to.
+preferably someone who has it coming.
+<<RemoveOption Cultist Pickpocket>>
+<<AddOption Asshole Pickpocket asshole.pickpocket>>
+<<AddOption Kit Pickpocket kit.pickpocket>>
+<<AddOption Homeless Pickpocket homeless.pickpocket>>
+<<AddOption Damsel Pickpocket damsel.pickpocket>>
+===
+
 
 title: cultist.talk
 ---
@@ -123,7 +179,23 @@ title: cultist.talk
     hey dude. i saw that guy with the white shoes take some sort of, jeweled thing out of your pocket.
     <<SetSpeaker Cultist>>
     ...Thank you for letting me know. At last, a test, afforded to me by the apostles...
-    //TODO: finish argument
+    <<FocusCamera Cultist>>
+    <<MoveNPC Cultist 1.5 -3.5>>
+    <<wait 2>>
+    <<show scufflemanager>>
+    <<hide Cultist>>
+    <<hide Asshole>>
+    <<FocusCamera Security>>
+    <<MoveNPC Security 1.5 -3.5>>
+    <<FocusCamera W_Turnstiles>>
+    <<Wait>>
+    <<FocusCamera Zero>>
+    <<SetSpeaker Zero>>
+    worked like a charm.
+    now i can slip by unnoticed.
+    <<GoToObject TurnstilesPoint>>
+    <<Invoke W_Turnstiles>>
+    <<PlayVideo SubToDream>>
 <<else>>
     <<SetSpeaker Zero>>
     hello?
@@ -160,6 +232,12 @@ title: kit.look
 she looks totally confused and disoriented.
 ...honestly, she's kinda cute...
 wait. both of those sentiments together sound creepy. i didn't mean it like that.
+===
+
+title: kit.pickpocket
+---
+<<SetSpeaker Zero>>
+nah, she's innocent.
 ===
 
 title: kit.use
@@ -283,7 +361,7 @@ it seems rather one sided. let me put this way. buzz off or i rub dirt on your s
 <<SetSpeaker Asshole>>
 You wouldn't dare!
 ...ugh, fine. If I see you later, you're dead, though.
-//Todo: move NPC and keep \him there
+<<MoveNPC Asshole 4 -1.5>>
 <<SetSpeaker Damsel>>
 Oh, thank you. Here, this is all I can spare right now.
 <<AddItem 15>>
@@ -298,6 +376,12 @@ alrighty then.
 title: dontIntervene
 ---
 <<stop>>
+===
+
+title: damsel.pickpocket
+---
+<<SetSpeaker Zero>>
+that would be counterproductive.
 ===
 
 
@@ -339,6 +423,12 @@ title: homeless.use
 <<else>>
     i should probably hang on to that.
 <<endif>>
+===
+
+title: homeless.pickpocket
+---
+<<SetSpeaker Zero>>
+that would be a total dick move.
 ===
 
 title: homeless.look
@@ -392,6 +482,7 @@ alright, here you go. does this jog your memory.
 Ah! Yes. Now I remember. Hmm, let's see...
 See that cultist over there?...
 In every cultist's pocket is a bejewelled dagger. 
+<<AddOption Cultist Pickpocket cultist.pickpocket>>
 If he finds that dagger missing, and perhaps, in somebody else's pocket, he'll be sure to get very upset, and cause a scene.
 <<SetSpeaker Zero>>
 aaah, and distract the officer.
