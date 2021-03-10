@@ -19,6 +19,10 @@ public class CameraScript : MonoBehaviour
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
         brain = GetComponent<CinemachineBrain>();
         StartCoroutine(FocusPlayer());
+        Camera cam = GetComponent<Camera>();
+        Debug.Log("cam loaded");
+        //cam.enabled = false;
+        //cam.enabled = true;
     }
 
     IEnumerator FocusPlayer(){
