@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -30,6 +30,7 @@ public class NPCscript : MonoBehaviour
     public bool reachedEndOfPath = false; //if reached end of path
     public Transform talkPoint;
     public UnityEvent customScript;
+    public NPCSpriteController spriteController;
     Seeker seeker; //seeker component
     Rigidbody2D rb; //rigidbody component
     
@@ -159,7 +160,7 @@ public class NPCscript : MonoBehaviour
         hidden = flags.hidden;
         customFlag = flags.custom;
         state = flags.state;
-        Debug.Log("NPC is hidden: " + hidden);
+        //Debug.Log("NPC is hidden: " + hidden);
         if (hidden) {
             gameObject.SetActive(false); //if hidden at start, hide
         }

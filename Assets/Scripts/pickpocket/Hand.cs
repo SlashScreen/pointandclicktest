@@ -63,7 +63,7 @@ public class Hand : MonoBehaviour
     }
 
     void OnPickUp(InputValue input){
-        Debug.Log(input.Get<float>());
+        //Debug.Log(input.Get<float>());
         if (input.Get<float>() > 0f){ //if clicked
         GetComponent<SpriteRenderer>().sprite = closeHand;
             if(grabbable != null){

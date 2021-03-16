@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class DialogControllerComponent : Singleton<DialogControllerComponent>
+public class DialogControllerComponent : MonoBehaviour
 {
     
     public DialogueRunner dia;
@@ -40,12 +40,23 @@ public class DialogControllerComponent : Singleton<DialogControllerComponent>
         if (sp.ToLower() == "zero"){
             Debug.Log("zero animation");
             GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"1"}); //yeah hardcoded but w/e
+        }else{
+            GameObject.Find(sp).GetComponent<NPCscript>().spriteController.setSprite(new string[] {"1"});
         }
-        //TODO: NPC stuff
     }
 
     public void StopSpeakingAnimation(){
-        GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"0"}); //yeah hardcoded but w/e
+        if (GetComponent<SetSpeaker>().voice.GetSilence()){ //if silent, just skip everything 
+            return;
+        }
+
+        string sp = GetComponent<SetSpeaker>().getSpeaker();
+
+        if (sp.ToLower() == "zero"){
+            GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"0"}); //yeah hardcoded but w/e
+        }else{
+            GameObject.Find(sp).GetComponent<NPCscript>().spriteController.setSprite(new string[] {"0"});
+        }
     }
     //TODO: NPC stuff
 }

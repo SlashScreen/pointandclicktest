@@ -16,6 +16,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     public Vector2 dir = new Vector2();
     public float baseSize = 3f;
     public PlayerControl player;
+    public bool doPerspective = true;
     
     public float horizon;
 
@@ -30,7 +31,6 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
     {
         //sert runtime stuff
         player = gameObject.GetComponent<PlayerControl>();
-        horizon = player.horizon;
     }
 
     void OnLoad(Scene scene, LoadSceneMode sceneMode){
@@ -75,10 +75,13 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
         animator.gameObject.transform.position = new Vector3 (animator.gameObject.transform.position.x, animator.gameObject.transform.position.y, (horizonLine.transform.position.y - animator.gameObject.transform.position.y) * -1);
 
         //perspective
-        float scale = Mathf.Pow(Mathf.Abs(animator.gameObject.transform.position.y-horizonLine.transform.position.y/2),.8f) * baseSize;//1/Mathf.Abs(transform.position.z + animator.gameObject.transform.position.z);//1/( 15 - Mathf.Abs(animator.gameObject.transform.position.z))*baseSize; //minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale to 1/(y-horizon)*3
-        float shadowScale = scale; //dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale for shadow
+        if(doPerspective){
+            float scale = Mathf.Pow(Mathf.Abs(animator.gameObject.transform.position.y-horizonLine.transform.position.y/2),.8f) * baseSize;//1/Mathf.Abs(transform.position.z + animator.gameObject.transform.position.z);//1/( 15 - Mathf.Abs(animator.gameObject.transform.position.z))*baseSize; //minsize-((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale to 1/(y-horizon)*3
+            float shadowScale = scale; //dropshadowSize -((1/((Mathf.Abs(transform.position.y)-horizon))*baseSize)); //set scale for shadow
 
-        transform.localScale = new Vector3(scale, scale, scale); //set scale
+            transform.localScale = new Vector3(scale, scale, scale); //set scale
+
+        }
         //dropshadow.localScale = new Vector3(shadowScale, shadowScale, shadowScale); //set scale dropshadow
         dropshadow.position = animator.gameObject.transform.position + new Vector3(0,vOffset,0);
 

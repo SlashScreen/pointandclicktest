@@ -30,11 +30,13 @@ public class PlayerYarn : MonoBehaviour
     public void AddCompletedNode(){ //might not be necessary
         //adds completed node string name to the list. 
         if (!activatedNodes.Contains(main.d.dia.CurrentNodeName)){
+            //Debug.Log("added node " + main.d.dia.CurrentNodeName);
             activatedNodes.Add(main.d.dia.CurrentNodeName);
         }
     }
 
     public object IsNodeVisited(Yarn.Value[] name){ //returns if node already visited
+        Debug.Log("Visited:" + activatedNodes.Contains(name[0].AsString));
         return activatedNodes.Contains(name[0].AsString);
     }
 
