@@ -143,6 +143,19 @@ and planted. i'm ready to join the thieves guild.
 now i just have to let the cult guy over there know that his precious thing was stolen.
 ===
 
+title: damsel.look
+---
+<<SetSpeaker Zero>>
+i'm not sure if that outfit works or not. then again, i am wearing dirty sweatpants and the same hoodie i wear every day.
+so maybe i have no room to talk.
+===
+
+title: damsel.use
+---
+<<SetSpeaker Zero>>
+i probably shouldn't give this to her.
+===
+
 title: cultist.look
 ---
 <<SetSpeaker Zero>>

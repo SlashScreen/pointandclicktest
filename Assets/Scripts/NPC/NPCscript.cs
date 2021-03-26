@@ -43,6 +43,7 @@ public class NPCscript : MonoBehaviour
 
     //Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
+        Debug.Log(t);
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
         //Debug.Log("generated path");
     }
