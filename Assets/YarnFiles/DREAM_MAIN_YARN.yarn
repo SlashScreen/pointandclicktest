@@ -1,0 +1,77 @@
+﻿title: pole.look
+---
+<<SetSpeaker Zero>>
+hmm. not sure what im looking at. lots of legs are involved.
+is it.. breathing?...
+===
+
+title: pole.talk
+---
+<<SetSpeaker Pole>>
+Greetings. Dreamer.
+<<SetSpeaker Zero>>
+oh, shit. you're sentient.
+<<SetSpeaker Pole>>
+You Are Not Of This World. So I Will Disregard Your Remark.
+Dreamer. Do You Know. Your Purpose Here.
+<<SetSpeaker Zero>>
+yeah. i have to like, appease the denizen, right.
+<<SetSpeaker Pole>>
+So. You Are Familiar. With Your Task.
+<<SetSpeaker Zero>>
+so. which one of you is the denizen. what do i have to do.
+<<SetSpeaker Pole>>
+Ah. So You Wish. To Know Of Our Game.
+<<SetSpeaker Zero>>
+yes. i wanna go home. i have pizza to eat. hurry it up, feet boy.
+<<SetSpeaker Pole>>
+Observe. The Shattered Object. Behind You.
+<<FocusCamera Shattered>>
+<<wait 1>>
+<<FocusCamera Player>>
+<<SetSpeaker Zero>>
+yeah, i saw that. what about it.
+<<SetSpeaker Pole>>
+You See. One Of Them. Standing In This Room. Is The Denizen. Not Including. Me. Or You.
+This Same One. Is The One. Who Broke. The Object.
+<<SetSpeaker Zero>>
+huh.
+<<SetSpeaker Pole>>
+To Appease The Denizen. Dreamer. You Must Deduce. Who The Denizen Is.
+<<SetSpeaker Zero>>
+ooh. so it's like. a whodunnit.
+and whoever shattered this thing is the denizen, and to appease the denizen, i have to figure out who did the thing.
+and the denizen is one of you lot in this room here.
+<<SetSpeaker Pole>>
+Yes. 
+<<SetSpeaker Zero>>
+uuggh. come on, do we really have to do this. just let me go home. i want pizza.
+<<SetSpeaker Pole>>
+You Know. As Well As We. That You Are. At Our Mercy.
+We Will. Derive Great Entertainment. In Watching You. Play Our Game.
+<<SetSpeaker Zero>>
+yeah yeah. ill only wake up if i finish your little game.
+alright. where do i start.
+<<SetSpeaker Pole>>
+Have You. Not Consumed. A Story Of Mystery.
+First. You Must. Collect Evidence.
+Conduct Interviews. Take Notes. And So. Forth.
+Then. Deduce.
+<<SetSpeaker Zero>>
+okay, sure. let's do this. 
+wait, why aren't you participating.
+<<SetSpeaker Pole>>
+Consider Me. A Judge. A Neutral. Party.
+<<SetSpeaker Zero>>
+i mean. you do know who it is though.
+<<SetSpeaker Pole>>
+This Is. Correct.
+<<SetSpeaker Zero>>
+so, youre basically just going to tell me if im right or wrong. not a judge.
+<<SetSpeaker Pole>>
+I Am Not. Bothered By. Semantics.
+Please. Start The. Investigation.
+<<SetSpeaker Zero>>
+alright, alright.
+<<call AddJournalEntry("find out who broke whatever this is by interviewing people, exploring, and collecting evidence. talking to the people in this room should be a good start.")>>
+===

@@ -413,7 +413,7 @@ title: sodamachine.use
     <<AddItem 14>> //add soda
 <<else>>
     <<if Visited("sodamachine.look")>>
-        i'd need a coin like object to put in the slot.
+        i'd need a coin-like object to put in the slot.
     <<else>>
         [[sodamachine.look]]
     <<endif>>
