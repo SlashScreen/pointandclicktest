@@ -21,3 +21,7 @@ MonoBehaviour:
     number: 2
   - name: witch
     number: 3
+  - name: asshole
+    number: 4
+  - name: damsel
+    number: 6

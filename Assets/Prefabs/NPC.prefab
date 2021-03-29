@@ -169,6 +169,10 @@ MonoBehaviour:
   options: []
   reachedEndOfPath: 0
   talkPoint: {fileID: 0}
+  customScript:
+    m_PersistentCalls:
+      m_Calls: []
+  spriteController: {fileID: 9090549502044552073}
 --- !u!50 &5289986992206867027
 Rigidbody2D:
   serializedVersion: 4
@@ -233,8 +237,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5289986992245784325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.51, z: 0}
-  m_LocalScale: {x: 4.6076, y: 12.613305, z: 4.6076}
+  m_LocalPosition: {x: 0.047, y: 0.989, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 4.6076}
   m_Children: []
   m_Father: {fileID: 5289986992206867026}
   m_RootOrder: 0
@@ -279,8 +283,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.93625194, b: 0.28773582, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 67438feb414b38144b197c1749c48972, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,9 +310,12 @@ MonoBehaviour:
   animationData: {fileID: 11400000, guid: cd700d956527a4847929f4ab35254768, type: 2}
   dropshadowSize: 2
   minsize: 0.2
+  vOffset: 0
   dropshadow: {fileID: 5251022672598677070}
   dir: {x: 0, y: 0}
+  baseSize: 3
   player: {fileID: 0}
+  doPerspective: 1
   horizon: 0
   npc: {fileID: -7517171757427484567}
 --- !u!95 &2438521313337695865

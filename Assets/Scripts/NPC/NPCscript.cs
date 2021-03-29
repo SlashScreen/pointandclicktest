@@ -85,18 +85,17 @@ public class NPCscript : MonoBehaviour
         customFlag = bool.Parse(b[0]);
     }
     [YarnCommand("MoveNPC")]
-    public IEnumerator moveNPC(string[] coords, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
-        Debug.Log(coords);
+    public IEnumerator moveNPC(string[] coords){//, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
+        Debug.Log("args " + coords);
         //TODO: Wait until moved to continue conversation
         //Debug.Log("begin yield");
-        Debug.Log("coords " + coords[0]);
         Vector3 target = new Vector3();
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
         GenPath(target);
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
-        onComplete(); //important for blocking
+        //onComplete(); //important for blocking
           
     }
 
@@ -175,7 +174,7 @@ public class NPCscript : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnLoad;
-        d.dia.RemoveCommandHandler("MoveNPCTo");
+        //d.dia.RemoveCommandHandler("MoveNPCTo");
     }
 
     [YarnCommand("Invoke")]

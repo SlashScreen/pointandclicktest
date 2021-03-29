@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 using Yarn;
 
 public class journal : MonoBehaviour
 {
     public TMP_Text text;
+    public UnityEvent action;
     List<string> entries = new List<string>();
 
     private void Start()
@@ -27,6 +29,7 @@ public class journal : MonoBehaviour
         }
 
         text.text = tx;
+        action.Invoke();
         //text.m_margin = new Vector4(text.m_margin.x,text.m_margin.y,text.m_margin.z,50 - (entries.Count * 25));
 
         return null;

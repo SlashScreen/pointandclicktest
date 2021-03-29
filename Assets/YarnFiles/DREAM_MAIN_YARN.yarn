@@ -25,22 +25,22 @@ Ah. So You Wish. To Know Of Our Game.
 <<SetSpeaker Zero>>
 yes. i wanna go home. i have pizza to eat. hurry it up, feet boy.
 <<SetSpeaker Pole>>
-Observe. The Shattered Object. Behind You.
-<<FocusCamera Shattered>>
+Observe. The Shattered Vase. Behind You.
+<<FocusCamera Vase>>
 <<wait 1>>
 <<FocusCamera Player>>
 <<SetSpeaker Zero>>
-yeah, i saw that. what about it.
+is that what that is. yeah, i saw that. what about it.
 <<SetSpeaker Pole>>
 You See. One Of Them. Standing In This Room. Is The Denizen. Not Including. Me. Or You.
-This Same One. Is The One. Who Broke. The Object.
+This Same One. Is The One. Who Broke. The Vase.
 <<SetSpeaker Zero>>
 huh.
 <<SetSpeaker Pole>>
 To Appease The Denizen. Dreamer. You Must Deduce. Who The Denizen Is.
 <<SetSpeaker Zero>>
 ooh. so it's like. a whodunnit.
-and whoever shattered this thing is the denizen, and to appease the denizen, i have to figure out who did the thing.
+and whoever shattered this vase is the denizen, and to appease the denizen, i have to figure out who did the thing.
 and the denizen is one of you lot in this room here.
 <<SetSpeaker Pole>>
 Yes. 
@@ -73,5 +73,54 @@ I Am Not. Bothered By. Semantics.
 Please. Start The. Investigation.
 <<SetSpeaker Zero>>
 alright, alright.
-<<call AddJournalEntry("find out who broke whatever this is by interviewing people, exploring, and collecting evidence. talking to the people in this room should be a good start.")>>
+<<call AddJournalEntry("find out who broke the vase by interviewing people, exploring, and collecting evidence. talking to the people in this room should be a good start.")>>
+===
+
+
+
+title: vase.look
+---
+<<SetSpeaker Zero>>
+<<if Visited("pole.talk")>>
+    well. examining the victim of this crime is probably a good thing to do.
+    i hope its an object and not a dead body. Pole said it was a vase, so im hopeful.
+    im assuming that this is the moment of impact played on loop.
+    it's hard to tell, but it looks like the vase was hit by something long and thin.
+    <<call AddJournalEntry("vase appears to have been hit with something long and thin, like a pole. not the guy, though.")>>
+<<else>>
+    not sure what to make of this.
+<<endif>>
+===
+
+title: vase.use
+---
+<<SetSpeaker Zero>>
+i'd rather not. put this, in the time loop zone.
+===
+
+
+
+title: omicron.look
+---
+<<SetSpeaker Zero>>
+am i supposed to narrate what im looking at here.
+===
+
+title: omicron.talk
+---
+<<SetSpeaker Zero>>
+<<if Visited("omicron.talk")>>
+    
+<<else>>
+    <<SetSpeaker Zero>>
+    alright. what is this thing, and will i ever get an answer.
+    <<SetSpeaker Omicron>>
+    You will indeed get an answer; my name is Omicron.
+    <<SetSpeaker Zero>>
+    oooh shit, youre alive. sorry about that.
+    <<SetSpeaker Omicron>>
+    Please take care not to call people "things."
+    <<SetSpeaker Zero>>
+    i said im sorry.
+<<endif>>
 ===

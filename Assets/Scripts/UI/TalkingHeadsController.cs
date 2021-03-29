@@ -11,7 +11,7 @@ public class TalkingHeadsController : MonoBehaviour
     public void SetSpeaker(string speaker){
         List<AnimControllerData.state> ls = new List<AnimControllerData.state> (datum.states);
         int talk = ls[ls.FindIndex(foo => foo.name == speaker.ToLower())].number; //get number of item in datum that matches speaker
-        Debug.Log(head);
+        Debug.Log(speaker + " " + talk);
         head.SetInteger("character",talk);
         head.SetTrigger("switch");
     }
