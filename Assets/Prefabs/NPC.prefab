@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5251022672598677070}
   - component: {fileID: 4034979302323702311}
+  - component: {fileID: 6149125304421537543}
   m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576909102924199337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0040369793, y: 0.0028908253, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.018, y: -0.219, z: 0}
+  m_LocalScale: {x: 1, y: 0.090679035, z: 1}
   m_Children: []
   m_Father: {fileID: 5289986992206867026}
   m_RootOrder: 1
@@ -50,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2acdfed33294fdf4b8054830327e67a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: c4b45c2d96fd3b04aade53a6247e944c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67438feb414b38144b197c1749c48972, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6149125304421537543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576909102924199337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593021b8909561f4ba80a0c9fb019ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentRenderer: {fileID: 5289986992245784323}
 --- !u!1 &5289986992206867031
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +329,7 @@ MonoBehaviour:
   dir: {x: 0, y: 0}
   baseSize: 3
   player: {fileID: 0}
-  doPerspective: 1
+  doPerspective: 0
   horizon: 0
   npc: {fileID: -7517171757427484567}
 --- !u!95 &2438521313337695865

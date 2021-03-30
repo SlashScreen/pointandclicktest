@@ -431,8 +431,15 @@ it used to only accept coins. now it'll accept any coin-like object. much better
 
 title: homeless.use
 ---
+<<SetSpeaker Zero>>
 <<if $selectedInventory == 15>>
-    [[giveMoney]]
+    <<if Visited("homeless.talk")>>
+        [[giveMoney]]
+    <<else>>
+        im a bit tight on money right now.
+        i should only give this away if i will get something in return.
+        im sure there's some sort of comment to be made there about, like, society, or something.
+    <<endif>>
 <<else>>
     i should probably hang on to that.
 <<endif>>
@@ -441,14 +448,14 @@ title: homeless.use
 title: homeless.pickpocket
 ---
 <<SetSpeaker Zero>>
-that would be a total dick move.
+that would be a total dick move. no thanks.
 ===
 
 title: homeless.look
 ---
 <<SetSpeaker Zero>>
 a homeless guy, seeking shelter from the shitty air outside. 
-who can blame him. i don't want cancer either.
+who can blame him. i don't want cancer either. the bills would put me in massive debt.
 ===
 
 title: homeless.talk
@@ -512,4 +519,32 @@ Oh hell no. I have some self respect. There's a food truck down the street that 
 <<SetSpeaker Zero>>
 thank god.
 <<EarnMedal infirm>>
+===
+
+
+
+title: security.look
+---
+<<SetSpeaker Zero>>
+a cop trying to ensure that nobody eats into the meager income the public transit system garners.
+===
+
+
+
+title: turnstile.w.look
+---
+<<SetSpeaker Zero>>
+this is the platform i need to get to.
+but i dont wanna pay the ticket. 5 bucks a ride is ridiculous. eat my ass.
+===
+
+title: turnstile.w.go
+---
+<<SetSpeaker Zero>>
+<<if  Visited("asshole.pickpocket") and Visited("cultist.talk")>>
+    gotta blast.
+    <<Invoke W_Turnstiles>>
+<<else>>
+    that cop is there. i gotta get him away from his post so i can slip by.
+<<endif>>
 ===

@@ -24,4 +24,6 @@ MonoBehaviour:
   - name: asshole
     number: 4
   - name: damsel
+    number: 5
+  - name: omicron
     number: 6

@@ -8,17 +8,36 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - HALL_1_items-hands.use-0
+  - HALL_1_items-hands.look-1
+  - HALL_1_items-fcknzi.use-2
+  - HALL_1_items-fcknzi.look-3
+  - HALL_1_items-fcknzi.look-4
+  - HALL_1_items-fcknzi.look-5
+  - HALL_1_items-hallcorner1.use-6
+  - HALL_1_items-hallcorner1.use-7
+  - HALL_1_items-404door.use-8
+  - HALL_1_items-404door.look-9
+  - HALL_1_items-witchdoor.look-10
+  - HALL_1_items-witchdoor.look-11
+  - HALL_1_items-witchdoor.knock-12
+  - HALL_1_items-witchdoor.knock-13
+  - HALL_1_items-witchdoor.knock-14
+  - HALL_1_items-witchdoor.knock-15
+  - HALL_1_items-witchdoor.knock-16
+  - HALL_1_items-witchdoor.knock-17
+  - HALL_1_items-witchdoor.knock-18
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: 'Error on line 1 at position 1:
 
     mismatched input
     ''<EOF>'' expecting {ID, HASHTAG}
 
-    
+
 
 '
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 52a64ced15bbf134ab035adf630bb800, type: 3}
   localizations: []
