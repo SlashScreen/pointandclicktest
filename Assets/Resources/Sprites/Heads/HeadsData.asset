@@ -27,3 +27,5 @@ MonoBehaviour:
     number: 5
   - name: omicron
     number: 6
+  - name: homeless
+    number: 7

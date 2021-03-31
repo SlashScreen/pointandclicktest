@@ -1099,7 +1099,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.16313696, y: 1.5264971}
@@ -2950,7 +2950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5289986992206867031, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_Name
-      value: HomelessGuy
+      value: Homeless
       objectReference: {fileID: 0}
     - target: {fileID: 5289986992245784322, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_LocalScale.x

@@ -73,7 +73,11 @@ public class PlayerUIInteraction : MonoBehaviour
                                 main.control.targetPosition = transform.position;
                             }
                         }else{
-                            main.control.targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;
+                            if (clickedObject.GetComponent<NPCscript>().talkPoint != null){ //if it has a talk point
+                                main.control.targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;
+                            }else{
+                                main.control.targetPosition = transform.position;
+                            }
                         }
 
                         if (main.d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item in hand from inventory

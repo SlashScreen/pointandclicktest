@@ -83,7 +83,7 @@ public class PlayerSpriteController : MonoBehaviour //NTS could absolutely exten
 
         }
         //dropshadow.localScale = new Vector3(shadowScale, shadowScale, shadowScale); //set scale dropshadow
-        dropshadow.position = animator.gameObject.transform.position + new Vector3(0,vOffset,0);
+        //dropshadow.position = animator.gameObject.transform.position + new Vector3(0,vOffset,0);
 
     }
 
