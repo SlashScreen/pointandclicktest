@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class CameraScript : MonoBehaviour
 {
     CinemachineBrain brain;
+
     private void OnEnable(){
         SceneManager.sceneLoaded += OnLoad; //set up onloaded yield
     }
@@ -20,6 +21,7 @@ public class CameraScript : MonoBehaviour
         brain = GetComponent<CinemachineBrain>();
         StartCoroutine(FocusPlayer());
         Camera cam = GetComponent<Camera>();
+        GameObject.Find("Player").GetComponent<PlayerMain>().d.dia.AddCommandHandler("FocusCamera",FocusCamera);
         Debug.Log("cam loaded");
         //cam.enabled = false;
         //cam.enabled = true;
@@ -30,7 +32,6 @@ public class CameraScript : MonoBehaviour
         FocusCamera(new string[] {"Player"}); //when scene load, focus camera on player
     }
 
-    [YarnCommand("FocusCamera")]
     public void FocusCamera(string[] target){
         try{
             brain.ActiveVirtualCamera.Follow = GameObject.Find(target[0]).transform; //set follow camera target to gameobject

@@ -189,13 +189,14 @@ public class NPCscript : MonoBehaviour
 
     [YarnCommand("AddOption")]
     public void AddOption(string[] s){
+        Debug.Log(s);
         InteractiveObject.option opt;
         opt.tooltip = s[0];
         opt.node = s[1];
         options.Add(opt);
     }
 
-    [YarnCommand("AddOption")]
+    [YarnCommand("ClearOptions")]
     public void ClearOptions(string[] s){
         options.Clear();
     }

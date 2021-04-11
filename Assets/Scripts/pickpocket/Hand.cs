@@ -29,11 +29,11 @@ public class Hand : MonoBehaviour
         
         // do we hit our portal plane?
         if (Physics.Raycast(ray, out hit)) {
-            Debug.Log(hit.collider.gameObject.name + ", " + portal.name);
+            //Debug.Log(hit.collider.gameObject.name + ", " + portal.name);
             if (hit.collider.gameObject == portal){
 
                 var localPoint = hit.textureCoord;
-                Debug.Log(hit.textureCoord);
+                //Debug.Log(hit.textureCoord);
                 // convert the hit texture coordinates into camera coordinates
                 //portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight))
                 //RaycastHit2D portalHit = Physics2D.Raycast(portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight)), Vector2.zero, Mathf.Infinity);

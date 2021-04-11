@@ -29,3 +29,15 @@ MonoBehaviour:
     number: 6
   - name: homeless
     number: 7
+  - name: david
+    number: 8
+  - name: pole
+    number: 9
+  - name: msdos
+    number: 10
+  - name: metalmouth
+    number: 11
+  - name: friend
+    number: 12
+  - name: hangman
+    number: 13

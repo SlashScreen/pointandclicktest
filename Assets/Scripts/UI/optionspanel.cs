@@ -44,7 +44,7 @@ public class optionspanel : MonoBehaviour
     }
 
     public void setButtons_NPC(NPCscript obj){
-        Debug.Log("setting up buttons");
+        //Debug.Log("setting up buttons + " + obj.options[0]);
         if (obj.options.Count == 1){
             buttons[2].setup_NPC(obj,obj.options[0]);
         }else{

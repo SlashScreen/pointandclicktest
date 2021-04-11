@@ -154,6 +154,7 @@ title: damsel.use
 ---
 <<SetSpeaker Zero>>
 i probably shouldn't give this to her.
+<<set $selectedInventory to 0>>
 ===
 
 title: cultist.look
@@ -267,6 +268,7 @@ title: kit.use
     <<SetSpeaker Zero>>
     i should probably hold on to that.
 <<endif>>
+<<set $selectedInventory to 0>>
 ===
 
 title: kit.talk
@@ -313,7 +315,7 @@ so i’d recommend taking the D line to tulsey street and then the B line to ver
 nah, it’s an area in the city center that’s covered in skin or something and if you go near it you can get subway dreams, which is like… uh. a nightmare/astral projection, but not really. 
 it would probably traumatize you. you kind of have to experience one, but i wouldn’t recommend it. here, see that like, growth of throbbing meat on the ceiling? 
 <<FocusCamera MainCamera meat>>
-<<wait 2>>
+<<wait 3>>
 <<FocusCamera MainCamera Player>>
 <<SetSpeaker Kit>>
 Wh-what the fuck?! What the fuck is that?!
@@ -411,6 +413,7 @@ title: sodamachine.use
 
     <<RemoveItem 13>> //remove washer
     <<AddItem 14>> //add soda
+    <<set $selectedInventory to 0>>
 <<else>>
     <<if Visited("sodamachine.look")>>
         i'd need a coin-like object to put in the slot.
@@ -443,6 +446,7 @@ title: homeless.use
 <<else>>
     i should probably hang on to that.
 <<endif>>
+<<set $selectedInventory to 0>>
 ===
 
 title: homeless.pickpocket
@@ -491,6 +495,7 @@ title: homeless.talk
     yeah that's fair. 
     alright. ill go find some cash.
 <<endif>>
+<<set $selectedInventory to 0>>
 ===
 
 title: giveMoney
@@ -501,7 +506,11 @@ alright, here you go. does this jog your memory.
 <<SetSpeaker Homeless>>
 Ah! Yes. Now I remember. Hmm, let's see...
 See that cultist over there?...
+<<FocusCamera Cultist>>
+<<wait 3>>
+<<FocusCamera Player>>
 In every cultist's pocket is a bejewelled dagger. 
+<<ClearOptions Cultist>>
 <<AddOption Cultist Pickpocket cultist.pickpocket>>
 If he finds that dagger missing, and perhaps, in somebody else's pocket, he'll be sure to get very upset, and cause a scene.
 <<SetSpeaker Zero>>
@@ -519,6 +528,7 @@ Oh hell no. I have some self respect. There's a food truck down the street that 
 <<SetSpeaker Zero>>
 thank god.
 <<EarnMedal infirm>>
+<<set $selectedInventory to 0>>
 ===
 
 

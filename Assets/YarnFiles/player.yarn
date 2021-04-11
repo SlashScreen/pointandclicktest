@@ -24,4 +24,5 @@ title: genericUse
 ---
 <<SetSpeaker Zero>>
 i don't need to do this.
+<<set $selectedInventory to 0>>
 ===
