@@ -41,3 +41,5 @@ MonoBehaviour:
     number: 12
   - name: hangman
     number: 13
+  - name: cultist
+    number: 14

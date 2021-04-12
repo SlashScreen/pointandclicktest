@@ -47,10 +47,14 @@ public class optionspanel : MonoBehaviour
         //Debug.Log("setting up buttons + " + obj.options[0]);
         if (obj.options.Count == 1){
             buttons[2].setup_NPC(obj,obj.options[0]);
+        }else if (obj.options.Count == 2){
+            buttons[0].setup_NPC(obj,obj.options[0]);
+            buttons[1].setup_NPC(obj,obj.options[1]);
         }else{
             buttons[0].setup_NPC(obj,obj.options[0]);
             buttons[1].setup_NPC(obj,obj.options[1]);
-        } 
+            buttons[2].setup_NPC(obj,obj.options[0]);
+        }
     }
 
     private void Start()

@@ -10,6 +10,7 @@ public class PlayerUIInteraction : MonoBehaviour
     public Vector3 UIPosition; //options wheel position
     optionspanel opt;
     public GameObject clickedObject = null; //an interactive object that is clicked
+    public bool inMenu = false;
 
     PlayerMain main;
     InGameDropdown dropdown;
@@ -29,8 +30,8 @@ public class PlayerUIInteraction : MonoBehaviour
     }
 
     public void OnMove(InputValue input){
-        if (main.yarn.inConversation || main.control.goingToTalkPoint){
-            //nothing should happen if youre in a conversation
+        if (main.yarn.inConversation || main.control.goingToTalkPoint || inMenu){
+            //nothing should happen if youre in a conversation or in a menu
             return;
         }
 

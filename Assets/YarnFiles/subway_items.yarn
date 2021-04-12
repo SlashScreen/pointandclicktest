@@ -126,6 +126,7 @@ last year's.
 title: asshole.pickpocket
 ---
 <<SetSpeaker Zero>>
+<<GoToObject AHpocketpoint>>
 aah, now here's a guy who has it coming.
 time to be the hand of karma.
 <<RemoveOption Kit Pickpocket>>
@@ -139,6 +140,7 @@ title: finishAssholePickpocket
 <<RemoveItem 16>>
 <<Invoke Hider>>
 <<SetSpeaker Zero>>
+<<AddOption Cultist Talk cultist.talk>>
 and planted. i'm ready to join the thieves guild.
 now i just have to let the cult guy over there know that his precious thing was stolen.
 ===
@@ -166,7 +168,9 @@ ugh, another one of the conehead cultists. better not talk to him.
 title: cultist.pickpocket
 ---
 <<SetSpeaker Zero>>
+<<GoToObject CLpocketpoint>>
 alright. here goes nothing.
+if i don't touch the sides, i should be golden.
 <<Invoke Cultist>>
 ===
 
@@ -196,13 +200,13 @@ title: cultist.talk
     <<FocusCamera Cultist>>
     <<MoveNPC Cultist 1.5 -3.5>>
     <<wait 2>>
-    <<show scufflemanager>>
+    <<show Scuffle>>
     <<hide Cultist>>
     <<hide Asshole>>
     <<FocusCamera Security>>
     <<MoveNPC Security 1.5 -3.5>>
     <<FocusCamera W_Turnstiles>>
-    <<Wait>>
+    <<wait 2>>
     <<FocusCamera Zero>>
     <<SetSpeaker Zero>>
     worked like a charm.

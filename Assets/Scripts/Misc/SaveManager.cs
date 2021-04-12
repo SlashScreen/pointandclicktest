@@ -29,6 +29,7 @@ public class SaveManager : MonoBehaviour{
         public bool hidden;
         public bool custom;
         public int state;
+        public InteractiveObject.option[] opts;
     }
     public scenemanager sm;
 
@@ -36,6 +37,7 @@ public class SaveManager : MonoBehaviour{
     List<itemFlags> flagslCache = new List<itemFlags>();
     bool shoes;
     bool mask;
+    bool purgeNextCycle = false;
 
     private void Start()
     {
@@ -47,7 +49,23 @@ public class SaveManager : MonoBehaviour{
         //SAVE game
         //TODO: Save custom states for interactive objects
         SaveGame sv = new SaveGame(); //create object
-
+        
+        //purge non essential data if Purge is on.
+        //to be done each time the player enters a new area that they cannot return from.
+        //this will remove all data that will not be used again from the save file, such as activated nodes, and item data.
+        //if zero is going to a new area, why save it? this is a way to keep file sizes down in a way that doesnt have me doing like, byte math or whatever
+        if(purgeNextCycle){
+            player.yarn.activatedNodes = new List<string>(); //purge activated nodes
+            flagslCache = new List<itemFlags>();
+            flagsl =  new List<itemFlags>();
+            purgeNextCycle = false;
+        }else{
+            NPCscript[] npcs = GameObject.FindObjectsOfType<NPCscript>();
+            foreach (var npc in npcs){
+                npc.updateTheFlags();
+            }
+        }
+        
         foreach(var item in player.inventory.inventory){ //store item IDs (saves on space and processing time)
             sv.inventory.Add(item.id);
         }
@@ -61,7 +79,7 @@ public class SaveManager : MonoBehaviour{
 
         sv.flags = flagsl;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
-
+        //write file
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/saves/" + SaveName +".save");
         sw.Write(JSON);
         sw.Close();
@@ -97,12 +115,13 @@ public class SaveManager : MonoBehaviour{
         Debug.Log("Game Loaded.");
     }
 
-    public void updateFlags(string name, bool hidden, bool custom, int state = 0){ //change flags in internal database
+    public void updateFlags(string name, bool hidden, bool custom,  InteractiveObject.option[] op, int state = 0){ //change flags in internal database
         itemFlags f = new itemFlags();
         f.name = name;
         f.hidden = hidden;
         f.custom = custom;
         f.state = state;
+        f.opts = op;
 
         if(flagsl.Exists(x => x.name == name)){ //if item with that name already exists, replace with f
             flagsl[flagsl.FindIndex(x => x.name == name)] = f;
@@ -118,5 +137,9 @@ public class SaveManager : MonoBehaviour{
         }else{
             return new itemFlags();
         }
+    }
+
+    public void PurgeNonEssentialData(){ //call on entering a new area manually
+        purgeNextCycle = true;
     }
 }

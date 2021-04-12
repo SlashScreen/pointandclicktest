@@ -160,6 +160,10 @@ public class NPCscript : MonoBehaviour
         hidden = flags.hidden;
         customFlag = flags.custom;
         state = flags.state;
+        if(flags.opts != null && flags.opts.Length != 0){
+            Debug.Log("found some options from the save file");
+            options = new List<InteractiveObject.option>(flags.opts);
+        }
         //Debug.Log("NPC is hidden: " + hidden);
         if (hidden) {
             gameObject.SetActive(false); //if hidden at start, hide
@@ -167,8 +171,8 @@ public class NPCscript : MonoBehaviour
 
     }
 
-    void updateTheFlags(){
-        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag, state);
+    public void updateTheFlags(){
+        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag, options.ToArray(), state);
     }
 
     private void OnDestroy()

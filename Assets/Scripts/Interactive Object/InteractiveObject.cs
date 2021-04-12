@@ -50,6 +50,10 @@ public class InteractiveObject : MonoBehaviour
         //set the flags
         hidden = flags.hidden;
         customFlag = flags.custom;
+        if(flags.opts != null && flags.opts.Length != 0){
+            options = flags.opts;
+        }
+        
         if (hidden) { //if hidden in the save game, hide it
             gameObject.SetActive(false);
         }
@@ -95,7 +99,7 @@ public class InteractiveObject : MonoBehaviour
     }
 
     void updateTheFlags(){
-        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag); //sync f;ags with savegame
+        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, hidden, customFlag, options); //sync f;ags with savegame
     }
 
     int getSprite(){

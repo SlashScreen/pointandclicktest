@@ -35,6 +35,6 @@ public class LivingRoomBackdrop : MonoBehaviour
     }
 
     void updateTheFlags(){
-        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, false, true); //sets savegame flag
+        GameObject.Find("Menu").GetComponent<SaveManager>().updateFlags(gameObject.name, false, true, new InteractiveObject.option[0]); //sets savegame flag
     }
 }
