@@ -6632,6 +6632,7 @@ MonoBehaviour:
   - {fileID: 2480198943629176163, guid: f7b21218a43287249968d68e3efd5716, type: 3}
   - {fileID: 2480198943629176163, guid: 46085916880ba264ca79e62f7d880b49, type: 3}
   - {fileID: 2480198943629176163, guid: 3d233203170cef84a91d6acd0441bac7, type: 3}
+  - {fileID: 2480198943629176163, guid: 73b13cc4b8bd8e04b950c82a1d0744c9, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}
@@ -8962,8 +8963,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2148228409176762742}
   m_HandleRect: {fileID: 7576369789822807729}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.407965
+  m_Value: -0.00000008135539
+  m_Size: 0.4086688
   m_NumberOfSteps: 11
   m_OnValueChanged:
     m_PersistentCalls:

@@ -83,8 +83,8 @@ title: vase.look
 <<SetSpeaker Zero>>
 <<if Visited("pole.talk")>>
     well. examining the victim of this crime is probably a good thing to do.
-    i hope its an object and not a dead body. Pole said it was a vase, so im hopeful.
-    im assuming that this is the moment of impact played on loop.
+    i hope its an object and not a dead body. Pole said it was a vase, so i hope it's just an object.
+    im assuming that this is the moment of impact played on loop. somehow.
     it's hard to tell, but it looks like the vase was hit by something long and thin.
     <<call AddJournalEntry("vase appears to have been hit with something long and thin, like a pole. not the guy, though.")>>
 <<else>>
