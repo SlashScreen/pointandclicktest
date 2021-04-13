@@ -161,7 +161,6 @@ public class NPCscript : MonoBehaviour
         customFlag = flags.custom;
         state = flags.state;
         if(flags.opts != null && flags.opts.Length != 0){
-            Debug.Log("found some options from the save file");
             options = new List<InteractiveObject.option>(flags.opts);
         }
         //Debug.Log("NPC is hidden: " + hidden);

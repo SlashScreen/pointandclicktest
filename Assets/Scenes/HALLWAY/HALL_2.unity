@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 478501868}
   - component: {fileID: 478501867}
   - component: {fileID: 478501871}
+  - component: {fileID: 478501872}
   m_Layer: 9
   m_Name: Elevator
   m_TagString: Clickable
@@ -565,6 +566,18 @@ MonoBehaviour:
   customScript:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 478501872}
+        m_TargetAssemblyTypeName: PurgeScript, Assembly-CSharp
+        m_MethodName: PurgeData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 478501868}
         m_TargetAssemblyTypeName: DoorScript, Assembly-CSharp
         m_MethodName: OpenDoor
@@ -603,6 +616,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb665fbfd404d8a4e81193a1f4d7e55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &478501872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478501866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f076c888adf964c82cef91d03b9e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &537704046
@@ -849,11 +874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06697583
+      value: 0.31103444
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0522996
+      value: 1.0508875
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.z

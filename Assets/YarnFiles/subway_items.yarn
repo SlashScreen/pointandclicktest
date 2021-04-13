@@ -193,10 +193,14 @@ preferably someone who has it coming.
 title: cultist.talk
 ---
 <<if Visited("asshole.pickpocket")>>
+    <<GoToObject CLpocketpoint>>
     <<SetSpeaker Zero>>
     hey dude. i saw that guy with the white shoes take some sort of, jeweled thing out of your pocket.
     <<SetSpeaker Cultist>>
     ...Thank you for letting me know. At last, a test, afforded to me by the apostles...
+    <<SetSpeaker Zero>>
+    this should be good.
+    <<HideDialog>>
     <<FocusCamera Cultist>>
     <<MoveNPC Cultist 1.5 -3.5>>
     <<wait 2>>
@@ -204,16 +208,18 @@ title: cultist.talk
     <<hide Cultist>>
     <<hide Asshole>>
     <<FocusCamera Security>>
+    <<wait 1>>
     <<MoveNPC Security 1.5 -3.5>>
-    <<FocusCamera W_Turnstiles>>
-    <<wait 2>>
-    <<FocusCamera Zero>>
+    //<<FocusCamera W_Turnstiles>>
+    //<<wait 2>>
+    <<FocusCamera Player>>
     <<SetSpeaker Zero>>
+    <<ShowDialog>>
     worked like a charm.
     now i can slip by unnoticed.
     <<GoToObject TurnstilesPoint>>
     <<Invoke W_Turnstiles>>
-    <<PlayVideo SubToDream>>
+    //<<PlayVideo test_FMV>>
 <<else>>
     <<SetSpeaker Zero>>
     hello?
