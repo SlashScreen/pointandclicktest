@@ -202,14 +202,15 @@ title: cultist.talk
     this should be good.
     <<HideDialog>>
     <<FocusCamera Cultist>>
-    <<MoveNPC Cultist 1.5 -3.5>>
+    <<MoveNPCToObject Cultist AHpocketpoint>>
     <<wait 2>>
-    <<show Scuffle>>
-    <<hide Cultist>>
-    <<hide Asshole>>
+    <<Invoke scufflemanager>>
+    <<Hide Cultist>>
+    <<Hide Asshole>>
+    <<wait 1>>
     <<FocusCamera Security>>
     <<wait 1>>
-    <<MoveNPC Security 1.5 -3.5>>
+    <<MoveNPCToObject Security Scuffle>>
     //<<FocusCamera W_Turnstiles>>
     //<<wait 2>>
     <<FocusCamera Player>>
@@ -217,8 +218,10 @@ title: cultist.talk
     <<ShowDialog>>
     worked like a charm.
     now i can slip by unnoticed.
+    <<HideDialog>>
     <<GoToObject TurnstilesPoint>>
     <<Invoke W_Turnstiles>>
+    <<ShowDialog>>
     //<<PlayVideo test_FMV>>
 <<else>>
     <<SetSpeaker Zero>>

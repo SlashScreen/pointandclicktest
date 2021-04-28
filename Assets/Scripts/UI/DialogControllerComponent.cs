@@ -38,7 +38,7 @@ public class DialogControllerComponent : MonoBehaviour
         string sp = GetComponent<SetSpeaker>().getSpeaker();
 
         if (sp.ToLower() == "zero"){
-            Debug.Log("zero animation");
+            //Debug.Log("zero animation");
             GameObject.Find("Player").GetComponent<PlayerSpriteController>().setSprite(new string[] {"1"}); //yeah hardcoded but w/e
         }else{
             GameObject.Find(sp).GetComponent<NPCscript>().spriteController.setSprite(new string[] {"1"});

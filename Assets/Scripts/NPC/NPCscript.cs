@@ -43,7 +43,7 @@ public class NPCscript : MonoBehaviour
 
     //Functions
     public void GenPath(Vector3 t){ //Generates path from current position to point t
-        Debug.Log(t);
+        //Debug.Log(t);
         seeker.StartPath(rb.position, t, OnPathComplete); //calls OnPathComplete once complete
         //Debug.Log("generated path");
     }
@@ -86,12 +86,27 @@ public class NPCscript : MonoBehaviour
     }
     [YarnCommand("MoveNPC")]
     public IEnumerator moveNPC(string[] coords){//, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
-        Debug.Log("args " + coords);
+        //Debug.Log("args " + coords);
         //TODO: Wait until moved to continue conversation
         //Debug.Log("begin yield");
         Vector3 target = new Vector3();
         target.x = float.Parse(coords[0]);
         target.y = float.Parse(coords[1]);
+        GenPath(target);
+        yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
+        //Debug.Log("yield");
+        //onComplete(); //important for blocking
+          
+    }
+
+    [YarnCommand("MoveNPCToObject")]
+    public IEnumerator moveNPCToObject(string[] obj){//, System.Action onComplete){ //moving the player via code. 2,d argument important for blocking
+        //Debug.Log("args " + coords);
+        //TODO: Wait until moved to continue conversation
+        //Debug.Log("begin yield");
+        Vector3 target = new Vector3();
+        GameObject o = GameObject.Find(obj[0]);
+        target = o.transform.position;
         GenPath(target);
         yield return new WaitUntil(() => reachedEndOfPath); //important for blocking
         //Debug.Log("yield");
@@ -192,7 +207,7 @@ public class NPCscript : MonoBehaviour
 
     [YarnCommand("AddOption")]
     public void AddOption(string[] s){
-        Debug.Log(s);
+        //Debug.Log(s);
         InteractiveObject.option opt;
         opt.tooltip = s[0];
         opt.node = s[1];
