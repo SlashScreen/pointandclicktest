@@ -124,3 +124,11 @@ title: omicron.talk
     i said im sorry.
 <<endif>>
 ===
+
+
+
+title: wdoor
+---
+//museum door
+<<Invoke wdoor>>
+===

@@ -8,3 +8,60 @@ if this world didn't use a different date and time system than ours, i'd say thi
 <<SetSilence False>>
 yeah, i can vibe with this one. i get it.
 ===
+
+title: pike
+---
+<<SetSpeaker Zero>>
+",". by aaaaaaaaa. material and date unknown.
+it's sorta like the album cover for zoe zowie's "tomorrow", but more grotesque.
+...it smells like tuna.
+===
+
+title: dipskip
+---
+<<SetSpeaker Zero>>
+"dipskip". i. nais, -46. wrought flesh and marble.
+i don't know what "wrought flesh" is, and i'd prefer to remain ignorant. i mostly just want to know how it looks so... noisy, staticy, in real life.
+well. assuming the subway dreams are real. which i think they are.
+<<SetSilence true>>
+...
+<<SetSilence False>>
+hmm. i could have sworn last time i looked at this it was in a different pose...
+===
+
+title: rottingmarrow
+---
+<<SetSpeaker Zero>>
+"seeping marrow". l. kopf, 9999999. organic material.
+that name is stomach-churning. not much to say about the piece though, it's a column of bone.
+===
+
+title: vasepedestal
+---
+<<SetSpeaker Zero>>
+"purple vase". artist unknown, 413. porcelain.
+ah! this is where the vase once was.
+so now i know it was taken from this pedestal and smashed in the other room.
+<<call AddJournalEntry("vase was on a pedestal in the museum, but then removed and taken to the crime scene.")>>
+===
+
+title: museumdoor.tomain
+---
+<<Invoke toMainDoor>>
+===
+
+title: museumdoor.togallery
+---
+<<Invoke toGalleryDoor>>
+===
+
+title: museumdoor.security
+---
+<<Invoke security>>
+===
+
+title: genericartuse
+---
+<<SetSpeaker Zero>>
+i know rules are different here, but i don't think they'd appreciate me adding to the sculptures.
+===

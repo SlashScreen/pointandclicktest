@@ -6633,6 +6633,7 @@ MonoBehaviour:
   - {fileID: 2480198943629176163, guid: 46085916880ba264ca79e62f7d880b49, type: 3}
   - {fileID: 2480198943629176163, guid: 3d233203170cef84a91d6acd0441bac7, type: 3}
   - {fileID: 2480198943629176163, guid: 73b13cc4b8bd8e04b950c82a1d0744c9, type: 3}
+  - {fileID: 2480198943629176163, guid: bac30e8539835de4aadaf6611e43f1c4, type: 3}
   textLanguage: 
   variableStorage: {fileID: 5638011373541677142}
   dialogueUI: {fileID: 5638011373541677143}

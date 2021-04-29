@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class InteractiveObject : MonoBehaviour
 {
     [Header("Yarn stuff")]
-    public string useNode; //items used on the object
+    public string useNode = "genericUse"; //items used on the object
     public YarnProgram yarnDialog; //dialogue of the object
     public option[] options; //options to show with the wheel
     [Header("Custom stuff")]
