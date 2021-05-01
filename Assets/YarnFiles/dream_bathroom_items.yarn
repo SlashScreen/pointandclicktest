@@ -1,0 +1,40 @@
+﻿title: curtain.look
+---
+<<SetSpeaker Zero>>
+it's a curtain to protect any cosmic horror's private parts from any onlookers.
+===
+
+title: curtain.draw
+---
+<<SetState CurtainInteractive true>>
+<<Invoke CurtainInteractive>>
+<<SetSpeaker Zero>>
+oh. i see.
+not sure what i expected.
+===
+
+title: dream.bathroom.react
+---
+<<if Visited("dream.bathroom.react")>>
+    <<stop>>
+<<endif>>
+<<SetSpeaker Zero>>
+woahly moly, the perspective in this room is all fucked. it hurts my brain.
+it's like that one underwater city in a novel by that racist horror writer guy.
+what was his name. pp loveshack or something. who cares.
+never really liked his novels anyway. like yeah he was a bigoted cunt but also like yeah i get that he pioneered cosmic horror but it's so generic sounding now.
+i remember reading one of his books about some inbred weirdos in a mansion in the middle of slut fuck nowhere and one of the lines was straight up like "the lightning revealed a silhouette of the creature. 
+its shape was indescribable. it is a wonder i am still sane." oh fuck off. opening this page revealed the silhouette of shitty words on a shitty page. its writing was awkward, generic, and stilted.
+it is a wonder i am still reading this.
+i know its supposed to leave it to the reader's imagination or some shit but it sounds so lazy and contrived. who the shit gives a fuck.
+anyway. what was i doing.
+<<SetSilence true>>
+...
+<<SetSilence false>>
+oh yeah. im supposed to be investigating a crime or something.
+===
+
+title: dream.bathroom.maindoor
+---
+<<Invoke MainDoor>>
+===

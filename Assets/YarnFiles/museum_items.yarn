@@ -60,6 +60,21 @@ title: museumdoor.security
 <<Invoke security>>
 ===
 
+title: securitydoor
+---
+<<Invoke SecDoor>>
+===
+
+title: museumdoor.to1
+---
+<<Invoke WDoor>>
+===
+
+title: Sec2Mus
+---
+<<Invoke Sec2Mus>>
+===
+
 title: genericartuse
 ---
 <<SetSpeaker Zero>>
