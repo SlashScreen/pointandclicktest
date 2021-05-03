@@ -1,0 +1,35 @@
+﻿title: mdoor.go
+tags:
+---
+<<Invoke MainDoor>>
+===
+
+title: sdoor.go
+tags:
+---
+<<Invoke ShatterDoor>>
+===
+
+title: museumdoor.go
+tags:
+---
+<<Invoke MuseumDoor>>
+===
+
+title: streetcomputer.look
+---
+<<SetSpeaker Zero>>
+ah. a familiar sight. a computer. public use, i guess?...
+===
+
+title: streetcomputer.use
+---
+<<SetSpeaker Zero>>
+placeholder text.
+===
+
+title: streetcomputer.itemuse
+---
+<<SetSpeaker Zero>>
+the computer doesnt have the right port.
+===

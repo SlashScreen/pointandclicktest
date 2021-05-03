@@ -38,3 +38,8 @@ title: dream.bathroom.maindoor
 ---
 <<Invoke MainDoor>>
 ===
+
+title: dream.bathroom.boilerdoor
+---
+<<Invoke BoilerDoor>>
+===

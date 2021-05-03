@@ -132,3 +132,15 @@ title: wdoor
 //museum door
 <<Invoke wdoor>>
 ===
+
+title: ndoor
+---
+//museum door
+<<Invoke ndoor>>
+===
+
+title: edoor
+---
+//museum door
+<<Invoke edoor>>
+===

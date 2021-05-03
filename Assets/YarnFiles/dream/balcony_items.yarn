@@ -1,0 +1,20 @@
+﻿title: welcomeMat
+tags:
+---
+<<Invoke WelcomeMat>>
+===
+
+title: balcony.look
+---
+<<SetSpeaker Zero>>
+yeah i have no idea what the hell im looking at.
+lots of radio towers though. cell reception mush be pretty good around here.
+===
+
+title: tossOff
+---
+<<SetSpeaker Zero>>
+i'd rather not toss this off. who knows where that goes.
+===
+
+
