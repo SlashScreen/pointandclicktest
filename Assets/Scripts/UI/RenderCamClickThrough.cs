@@ -12,10 +12,13 @@ public class RenderCamClickThrough : MonoBehaviour
     public GraphicRaycaster gRay;
     EventSystem eventSystem;
     Vector2 mouseP;
+    private void Start()
+    {
+        eventSystem = GameObject.FindObjectOfType<EventSystem>();
+    }
 
     public void OnMousePos(InputValue input){
         mouseP = input.Get<Vector2>();
-        eventSystem = GameObject.FindObjectOfType<EventSystem>();
     }
 
     public void OnMove(InputValue input){
@@ -32,12 +35,15 @@ public class RenderCamClickThrough : MonoBehaviour
                 // convert the hit texture coordinates into camera coordinates
                 //portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight))
                 RaycastHit2D portalHit = Physics2D.Raycast(portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight)), Vector2.zero, Mathf.Infinity);
-                
+                Debug.DrawRay(portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight)),Vector2.zero, Color.red, duration: 5f);
+                Debug.Log(portalCamera.ScreenToWorldPoint(new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight)));
+
                 PointerEventData m_PointerEventData = new PointerEventData(eventSystem);
                 m_PointerEventData.position = new Vector2(localPoint.x * portalCamera.pixelWidth, localPoint.y * portalCamera.pixelHeight);
                 List<RaycastResult> results = new List<RaycastResult>();
                 gRay.Raycast(m_PointerEventData, results);
 
+                //Debug.Log(portalHit.collider.gameObject.name);
                 // test these camera coordinates in another raycast test
                 foreach (RaycastResult result in results)
                 {

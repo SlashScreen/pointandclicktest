@@ -8,13 +8,22 @@ title: balcony.look
 ---
 <<SetSpeaker Zero>>
 yeah i have no idea what the hell im looking at.
+whenever the red light shines on me it feels hot.
 lots of radio towers though. cell reception mush be pretty good around here.
 ===
 
 title: tossOff
 ---
 <<SetSpeaker Zero>>
-i'd rather not toss this off. who knows where that goes.
+<<if $selecteditem == 17>>
+    
+    oh, do you think the radio can pick up the signals from those towers.
+    <<Show RadioInterface>>
+    
+<<elseif $selecteditem == 4>>
+    yeah, my phone doesnt work during a subway dream. i already tried.
+    not that a photo of this would come out well on my camera. or come out at all. The Ones Above stuff tends to not play nicely with cameras, even in good lighting.
+<<else>>
+    i'd rather not toss this off. who knows where that goes.
+<<endif>>
 ===
-
-

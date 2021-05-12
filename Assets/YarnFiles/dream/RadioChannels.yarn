@@ -1,0 +1,18 @@
+﻿title: TestChannel
+tags:
+---
+<<SetSpeaker Zero>>
+haha funee test dialogue.
+===
+
+title: coderadio
+---
+<<SetSpeaker Zero>>
+<<if Visited("streetcomputer.use")>>
+        nice. 10658. i think that fits the computer password.
+        <<Call AddJournalEntry("the code from the radio forest is 10658.")>>
+    <<else>>
+        10658. interesting. not sure what it means though.
+        <<Call AddJournalEntry("i got the number 10658 from the radio forest.")>>
+    <<endif>>
+===

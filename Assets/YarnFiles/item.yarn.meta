@@ -9,9 +9,13 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
+  stringIDs:
+  - item-item.use-0
+  - item-item.use-1
+  - item-item.use-2
+  - item-item.use-3
+  compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 8de39f7b19bf0b4438b4cc86e8e46000, type: 3}
   localizations: []

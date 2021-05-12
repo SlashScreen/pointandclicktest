@@ -15,6 +15,7 @@
         {"name":"washer","id":13,"iconPath":"Icons/washer"},
         {"name":"dr plibby","id":14,"iconPath":"Icons/plibby"},
         {"name":"money","id":15,"iconPath":"Icons/money"},
-        {"name":"dagger","id":16,"iconPath":"Icons/dagger"}
+        {"name":"dagger","id":16,"iconPath":"Icons/dagger"},
+        {"name":"radio","id":17,"iconPath":"Icons/radio"}
     ]
 }
