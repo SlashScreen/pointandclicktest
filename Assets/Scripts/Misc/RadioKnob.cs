@@ -11,6 +11,7 @@ public class RadioKnob : MonoBehaviour
         public string node;
         public AudioClip chatter;
         public float listenTime;
+        public bool looping;
     }
 
     public station[] stations;
@@ -22,6 +23,7 @@ public class RadioKnob : MonoBehaviour
     float previousChannel;
     float timer = 0f;
     float rounded;
+    float roun;
     bool onAStation;
     float timerTarget;
     string nodeToPlay;
@@ -37,7 +39,13 @@ public class RadioKnob : MonoBehaviour
     }
 
     public void OnMouseHold(InputValue input){
-        mouseVal = input.Get<float>();
+        if (input.Get<float>() == 1f && GetComponent<Collider2D>().ClosestPoint(mPos) == mPos){ //if not clicking the knob
+            mouseVal = input.Get<float>();
+        }else if(input.Get<float>() == 0f){
+            mouseVal = input.Get<float>();
+        }else{
+            return;
+        }
     }
 
     private void Update()
@@ -45,10 +53,11 @@ public class RadioKnob : MonoBehaviour
         if (main.yarn.inConversation){ //if Zero is talking, don't do anything
             return;
         }
+
         //this script is a disaster but it works
         if (mouseVal > 0f){
             angle = Vector2.SignedAngle(Vector2.right,(mPos - new Vector2 (transform.position.x,transform.position.y))); //get angle to mouse pos
-            float roun = Mathf.Round(angle*10)/10; //round to first digit
+            roun = Mathf.Round(angle*10)/10; //round to first digit
             float rounded;
             if (roun < 0){ //this maps the signed angles to 360
                 rounded = 360 + roun;
@@ -72,6 +81,7 @@ public class RadioKnob : MonoBehaviour
                     if (previousChannel != rounded){
                         previousChannel = roun;
                         audioSource.clip = st.chatter;
+                        audioSource.loop = st.looping;
                         audioSource.Play();
                         Debug.Log("playing audio");
                     }
@@ -90,12 +100,13 @@ public class RadioKnob : MonoBehaviour
         }
 
         //count up timer if player stays on channel
-        if (onAStation && previousChannel == rounded){
+        if (onAStation && previousChannel == roun){
             timer += Time.deltaTime;
         }else{
             timer = 0f;
         }
         //if timer done, play the node
+        //Debug.Log(timer +", "+timerTarget);
         if (onAStation && timer >= timerTarget){
             //Debug.Log(timer +","+timerTarget);
             main.d.dia.StartDialogue(nodeToPlay);
