@@ -12,3 +12,77 @@ title: balconydoor.go
 ---
 <<Invoke ShatterDoor>>
 ===
+
+
+
+
+title: scarylady.look
+---
+<<SetSpeaker Zero>>
+<<if Visited("metalmouth.talk")>>
+    fuck that thing. fuck you. fuck your shit. fuck you fuck. up shut your shit ass. fuck off.
+<<else>>
+    if that thing starts moving around i'm gonna flip my shit.
+    it appears to have a steam pipe at the base, so im not keeping my hopes high.
+<<endif>>
+
+i can handle a lot of shit, but i draw the line at mannequin things.
+fuck mannequins. super overused in movies and video games, but that shit gets me every time. i have to leave the room.
+i can't handle things with lots of holes, mannequins, and deep water.
+===
+
+title: scarylady.activate
+---
+<<SetSpeaker Zero>>
+no.
+===
+
+title: scarylady.use
+---
+<<SetSpeaker Zero>>
+im sure it will find some way to kill me with this. no thanks.
+===
+
+
+
+title: radiocanister.look
+---
+<<SetSpeaker Zero>>
+it's a metal cabinet thing bolted to the wall. it has a light and a pressure gauge on it.
+===
+
+title: radiocanister.open
+---
+<<SetSpeaker Zero>>
+it appears to be shut tight. it doesnt even have a handle.
+the pressure gauge is at empty though.
+===
+
+
+
+title: radio.look
+---
+<<SetSpeaker Zero>>
+it's an old handheld radio. looks a bit like the one my grandpa gave me.
+===
+
+title: radio.take
+---
+<<SetSpeaker>>
+The Ones Above like fucking with tech shit, so im sure this will prove handy somewhere.
+i hope the horrible mannequin thing doesnt try any shit.
+===
+
+
+
+title: setuproom
+---
+<<if Visited("metalmouth.talk")>>
+    <<Invoke SetUpRadio>>
+    <<if Visited("dancevalve.turnsuccess")>>
+        <<stop>>
+    <<else>>
+        <<Invoke SetUpLady>>
+    <<endif>>
+<<endif>>
+===

@@ -20,9 +20,9 @@ it's sorta like the album cover for zoe zowie's "tomorrow", but more grotesque.
 title: dipskip
 ---
 <<SetSpeaker Zero>>
-"dipskip". i. nais, -46. wrought flesh and marble.
+"dipskip". i. nais, -46.23. wrought flesh and marble.
 i don't know what "wrought flesh" is, and i'd prefer to remain ignorant. i mostly just want to know how it looks so... noisy, staticy, in real life.
-well. assuming the subway dreams are real. which i think they are.
+well. assuming the subway dreams are "real". which i think they are.
 <<SetSilence true>>
 ...
 <<SetSilence False>>
@@ -79,4 +79,85 @@ title: genericartuse
 ---
 <<SetSpeaker Zero>>
 i know rules are different here, but i don't think they'd appreciate me adding to the sculptures.
+===
+
+
+
+title: security.monitors.look
+---
+<<SetSpeaker Zero>>
+a large stack of old crts, displaying footage from around this area. at least i assume so.
+im going to ignore the one on the top.
+===
+
+title: security.keyboards.look
+---
+<<SetSpeaker Zero>>
+that's way too many keyboards wor one office. save some for the rest of us, will ya?
+===
+
+title: pushthebutton.look
+---
+<<SetSpeaker Zero>>
+it's. theyre uh. a denizen of this place. let's go with that.
+===
+
+title: pushthebutton.talk
+---
+<<SetSpeaker Zero>>
+hey, are you the-
+<<SetSpeaker ptb>>
+Push the button!
+<<SetSpeaker Zero>>
+what-
+<<SetSpeaker ptb>>
+I said, push the button!
+//TODO: minigame
+<<SetSpeaker Zero>>
+===
+
+title: dancevalve.look
+---
+<<SetSpeaker Zero>>
+it's a pipe with a valve on it. it says "dancing lady". not sure what to make of it.
+===
+
+title: dancevalve.turn
+---
+<<SetSpeaker Zero>>
+<<if Visited("metalmouth.talk")>>
+    now that there's steam flowing through all these similar-looking pipes, i'll go ahead and give it a turn.
+    //todo: sfx
+    <<SetSilence true>> //maybe just remove the box instead
+    <<wait 1>>
+    //todo: clunk sfx
+    <<SetSilence false>>
+    i heard an audible "clunk" coming through the pipes. i wonder what it did?...
+    [[dancevalve.turnsuccess]]
+<<else>>
+    the first rule of anything is: if there's a valve, give it a twist.
+    //sfx
+    <<SetSilence true>>
+    ...
+    <<SetSilence false>>
+    nothing happened.
+    <<SetSpeaker ptb>>
+    Of course nothing happened! There's no steam flowing through the pipes!
+    <<SetSpeaker Zero>>
+    oh.
+    (i feel kind of stupid now...)
+    how would i get steam flowing.
+    <<SetSpeaker ptb>>
+    Probably the boiler room. Why do you want steam to flow anyway?
+    <<SetSpeaker Zero>>
+    i uh.
+    i don't know.
+    (now i feel *really* stupid.)
+    <<call AddJournalEntry("the weird wall guy says that i might be able to turn the steam back on in the boiler room.")>>
+<<endif>>
+===
+
+title: dancevalve.turnsuccess
+---
+<<call AddJournalEntry("i turned the valve in the security room, and heard a clunk.")>>
 ===

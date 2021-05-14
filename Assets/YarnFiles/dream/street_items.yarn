@@ -7,7 +7,21 @@ tags:
 title: sdoor.go
 tags:
 ---
-<<Invoke ShatterDoor>>
+<<if !Visited("sdoor.go")>>
+<<SetSpeaker Zero>>
+    shattered room?...
+    <<Invoke ShatterDoor>>
+    <<wait .5>>
+    oh. i see. i don't know what i expected.
+    good lord this room is an eyesore. where do my eyes rest. take an interior design class, for god's sake.
+    <<if Visited("ndoor")>>
+        seriously, what is with this place and weird perspective. first the bathroom, now this.
+    <<else>>
+        this room looks... flat. perspective is hurting my head.
+    <<endif>>
+<<else>>
+    <<Invoke ShatterDoor>>
+<<endif>>
 ===
 
 title: museumdoor.go

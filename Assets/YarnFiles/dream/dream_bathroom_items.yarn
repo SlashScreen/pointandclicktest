@@ -8,6 +8,7 @@ title: curtain.draw
 ---
 <<SetState CurtainInteractive true>>
 <<Invoke CurtainInteractive>>
+<<StartSFX Curtain_Draw_2>>
 <<SetSpeaker Zero>>
 oh. i see.
 not sure what i expected.

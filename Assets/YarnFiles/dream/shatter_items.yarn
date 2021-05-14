@@ -1,11 +1,52 @@
 ﻿title: scarydoor.go
 tags:
 ---
+<<SetSpeaker Zero>>
 <<Invoke ScaryDoor>>
+<<if Visited("metalmouth.talk") and !Visited("dancevalve.turnsuccess")>>
+    <<wait 2>>
+    <<Invoke ShatterDoor>>
+    nope. nope. nononononononono.
+    <<if Visited("hatch") or Visited("scarydoor.go")>>
+        i knew that motherfucker would come to life. i could feel it.
+    <<endif>>
+    i fucking hate mannequins. i also hate things that are all twitchy. and that's both.
+    i have those skull unit fuckers from Delta Gear Structure 5: The Pain of Absence to thank for that.
+    fuck fuck fuck fuck. im all jittery now. fuck that noise. god damn it.
+    huaugh.
+<<endif>>
 ===
 
 title: towndoor.go
 tags:
 ---
 <<Invoke TownDoor>>
+===
+
+
+
+title: bat.look
+---
+<<SetSpeaker Zero>>
+hey, look. a baseball bat. im sure that'll be important.
+===
+
+title: bat.inspect
+---
+<<SetSpeaker Zero>>
+<<GoToobject batinspect>>
+i need one of those little placards that police use to mark bullets and stuff.
+let's take a gander here shall we?...
+<<wait 1>>
+there's a little purple shard embedded in the bat. //TODO: red herring? how would the shard get there?
+that seems like evidence to me.
+a shard of something in the shatter room? huge if true.
+this purple does match the color of the vase though.
+<<call AddJournalEntry("the bat found in the shatter room has a shard of purple in it, like the vase.")>>
+===
+
+title: bat.use
+---
+<<SetSpeaker Zero>>
+shouldn't tamper with evidence.
 ===

@@ -28,10 +28,14 @@ public class RadioKnob : MonoBehaviour
     float timerTarget;
     string nodeToPlay;
     float mouseVal;
+    float chann;
+    RadioAudioEngine engine;
 
     private void Start()
     {
-        main = GameObject.Find("Player").GetComponent<PlayerMain>();;
+        main = GameObject.Find("Player").GetComponent<PlayerMain>();
+        engine = GetComponent<RadioAudioEngine>();
+        //engine.EngineStart();
     }
 
     public void OnMousePos(InputValue input){
@@ -50,6 +54,8 @@ public class RadioKnob : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (main.yarn.inConversation){ //if Zero is talking, don't do anything
             return;
         }
@@ -66,7 +72,7 @@ public class RadioKnob : MonoBehaviour
             }
 
             rounded = Mathf.Round(rounded*10)/10; //round to first digit again
-            float chann = (Mathf.Round(Mathf.Lerp(80f,100f,(rounded/360))*10)/10); //calculate the channel
+            chann = (Mathf.Round(Mathf.Lerp(80f,100f,(rounded/360))*10)/10); //calculate the channel
             
             radiotext.text = chann.ToString() + " kHz"; //display
 
@@ -95,6 +101,8 @@ public class RadioKnob : MonoBehaviour
             audioSource.Stop();
             onAStation = false;
             previousChannel = roun;
+
+            
             //todo play generic noise. generated? or random pitch of a constant frequency
             //todo: be able to skip over a frequency accidentally? only go 
         }
@@ -112,6 +120,8 @@ public class RadioKnob : MonoBehaviour
             main.d.dia.StartDialogue(nodeToPlay);
             onAStation = false; //should hopefully stop the timer 
         }
+        //Chuck noise
+        engine.updateChannel(chann,!onAStation);
 
     }
 }
