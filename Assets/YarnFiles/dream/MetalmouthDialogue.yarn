@@ -1,0 +1,51 @@
+﻿title: MetalmouthDialogue
+tags:
+---
+Zero: damn this room is full of crap. and it's hot.
+//todo: move zero, play animation, stop music
+Zero: <i>(ohshit)</i>
+Zero: uh
+Zero: hi
+Zero: friend or foe.
+<<wait 1>>
+//Play music
+Metalmouth(Scary face): Puhuhu~ I'm neither of them~
+Zero: oh right.
+Metalmouth: My name's Metalmouth! You don't look like you're from around here.
+Zero: i'm not. i fell asleep on the subway and-
+Metalmouth: Ooooooh you're a <i>dreamer</i>!!! How exoctic~
+Metalmouth: I imagine someone sent you down here to get the steam flowing again.
+<<if Visited("msdos.talk")>>
+    Zero: yeah, a pile of computers sent me here to turn on some boilers.
+    Metalmouth: Ugh, MS.DOS never shuts up about the steam. But, it's my job, so I must deliver.
+<<else>>
+    Zero: no, but i can't imagine it would hurt.
+    Metalmouth: I bet it was MS.DOS. She never shuts up about the steam. But, it's my job, so I must deliver.
+<<endif>>
+Zero: do you know how to turn the boilers on.
+Metalmouth: Of course I know how to turn them on <s>in more ways than one</s>! I <i>am</i> the boiler~!
+Metalmouth: I'd love to help you out and get the steam flowing around the place, buuuuuut I've been a bit down in the dumps lately...
+Zero: sorry to hear that. what's up.
+Metalmouth: See, I'd love to play my precious violin here, since it's my true passion and all, but I don't have any arms!
+Zero: that's apparent. i don't see how i can help with that, unfortunately.
+Metalmouth: Oh, but you can~
+Zero: can i.
+Metalmouth: You see, my arm comes back when I'm in a good mood, but I can't be in a good mood because I don't have my arm, creating a vicious cycle.
+Metalmouth: Now, if someone could cheer me up and get my arm back, I'd be back in business~!
+Zero: (oh dear.)
+Zero: well uh. i don't know how i could cheer you up.
+Metalmouth: well, i've heard dreamers heat up when they blush.
+//get close, suprise
+Zero: (woahshit)
+Metalmouth: well, the same phenomenon happens with me.
+Metalmouth: And I am... <i>particularly fond...</i> of dreamers.
+Zero: (are you fucking serious.)
+<<call AddJournalEntry("i have to turn on the boiler, in more ways than one. fuck my life.")>>
+Zero: you've gotta be flipping my pancakes right now.
+Metalmouth: Puhuhuhu~ you've got such a way with words~
+Metalmouth: But no, I kid you not.
+Zero: there's gotta be another way, right.
+Metalmouth: Nope~! Puhuhu~
+Zero: alright. let's get this over with.
+//Minigame
+===
