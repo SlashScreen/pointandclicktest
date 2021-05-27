@@ -48,8 +48,10 @@ public class RenderCamClickThrough : MonoBehaviour
                 foreach (RaycastResult result in results)
                 {
                     Debug.Log("Hit " + result.gameObject.name);
+                    Debug.Log(result.gameObject.GetComponent<Button>());
                     if (result.gameObject.GetComponent<Button>() != null){
                         result.gameObject.GetComponent<Button>().onClick.Invoke();
+                        Debug.Log("invoked");
                     }
                 }
 
