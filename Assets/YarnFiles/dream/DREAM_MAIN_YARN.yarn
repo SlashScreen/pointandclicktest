@@ -144,3 +144,49 @@ title: edoor
 //museum door
 <<Invoke edoor>>
 ===
+
+
+title: friend.talk
+---
+zero:hello? what's your name.
+friend: :3
+zero:friend, huh. what's your deal.
+friend: ... :3c
+zero:drinking tea. that's a hobby, i suppose.
+zero:well, uh. seeya.
+===
+
+title: friend.interrogate
+---
+
+===
+
+title: omicron.talk
+---
+
+===
+
+title: omicron.interrogate
+---
+
+===
+
+title: msdos.talk
+---
+
+===
+
+title: msdos.interrogate
+---
+
+===
+
+title: hangman.talk
+---
+
+===
+
+title: hangman.interrogate
+---
+
+===

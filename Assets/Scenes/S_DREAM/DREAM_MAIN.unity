@@ -174,6 +174,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -205,7 +206,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 8537198873322406288, guid: 98d81802a60b96943969ca6ff7411f92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.39, y: 9.0600395}
@@ -226,7 +227,7 @@ Transform:
   m_LocalScale: {x: 0.75171775, y: 0.75171775, z: 0.75171775}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &87060853
 BoxCollider2D:
@@ -906,16 +907,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5289986992245784322, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 5289986992245784322, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289986992245784323, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: m_Size.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289986992245784323, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: m_Size.y
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: 5289986992245784323, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: af2f8ef0a98ec844c9f0eeba155b8371, type: 3}
+      objectReference: {fileID: 21300000, guid: e3e66bd6aeb77f045ac88e0652224767, type: 3}
     - target: {fileID: 5289986992245784323, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1024,7 +1033,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &362427284
 PrefabInstance:
@@ -1172,11 +1181,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.173992
+      value: 2.9041152
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.4347854
+      value: 4.4310174
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1807,6 +1816,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2543,7 +2553,10 @@ MonoBehaviour:
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
+    ModeOverride: 0
     LensShift: {x: 0, y: 0}
+    GateFit: 0
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2565,7 +2578,7 @@ Transform:
   m_Children:
   - {fileID: 194872560}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1534431902
 MonoBehaviour:
