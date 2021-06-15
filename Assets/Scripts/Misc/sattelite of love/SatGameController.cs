@@ -7,6 +7,7 @@ public class SatGameController : MonoBehaviour
     public SatController Sat;
     public int maxscore = 20;
     public int score = 0;
+    public float separation = 1f;
     public GameObject goodObstacle;
     public GameObject badObstacle;
     float timer;
@@ -43,16 +44,41 @@ public class SatGameController : MonoBehaviour
         timer += Time.deltaTime;
         Debug.Log(Mathf.Lerp(0, maxscore,score)/maxscore);
         if (timer >= 2f - (Mathf.Lerp(0, maxscore,score)/maxscore ) ){ //timer interval
+
             timer = 0;
-            if( Mathf.RoundToInt(Random.Range(0f,1f)) == 1 ){
-                GameObject ob = Instantiate(goodObstacle);
-                obstacles.Add(ob);
-                ob.GetComponent<SatObstacle>().SetSpeed(2.5f + (Mathf.Lerp(0, maxscore,score)/maxscore));
-            }else{
-                GameObject ob = Instantiate(badObstacle);
-                obstacles.Add(ob);
-                ob.GetComponent<SatObstacle>().SetSpeed(2.5f + (Mathf.Lerp(0, maxscore,score)/maxscore));
+
+            GameObject[] column = new GameObject[4]; 
+            for (int i = 0; i < 4; i++)
+            {
+                int decision = Random.Range(1,4);
+                GameObject ob = null;
+                switch (decision){
+                    case 1:
+                        ob = goodObstacle;
+                        break;
+                    case 2:
+                        ob = badObstacle;
+                        break;
+                    case 3:
+                        ob = null;
+                        break;
+                }
+                column[i] = ob;
             }
+
+            int index = 0;
+            foreach (var item in column)
+            {
+                if (item != null){
+                    GameObject add = Instantiate(item);
+                    //add.GetComponent<SatObstacle>().SetSpeed(2.5f + (Mathf.Lerp(0, maxscore,score)/maxscore));
+                    add.GetComponent<SatObstacle>().SetSpeed(2f);
+                    add.GetComponent<SatObstacle>().SetY(index*separation); 
+                    //Debug.Log(index + "," + index*.5f);
+                }
+                index += 1;
+            }
+
         }
     }
 }

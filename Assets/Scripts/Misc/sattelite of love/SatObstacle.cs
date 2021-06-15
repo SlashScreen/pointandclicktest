@@ -9,9 +9,7 @@ public class SatObstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPoint = GameObject.FindGameObjectWithTag("GameSpawnpoint").transform;
-        transform.position = spawnPoint.transform.position;
-        transform.position = new Vector3 (transform.position.x, transform.position.y + Random.Range(-3f,3f), 0f);
+
     }
 
     // Update is called once per frame
@@ -40,6 +38,11 @@ public class SatObstacle : MonoBehaviour
 
     public void SetSpeed(float s){
         speed = s;
+    }
+
+    public void SetY(float y){
+        spawnPoint = GameObject.FindGameObjectWithTag("GameSpawnpoint").transform;
+        transform.position = new Vector3 (spawnPoint.transform.position.x, spawnPoint.transform.position.y - y, 0f);
     }
 
 }
