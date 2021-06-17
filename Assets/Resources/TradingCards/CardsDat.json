@@ -1,5 +1,5 @@
 {
     "cards":[
-        {"id":0,"graphic":"TradingCards/graphics/test"}
+        {"id":0,"graphic":"TradingCards/graphics/test","back":"TradingCards/graphics/testback"}
     ]
 }

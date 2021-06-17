@@ -42,22 +42,35 @@ public class SatGameController : MonoBehaviour
         //add gameObjects
 
         timer += Time.deltaTime;
-        Debug.Log(Mathf.Lerp(0, maxscore,score)/maxscore);
-        if (timer >= 2f - (Mathf.Lerp(0, maxscore,score)/maxscore ) ){ //timer interval
+        //Debug.Log(Mathf.Lerp(0, maxscore,score)/maxscore);
+        if (timer >= 4f - ((Mathf.Lerp(0, maxscore,score)/maxscore )*3f) ){ //timer interval
 
             timer = 0;
 
             GameObject[] column = new GameObject[4]; 
+            bool didGood = false; //half assed way of making only 1 of each type
+            bool didBad = false;
             for (int i = 0; i < 4; i++)
             {
+                
                 int decision = Random.Range(1,4);
                 GameObject ob = null;
                 switch (decision){
                     case 1:
-                        ob = goodObstacle;
+                        if(!didGood){
+                            ob = goodObstacle;
+                            didGood = true;
+                        }else{
+                            ob = badObstacle;
+                        }
                         break;
                     case 2:
-                        ob = badObstacle;
+                        if(!didBad){
+                            ob = badObstacle;
+                            didBad = true;
+                        }else{
+                            ob = null;
+                        }
                         break;
                     case 3:
                         ob = null;

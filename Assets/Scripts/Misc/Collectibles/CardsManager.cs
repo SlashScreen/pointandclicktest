@@ -10,6 +10,7 @@ using Yarn;
 public class card{
     public int id;
     public string graphic;
+    public string back;
 }
 
 [System.Serializable]

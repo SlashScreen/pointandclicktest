@@ -3,7 +3,7 @@
         {"id":"test","title":"Testing Testing 1-2-3","description":"This is just a test.","icon":"Medals/Icons/test"},
         {"id":"infirm","title":"Spare a Coin for the Infirm?","description":"Pay for a meal.","icon":"Medals/Icons/infirm"},
         {"id":"abiding","title":"Law Abiding Citizen","description":"Attempt to beard the train the boring way.","icon":"Medals/Icons/abiding"},
-        {"id":"train","title":"She Took the Midnight Train","description":"Almost board the wrong train.","icon":"Medals/Icons/train"},
+        {"id":"train","title":"She Took the Midday Train","description":"Almost board the wrong train.","icon":"Medals/Icons/train"},
         {"id":"denizen","title":"True Denizen","description":"Make a friend.","icon":"Medals/Icons/denizen"},
         {"id":"dang","title":"Dang It.","description":"Miss an opportunity.","icon":"Medals/Icons/dang"},
         {"id":"pizza","title":"Pizza Time","description":"Eat a hard won pizza.","icon":"Medals/Icons/pizza"},
@@ -11,7 +11,7 @@
         {"id":"popo","title":"Eff the Po-lice!","description":"Slip by unnoticed.","icon":"Medals/Icons/popo"},
         {"id":"apartment","title":"The Barrier is Psychological","description":"Leave the safety of your abode.","icon":"Medals/Icons/apartment"},
         {"id":"shine","title":"Rise and Shine","description":"Awaken on a train.","icon":"Medals/Icons/shine"},
-        {"id":"kit","title":"Sugary Discount","description":"Give the girl from out of town some soda.","icon":"Medals/Icons/kit"},
-        {"id":"egg1","title":"Underwhelming","description":"Find an easter egg. Not a very cool one, though.","icon":"Medals/Icons/egg1"}
+        {"id":"kit","title":"None of the Calories, None of the Taste","description":"Give the girl from out of town some soda.","icon":"Medals/Icons/kit"},
+        {"id":"egg1","title":"Underwhelming.","description":"Find an easter egg. Not a very cool one, though...","icon":"Medals/Icons/egg1"}
     ]
 }
