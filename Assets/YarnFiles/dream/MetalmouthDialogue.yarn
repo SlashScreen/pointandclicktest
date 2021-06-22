@@ -49,3 +49,11 @@ Metalmouth: Nope~! Puhuhu~
 Zero: alright. let's get this over with.
 //Minigame
 ===
+
+title:MetalMouthFinish
+---
+Metalmouth:Ah, that was wonderful, UwU
+//blah blah
+<<AddClue("notMsDOS")>>
+<<AddJournalEntry("metalmouth has it on good authority that it wasn't Ms. Dos.")>>
+===

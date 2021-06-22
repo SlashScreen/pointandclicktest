@@ -47,3 +47,11 @@ title: streetcomputer.itemuse
 <<SetSpeaker Zero>>
 the computer doesnt have the right port.
 ===
+
+title: streetcomputer.success
+---
+zero:hmm. looks like Friend was here until... 10:30.
+zero:that might be important.
+<<call AddJournalEntry("Friend was here between 10:00 and 10:30.")>>
+<<call AddClue("friendtime")>>
+===

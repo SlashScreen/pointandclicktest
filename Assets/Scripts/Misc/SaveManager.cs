@@ -11,6 +11,7 @@ public class SaveGame
 {
     public List<int> inventory = new List<int>();
     public List<string> activatedNodes = new List<string>();
+    public List<string> clues = new List<string>();
     public string room;
     public Vector3 pos;
     public bool pizzaflag;
@@ -77,6 +78,8 @@ public class SaveManager : MonoBehaviour{
         sv.wearingShoes = !player.accessories.shoes.hidden;
         sv.wearingMask = !player.accessories.mask.hidden;
 
+        sv.clues = player.cluecontroller.clues;
+
         sv.flags = flagsl;
         string JSON = JsonUtility.ToJson(sv); //serialize as JSON
         //write file
@@ -94,7 +97,7 @@ public class SaveManager : MonoBehaviour{
         //file loading
         flagsl.Clear(); //clear flags list
         player.inventory.inventory.Clear(); //clear inventory
-        StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile); //open file
+        StreamReader sr = new StreamReader(Application.persistentDataPath + "/saves/" + selectedFile); //open file 
         SaveGame sv = JsonUtility.FromJson<SaveGame>(sr.ReadToEnd()); //create savegame from JSON from selectedFile
         sr.Close(); //close file
 
@@ -104,6 +107,8 @@ public class SaveManager : MonoBehaviour{
         foreach(var item in sv.inventory){ //add all saved items
             player.inventory.AddItem(new string[] { item.ToString() }); //Add item to inventory
         }
+
+        player.cluecontroller.clues = sv.clues;
 
         player.accessories.shoes.hidden = !sv.wearingShoes;
         player.accessories.mask.hidden = !sv.wearingMask;

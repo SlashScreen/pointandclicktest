@@ -44,6 +44,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -161,6 +162,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -280,6 +282,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -387,6 +390,7 @@ GameObject:
   - component: {fileID: 8167770275681559113}
   - component: {fileID: 1237858714381586702}
   - component: {fileID: 6916134288764271873}
+  - component: {fileID: 2505364577729687606}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -508,6 +512,7 @@ MonoBehaviour:
   yarn: {fileID: 5487760602018392812}
   ui: {fileID: 8167770275681559113}
   accessories: {fileID: 6916134288764271873}
+  cluecontroller: {fileID: 2505364577729687606}
   d: {fileID: 0}
 --- !u!114 &6781141106083225342
 MonoBehaviour:
@@ -710,6 +715,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoes: {fileID: 3839859752754674904}
   mask: {fileID: 8811741737535542466}
+--- !u!114 &2505364577729687606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6781141106083225337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc147f7af1fd51147a8ea34141a18d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clues: []
 --- !u!1 &8313327932804440969
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +771,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

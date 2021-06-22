@@ -9,5 +9,6 @@ public class PlayerMain : MonoBehaviour
     public PlayerYarn yarn;
     public PlayerUIInteraction ui;
     public PlayerAccessories accessories;
+    public YarnClues cluecontroller;
     public DialogControllerComponent d;
 }

@@ -47,6 +47,7 @@ there's a little purple shard embedded in the bat. //TODO: red herring? how woul
 that seems like evidence to me.
 a shard of something in the shatter room? huge if true.
 this purple does match the color of the vase though.
+<<call AddClue("bat")>>
 <<call AddJournalEntry("the bat found in the shatter room has a shard of purple in it, like the vase.")>>
 ===
 
