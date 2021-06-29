@@ -173,20 +173,113 @@ title: omicron.interrogate
 
 title: msdos.talk
 ---
-
+zero:so what's your deal.
+msdos:MY NAME IS MS.DOS, FANSHIONISTA EXTRAORDINAIRE.\n 
+zero:subtle. so where were you when the crime happened.
+msdos:I HAVE SPENT THE ENTIRE DAY ON THE BALCONY, ADMIRING THE VIEW.\n
+zero:okay.
+<<if HasClue("balconyseal")>>
+    [[Press|msdos.interrogate.1]]
+    [[Leave it be|noFurtherPursuit]]
+<<endif>>
 ===
 
-title: msdos.interrogate
+title: msdos.interrogate.1
 ---
+zero:but the seal on the balcony door has been unbroken for a while.
+msdos:AH. NOW I REMEMBER.\n 
+msdos:THAT WAS IN THE PAST. TODAY I SHOPPED ON THE STREET.\n 
+zero:mhmm.
+<<if HasClue("msdosabsent")>>
+    [[Press|msdos.interrogate.2]]
+    [[Leave it be|noFurtherPursuit]]
+<<else>>
+    [genericNoMoreInfo]
+<<endif>>
+===
 
+title: msdos.interrogate.2
+---
+zero:well, i just checked that street tracking computer, and you weren't there today.
+msdos:AHEM. I MUST FORMULATE A RESPONSE.\n 
+msdos:...
+zero:...
+msdos:UNFORTUNATELY. YOU HAVE SEEN THROUGH MY RUSE.\n 
+msdos:I WAS IN THE MUSEUM AT THE TIME OF THE INCIDENT.\n
+msdos:BUT I AM INNOCENT! I WAS WITH HANGMAN.\n 
+zero:if you didn't do it then why did you lie about it.
+msdos:HANGMAN AND I'S RELATIONSHIP WAS MEANT TO REMAIN SECRET. BUT UNFORTUNATELY, YOU HAVE BLOWN OUR COVER.\n 
+zero:i see. well, thank you for being honest.
+<<call AddJournalEntry("Ms. Dos admitted to being in the museum at the time of the crime. a break in the case.")>>
+<<call AddClue("msdosinmuseum")>>
 ===
 
 title: hangman.talk
 ---
-
+zero:uh. hello.
+hangman(???):Good day to you.
+zero:you are?...
+hangman:My name is hangman.
+zero:zero.
+hangman:I imagine you want my story today?
+zero:sure do. where were you at the time of the incident.
+hangman:I've been here the entire day.
+//todo press, bluff
+[[Bluff|hangman.interrogate.bluff]]
+[[Press|hangman.interrogate.press]]
 ===
 
-title: hangman.interrogate
+title: hangman.interrogate.bluff
 ---
+zero:well. i already know that you weren't there today.
+hangman:Oh? Where did you learn this?
+[[Omicron told me|hangman.interrogate.bluff.omicron]]
+[[Ms. Dos told me|hangman.interrogate.bluff.msdos]]
+[[Friend told me|hangman.interrogate.bluff.friend]]
+===
 
+title: hangman.interrogate.bluff.omicron
+---
+zero:by omicron.
+hangman:Well, he is a fibber then for he was not with me today.
+zero:(dammit.)
+===
+
+title: hangman.interrogate.bluff.msdos
+---
+zero:by Ms. Dos.
+hangman:Well then. I suppose you know the truth.
+hangman:Ms. DOS and I spent the day together in the museum today!
+zero:oh!
+hangman:However, before you go about throwing false accusations all willy-nilly, we spent the day is the art gallery- we've already seen the sculpture gallery.
+zero:oh.
+<<call AddJournalEntry("Hangman admitted that they were in the art gallery today.")>>
+===
+
+title: hangman.interrogate.bluff.friend
+---
+zero:by Friend.
+hangman:Now that you mention it, I did see Friend today. But I hardly think they were following me around the whole day!
+zero:(dammit.)
+===
+
+title: hangman.interrogate.press
+---
+zero:are you telling me the truth.
+hangman:And nothing but the truth. I stand by what I said.
+zero:are you sure.
+hangman:Yes I'm sure! I've given you no reason to doubt me!
+zero:everyone is a suspect at this point.
+hangman:That is true, but I am innocent until proven guilty. 
+zero:(yeah, i can tell this is gonna be like trying to carve granite with fine-grit sandpaper. i better leave off now.)
+===
+
+title:genericNoMoreInfo
+---
+zero:(i have nothing more to say at the moment...)
+===
+
+title:noFurtherPursuit
+---
+<<stop>>
 ===
