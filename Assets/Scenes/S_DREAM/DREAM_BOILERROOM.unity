@@ -1066,6 +1066,21 @@ MonoBehaviour:
   separation: 1
   goodObstacle: {fileID: 1199060540724702503, guid: 5e0be7a1bc4c60947ba5956fa0a33006, type: 3}
   badObstacle: {fileID: 6195540849737706515, guid: af11355b724315b4f99b03e230e243af, type: 3}
+  onWin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1870711174}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_isStatic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1144441650
 Transform:
   m_ObjectHideFlags: 0

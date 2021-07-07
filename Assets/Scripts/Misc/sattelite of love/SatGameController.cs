@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SatGameController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SatGameController : MonoBehaviour
     public float separation = 1f;
     public GameObject goodObstacle;
     public GameObject badObstacle;
+    public UnityEvent<int> onScore;
+    public UnityEvent<int> onHit;
+    public UnityEvent onWin;
     float timer;
     List<GameObject> obstacles = new List<GameObject>();
     // Start is called before the first frame update
@@ -26,8 +30,10 @@ public class SatGameController : MonoBehaviour
         if (Sat.gameObject.GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(),colliders)>0){
             if ( colliders.Find(x => x.gameObject.tag == "satGood")){
                 score += 1;
+                onScore.Invoke(score);
             }else if ( colliders.Find(x => x.gameObject.tag == "satBad")){
                 score -= 1;
+                onHit.Invoke(score);
             }
 
             Object.Destroy(colliders.Find(x => x.gameObject.tag == "satGood" || x.gameObject.tag == "satBad").gameObject);
@@ -36,6 +42,7 @@ public class SatGameController : MonoBehaviour
 
             if (score == maxscore){
                 print("win");
+                onWin.Invoke();
             }
         }
 

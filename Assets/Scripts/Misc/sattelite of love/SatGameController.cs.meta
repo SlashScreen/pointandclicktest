@@ -3,7 +3,10 @@ guid: f0270eba535dbbd4386fac372a67e5ea
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Sat: {instanceID: 0}
+  - goodObstacle: {fileID: 1199060540724702503, guid: 5e0be7a1bc4c60947ba5956fa0a33006, type: 3}
+  - badObstacle: {fileID: 6195540849737706515, guid: af11355b724315b4f99b03e230e243af, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
