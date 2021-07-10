@@ -15,6 +15,7 @@ public class SatGameController : MonoBehaviour
     public UnityEvent<int> onHit;
     public UnityEvent onWin;
     float timer;
+    bool going = false;
     List<GameObject> obstacles = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,17 @@ public class SatGameController : MonoBehaviour
         
     }
 
+    public void SetGoing(bool b){
+        going = b;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (!going){
+            return;
+        }
+
         List<Collider2D> colliders = new List<Collider2D>();
 
         if (Sat.gameObject.GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(),colliders)>0){

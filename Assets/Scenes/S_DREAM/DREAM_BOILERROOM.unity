@@ -541,6 +541,82 @@ PolygonCollider2D:
       - {x: 2.8427997, y: -2.4750333}
       - {x: 2.8560176, y: -2.2791305}
       - {x: 0.7659426, y: -2.0806222}
+--- !u!1 &722410337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722410339}
+  - component: {fileID: 722410338}
+  m_Layer: 0
+  m_Name: MetalmouthGameStartup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &722410338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722410337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab057f01a2c20643b0c8374e1eb77f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useNode: genericUse
+  yarnDialog: {fileID: 0}
+  options: []
+  customFlag: 0
+  customScript:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1870711174}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1144441649}
+        m_TargetAssemblyTypeName: SatGameController, Assembly-CSharp
+        m_MethodName: SetGoing
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  hidden: 0
+  talkPoint: {fileID: 0}
+--- !u!4 &722410339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722410337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.914009, y: -3.1073098, z: -57.952824}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &761621845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,12 +1142,30 @@ MonoBehaviour:
   separation: 1
   goodObstacle: {fileID: 1199060540724702503, guid: 5e0be7a1bc4c60947ba5956fa0a33006, type: 3}
   badObstacle: {fileID: 6195540849737706515, guid: af11355b724315b4f99b03e230e243af, type: 3}
+  onScore:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
   onWin:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1870711174}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: set_isStatic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1144441649}
+        m_TargetAssemblyTypeName: SatGameController, Assembly-CSharp
+        m_MethodName: SetGoing
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
