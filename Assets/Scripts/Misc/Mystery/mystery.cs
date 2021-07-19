@@ -7,6 +7,7 @@ using Yarn.Unity;
 public class mystery : MonoBehaviour
 {
     public string answer;
+    public YarnProgram yarnDialog;
     public string successNode;
     public string failureNode;
     public Dropdown[] drops;
@@ -15,6 +16,11 @@ public class mystery : MonoBehaviour
     {
         if (GameObject.Find("Player")){
             GameObject.Find("Player").GetComponent<PlayerMain>().d.dia.AddFunction("AddOption",2,AddOption);
+        }
+        try{
+            GameObject.Find("Player").GetComponent<PlayerMain>().d.dia.Add(yarnDialog); //try to add the dialog; if it already exists, just exit the script
+        } catch {
+            return; //exit
         }
     }
 

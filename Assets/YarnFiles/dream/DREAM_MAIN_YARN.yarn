@@ -76,6 +76,27 @@ alright, alright.
 <<call AddJournalEntry("find out who broke the vase by interviewing people, exploring, and collecting evidence. talking to the people in this room should be a good start.")>>
 ===
 
+title: pole.success
+---
+<<Invoke CloseGuesser>>
+pole:Ah. I See. That You Have. Figured It Out.
+zero:hell yeah. so i can leave, right.
+friend: ...:3
+zero:so you're the denizen, friend. are you done. have i appeased you.
+friend: ...:3c
+//todo: cutscene
+===
+
+title: pole.failure
+---
+<<Invoke CloseGuesser>>
+pole:Unfortunately. You Have Not. Solved The Case.
+zero:damn.
+zero:what did i go wrong.
+pole:You Know. As Well As I. I Cannot Tell You. Anything.
+zero:it was worth a shot.
+===
+
 
 
 title: vase.look
@@ -194,7 +215,7 @@ zero:mhmm.
     [[Press|msdos.interrogate.2]]
     [[Leave it be|noFurtherPursuit]]
 <<else>>
-    [genericNoMoreInfo]
+    [[genericNoMoreInfo]]
 <<endif>>
 ===
 
