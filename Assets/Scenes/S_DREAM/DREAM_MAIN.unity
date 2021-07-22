@@ -1205,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.1172905
+      value: 4.2631497
       objectReference: {fileID: 0}
     - target: {fileID: 7568093018399966880, guid: 84041e65900306646af1b1dbf489143f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1325,6 +1325,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: useNode
+      value: pole.use
+      objectReference: {fileID: 0}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: talkPoint
+      value: 
+      objectReference: {fileID: 1607002059}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: yarnDialog
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 73b13cc4b8bd8e04b950c82a1d0744c9, type: 3}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: options.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: options.Array.data[0].node
+      value: pole.look
+      objectReference: {fileID: 0}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: options.Array.data[1].node
+      value: pole.talk
+      objectReference: {fileID: 0}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: options.Array.data[0].tooltip
+      value: Look
+      objectReference: {fileID: 0}
+    - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+      propertyPath: options.Array.data[1].tooltip
+      value: Talk
+      objectReference: {fileID: 0}
     - target: {fileID: -7517171757427484567, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
       propertyPath: customScript.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1494,6 +1526,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3378124, y: 14.296318}
   m_EdgeRadius: 0
+--- !u!4 &437401356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5289986992206867026, guid: a882a1a80b63bb14fa703dbd74d8dd4a, type: 3}
+  m_PrefabInstance: {fileID: 437401353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &544944212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,7 +3022,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 2.1100123, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3041,6 +3078,36 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: -53.65}
   m_ApplyAfter: 0
   m_PreserveComposition: 0
+--- !u!1 &1607002058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607002059}
+  m_Layer: 0
+  m_Name: poletalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607002059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607002058}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.73, y: 0.36, z: -634.778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 437401356}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745769361
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,18 @@ public class YarnClues : MonoBehaviour
     }
 
     public object hasFoundClue(Yarn.Value[] v){
-        return clues.Exists(x => x == v[0].ToString());
+        if (v.Length == 1){
+            return clues.Exists(x => x == v[0].ToString());
+        }else{
+            foreach (var item in v)
+            {
+                if (!clues.Exists(x => x == item.ToString())){
+                    return false;
+                }
+            }
+            return true;
+        }
+        
     }
 
     public object addClue(Yarn.Value[] v){

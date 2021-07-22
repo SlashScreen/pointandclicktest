@@ -7,6 +7,10 @@ is it.. breathing?...
 
 title: pole.talk
 ---
+<<if Visited("pole.talk")>> //lazy way to do this but it works
+    [[pole.present]]
+<<endif>>
+
 <<SetSpeaker Pole>>
 Greetings. Dreamer.
 <<SetSpeaker Zero>>
@@ -74,6 +78,33 @@ Please. Start The. Investigation.
 <<SetSpeaker Zero>>
 alright, alright.
 <<call AddJournalEntry("find out who broke the vase by interviewing people, exploring, and collecting evidence. talking to the people in this room should be a good start.")>>
+===
+
+title:pole.use
+---
+pole:You Can. Maintain Ownership. Of Your Possessions.
+pole:I Want Not. For Material Things. Especially Those. From The World Below.
+===
+
+title:pole.look
+---
+zero:a tower of legs.
+zero:i've seen weirder things in the art museum downtown.
+===
+
+title: pole.present
+---
+<<if HasClue("balconyseal","msdosabsent","msdosinmuseum")>>
+    pole:You Have. Made Your Choice?
+    zero:yep. let's go. //todo: way to back out of this
+    <<Invoke Pole>>
+<<else>>
+    pole:You Do Not. Have The Evidence. Required. To Make An Accurate Conclusion.
+    zero:how do you know that. maybe i'm omniscient. omnipotent.
+    pole:Because. I Know Where You. have Been.
+    pole:Find What. You Missed.
+    zero:augh.
+<<endif>>
 ===
 
 title: pole.success
