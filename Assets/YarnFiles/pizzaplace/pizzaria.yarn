@@ -1,0 +1,41 @@
+﻿title: wall.look
+tags:
+---
+zero:man what is it with restaraunts like this and having the walls being comletely covered in random crap.
+===
+
+title:line.look
+---
+zero:uuuuuuugggghhhh there's a liiiiine.
+zero:why is there everything between me and my god damn fucking pizza today.
+===
+
+title:customer.talk
+---
+zero:i know that this is a bad thing to do, but i've had a really long day. can i cut in front of you. i'm only getting a personal pizza.
+guy:You may... IF you can answer my riddles three!
+zero:are you kidding me.
+guy:Yep. Go ahead. I have emails to answer anyway.
+zero:oh, thank you so much. i owe you one.
+guy:I'll keep that in mind.
+[[cashier]]
+===
+
+title:cashier
+---
+<<Invoke overlay>>
+zero:hey, can i get a personal pizza with italian sausage and green onion.
+cashier:sure thing!! is that to here or to go??
+zero:for here.
+<<if GetPizzaFlag()>>
+    cashier:have you heard about our vinyl donation program??
+    zero:your what?
+    cashier:we've partnered with Catstrut Records!! bring in an old vinyl record to donate and get a free personal pizza!!
+    zero:ah, no, i don't have a vinyl record with me today.
+    zero:(dammit.)
+    <<EarnMedal dang>>
+<<endif>>
+<<EarnMedal pizza>>
+<<PlayVideo final_fmv>>
+<<LoadScene MainMenu>>
+===

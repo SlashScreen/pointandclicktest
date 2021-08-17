@@ -1,0 +1,45 @@
+title:wall.look
+---
+zero:the whole authorized personnell only thing is based on the honor system. I don't even think there's a checkpoint.
+zero:not that any sane person should go into the red zone anyway.
+zero:although some people think that the whole thing is a mass hallucination brought on by chemicals put in the water by the Chinese government to combat our freedom. i think. 
+zero:their rants aren't exactly coherent.
+zero:although i do hear that the clubs in there are totally worth vomiting up fuzzy mold, if that's your thing.
+===
+
+
+
+title:princess.look
+---
+zero:i have the horrible feeling that thing isn't actually dead.
+===
+
+
+
+title:battlegear.look
+---
+zero:it's one of those fancy new mechs the police department bought recently.
+zero:these things are 3 million a pop. you'll find them patrolling the, how you say, low income neighborhoods.
+===
+
+title:battlegear.steal
+---
+zero:tempting, isn't it.
+===
+
+
+
+title:pizzaplace.look
+---
+zero:there it is. Papa Italiano's Pizzaria.
+zero:the thing i've turned a 30 minute commute into a whole however-many-hours nightmare for.
+zero:was it worth it?
+zero:we'll see.
+===
+
+title:pizzaplace.go
+---
+zero:let's do it to it.
+<<GoToObject PizzaDoor>>
+<<Invoke PizzaDoor>>
+===

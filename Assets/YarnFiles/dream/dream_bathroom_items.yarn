@@ -42,5 +42,54 @@ title: dream.bathroom.maindoor
 
 title: dream.bathroom.boilerdoor
 ---
+<<if Visited("foe.talk")>>
+    zero:...wow. Foe wasn't lying. 
+<<endif>>
 <<Invoke BoilerDoor>>
+===
+
+
+
+title:foe.look
+---
+zero:some sort of, rabbit, sitting on the toilet. don't worry- the toilet is closed. looks to be in the same visual style as Friend.
+===
+
+title:foe.talk
+---
+<<if !Visited("foe.talk")>>
+    foe(???):Howdy!
+    zero:uh, hello.
+    foe(???):What brings one like you to the world above?
+    zero:well, i believe right now i am considered a "dreamer".
+    foe:Ah, say no more! Oh pardon me- my name is Foe.
+    zero:zero.
+    foe:So, what do you need to do to appease the denizen?
+    zero:well that's the thing- the whole challenge is to find who the denizen is.
+    foe:oh?
+    zero:yeah, it's like this whole crime mystery. apparently whoever broke this one purple vase is the denizen, and i have to figure out who it is.
+    foe:Oh no! The purple vase from the museum? What a shame. Well, I don't really know anything about it, but do let me know if I can help in any way.
+    foe:Actually- Metalmouth might know something about it. She's in the boiler room- the door is in the bathtub over there.
+    zero:in the- alright. thanks for the tip.
+    <<call AddJournalEntry("The boiler room is... in the bathtub?")>>
+<<else>>
+    <<if Visited("friend.talk")>>
+        foe:Anything I can help with?
+        zero:actually yeah- so there's this short cat thing that looks kinda-
+        foe:You mean Friend?
+        zero:oh, you know them?
+        foe:Very much so. Friend is the black to my white. What about them?
+        zero:so they said they were in here most of the day. Is that true?
+        foe:Nope! I haven't seen them all day, and I've been sat here on this toilet for a week.
+        zero:alright. thanks.
+    <<else>>
+        foe:Anything I can help with?
+        zero:not right now, thanks.
+    <<endif>>
+<<endif>>
+===
+
+title:foe.use
+---
+foe:That's very kind of you, but I don't need anything right now.
 ===

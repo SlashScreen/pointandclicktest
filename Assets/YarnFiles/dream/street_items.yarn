@@ -55,3 +55,23 @@ zero:that might be important.
 <<call AddJournalEntry("Friend was here between 10:00 and 10:30.")>>
 <<call AddClue("friendtime")>>
 ===
+
+title:streetman.look
+---
+zero:it's uh.
+zero:alive.
+===
+
+title:streetman.talk
+---
+zero:hey there. were you here around 11 o'clock.
+streetman:<p>Yes I was.</p>
+zero:did you happen to see a small little cartoon cat thing, about yea tall.
+streetman:<p>ah, you mean <i>Friend</i>? Hmm, I wasn't paying attention. But you could use that <b>personal computer</b> there- one of the internet websites there is a database of everyone that's come in and out of this plaza today.</p>
+streetman:<p><i>If</i> you can find the code, that is.</p>
+zero:very useful. but, why is this a thing.
+streetman:<p>No clue. I'm not the one who put it there.</p>
+zero:...would you happen to know the code.
+streetman:<p>Off the top of the ol domepiece? Not at all. I'm sure you can find it around somewhere, if you're sleuthy.</p>
+zero:mm, okay. thanks for the info, though.
+===

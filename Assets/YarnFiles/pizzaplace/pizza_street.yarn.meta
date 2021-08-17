@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 9f9d4d26bc23b10499ba0c06a46c1e75
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - pizza_street-wall.look-0
+  - pizza_street-wall.look-1
+  - pizza_street-wall.look-2
+  - pizza_street-wall.look-3
+  - pizza_street-wall.look-4
+  - pizza_street-princess.look-5
+  - pizza_street-battlegear.look-6
+  - pizza_street-battlegear.look-7
+  - pizza_street-battlegear.steal-8
+  - pizza_street-pizzaplace.look-9
+  - pizza_street-pizzaplace.look-10
+  - pizza_street-pizzaplace.look-11
+  - pizza_street-pizzaplace.look-12
+  - pizza_street-pizzaplace.go-13
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 9f9d4d26bc23b10499ba0c06a46c1e75, type: 3}
+  localizations: []

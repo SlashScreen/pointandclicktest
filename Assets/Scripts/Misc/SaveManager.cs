@@ -74,6 +74,7 @@ public class SaveManager : MonoBehaviour{
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
+        sv.pizzaflag = player.yarn.pizzaflag;
         //clothes
         sv.wearingShoes = !player.accessories.shoes.hidden;
         sv.wearingMask = !player.accessories.mask.hidden;
@@ -102,6 +103,7 @@ public class SaveManager : MonoBehaviour{
         sr.Close(); //close file
 
         player.yarn.activatedNodes = sv.activatedNodes; //set activated nodes
+        player.yarn.pizzaflag = sv.pizzaflag;
         flagsl = sv.flags; //set flags
 
         foreach(var item in sv.inventory){ //add all saved items

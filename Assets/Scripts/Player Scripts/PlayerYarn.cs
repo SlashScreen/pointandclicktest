@@ -8,12 +8,15 @@ public class PlayerYarn : MonoBehaviour
     [Header("Yarn stuff")]
     public List<string> activatedNodes = new List<string>();
     public bool inConversation;
+    public bool pizzaflag = false;
     PlayerMain main;
 
     private void Start()
     {
         main = GetComponent<PlayerMain>();
         main.d.dia.AddFunction("Visited",1,IsNodeVisited);
+        main.d.dia.AddFunction("GetPizzaFlag",0,GetPizzaFlag);
+        main.d.dia.AddCommandHandler("FlipPizzaFlag",FlipPizzaFlag);
     }
     //yarn conversation stuff
     void AddNode(String node){
@@ -33,6 +36,14 @@ public class PlayerYarn : MonoBehaviour
             //Debug.Log("added node " + main.d.dia.CurrentNodeName);
             activatedNodes.Add(main.d.dia.CurrentNodeName);
         }
+    }
+
+    public void FlipPizzaFlag(string[] s){
+        pizzaflag = true;
+    }
+
+    public object GetPizzaFlag(Yarn.Value[] s){
+        return pizzaflag;
     }
 
     public object IsNodeVisited(Yarn.Value[] name){ //returns if node already visited

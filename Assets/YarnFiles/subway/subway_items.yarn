@@ -4,10 +4,51 @@ title: inAHurry
 this is my only opportunity to slip by. i shouldn't waste time.
 ===
 
+
+
 title: map.look
 ---
+<<LockMapHand>>
+<<MoveMapHand 0>>
 <<Invoke map>> //look at the map
+zero:well, let's see.
+<<MoveMapHand 1>>
+zero:i'm over here.
+<<MoveMapHand 2>>
+zero:and I need to go over here.
+zero:so i'll take the A line.
+<<FreeMapHand>>
 ===
+
+title:map.redzone.look
+---
+zero:this is where it all went down.
+===
+
+title:map.park.look
+---
+zero:this is where i had my first date.
+zero:i accidentally threw away my phone. when i went into the trash can to retrieve it, i fell in.
+zero:i ended up rolling down the hill in the trash can, totally wiping out a group of teenagers like bowling pins, and going into the lake.
+zero:which, naturally, pissed off the geese, who chased me around the park, and kicked the shit out of me when i tripped on my shoelaces.
+<<SetSilence true>>
+zero:...
+<<SetSilence false>>
+zero:we were together for 2 years after that.
+===
+
+title:map.trainstation.look
+---
+zero:this is our central train station. it boasts a whopping 4 platforms. i went to a town in europe once with 50 thousand people with double that.
+zero:at least it actually connects well to the rest of the transit network, unlike a certain large airport in Los Angeles. probably should take more than the olympics to prompt that new subway line to LAX, huh fellas.
+===
+
+title:map.suburbia.look
+---
+zero:ah yes, suburbia. the land of plumb yet visually deficient lawns, ticky-tacky houses, and an impossible-to-sustain asphalt:usable space ratio.
+zero:...how obvious is it that i have a rather acute distaste for this city design philosophy.
+===
+
 
 
 title: subwaygraffiti.look
@@ -69,6 +110,16 @@ an ad for a loyalty program at your friendly neighborhood gigacorporation.
 capitalism's unquenchable thirst for innovation at its zenith here, unquestionably.
 sure thing boss. i will pick from 30 brands of the exact same kind of cheese from *your* aisles.
 god bless the land of the free.
+===
+
+
+
+title:poster.ena.look
+---
+zero:a movie poster for the long awaited finale to the NONE GNISIS ENANGELION franchise- REBUILD OF ENANGELION 4.0 + 1.0: I Am (Not) Hurt.
+zero:i've been waiting a million years for this movie to come out. give or take 999,991.
+zero:i don't normally go to theaters because of the crowds, but you bet your ass i'm seeing this opening day.
+zero:i hope it's as totally bonkers as 1997's ENANGELION FINALLY.
 ===
 
 
