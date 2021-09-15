@@ -59,6 +59,10 @@ public class PlayerUIInteraction : MonoBehaviour
                     Debug.Log("Hit minigame surface");
                     return;
                 }
+
+                if(hit.collider.gameObject.tag == "Clicklink"){
+                    hit.collider.gameObject.GetComponent<clickling>().Invoke();
+                }
                 
                 if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
                     //"Clickable" *tag* is interactive objects, thats not totally clear

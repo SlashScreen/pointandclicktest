@@ -3,57 +3,42 @@ tags:
 ---
 Zero: damn this room is full of crap. and it's hot.
 //todo: move zero, play animation, stop music
-Zero: <i>(ohshit)</i>
+Zero: (ohshit)
 Zero: uh
 Zero: hi
 Zero: friend or foe.
 <<wait 1>>
 //Play music
-Metalmouth(Scary face): Puhuhu~ I'm neither of them~
-Zero: oh right.
-Metalmouth: My name's Metalmouth! You don't look like you're from around here.
-Zero: i'm not. i fell asleep on the subway and-
-Metalmouth: Ooooooh you're a <i>dreamer</i>!!! How exoctic~
-Metalmouth: I imagine someone sent you down here to get the steam flowing again.
-<<if Visited("msdos.talk")>>
-    Zero: yeah, a pile of computers sent me here to turn on some boilers.
-    Metalmouth: Ugh, MS.DOS never shuts up about the steam. But, it's my job, so I must deliver.
-<<else>>
-    Zero: no, but i can't imagine it would hurt.
-    Metalmouth: I bet it was MS.DOS. She never shuts up about the steam. But, it's my job, so I must deliver.
-<<endif>>
-Zero: do you know how to turn the boilers on.
-Metalmouth: Of course I know how to turn them on <s>in more ways than one</s>! I <i>am</i> the boiler~!
-Metalmouth: I'd love to help you out and get the steam flowing around the place, buuuuuut I've been a bit down in the dumps lately...
-Zero: sorry to hear that. what's up.
-Metalmouth: See, I'd love to play my precious violin here, since it's my true passion and all, but I don't have any arms!
-Zero: that's apparent. i don't see how i can help with that, unfortunately.
-Metalmouth: Oh, but you can~
-Zero: can i.
-Metalmouth: You see, my arm comes back when I'm in a good mood, but I can't be in a good mood because I don't have my arm, creating a vicious cycle.
-Metalmouth: Now, if someone could cheer me up and get my arm back, I'd be back in business~!
-Zero: (oh dear.)
-Zero: well uh. i don't know how i could cheer you up.
-Metalmouth: well, i've heard dreamers heat up when they blush.
-//get close, suprise
-Zero: (woahshit)
-Metalmouth: well, the same phenomenon happens with me.
-Metalmouth: And I am... <i>particularly fond...</i> of dreamers.
-Zero: (are you fucking serious.)
-<<call AddJournalEntry("i have to turn on the boiler, in more ways than one. fuck my life.")>>
-Zero: you've gotta be flipping my pancakes right now.
-Metalmouth: Puhuhuhu~ you've got such a way with words~
-Metalmouth: But no, I kid you not.
-Zero: there's gotta be another way, right.
-Metalmouth: Nope~! Puhuhu~
-Zero: alright. let's get this over with.
+Metalmouth(Scary face): puhuhu~ im neither of them~ :la:
+Zero:what? oh, yeah.
+Metalmouth:hiiiiii!!!! im metalmouth XP nice to meet you!!!
+zero:hi, i'm zero.
+Metalmouth:oooh nice name!! ive nevr seen u around here b4!! X3 
+zero:yeah, i'm one of those dreamers.
+Metalmouth:oooooooo a dreamerrr!!! i havent seen one of those in a long time!! how exotic~~~~ :iloveitplz:
+zero:so uh, i'm supposed to meet someone in here about turning on the boilers.
+Metalmouth:oh dreamer-senpai came all the way here 2 c meeeeeee?!?!?!?! :tetopopipoplz:
+zero:(oh godddd.) i suppose i did, yes. can you turn the boilers on.
+Metalmouth:id luv 2 but im all sad X(((( :raincloud:
+zero:what's wrong.
+Metalmouth:well, i cant play ma violin !! my arm is gone cuz im sad and im sad cuz my arm is gone and  i hope u understand 
+zero:well, i kinda need steam in these pipes, so if there's anything i can do to help, just say the word.
+Metalmouth:the word!! LOLOLOLOLoL :trollfaceplz:
+zero:(ooooouuughh.)
+Metalmouth:well im wonewy... i could use some huggie wuggies!! and maybe sum encuraging words~ but it's not liek i liek u or n e thing!!! :smileblushplz:
+zero:(holy shit) 
+zero:well. i suppose if that's what it would take to do that. then i guess i could do that (blugh)
+Metalmouth: :OOOOOOOOO !!!!!! weawwy?????? OwO 
+zero:yeah. sure. (oooy weyyy let's get this over with.)
 //Minigame
 ===
 
 title:MetalMouthFinish
 ---
-Metalmouth:Ah, that was wonderful, UwU
+Metalmouth:that was wonderful UwU
+zero:(forget waterboarding, forget the rack, forget fingernails, forget the thing they put in your ass and it expands.)
+zero:(5 minutes with Metalmouth is enough torture to bring even the most hardened of marines to their knees.)
 //blah blah
 <<AddClue("notMsDOS")>>
-<<AddJournalEntry("metalmouth has it on good authority that it wasn't Ms. Dos.")>>
+<<AddJournalEntry("Metalmouth has it on good authority that it wasn't Ms. Dos.")>>
 ===

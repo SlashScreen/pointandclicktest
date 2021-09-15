@@ -77,6 +77,10 @@ public class RenderCamClickThrough : MonoBehaviour
                         result.gameObject.GetComponent<Button>().onClick.Invoke();
                         Debug.Log("invoked");
                     }
+                    if (result.gameObject.GetComponent<clickling>() != null){
+                        result.gameObject.GetComponent<clickling>().Invoke();
+                        Debug.Log("invoked");
+                    }
                 }
 
                 if(portalHit.collider != null){

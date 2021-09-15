@@ -112,8 +112,36 @@ Push the button!
 what-
 <<SetSpeaker ptb>>
 I said, push the button!
-//TODO: minigame
+<<Invoke show>>
 <<SetSpeaker Zero>>
+===
+
+title:ptb.use
+---
+pushthebutton:What is that junk?!
+===
+
+title:continuePTB
+---
+pushthebutton:Thank you!
+zero:okay. now what.
+pushthebutton:I can answer your question.
+zero:you're the security guard here right.
+pushthebutton:Yep!
+zero:can i look at the camera footage to solve a crime.
+pushthebutton:Nope!
+pushthebutton:There is none!
+zero:huh.
+pushthebutton:I only know whether the piece is there or not.
+zero:why.
+pushthebutton:That's how it is! 
+zero:then what are the monitors for.
+pushthebutton:To watch TV!
+zero:i don't know what i expected.
+zero:so can you tell me when the purple vase was removed.
+pushthebutton:Ah, that. It was at TIME oclock.
+zero:thank you very much.
+<<call AddJournalEntry("the security guy said the vase was stolen at TIME oclock.")>>
 ===
 
 title: dancevalve.look
