@@ -5,9 +5,15 @@ tags:
     You combine the items to make... whatever this is.
     <<CombineItems 1 2 3>>
 <<elseif TryCombine(6,7) == true>> //combine both shoes
-    star-crossed lovers, reunited at last.
-    it's almost as if they were made to be together.
+    zero:star-crossed lovers, reunited at last.
+    zero:it's almost as if they were made to be together.
     <<CombineItems 6 7 9>>
+<<elseif TryCombine(18,22)>>
+    zero:with the magic of adhesive, i should be able to adhere this to the, uh, place where it goes.
+    <<CombineItems 18 22 19>>
+<<elseif TryCombine(18,21)>>
+    zero:this time, with the magic of tension stress, i should be able to tie this to the pipe and provide enough force to do the thing i need to do. 
+    <<CombineItems 18 21 20>>
 <<else>>
     that doesn't go with that.
 <<endif>>

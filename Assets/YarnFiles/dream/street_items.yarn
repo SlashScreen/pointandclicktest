@@ -59,19 +59,57 @@ zero:that might be important.
 title:streetman.look
 ---
 zero:it's uh.
-zero:alive.
+zero:alive?
 ===
 
 title:streetman.talk
 ---
 zero:hey there. were you here around 11 o'clock.
-streetman:<p>Yes I was.</p>
-zero:did you happen to see a small little cartoon cat thing, about yea tall.
-streetman:<p>ah, you mean <i>Friend</i>? Hmm, I wasn't paying attention. But you could use that <b>personal computer</b> there- one of the internet websites there is a database of everyone that's come in and out of this plaza today.</p>
-streetman:<p><i>If</i> you can find the code, that is.</p>
-zero:very useful. but, why is this a thing.
-streetman:<p>No clue. I'm not the one who put it there.</p>
-zero:...would you happen to know the code.
-streetman:<p>Off the top of the ol domepiece? Not at all. I'm sure you can find it around somewhere, if you're sleuthy.</p>
-zero:mm, okay. thanks for the info, though.
+streetman: HELLO! !!      YOU !
+streetman:   YO U!
+streetman:YES       YES   YEP
+zero:mkay. did you happen to see a small little cartoon cat thing, about yea tall.
+streetman:
+streetman: YOU                MADE A (sPECIAL fRIEND) ?
+streetman: DID YOU FRIEN d 
+zero:yes. Friend.
+streetman:NO .  LOOKING 
+streetman: BUT. THAT  (personal computer....) THERE 
+streetman: WEBSITe. ACCES  S SSIBLE THROUGH <a href="ww . netscape.brouwser/com"> INTERNET BROWSER?</a >
+streetman: A   LOG ! OF ALL PEOPLE! IN AND NOUT  !!      touRNSTILE
+streetman: turn      style
+zero:so there's a website, that tracks all who come in and out. alright, usef-
+streetman: CODE   !!!!!!!! !
+streetman:YOU NEED THE  CODE
+streetman: (access denied.0)
+zero:i see. do you happen to know the code?
+streetman:NO 
+streetman: NO 
+streetman:MO 
+streetman:   FOREST <- look .
+zero:i uh. okay. ill look in the forest. i guess. (wherever that is.) 
+streetman:BY 
+streetman:e 
+===
+
+title:streetman.use
+---
+streetman:no
+===
+
+title:diamondman.look 
+---
+zero:i dont really have to vocabulary to say what im looking at.
+===
+
+title:diamondman.talk
+---
+zero:hey dude, have you seen-
+dman(???):STREAMINGASSETS/DIAMOND PASS BALTHAZAR
+zero:come again.
+<<SetSilence true>>
+dman(???):...
+zero:...
+<<SetSilence false>>
+zero:okay.
 ===

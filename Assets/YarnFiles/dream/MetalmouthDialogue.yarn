@@ -11,17 +11,17 @@ Zero: friend or foe.
 //Play music
 Metalmouth(Scary face): puhuhu~ im neither of them~ :la:
 Zero:what? oh, yeah.
-Metalmouth:hiiiiii!!!! im metalmouth XP nice to meet you!!!
+Metalmouth:hiiiiii!!!! im metalmouth XP gneiss 2 meet you!!!
 zero:hi, i'm zero.
 Metalmouth:oooh nice name!! ive nevr seen u around here b4!! X3 
 zero:yeah, i'm one of those dreamers.
-Metalmouth:oooooooo a dreamerrr!!! i havent seen one of those in a long time!! how exotic~~~~ :iloveitplz:
+Metalmouth:oooooooo a dreamerrr!!! i havnt seen on of thos in a long time!! how exotic~~~~ :iloveitplz:
 zero:so uh, i'm supposed to meet someone in here about turning on the boilers.
-Metalmouth:oh dreamer-senpai came all the way here 2 c meeeeeee?!?!?!?! :tetopopipoplz:
+Metalmouth:oh dreamer-senpai came all the way here 2 c meeeeeee?!?!?!?! rawr XD :tetopopipoplz:
 zero:(oh godddd.) i suppose i did, yes. can you turn the boilers on.
 Metalmouth:id luv 2 but im all sad X(((( :raincloud:
 zero:what's wrong.
-Metalmouth:well, i cant play ma violin !! my arm is gone cuz im sad and im sad cuz my arm is gone and  i hope u understand 
+Metalmouth:well, i cant play ma violin !! meh arm is gone cuz im sad and im sad cuz meh arm is gone and  i hope u understand 
 zero:well, i kinda need steam in these pipes, so if there's anything i can do to help, just say the word.
 Metalmouth:the word!! LOLOLOLOLoL :trollfaceplz:
 zero:(ooooouuughh.)
@@ -30,12 +30,21 @@ zero:(holy shit)
 zero:well. i suppose if that's what it would take to do that. then i guess i could do that (blugh)
 Metalmouth: :OOOOOOOOO !!!!!! weawwy?????? OwO 
 zero:yeah. sure. (oooy weyyy let's get this over with.)
-//Minigame
+<<Invoke invoke_show>>
 ===
 
 title:MetalMouthFinish
 ---
 Metalmouth:that was wonderful UwU
+Metalmouth:better then sum spanky wankies 4 shure XPPP
+zero:yeah whatever
+zero:what do you know
+Metalmouth:i can tell u- its not ms. dos!!!! shes so brag brag that she wud telk me if she did sumthin liek tat
+zero:ok bye
+
+<<GoToObject fleePoint>>
+
+zero:(Jesus Christ the Nazarene, King of the Jews, did not die on the sunbaked hill of Golgotha for the phrase "spanky wankies" to enter my brain.)
 zero:(forget waterboarding, forget the rack, forget fingernails, forget the thing they put in your ass and it expands.)
 zero:(5 minutes with Metalmouth is enough torture to bring even the most hardened of marines to their knees.)
 //blah blah

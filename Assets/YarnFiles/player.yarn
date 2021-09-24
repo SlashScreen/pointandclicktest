@@ -8,7 +8,7 @@ position: 861,403
 <<if $selectedInventory == 9>> //if shoes
     it's a good idea to put these on if i want to go outside.
     socks are for fools and the lazy.
-    also i have no socks that don't smell like the distilled scent of a boy's locker room.
+    also i have no socks that don't smell like davy jones' damp locker room.
     <<Show Player_Shoes>>
     <<RemoveItem 9>>
 <<elseif $selectedInventory == 6 or $selectedInventory == 7>>

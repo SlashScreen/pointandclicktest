@@ -189,3 +189,54 @@ title: dancevalve.turnsuccess
 ---
 <<call AddJournalEntry("i turned the valve in the security room, and heard a clunk.")>>
 ===
+
+
+
+title: tapevalve.look
+---
+<<if Visited("tapevalve.taperemove")>>
+    zero:there's nothing here.
+    zero:really makes you think. what *is* art. what *is* perception. if something can mean nothing, can nothing mean something?
+    <<stop>>
+<<endif>>
+
+<<if Visited("tapevalve.remove")>>
+    zero:a defaced piece of art, meant to represent how people contrary to the art world have forged their own path around the art galleries. the wall has been broken.
+    <<stop>>
+<<endif>>
+
+zero:it's a valve duct taped to the wall.
+zero:it's meant to symbolize the hopeless pretentiousness of the modern fine art world, and show how the trade of art pieces as investments rather than art is damaging.
+zero:consider the composition of this piece. the tape forms a line down the middle with the bright red valve in the dead center.
+zero:as valves are meant to control the flow of a substance, and the tape bisects the canvas, it seems to imply that the art world controls which artists pass through it with money.
+
+<<if Visited("dancevalve.turn")>>
+    zero:wait. a valve. don't i need one of those?
+<<endif>>
+===
+
+title:tapevalve.use
+---
+<<if $selectedInventory == 5>>
+    zero:wait. son't i have a key. that can cut tape, right.
+    zero:well. one way to find out.
+<<else>>
+    zero:if i want to get down the valve, i need something to cut the tape.
+<<endif>>
+<<set $selectedInventory to 0>>
+===
+
+title:tapevalve.remove
+---
+//set sprite
+zero:aaaand... done.
+zero:let's pretend like this never happened.
+<<AddItem 18>>
+===
+
+title:tapevalve.taperemove
+---
+//set sprite
+zero:i still feel shitty doing this. but like. whatever. i made my own art. with vandalism. it's like graffiti but stupid.
+<<AddItem 22>>
+===

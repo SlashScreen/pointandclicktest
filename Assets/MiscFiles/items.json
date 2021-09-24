@@ -16,6 +16,11 @@
         {"name":"dr plibby","id":14,"iconPath":"Icons/plibby"},
         {"name":"money","id":15,"iconPath":"Icons/money"},
         {"name":"dagger","id":16,"iconPath":"Icons/dagger"},
-        {"name":"radio","id":17,"iconPath":"Icons/radio"}
+        {"name":"radio","id":17,"iconPath":"Icons/radio"},
+        {"name":"valve","id":18,"iconPath":"Icons/valve"},
+        {"name":"tapevalve","id":19,"iconPath":"Icons/tapevalve"},
+        {"name":"stringvalve","id":20,"iconPath":"Icons/stringvalve"},
+        {"name":"string","id":21,"iconPath":"Icons/string"},
+        {"name":"ducttape","id":22,"iconPath":"Icons/ducttape"}
     ]
 }
