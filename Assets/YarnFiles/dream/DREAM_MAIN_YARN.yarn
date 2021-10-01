@@ -156,13 +156,23 @@ title: omicron.look
 ---
 <<SetSpeaker Zero>>
 am i supposed to narrate what im looking at here.
+because i have no idea.
 ===
 
 title: omicron.talk
 ---
 <<SetSpeaker Zero>>
 <<if Visited("omicron.talk")>>
-    
+    zero:so. where were you on the night of the murder.
+    omicron:There was no murder.
+    zero:i know. i just wanted to say that.
+    zero:where were you when the crime took place.
+    omicron:I was taking a walk in the radio forest.
+    omicron:Hangman can attest to this.
+    zero:(a walk? with you and what legs.)
+    zero:alright. thanks for your time.
+    <<call AddJournalEntry("Omicron says it was in the quote Radio Forest, whatevcer that is, and not here.")>>
+
 <<else>>
     <<SetSpeaker Zero>>
     alright. what is this thing, and will i ever get an answer.
@@ -174,6 +184,9 @@ title: omicron.talk
     Please take care not to call people "things."
     <<SetSpeaker Zero>>
     i said im sorry.
+    zero:do you happen to be a nomad soul.
+    omicron:What?
+    zero:nevermind.
 <<endif>>
 ===
 

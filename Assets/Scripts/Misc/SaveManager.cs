@@ -15,6 +15,7 @@ public class SaveGame
     public string room;
     public Vector3 pos;
     public bool pizzaflag;
+    public bool jesusflag;
     public bool wearingShoes = false;
     public bool wearingMask = false;
     public List<SaveManager.itemFlags> flags = new List<SaveManager.itemFlags>();
@@ -75,6 +76,7 @@ public class SaveManager : MonoBehaviour{
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
         sv.pizzaflag = player.yarn.pizzaflag;
+        sv.jesusflag = player.yarn.jesusflag;
         //clothes
         sv.wearingShoes = !player.accessories.shoes.hidden;
         sv.wearingMask = !player.accessories.mask.hidden;
@@ -104,6 +106,7 @@ public class SaveManager : MonoBehaviour{
 
         player.yarn.activatedNodes = sv.activatedNodes; //set activated nodes
         player.yarn.pizzaflag = sv.pizzaflag;
+        player.yarn.jesusflag = sv.jesusflag;
         flagsl = sv.flags; //set flags
 
         foreach(var item in sv.inventory){ //add all saved items

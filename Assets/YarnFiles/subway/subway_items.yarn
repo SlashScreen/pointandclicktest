@@ -628,3 +628,55 @@ title: turnstile.w.go
     that cop is there. i gotta get him away from his post so i can slip by.
 <<endif>>
 ===
+
+title: superdogs.look 
+---
+zero:this is the worst food i've ever tasted.
+zero:"just like mom's cooking". i'll give them that.
+zero:there are few things that remind me of my mom's cooking.
+zero:let's see. agent orange, for one. also airport jungle juice.
+zero:you know that vile bucket at airports they have you pour all your liquids into before boarding the plane.
+zero:i once saw someone dump half-cured jelly-o into there.
+zero:super dogs also make it on that list.
+zero:my mom's cooking always had a chemicaly aftertaste to it. only later in life did i learn that none of her cookware was microwave-safe.
+zero:of course, now the smell of burning plastic makes me homesick.
+===
+
+title:kids.look 
+---
+zero:a group of kids.
+===
+
+title:kid.talk
+---
+kid:We're going on a field trip to the zoo! Yay!
+===
+
+title:teacher.talk
+---
+teacher:Ugh. I could really go for a smoke right now.
+===
+
+title:christ.look
+---
+zero:looks familiar.
+===
+
+title:christ.talk
+---
+Jesus Christ:Howdy, Child of God!
+zero:(uh oh.)
+Jesus Christ:I Need some Assistance!
+zero:what's up.
+Jesus Christ:I Keep telling Everyone That i'm The Messiah reborn. But Nobody will Take Me seriously!
+zero:what a conundrum.
+Jesus Christ:What Do you Suggest I do?
+->lose the shirt
+    zero:lose the shirt.
+    Jesus Christ:Really? I like It!
+    zero:just. trust me on this.
+    <<FlipJesusFlag>>
+->build the third temple
+    zero:well, you could build the third temple, for one.
+    Jesus Christ:But Even with God's Help, i Could Not build It Myself! i Need A legion Of Followers...
+===

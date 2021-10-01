@@ -19,8 +19,10 @@
         {"name":"radio","id":17,"iconPath":"Icons/radio"},
         {"name":"valve","id":18,"iconPath":"Icons/valve"},
         {"name":"tapevalve","id":19,"iconPath":"Icons/tapevalve"},
-        {"name":"stringvalve","id":20,"iconPath":"Icons/stringvalve"},
-        {"name":"string","id":21,"iconPath":"Icons/string"},
-        {"name":"ducttape","id":22,"iconPath":"Icons/ducttape"}
+        {"name":"gunkvalve","id":20,"iconPath":"Icons/gunkvalve"},
+        {"name":"gunk","id":21,"iconPath":"Icons/gunk"},
+        {"name":"ducttape","id":22,"iconPath":"Icons/ducttape"},
+        {"name":"bottle","id":23,"iconPath":"Icons/bottle"},
+        {"name":"bottleofgunk","id":24,"iconPath":"Icons/bottleofgunk"}
     ]
 }

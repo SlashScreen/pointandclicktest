@@ -9,6 +9,7 @@ public class PlayerYarn : MonoBehaviour
     public List<string> activatedNodes = new List<string>();
     public bool inConversation;
     public bool pizzaflag = false;
+    public bool jesusflag = false;
     PlayerMain main;
 
     private void Start()
@@ -16,7 +17,9 @@ public class PlayerYarn : MonoBehaviour
         main = GetComponent<PlayerMain>();
         main.d.dia.AddFunction("Visited",1,IsNodeVisited);
         main.d.dia.AddFunction("GetPizzaFlag",0,GetPizzaFlag);
+        main.d.dia.AddFunction("GetJesusFlag",0,GetJesusFlag);
         main.d.dia.AddCommandHandler("FlipPizzaFlag",FlipPizzaFlag);
+        main.d.dia.AddCommandHandler("FlipPizzaFlag",FlipJesusFlag);
     }
     //yarn conversation stuff
     void AddNode(String node){
@@ -42,8 +45,16 @@ public class PlayerYarn : MonoBehaviour
         pizzaflag = true;
     }
 
+    public void FlipJesusFlag(string[] s){
+        jesusflag = true;
+    }
+
     public object GetPizzaFlag(Yarn.Value[] s){
         return pizzaflag;
+    }
+
+    public object GetJesusFlag(Yarn.Value[] s){
+        return jesusflag;
     }
 
     public object IsNodeVisited(Yarn.Value[] name){ //returns if node already visited

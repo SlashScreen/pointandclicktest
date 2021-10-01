@@ -39,3 +39,18 @@ zero:for here.
 <<PlayVideo final_fmv>>
 <<LoadScene MainMenu>>
 ===
+
+title:kid.talk
+---
+kid:The zoo was awesome!
+===
+
+title:teacher.talk
+---
+teacher:Wasn't the zoo so fun, children?
+===
+
+title:lastkid.talk
+---
+teacher(kid):ugh. I could really go for a smoke right now.
+===

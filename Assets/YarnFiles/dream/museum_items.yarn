@@ -152,6 +152,7 @@ it's a pipe with a valve on it. it says "dancing lady". not sure what to make of
 
 title: dancevalve.turn
 ---
+//TODO: logic about missing valve.
 <<SetSpeaker Zero>>
 <<if Visited("metalmouth.talk")>>
     now that there's steam flowing through all these similar-looking pipes, i'll go ahead and give it a turn.
@@ -163,24 +164,20 @@ title: dancevalve.turn
     i heard an audible "clunk" coming through the pipes. i wonder what it did?...
     [[dancevalve.turnsuccess]]
 <<else>>
-    the first rule of anything is: if there's a valve, give it a twist.
+    zero:the first rule of anything is: if there's a valve, give it a twist.
     //sfx
     <<SetSilence true>>
     ...
     <<SetSilence false>>
-    nothing happened.
-    <<SetSpeaker ptb>>
-    Of course nothing happened! There's no steam flowing through the pipes!
-    <<SetSpeaker Zero>>
-    oh.
-    (i feel kind of stupid now...)
-    how would i get steam flowing.
-    <<SetSpeaker ptb>>
-    Probably the boiler room. Why do you want steam to flow anyway?
-    <<SetSpeaker Zero>>
-    i uh.
-    i don't know.
-    (now i feel *really* stupid.)
+    zero:fuck all hath transpired.
+    pushthebutton:Of course nothing happened! There's no steam flowing through the pipes!
+    zero:oh.
+    zero:(i feel kind of stupid now...)
+    zero:how would i get steam flowing.
+    pushthebutton:Probably the boiler room. Why do you want steam to flow anyway?
+    zero:i uh.
+    zero:i don't know.
+    zero:(now i feel *really* stupid.)
     <<call AddJournalEntry("the weird wall guy says that i might be able to turn the steam back on in the boiler room.")>>
 <<endif>>
 ===
@@ -218,7 +215,7 @@ zero:as valves are meant to control the flow of a substance, and the tape bisect
 title:tapevalve.use
 ---
 <<if $selectedInventory == 5>>
-    zero:wait. son't i have a key. that can cut tape, right.
+    zero:wait. don't i have a key. that can cut tape, right.
     zero:well. one way to find out.
 <<else>>
     zero:if i want to get down the valve, i need something to cut the tape.
@@ -232,6 +229,7 @@ title:tapevalve.remove
 zero:aaaand... done.
 zero:let's pretend like this never happened.
 <<AddItem 18>>
+//hide
 ===
 
 title:tapevalve.taperemove
@@ -239,4 +237,24 @@ title:tapevalve.taperemove
 //set sprite
 zero:i still feel shitty doing this. but like. whatever. i made my own art. with vandalism. it's like graffiti but stupid.
 <<AddItem 22>>
+//hide
+===
+
+title:calvary.look
+---
+zero:"Calvary Object" by... uh... someone who's name looks like a cryptocurrency wallet address. no medium is listed.
+zero:religious iconography? in artwork? what has this world come to.
+===
+
+title:portrait.look
+---
+zero:"Self Portrait" by G.D.Wing. oil on canvas.
+zero:hey handsome. come here often.
+===
+
+title:skeleton.look
+---
+zero:"Bleached" by... the name is scrubbed off. clay on canvas.
+zero:no bones about it. this is a skeleton.
+//random chance for sans voice
 ===

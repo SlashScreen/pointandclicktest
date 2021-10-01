@@ -86,7 +86,7 @@ zero:i see. do you happen to know the code?
 streetman:NO 
 streetman: NO 
 streetman:MO 
-streetman:   FOREST <- look .
+streetman:   FOREST <- look ?...
 zero:i uh. okay. ill look in the forest. i guess. (wherever that is.) 
 streetman:BY 
 streetman:e 
@@ -105,7 +105,7 @@ zero:i dont really have to vocabulary to say what im looking at.
 title:diamondman.talk
 ---
 zero:hey dude, have you seen-
-dman(???):STREAMINGASSETS/DIAMOND PASS BALTHAZAR
+dman(???):STREAMINGASSETS/DIAMOND 7ZIPPASS BALTHAZAR
 zero:come again.
 <<SetSilence true>>
 dman(???):...

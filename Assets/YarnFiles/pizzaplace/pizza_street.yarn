@@ -43,3 +43,8 @@ zero:let's do it to it.
 <<GoToObject PizzaDoor>>
 <<Invoke PizzaDoor>>
 ===
+
+title:jesuscrowd.look
+---
+zero:looks like he took my advice.
+===
