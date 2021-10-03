@@ -7,6 +7,7 @@ public class PlayerYarn : MonoBehaviour
 {
     [Header("Yarn stuff")]
     public List<string> activatedNodes = new List<string>();
+    public List<string> persistentNodes = new List<string>();
     public bool inConversation;
     public bool pizzaflag = false;
     public bool jesusflag = false;
@@ -16,13 +17,10 @@ public class PlayerYarn : MonoBehaviour
     {
         main = GetComponent<PlayerMain>();
         main.d.dia.AddFunction("Visited",1,IsNodeVisited);
-        main.d.dia.AddFunction("GetPizzaFlag",0,GetPizzaFlag);
-        main.d.dia.AddFunction("GetJesusFlag",0,GetJesusFlag);
-        main.d.dia.AddCommandHandler("FlipPizzaFlag",FlipPizzaFlag);
-        main.d.dia.AddCommandHandler("FlipPizzaFlag",FlipJesusFlag);
     }
     //yarn conversation stuff
     void AddNode(String node){
+
         activatedNodes.Add(node);
     }
     public void OnDialogStart(){
@@ -35,31 +33,18 @@ public class PlayerYarn : MonoBehaviour
 
     public void AddCompletedNode(){ //might not be necessary
         //adds completed node string name to the list. 
+        if (main.d.dia.Dialogue.GetTagsForNode(main.d.dia.CurrentNodeName).Contains("persist") && !persistentNodes.Contains(main.d.dia.CurrentNodeName)){
+            persistentNodes.Add(main.d.dia.CurrentNodeName);
+        }
         if (!activatedNodes.Contains(main.d.dia.CurrentNodeName)){
             //Debug.Log("added node " + main.d.dia.CurrentNodeName);
             activatedNodes.Add(main.d.dia.CurrentNodeName);
         }
     }
 
-    public void FlipPizzaFlag(string[] s){
-        pizzaflag = true;
-    }
-
-    public void FlipJesusFlag(string[] s){
-        jesusflag = true;
-    }
-
-    public object GetPizzaFlag(Yarn.Value[] s){
-        return pizzaflag;
-    }
-
-    public object GetJesusFlag(Yarn.Value[] s){
-        return jesusflag;
-    }
-
     public object IsNodeVisited(Yarn.Value[] name){ //returns if node already visited
-        Debug.Log("Visited:" + activatedNodes.Contains(name[0].AsString));
-        return activatedNodes.Contains(name[0].AsString);
+        //Debug.Log("Visited:" + activatedNodes.Contains(name[0].AsString));
+        return activatedNodes.Contains(name[0].AsString) || persistentNodes.Contains(name[0].AsString);
     }
 
     public void StartUseDialog(){

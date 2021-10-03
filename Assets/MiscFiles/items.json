@@ -23,6 +23,9 @@
         {"name":"gunk","id":21,"iconPath":"Icons/gunk"},
         {"name":"ducttape","id":22,"iconPath":"Icons/ducttape"},
         {"name":"bottle","id":23,"iconPath":"Icons/bottle"},
-        {"name":"bottleofgunk","id":24,"iconPath":"Icons/bottleofgunk"}
+        {"name":"bottleofgunk","id":24,"iconPath":"Icons/bottleofgunk"},
+        {"name":"reciept","id":25,"iconPath":"Icons/reciept"},
+        {"name":"fakequarter","id":26,"iconPath":"Icons/fakequarter"},
+        {"name":"toy","id":27,"iconPath":"Icons/toy"}
     ]
 }

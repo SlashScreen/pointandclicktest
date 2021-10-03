@@ -56,3 +56,25 @@ title: bat.use
 <<SetSpeaker Zero>>
 shouldn't tamper with evidence.
 ===
+
+title:gunk.look
+---
+zero:an orangeish sticky gloop with a rainbow sheen.
+zero:smells like a weird mixture of yogurt, rubbing alcohol, and copper.
+===
+
+title:gunk.take
+---
+zero:im not putting that bare in my pocket, are you kidding me.
+===
+
+title:gunk.use
+---
+<<if $selectedInventory == 23>>
+    zero:here we go, a nice container.
+    <<RemoveItem 23>>
+    <<AddItem 24>>
+<<else>>
+    zero:i don't want to ruin this.
+<<endif>>
+===

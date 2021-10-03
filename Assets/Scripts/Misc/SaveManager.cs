@@ -11,11 +11,10 @@ public class SaveGame
 {
     public List<int> inventory = new List<int>();
     public List<string> activatedNodes = new List<string>();
+    public List<string> persistentNodes = new List<string>();
     public List<string> clues = new List<string>();
     public string room;
     public Vector3 pos;
-    public bool pizzaflag;
-    public bool jesusflag;
     public bool wearingShoes = false;
     public bool wearingMask = false;
     public List<SaveManager.itemFlags> flags = new List<SaveManager.itemFlags>();
@@ -72,11 +71,10 @@ public class SaveManager : MonoBehaviour{
             sv.inventory.Add(item.id);
         }
         sv.activatedNodes = player.yarn.activatedNodes; //store nodes
+        sv.persistentNodes = player.yarn.persistentNodes;
         sv.room = SceneManager.GetActiveScene().name; //store room
         sv.pos = player.transform.position; //store pos
         sv.room = SceneManager.GetSceneAt(1).name; //store room
-        sv.pizzaflag = player.yarn.pizzaflag;
-        sv.jesusflag = player.yarn.jesusflag;
         //clothes
         sv.wearingShoes = !player.accessories.shoes.hidden;
         sv.wearingMask = !player.accessories.mask.hidden;
@@ -105,8 +103,7 @@ public class SaveManager : MonoBehaviour{
         sr.Close(); //close file
 
         player.yarn.activatedNodes = sv.activatedNodes; //set activated nodes
-        player.yarn.pizzaflag = sv.pizzaflag;
-        player.yarn.jesusflag = sv.jesusflag;
+        player.yarn.persistentNodes = sv.persistentNodes;
         flagsl = sv.flags; //set flags
 
         foreach(var item in sv.inventory){ //add all saved items

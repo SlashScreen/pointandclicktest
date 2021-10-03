@@ -27,7 +27,7 @@ title:cashier
 zero:hey, can i get a personal pizza with italian sausage and green onion.
 cashier:sure thing!! is that to here or to go??
 zero:for here.
-<<if GetPizzaFlag()>>
+<<if Visited("album.nickie")>>
     cashier:have you heard about our vinyl donation program??
     zero:your what?
     cashier:we've partnered with Catstrut Records!! bring in an old vinyl record to donate and get a free personal pizza!!

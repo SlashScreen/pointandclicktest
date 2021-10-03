@@ -113,3 +113,96 @@ zero:...
 <<SetSilence false>>
 zero:okay.
 ===
+
+title:kid.look
+---
+zero:just a little man. a kid even.
+===
+
+title:kid.talk
+---
+<<if !Visited("ptb.interrogate.bottle")>>
+    streetkid(Kid):i'm just a little lad, taking notes on my notebook.
+    <<stop>>
+<<endif>>
+
+<<if Visited("toysteal")>>
+    zero:alright, kid, i got your toy.
+    streetkid(Kid):Awesome! Do you have a reciept for it?
+    zero:i, uh. no?
+    streetkid(Kid):Nuts. My mom will want to see a reciept to make sure I didn't steal it, like last time.
+    streetkid(Kid):Hmm.
+    streetkid(Kid):So here's what we will do:
+    streetkid(Kid):I will give you my quarter and you give me the bottle.
+    streetkid(Kid):Then you buy the bottle from me and I will write a reciept for you.
+    streetkid(Kid):ANd then I will use that quarter to buy the toy off of you, and you will write a reciept for *me*.
+    streetkid(Kid):Got it?
+    zero:(goddamn, what is with this kid?...)
+    zero:i um. ok?
+    <<RemoveItem 23>> //bottle
+    <<AddItem 26>> //coin
+    zero:ok here we go.
+    zero:A Quarter For This Bottle? You've Got A Deal, Kid.
+    streetkid(Kid):Sure Thing, Ma'am!
+    //todo: play writing animation
+    <<wait 3>>
+    <<AddItem 23>> //bottle
+    <<RemoveItem 26>> //coin
+    <<AddItem 25>> //reciept
+    streetkid(Kid):Oh, That Is A Cool Toy! Can I Buy It For 1 Quarter?
+    zero:Sure Thing, Kid.
+    zero:(1 toy - 20 cents. Tip - 20%. Total - 25 cents. Cashier: Zero)
+    <<AddItem 26>> //coin
+    <<RemoveItem 27>> //toy
+    zero:Thank You For Your Business.
+    zero:really, thanks a bunch, kid.
+    streetkid(Kid):Many thanks to you too, miss!
+    //todo: animation for going away
+    <<Hide Streetkid>>
+    zero:...wait a minute.
+    zero:wait, dude, your quarter!
+    zero:damn it. too late.
+    <<SetSilence true>>
+    zero:...
+    <<SetSilence false>>
+    zero:wait a god damn minute, this quarter is fake! the little punk duped me!
+    zero:wait, have *i* been duped, or has *he* been duped.
+    zero:was *anyone* duped??
+    zero:i'm confused.
+<<elseif Visited("stall.shop")>>
+    zero:...hey kid.
+    streetkid(Kid):Yes, miss?
+    zero:i'd like you to do a favor for me.
+    streetkid(Kid):...What is it?
+    zero:how much money do you have.
+    streetkid(Kid):A quarter. Why?
+    zero:don't ask why i need this, but i have this bottle here.
+    zero:so i'm gonna give you this bottle, and you will give me your quarter.
+    zero:and then i will "buy" the bottle from you for a quarter. and you will write a reciept saying i bought the bottle.
+    zero:understand?
+    streetkid(Kid):Gaaasp!
+    streetkid(Kid):You're a bottle launderer!
+    zero:i, uh. i suppose i am.
+    streetkid(Kid):Bottle laundering is a dangerous business... how exciting! I'll do it!
+    zero:nice. i-
+    streetkid(Kid):if you get me a toy from that shop over there.
+    zero:ah. i see. a deal is a deal i suppose.
+<<else>>
+    streetkid(Kid):i'm just a little lad, taking notes on my notebook.
+<<endif>>
+===
+
+title:stall.look
+---
+
+===
+
+title:stall.shop
+---
+
+===
+
+title:toysteal
+---
+
+===

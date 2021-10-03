@@ -4,7 +4,7 @@ colorID: 0
 position: 861,403
 ---
 <<SetSpeaker Zero>>
-
+//BEHOLD: ELSE IF HELL
 <<if $selectedInventory == 9>> //if shoes
     it's a good idea to put these on if i want to go outside.
     socks are for fools and the lazy.
@@ -13,8 +13,59 @@ position: 861,403
     <<RemoveItem 9>>
 <<elseif $selectedInventory == 6 or $selectedInventory == 7>>
     i need to put this with the other shoe first. it's awkward to wear just a single shoe.
+<<elseif $selectedInventory == 4>>
+    zero:my phone. or, as the germans say it, mein Handy.
+<<elseif $selectedInventory == 5>>
+    zero:i need this to enter my home. pretty important, i'd say.
+    zero:also a good cutting tool or weapon, if used appropriately.
+<<elseif $selectedInventory == 8>>
+    zero:if anything good happens when i'm in my 50's, it will be menopause.
+    zero:assuming there is still a world then for me to reach menopause in.
+<<elseif $selectedInventory == 10>>
+    zero:i'd be more effective if it would stay over my breathing holes.
+<<elseif $selectedInventory == 11>>
+    zero:sure, whatever.
+    <<Show Player_Mask>>
+<<elseif $selectedInventory == 12>>
+    zero:electrical tape. good for demonstrating the might of high-powered lasers.
+<<elseif $selectedInventory == 13>>
+    zero:oh hell yeah. ground washers.
+<<elseif $selectedInventory == 14>>
+    zero:"Dr. Plibby - Mediocre at best."
+    zero:...i still drink it though. like stuffed crust pizza- it tastes like shit, but you can't get enough of it.
+<<elseif $selectedInventory ==15>>
+    zero:legal tender. used to obtain goods and services without the need to barter.
+<<elseif $selectedInventory == 16>>
+    zero:a ceremonial weapon, used by the conehead cultists. each member carries one.
+    zero:technically not allowed on transport, but security officers don't want to get on the wrong side of these guys.
+<<elseif $selectedInventory == 17>>
+    zero:i can make a game engine from the ground up, but i have no god damn clue how these work.
+    zero:or sewing machines either, for the record.
+<<elseif $selectedInventory == 18>>
+    zero:a classic red valve that i did not take from an art installation.
+    zero:i'm going to hell when i die, i have accepted that.
+<<elseif $selectedInventory == 19>>
+    zero:a valve stuffed with morally-obtained tape.
+<<elseif $selectedInventory == 20>>
+    zero:a valve stuffed with ooze.
+    zero:...get your mind out of the gutter.
+<<elseif $selectedInventory == 21>>
+    zero:possibly flammable. i'm not going to find out though.
+<<elseif $selectedInventory == 22>>
+    zero:a fabric band slathered with strong adhesive. great for building temporary spacesuits, among other, less common use cases.
+<<elseif $selectedInventory == 23>>
+    zero:a bottle, used for holding liquids like milk, and fairies.
+<<elseif $selectedInventory == 24>>
+    zero:pretty sure this is very close to being a molotov cocktail.
+<<elseif $selectedInventory == 25>>
+    zero:"Stinky lady bought this bottle for 1 quarter. This was not bottle laundering. Cashier: Fancy Lad".
+    zero:thanks, kid.
+<<elseif $selectedInventory == 26>>
+    zero:ol' Washington has a case of the gout, i see.
+<<elseif $selectedInventory == 27>>
+    zero:some kind of posable robot.
 <<else>>
-    I don't need this.
+    zero:i don't think i am supposed to see this.
 <<endif>>
 
 <<set $selectedInventory to 0>>

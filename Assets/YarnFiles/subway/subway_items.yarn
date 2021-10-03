@@ -672,11 +672,16 @@ Jesus Christ:I Keep telling Everyone That i'm The Messiah reborn. But Nobody wil
 zero:what a conundrum.
 Jesus Christ:What Do you Suggest I do?
 ->lose the shirt
-    zero:lose the shirt.
-    Jesus Christ:Really? I like It!
-    zero:just. trust me on this.
-    <<FlipJesusFlag>>
+    [[christShirtOff]]
 ->build the third temple
     zero:well, you could build the third temple, for one.
     Jesus Christ:But Even with God's Help, i Could Not build It Myself! i Need A legion Of Followers...
+===
+
+title:christShirtOff
+tags:persist
+---
+zero:lose the shirt.
+Jesus Christ:Really? I like It!
+zero:just. trust me on this.
 ===
