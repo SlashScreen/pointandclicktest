@@ -47,12 +47,12 @@ position: 861,403
 <<elseif $selectedInventory == 19>>
     zero:a valve stuffed with morally-obtained tape.
 <<elseif $selectedInventory == 20>>
-    zero:a valve stuffed with ooze.
+    zero:a valve stuffed with sticky ooze.
     zero:...get your mind out of the gutter.
 <<elseif $selectedInventory == 21>>
     zero:possibly flammable. i'm not going to find out though.
 <<elseif $selectedInventory == 22>>
-    zero:a fabric band slathered with strong adhesive. great for building temporary spacesuits, among other, less common use cases.
+    zero:duct tape- a fabric band slathered with strong adhesive. great for building temporary spacesuits, among other, less common use cases.
 <<elseif $selectedInventory == 23>>
     zero:a bottle, used for holding liquids like milk, and fairies.
 <<elseif $selectedInventory == 24>>

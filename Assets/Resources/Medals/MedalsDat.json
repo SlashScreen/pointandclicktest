@@ -12,6 +12,7 @@
         {"id":"apartment","title":"The Barrier is Psychological","description":"Leave the safety of your abode.","icon":"Medals/Icons/apartment"},
         {"id":"shine","title":"Rise and Shine","description":"Awaken on a train.","icon":"Medals/Icons/shine"},
         {"id":"kit","title":"None of the Calories, None of the Taste","description":"Give the girl from out of town some soda.","icon":"Medals/Icons/kit"},
-        {"id":"egg1","title":"Underwhelming.","description":"Find an easter egg. Not a very cool one, though...","icon":"Medals/Icons/egg1"}
+        {"id":"egg1","title":"Underwhelming.","description":"Find an easter egg. Not a very cool one, though...","icon":"Medals/Icons/egg1"},
+        {"id":"launder","title":"A little financial fraud never hurt nobody.","description":"Launder illicit goods.","icon":"Medals/Icons/launder"}
     ]
 }

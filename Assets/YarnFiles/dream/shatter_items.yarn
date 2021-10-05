@@ -77,4 +77,5 @@ title:gunk.use
 <<else>>
     zero:i don't want to ruin this.
 <<endif>>
+<<set $selectedInventory to 0>>
 ===

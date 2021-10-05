@@ -629,7 +629,7 @@ title: turnstile.w.go
 <<endif>>
 ===
 
-title: superdogs.look 
+title: superdogs.look
 ---
 zero:this is the worst food i've ever tasted.
 zero:"just like mom's cooking". i'll give them that.
@@ -642,7 +642,7 @@ zero:my mom's cooking always had a chemicaly aftertaste to it. only later in lif
 zero:of course, now the smell of burning plastic makes me homesick.
 ===
 
-title:kids.look 
+title:kids.look
 ---
 zero:a group of kids.
 ===

@@ -33,7 +33,7 @@ public class PlayerYarn : MonoBehaviour
 
     public void AddCompletedNode(){ //might not be necessary
         //adds completed node string name to the list. 
-        if (main.d.dia.Dialogue.GetTagsForNode(main.d.dia.CurrentNodeName).Contains("persist") && !persistentNodes.Contains(main.d.dia.CurrentNodeName)){
+        if (main.d.dia.Dialogue.GetTagsForNode(main.d.dia.CurrentNodeName).ToString().Contains("persist") && !persistentNodes.Contains(main.d.dia.CurrentNodeName)){
             persistentNodes.Add(main.d.dia.CurrentNodeName);
         }
         if (!activatedNodes.Contains(main.d.dia.CurrentNodeName)){

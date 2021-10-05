@@ -97,7 +97,7 @@ title:streetman.use
 streetman:no
 ===
 
-title:diamondman.look 
+title:diamondman.look
 ---
 zero:i dont really have to vocabulary to say what im looking at.
 ===
@@ -169,6 +169,7 @@ title:kid.talk
     zero:wait, have *i* been duped, or has *he* been duped.
     zero:was *anyone* duped??
     zero:i'm confused.
+    <<EarnMedal launder>>
 <<elseif Visited("stall.shop")>>
     zero:...hey kid.
     streetkid(Kid):Yes, miss?
