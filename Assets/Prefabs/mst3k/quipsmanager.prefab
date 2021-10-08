@@ -104,7 +104,7 @@ MonoBehaviour:
   variableStorage: {fileID: 498043124015234744}
   dialogueUI: {fileID: 498043124015234693}
   startNode: Start
-  startAutomatically: 1
+  startAutomatically: 0
   onNodeStart:
     m_PersistentCalls:
       m_Calls: []

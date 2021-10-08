@@ -11,6 +11,8 @@ public class mst3k_quips : MonoBehaviour
     public quipbubble ZBubble; //Zero 
     public quipbubble GBubble; //Guest
     public DialogueRunner runner;
+    [UnityEngine.SerializeField]
+    
     string current;
 
     public void HandleLine(string[] lineData){
@@ -41,8 +43,10 @@ public class mst3k_quips : MonoBehaviour
     public void PlayQuip(string quip){
         runner.StartDialogue("quip."+quip);
     }
-
-    public void PlayQuip(bool canBeSilent,float chanceForSilence,string[] quips){
+    public void ListWrapper(QuipListData qld){
+        
+    }
+    public void PlayQuipFromList(bool canBeSilent,float chanceForSilence,string[] quips){
         if (canBeSilent && (Random.Range(0f,1f)>=chanceForSilence)){ //if can be silent (no quip will play) and random greater than chanceForSilence, play nothing
             return;
         }
