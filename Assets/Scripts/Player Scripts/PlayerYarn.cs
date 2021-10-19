@@ -17,6 +17,7 @@ public class PlayerYarn : MonoBehaviour
     {
         main = GetComponent<PlayerMain>();
         main.d.dia.AddFunction("Visited",1,IsNodeVisited);
+        main.d.dia.AddCommandHandler("SelectRandom",SelectRandom);
     }
     //yarn conversation stuff
     void AddNode(String node){
@@ -54,5 +55,10 @@ public class PlayerYarn : MonoBehaviour
         }else{ //for NPCs
             main.ui.clickedObject.GetComponent<NPCscript>().beginDialog(main.ui.clickedObject.GetComponent<NPCscript>().useNode); //trigger Use node (NPC)
         }
+    }
+
+    public void SelectRandom(string[] max){
+        int m = int.Parse(max[0]);
+        main.d.GetComponent<Yarn.VariableStorage>().SetValue("Random",UnityEngine.Random.Range(0,m));
     }
 }

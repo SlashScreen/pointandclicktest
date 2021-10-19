@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e563ae7bb2fd6a47b0974764b7d0754, type: 3}
-  m_Name: AholePickpocletQuips
+  m_Name: metal_pos
   m_EditorClassIdentifier: 
   canBeSilent: 0
   chanceForSilence: 0
   quips:
-  - quip.dagger
-  - quip.superdogs
-  - quip.trainstation
+  - quip.good
+  - quip.good2
+  - quip.good3

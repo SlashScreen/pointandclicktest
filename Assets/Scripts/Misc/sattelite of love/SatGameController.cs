@@ -14,13 +14,32 @@ public class SatGameController : MonoBehaviour
     public UnityEvent<int> onScore;
     public UnityEvent<int> onHit;
     public UnityEvent onWin;
+    public UnityEvent onPositive;
+    public UnityEvent onNegative;
     float timer;
     bool going = false;
+    List<int> history = new List<int>();
     List<GameObject> obstacles = new List<GameObject>();
-    // Start is called before the first frame update
-    void Start()
+    
+    private float Average(int[] values)
     {
-        
+        int sum = 0;
+        for (int i = 0; i < values.Length; i++)
+        {
+            sum += values[i];
+            System.Console.Write(values[i] + ", ");
+        }
+        return((float)sum/values.Length);
+    }
+
+    public void CalcHistory(){
+        float avg = Average(history.ToArray()); //calc average
+        if (avg < 0){ //if it is negative, make her say something awkward. else positive
+            onNegative.Invoke();
+        }else{
+            onPositive.Invoke();
+        }
+        history.Clear(); //clear the history
     }
 
     public void SetGoing(bool b){
@@ -39,9 +58,11 @@ public class SatGameController : MonoBehaviour
         if (Sat.gameObject.GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(),colliders)>0){
             if ( colliders.Find(x => x.gameObject.tag == "satGood")){
                 score += 1;
+                history.Add(1);
                 onScore.Invoke(score);
             }else if ( colliders.Find(x => x.gameObject.tag == "satBad")){
                 score -= 1;
+                history.Add(-1);
                 onHit.Invoke(score);
             }
 

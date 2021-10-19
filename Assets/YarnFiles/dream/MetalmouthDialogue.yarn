@@ -27,10 +27,14 @@ Metalmouth:the word!! LOLOLOLOLoL :trollfaceplz:
 zero:(ooooouuughh.)
 Metalmouth:well im wonewy... i could use some huggie wuggies!! and maybe sum encuraging words~ but it's not liek i liek u or n e thing!!! :smileblushplz:
 zero:(holy shit.) 
-zero:well. i suppose if that's what it would take to do that. then i guess i could do that (blugh)
-Metalmouth: :OOOOOOOOO !!!!!! weawwy?????? OwO 
-zero:yeah. sure. (oooy weyyy let's get this over with.)
-<<Invoke invoke_show>>
+->yes
+    zero:well. i suppose if that's what it would take to do that. then i guess i could do that (blugh)
+    Metalmouth: :OOOOOOOOO !!!!!! weawwy?????? OwO 
+    zero:yeah. sure. (oooy weyyy let's get this over with.)
+    <<Invoke MetalmouthGameStartup>>
+->no
+    zero:maybe... later.
+    Metalmouth::(((
 ===
 
 title:MetalMouthFinish

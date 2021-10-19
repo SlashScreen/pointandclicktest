@@ -98,3 +98,38 @@ title: witchdoor.knock
     no need to disturb her.
 <<endif>>
 ===
+
+
+
+title:mel.look
+---
+zero:my neighbor. she's a zombie, i think. she's nice, if not much of a sparkling conversationalist.
+zero:i guess since she's alive now, she isn't rotting. 
+zero:good i say, because i would rather do lots of things than live next to a constant rotting corpse smell.
+===
+
+title:mel.talk
+---
+mel:graaaagh!
+mel:ugh, It's So annoying.
+mel:finding Dates Is SO Hard For me!
+mel:everyone Keeps Being Weirded Out That My Body Is 17.
+mel:like, I Get It, But It's Not Like I As A Person Froze At 17.
+mel:i'm Like 23, I'm Not Going To Be A Stupid Teenager For The Rest Of My Life, God forbid.
+mel:i Can't Help That That Car Hit Me When I Was A minor. at Least I Don't Look, Like, 8 Or something.
+mel:there Are Women Older Than I Am That Look, Like, 12.
+zero:ok.
+mel:oh, I'm So sorry. i Just Needed To vent. 
+mel:that Was Weird, I'm sorry, hahah.
+->birthdays
+    zero:so like. i've been wondering. how do you count your age.
+    mel:what Do You mean?
+    zero:like do you celebrate your birthday *before* you died, when you were resurrected, or like calculate the difference between the two.
+    zero:or do you just guess.
+    mel:oh. oh god. i... I Have No idea. i Never Really Thought About It Like that.
+    mel:on My ID It Says I'm 23 But Really, I... Guess I Don't know?...
+->bye
+    zero:ok bye.
+    mel:you too.
+    mel:(wait...)
+===

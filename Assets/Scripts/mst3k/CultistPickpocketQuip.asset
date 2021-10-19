@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeSilent: 0
   chanceForSilence: 0
-  quips: []
+  quips:
+  - quip.dagger
+  - quip.superdogs
+  - quip.conehead
+  - quip.conehead2
+  - quip.trainstation

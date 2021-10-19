@@ -135,7 +135,7 @@ title:kid.talk
     streetkid(Kid):So here's what we will do:
     streetkid(Kid):I will give you my quarter and you give me the bottle.
     streetkid(Kid):Then you buy the bottle from me and I will write a reciept for you.
-    streetkid(Kid):ANd then I will use that quarter to buy the toy off of you, and you will write a reciept for *me*.
+    streetkid(Kid):And then I will use that quarter to buy the toy off of you, and you will write a reciept for *me*.
     streetkid(Kid):Got it?
     zero:(goddamn, what is with this kid?...)
     zero:i um. ok?
@@ -195,15 +195,53 @@ title:kid.talk
 
 title:stall.look
 ---
-
+zero:a small shop.
+zero:there seems to be no clerk?...
 ===
 
 title:stall.shop
 ---
+<<if Visited("stall.shop") and !Visited("kid.talk")>>
+    zero:i already have a bottle.
+<<endif>>
 
+<<if Visited("gunk.take")>>
+    zero:hey, they have a bottle here.
+    zero:...5 dollars for a tiny fucking bottle????
+    zero:nope, no. how about this, asshats.
+    <<AddItem 23>>
+    zero:eat shit.
+<<else>>
+    zero:this shop sells stuff like... toys, and bottles? and snacks.
+    zero:i have no reason to shop here.
+<<endif>>
 ===
 
 title:toysteal
 ---
+<<if !Visited("toysteak")>>
+    zero:gotcha.
+    <<AddItem 27>>
+<<else>>
+    zero:that's enough shoplifting for today.
+<<endif>>
+===
 
+title:streetcouple.look
+---
+zero:love is in bloom.
+===
+
+title:streetcouple.eavesdrop
+---
+Lover:Hello!
+Shopper:What's going on? With you?
+Lover:Good.
+Shopper:What's the news in the rest of the Red Zone?
+Lover:I don't like to think about zombies. Missing arms, legs, heads. They smell awful, and they're hard to kill.
+Shopper:Bye.
+Lover:You Too.
+<<SelectRandom 3>>
+Zero:(some people have the conversation skills of [select {$Random} 1 = "a sceen door on a submarine" 2 = "a wooden toaster" 3 = "a derailed freight train"].)
+Zero:(not that i have any room to talk.)
 ===

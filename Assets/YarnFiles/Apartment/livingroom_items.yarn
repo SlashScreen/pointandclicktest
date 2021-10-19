@@ -33,12 +33,8 @@ tags:
     its accompanied by a garbled mimicking of human speech. its usually nonsense, but recently it's gotten more coherent.
     the tv started tuning itself to this channel sometimes after that gross stuff in my room showed up.
 <<elseif $channel == 3>>
-    it's the news. have you ever wanted depression to get beamed into your eyeballs, but didn't have a social media account. well worry no more.
+    it's the news. have you ever wanted depression to get beamed into your eyeballs, but don't have a social media account. well worry no more.
     right now they are covering a mass shooting that happened today. i guess they got bored of the one that happened yesterday.
-<<elseif $channel == 4>>
-    this is a cartoon i found on YouShare when i was 12, which prompted me to learn bass guitar.
-    looks like i caught the credits. what a shame.
-    <<EarnMedal flcl>>
 <<endif>>
 ===
 
@@ -56,7 +52,7 @@ title: box.look
 tags:
 ---
 <<SetSpeaker Zero>>
-it's fully network crap from my last job. i got laid off a few months ago, and i haven't bothered to move the box.
+it's full of network crap from my last job. i got laid off a few months ago, and i haven't bothered to move the box.
 "Osmacorp: We Own You." quite the shift in tone from their old motto, "Evil Leads to Dispair."
 ===
 
@@ -85,7 +81,7 @@ at least i hope not.
 title: couch.sit
 tags:
 ---
-if i sit down i will never get back up.
+zero:if i sit down i will never get back up.
 ===
 
 
@@ -147,17 +143,14 @@ how would i do that.
 title: plate.look
 tags:
 ---
-<<SetSpeaker Zero>>
-heh.
-it's genuine. im sure it's a felony to own this.
-it got off kilter about a year ago during a quake from the red zone. i haven't bothered to fix it.
+zero:this was the 3rd place prize from a game at a house party i went to a few years ago.
+zero:the 2nd place prize was all of the recycling from the party.
+zero:i don't think this is legal to own, but i'm sure it's fine.
 ===
 
 title: plate.fix
-tags:
 ---
-<<SetSpeaker Zero>>
-nah.
+zero:nah.
 ===
 
 

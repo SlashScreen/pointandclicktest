@@ -669,6 +669,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1144441649}
+        m_TargetAssemblyTypeName: SatGameController, Assembly-CSharp
+        m_MethodName: SetGoing
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   hidden: 0
   talkPoint: {fileID: 0}
 --- !u!4 &722410339
@@ -1537,6 +1549,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 216bcee54aebb6349a0581887561cc4a, type: 3}
+--- !u!114 &1142752512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 498043124015234694, guid: 216bcee54aebb6349a0581887561cc4a, type: 3}
+  m_PrefabInstance: {fileID: 1142752511}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142752513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a8bc69ad0f3a943a16a8e425e84b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1142752513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 498043124015234690, guid: 216bcee54aebb6349a0581887561cc4a, type: 3}
+  m_PrefabInstance: {fileID: 1142752511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1142752514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142752513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b597d02332f754c84db3944abe431d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTimeLoop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1144441649}
+        m_TargetAssemblyTypeName: SatGameController, Assembly-CSharp
+        m_MethodName: CalcHistory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timebetween: 7
+  wobble: 0
+  looping: 0
 --- !u!1 &1144441648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1658,36 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPositive:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1142752512}
+        m_TargetAssemblyTypeName: mst3k_quips, Assembly-CSharp
+        m_MethodName: ListWrapper
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e3e3627f558fe52439ece0277424c40c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: QuipListData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onNegative:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1142752512}
+        m_TargetAssemblyTypeName: mst3k_quips, Assembly-CSharp
+        m_MethodName: ListWrapper
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 297d3611982161e4daaf463c1ea4b291, type: 2}
+          m_ObjectArgumentAssemblyTypeName: QuipListData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2352,7 +2440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1870711175
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -35,8 +35,7 @@ it looks good enough as-is.
 title: poster.look
 ---
 <<SetSpeaker Zero>>
-it's my poster for Das Ding, a fantastic german horror movie from the 80s by a guy named Johannes Tischler. the poster is famous for being shitty in a beautiful way.
-the monster in the movie looks like my dreams after i cross through the red zone. 
+it's my poster for Das Ding, a german horror movie from the 80s by a guy named Johannes Tischler. the poster is famous for being shitty in a beautiful way.
 ===
 
 
@@ -81,7 +80,7 @@ title: computer.use
 ---
 <<SetSpeaker Zero>>
 <<if $selectedInventory == 4>>
-    i've already downloaded all the music that i've, erm, aquired.
+    i've already downloaded all the music that i've, erm, acquired.
 <<else>>
     maybe in a world with a single universal cable standard.
 <<endif>>
@@ -90,7 +89,7 @@ title: computer.use
 title:computer.look
 ---
 <<SetSpeaker Zero>>
-it's my computer and its desk. this is where i "pown" the "noobs" in an admirably epic manner. it's also where i code and make music. and the desk where 
+it's my computer and its desk. this is where i "pown" the "noobs" in an admirably epic manner. it's also where i write code and make music. and the desk where 
 i bang my head when nothing is working right.
 i want to get a computer case that's translucent plastic like late 90's computers. that's way more stylish than tempered glass side panels.
 it's been rather inconvenient to use since my chair disappeared last thursday.
@@ -99,7 +98,6 @@ it's been rather inconvenient to use since my chair disappeared last thursday.
 title: computer.on
 ---
 <<SetSpeaker Zero>>
-<<PlaySFX SFXAudio SFX/grumps>>
 <<Invoke computer>> //toggle on and off
 ah yes, my favorite YouShare let's play series. i watch this particular series every time i'm feeling depressed.
 <<SetSilence True>>
@@ -131,8 +129,8 @@ title: turntable.browse
 
 title: bed.use
 ---
-<<SetSpeaker Zero>>
-inanimate objects do not need to sleep.
+zero:inanimate objects do not need to sleep.
+zero:and i... i am animate.
 ===
 
 title: bed.look
@@ -140,7 +138,6 @@ title: bed.look
 <<SetSpeaker Zero>>
 my luxurious sleeping quarters. fit to accomodate me and me alone. 
 forever.
-<<EarnMedal test>>
 ===
 
 title: bed.lay
@@ -182,10 +179,8 @@ the covering is barely secure as it is.
 
 title:cover.look
 ---
-<<SetSpeaker Zero>>
-a few months ago a hole appeared in my wall and this, uh, stuff started coming out of it. it was like, that kind of mold that's fluffy with long strands of hair that grows on spaghetti, but made out of skin instead.
-it smelled like water that a corpse has been rotting in. i talked to my landlord about it, but he was being really weird about it, and i gave up and nailed this plastic cover on it. it's worked so far.
-when it was uncovered, it kept giving me sleep paralysis, which was inconvenient.
+zero:a few weeks ago some sort of ooze started coming out of this vent. 
+zero:i told my landlord about it had he was weirdly dismissive about it.
 ===
 
 title: cover.remove

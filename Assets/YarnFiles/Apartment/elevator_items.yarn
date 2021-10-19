@@ -83,20 +83,17 @@ title: elevator.go
 
 title: stairs.use
 ---
-<<SetSpeaker Zero>>
-tossing things down the stairs is difficult.
+zero:ive done that plenty, but retrieving the items is tedious.
 ===
 
 title: stairs.look
 ---
-<<SetSpeaker Zero>>
-i would go down the stairs, but the gravity is a bit screwy in there.
+zero:the stairwell. or, more accurately, the well.
 ===
 
 title: stairs.go
 ---
-<<SetSpeaker Zero>>
-last time i did that i fell and broke my nose. "down" was suddenly towards the wall.
+zero:someone took the stairs.
 ===
 
 
