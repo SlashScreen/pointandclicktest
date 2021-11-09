@@ -36,8 +36,7 @@ title: elevator.go
 <<endif>>
 
 <<if Visited("elevator.go")>>
-    <<SetSpeaker Zero>>
-    can i just go. im just going to the subway station a few doors down.
+    zero:can i just go. im just going to the subway station a few doors down. my lungs will be fine. i used to smoke.
     <<SetSpeaker OldMan>>
     To breathe in the word of God is to destroy it, and would condemn you to Hell.
     <<SetSpeaker Zero>>
@@ -51,30 +50,24 @@ title: elevator.go
 
 <<else>>
     <<GoToObject InterruptPoint>>
-    <<SetSpeaker OldMan>>
-    You, young lady, may not use the elevator.
-    <<SetSpeaker Zero>>
-    huh? why not.
-    <<SetSpeaker OldMan>>
-    Outside, the ash is falling.
-    <<SetSpeaker Zero>>
-    yeah i know, there's a fire outside town. im just going to the subway station, i can breathe through my shirt.
-    <<SetSpeaker OldMan>>
-    You do not understand! I see patterns in the way the ash flutters gently towards the ground, for it is the word of God.
-    <<SetSpeaker Zero>>
-    huh.
-    <<SetSpeaker OldMan>>
-    If you breathe in, you disturb the delicate pattern defined by God to send His message to our world.
-    That would destroy it, and to destroy the word of God is a sin!
-    <<SetSpeaker Zero>>
-    yeah that sounds cool and all but i just want-
-    <<SetSpeaker OldMan>>
-    Silence! If you are to continue, you must wear something that can prevent the word of God from entering your lungs.
-    <<SetSpeaker Zero>>
-    <<GoToObject StepBackPoint>>
-    yikes. what a nutjob. looks like he isn't gonna budge.
-    i have a respirator hanging in the living room, but it's broken.
-    i should grab it and find someone who can fix it.
+    oldman:You may not use the elevator young lady!
+    zero:huh. why not. the stairs are gone.
+    oldman:Because the LORD is sending us a message.
+    zero:(uh oh. here we go.)
+    oldman:Observe the patterns in the ash as it falls. The pattern is a message, a message sent to us by the LORD.
+    oldman:The red skies indicate the coming of the beast. This is the LORD's final message before the children of Christ get pulled into the Kigdom of Heaven.
+    zero:pretty sure the devil is already here. like, what about the red zone.
+    oldman:That was a hoax put in place by the government to convince us that when the rapture does occur it will just be played off as just "the ones above."
+    zero:(maybe i should just shut up.)
+    oldman:You see, the new world order is already here. The satan-worshipping baby-blood drinkers in power have come to lead the LORD's lambs astray.
+    oldman:And the gateway for all of this is the computer. The internet was invented by a scientist at CERN. Look at the logo- 666, the mark of the beast.
+    zero:can i-
+    oldman:He is trying to get his message through to us using Satan's own devices. GOD is a random number generator, sending encrypted messages to us through the ash
+    zero:i just-
+    oldman:created by the fires of hell that are already upon us. Your breath corrupts His message to us by moving the ash. Young child of God, you must not work for the Devil!!
+    zero:alright alright, if i put on my breathing mask, will you leat me through.
+    oldman:Yes, but stay vigilant. The Devil lurks outside this building.
+    <<call AddJournalEntry("Hoooly shit this dude. I'll put on my mask so I don't breathe the smoke in.")>>
     <<AddOption OldMan Talk oldman.talk>>
 <<endif>>
 ===
@@ -88,7 +81,7 @@ zero:ive done that plenty, but retrieving the items is tedious.
 
 title: stairs.look
 ---
-zero:the stairwell. or, more accurately, the well.
+zero:the stairwell. or, just the well, i guess.
 ===
 
 title: stairs.go

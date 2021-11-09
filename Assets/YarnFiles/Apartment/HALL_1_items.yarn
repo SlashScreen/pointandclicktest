@@ -110,26 +110,51 @@ zero:good i say, because i would rather do lots of things than live next to a co
 
 title:mel.talk
 ---
-mel:graaaagh!
-mel:ugh, It's So annoying.
-mel:finding Dates Is SO Hard For me!
-mel:everyone Keeps Being Weirded Out That My Body Is 17.
-mel:like, I Get It, But It's Not Like I As A Person Froze At 17.
-mel:i'm Like 23, I'm Not Going To Be A Stupid Teenager For The Rest Of My Life, God forbid.
-mel:i Can't Help That That Car Hit Me When I Was A minor. at Least I Don't Look, Like, 8 Or something.
-mel:there Are Women Older Than I Am That Look, Like, 12.
-zero:ok.
-mel:oh, I'm So sorry. i Just Needed To vent. 
-mel:that Was Weird, I'm sorry, hahah.
-->birthdays
-    zero:so like. i've been wondering. how do you count your age.
-    mel:what Do You mean?
-    zero:like do you celebrate your birthday *before* you died, when you were resurrected, or like calculate the difference between the two.
-    zero:or do you just guess.
-    mel:oh. oh god. i... I Have No idea. i Never Really Thought About It Like that.
-    mel:on My ID It Says I'm 23 But Really, I... Guess I Don't know?...
-->bye
-    zero:ok bye.
-    mel:you too.
-    mel:(wait...)
+<<if Visited("mel.bye")>>
+    zero:so uh. how's. no longer being dead, treating you.
+    mel:well, The Reanimation Proccess Was Pretty painful.
+    mel:and I Don't Remember Most Of Middle school.
+    zero:i'm pretty sure that's not just you.
+    mel:and I Had To Relearn How To Use My Limbs, And I Still Can't Stand Up straight.
+    mel:or Do Anything With Precision With My Left hand.
+    zero:oh, that sucks.
+    mel:i'm Left handed.
+    zero:oh, that double sucks.
+    mel:but On The Plus Side, I Get Another Chance To live. dying Before I Even Got To Drink sucked.
+    mel:also I Can Speak Portuguese Now I guess? i'm Not Portuguese Or brazilian. i Am vietnamese. i Never Learned portuguese. i Don't Know How That happened.
+    zero:well, that's pretty cool at least.
+    mel:also, Do You Also Visualize The Calendar As, Like, Twisting Around Inside Your Mind Like A paperclip? as If It Was In Like, Real space?
+    zero:yeah, my mental timeline bends by 90 degrees or so at the year 2000.
+    mel:oh Okay, That Started Happening But I Wasn't Sure If It Was Always Like that.
+<<else>>
+    mel:gruuugh!
+    zero:what's up.
+    mel:it's SO Hard To Find A date!
+    zero:because you're a zombie?
+    mel:no, There Are Plenty Of People Who Are Into that.
+    mel:it's Because I Was 17 When I died!
+    mel:a Lot Of People Are Weirded Out By that.
+    mel:and Like, I Get It, But It's Not Like I As A Person Froze With My body.
+    mel:i'm Like, 23 now. i'm An adult! i Just Look young. and I Was Almost An Adult Anyway, I Wasn't Like, 8.
+    mel:it's Not Like I Chose When I died!
+    zero:ok.
+    mel:oh, sorry. that Was A Bit Much, Wasn't it.
+    mel:sorry About that, haha. it's Just Really frustrating.
+    ->birthdays
+        zero:so like. i've been wondering. how do you count your age.
+        mel:what Do You mean?
+        zero:like do you celebrate your birthday *before* you died, when you were resurrected, or like calculate the difference between the two.
+        zero:or do you just guess.
+        mel:oh. oh god. i... I Have No idea. i Never Really Thought About It Like that.
+        mel:on My ID It Says I'm 23 But Really, I... Guess I Don't know?...
+    ->bye
+        [[mel.bye]]
+<<endif>>
+===
+
+title:mel.bye
+---
+zero:ok bye.
+mel:you too.
+mel:(wait...)
 ===

@@ -163,30 +163,25 @@ title: omicron.talk
 ---
 <<SetSpeaker Zero>>
 <<if Visited("omicron.talk")>>
-    zero:so. where were you on the night of the murder.
-    omicron:There was no murder.
-    zero:i know. i just wanted to say that.
-    zero:where were you when the crime took place.
-    omicron:I was taking a walk in the radio forest.
-    omicron:Hangman can attest to this.
-    zero:(a walk? with you and what legs.)
-    zero:alright. thanks for your time.
-    <<call AddJournalEntry("Omicron says it was in the quote Radio Forest, whatevcer that is, and not here.")>>
+    [[omicron.interrogate]]
 
 <<else>>
-    <<SetSpeaker Zero>>
-    alright. what is this thing, and will i ever get an answer.
-    <<SetSpeaker Omicron>>
-    You will indeed get an answer; my name is Omicron.
-    <<SetSpeaker Zero>>
-    oooh shit, youre alive. sorry about that.
-    <<SetSpeaker Omicron>>
-    Please take care not to call people "things."
-    <<SetSpeaker Zero>>
-    i said im sorry.
-    zero:do you happen to be a nomad soul.
-    omicron:What?
-    zero:nevermind.
+    zero:so uh, what is this, thing.
+    omicron:You could call me Omicron, but I'd rather you call me tonight.
+    <<PlaySFX cartoon1.ogg>>
+    zero:oh, you're alive. and hammy.
+    zero:so what's your deal.
+    Omicron:No deal!
+    <<PlaySFX cartoon2.ogg>>
+    zero:nevermind. so do you know anything that could help me. like. do you know who did it.
+    Omicron:Well, darling. I don't know a thing! Unless the crime is being gorgeous, then you can put me in handcuffs right now baby!
+    <<PlaySFX cartoon3.ogg>>
+    zero:(are the sound effects necessary.)
+    Omicron:Actually, not that I'm on the topic, you can put me in handcuffs whenever you like, sugar!
+    Omicron:Baby girl, if you come back to my place, pretty soon you'll know what I'm into.
+    <<PlaySFX cartoon4.ogg>>
+    zero:i'll uh. go now. away, from here.
+    zero:(blughhhhh. men.)
 <<endif>>
 ===
 
@@ -233,7 +228,18 @@ title: omicron.talk
 
 title: omicron.interrogate
 ---
-
+zero:(here goes.)
+zero:so. where were you on the night of the murder.
+omicron:There was no murder, darling.
+zero:i know. i just wanted to say that.
+zero:where were you when the crime took place.
+omicron:I was taking a walk in the radio forest, perusing for a nice catch, if you know what I mean.
+omicron:Hangman can attest to this.
+zero:(godddd what a sleazeball.)
+zero:(wait, a walk? with you and what legs.)
+zero:alright. thanks for your time.
+omicron:you can take as much time as you want, sugar.
+<<call AddJournalEntry("Omicron says it was in the quote Radio Forest, whatevcer that is, and not here.")>>
 ===
 
 title: msdos.talk

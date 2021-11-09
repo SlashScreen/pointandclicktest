@@ -1,0 +1,10 @@
+﻿title: instrument.play
+tags:
+---
+zero:it seems to be a keyboard. a single preset is selected, and a button reads "play".
+zero:should i push the button?
+->push
+    <<Invoke instrument>>
+->do not
+    <<stop>>
+===

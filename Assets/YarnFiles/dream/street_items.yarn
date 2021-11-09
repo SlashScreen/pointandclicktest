@@ -105,12 +105,18 @@ zero:i dont really have to vocabulary to say what im looking at.
 title:diamondman.talk
 ---
 zero:hey dude, have you seen-
-dman(???):STREAMINGASSETS/DIAMOND 7ZIPPASS BALTHAZAR
+dman(???):SEEK MY TRADING CARD
 zero:come again.
 <<SetSilence true>>
 dman(???):...
 zero:...
 <<SetSilence false>>
+zero:okay.
+===
+
+title: diamondman.use
+---
+dman(???):NO THANK YOU
 zero:okay.
 ===
 
@@ -229,7 +235,7 @@ title:toysteal
 
 title:streetcouple.look
 ---
-zero:love is in bloom.
+zero:oh, to be young and in love.
 ===
 
 title:streetcouple.eavesdrop
