@@ -87,3 +87,11 @@ title: setuproom
     <<endif>>
 <<endif>>
 ===
+
+
+title:gyahoo.look
+---
+<<Hide pictureframe>>
+<<Show painting>>
+<<Invoke painting>>
+===
