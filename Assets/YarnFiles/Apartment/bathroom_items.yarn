@@ -34,14 +34,14 @@ title: tampon.use
     i guess i don't need this.
     <<RemoveItem 8>>
 <<else>>
-    contrary to first popular belief, a tampon box should only be used to store tampons.
+    contrary to popular belief, a tampon box should only be used to store tampons.
 <<endif>>
 ===
 
 title: tampon.look
 ---
 <<SetSpeaker Zero>>
-these come in handy when my uterus decides to shed its lining, making me miserable in the process.
+these come in handy when my uterus decides to shed its lining.
 ===
 
 title: tampon.take
@@ -95,23 +95,30 @@ title: bath.look
 ---
 <<SetSpeaker Zero>>
 the baaaath!!!
-this is the area where i, while nude, bombard myself with pressurized water for 10-20 minutes in an effort to rid myself of my Gamer Grease.
+this is the area where i, nude, bombard myself with pressurized water for 10-20 minutes in an effort to rid myself of my Gamer Grease.
 ===
 
 
 
 title:books.look
 ---
-zero:that's right. i keep my bookshelf in the bathroom.
-zero:ladies, single file line please. throw your panties into the basket to my left.
+zero:that's right. i keep my books... in the bathroom.
+zero:ladies, single file line please. throw your panties into the basket to my left for reprocessing.
 ===
 
 title:books.admire
 ---
 zero:i have quite the collection.
 zero:let's see...
-zero:A full compilation of "Jon The Murderous Bastard" comics.
+zero:A full compilation of "Jon The Murderous Bastard" comics, as well as the spinoff comics "Squeeze" and "Super Noodle Man Extreme".
 zero:"Insanity: A Jeff The Killer Fanfiction". well worn and well enjoyed. ironically.
 zero:"True Crime: A History of Psycho Psychophants and Other Malevolents".
-zero:hm. now that i look at it. i'm starting to see a pattern that should probably be considered a red flag.
+zero:hm. now that i look at it. i'm starting to see a pattern that is probably a red flag.
+===
+
+
+
+title:toilet.look
+---
+zero:that's right, boys. this is where i shit and piss.
 ===

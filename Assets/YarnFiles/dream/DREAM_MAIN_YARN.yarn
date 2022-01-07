@@ -288,13 +288,16 @@ zero:i see. well, thank you for being honest.
 title: hangman.talk
 ---
 zero:uh. hello.
-hangman(???):Good day to you.
-zero:you are?...
-hangman:My name is hangman.
-zero:zero.
-hangman:I imagine you want my story today?
-zero:sure do. where were you at the time of the incident.
-hangman:I've been here the entire day.
+hangman(???):Yes, hello.
+zero:and you are?
+hangman:My name is Hangman, but my friends call me the Will of the West.
+zero:where did that name come from.
+hangman:Are you my friend?
+zero:i suppose not.
+hangman:Well, as my brother Pole has arranged, I assume you are going to ask me where I was.
+zero:yes.
+hangman:Well, I was on the balcony.
+zero:alright.
 //todo press, bluff
 [[Bluff|hangman.interrogate.bluff]]
 [[Press|hangman.interrogate.press]]
