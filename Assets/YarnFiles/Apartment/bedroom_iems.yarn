@@ -156,7 +156,7 @@ title: bra.look
 ---
 <<SetSpeaker Zero>>
 watch out boys. it's an article of clothing meant to contain breasts. titties, boobies, milkers, badonkadonk counterweights, bazongas, bablambobinos, boing boing, juggalo jiggalos,
-pool floaters, baps, rockin cans, the San Onofre Nuclear Generating Station of the flesh.
+pool floaters, baps, rockin cans, the San Onofre Nuclear Generating Station.
 wowie zowie. make a single file line please. no pushing.
 ===
 
@@ -177,7 +177,7 @@ the covering is barely secure as it is.
 
 title:cover.look
 ---
-zero:a few weeks ago some sort of ooze started coming out of this vent. 
+zero:a few weeks ago some sort of ooze started coming out of this vent.
 zero:i told my landlord about it had he was weirdly dismissive about it.
 ===
 
@@ -199,4 +199,22 @@ title: doortohall.go
 ---
 <<SetSpeaker Zero>>
 <<Invoke door>>
+===
+
+
+
+title: raspi.look
+---
+zero:it's a small computer whirring away, simulating a worm.
+zero:like, an actual worm's brain.
+zero:recently, some scientists published the complete neural mappings of a worm's brain.
+zero:so i took the data and built a program to simulate the nerves.
+zero:it's been sitting in there for a month happily eating fake garbage in a simulated compost bin.
+zero:although for it it's been about a year. the simulation's running at about 10 times real time speed.
+zero:sometimes i stare at this box and think: if i were also a simulated brain fed all the signals it expected like for sight, touch, smell...
+zero:would my brain be able to discern the fake reality from real... reality? brains are very adaptable.
+zero:and if i found out that i'm being simulated, how would i react.
+zero:would i go insane? would i lose the will to live? would i even care?
+zero:i've thought about it a lot. it's hard to know how you'd react until you are put in that situation.
+zero:but i think i'd just gesture vaguely at everything and say, what the fuck, man.
 ===
