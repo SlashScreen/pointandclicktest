@@ -11,17 +11,18 @@ public class PlayerUIInteraction : MonoBehaviour
     optionspanel opt;
     public GameObject clickedObject = null; //an interactive object that is clicked
     public bool inMenu = false;
+    public bool overUI = false;
 
     PlayerMain main;
     InGameDropdown dropdown;
 
-        //Explanation for clickedObject:
+    //Explanation for clickedObject:
     //if an object that is clickable is clicked
     //store a reference to the object
     //set goingToObject to be true
     //then generate a path and walk to the object, and ensure the player cannot click away
     //if at the object, only then start dialog and reset everything
-    
+
     private void Start() //get components 
     {
         main = GetComponent<PlayerMain>();
@@ -29,95 +30,139 @@ public class PlayerUIInteraction : MonoBehaviour
         opt = GameObject.Find("optionspanel").GetComponent<optionspanel>();
     }
 
-    public void OnMove(InputValue input){
-        if (main.yarn.inConversation || main.control.goingToTalkPoint || inMenu){
+    private void Update()
+    {
+        overUI = EventSystem.current.IsPointerOverGameObject();
+    }
+
+    public void OnMove(InputValue input)
+    {
+        if (main.yarn.inConversation || main.control.goingToTalkPoint || inMenu)
+        {
             //nothing should happen if youre in a conversation or in a menu
+            print("in menu or conversation");
             return;
         }
 
-        if(!main.control.goingToObject) //when clicked and not actively going to an object
+        if (!main.control.goingToObject) //when clicked and not actively going to an object
         {
+            print("raycasting");
             UIPosition = main.control.mouseP; //set point where mouse clicked in world space
             Vector3 mousePos2D = Camera.main.ScreenToWorldPoint(main.control.mouseP); //gets mouse point in world space
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity ,LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
+            print(main.control.mouseP);
+            print(mousePos2D);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, LayerMask.GetMask("Clickable")); //raycast to find clicked object. Only sees Clickable layer
 
             //mousePos2D.z = GameObject.FindGameObjectWithTag("BG").transform.position.z - Camera.main.transform.position.z;
             //Ray ray = Camera.main.ScreenPointToRay(mousePos2D);
             //RaycastHit hit;
 
 
-            if (EventSystem.current.IsPointerOverGameObject()){
+            if (overUI)
+            {
                 //if any UI clicked, exit out of script
+                print("UI clicked");
+                //print(EventSystem.current.currentSelectedGameObject);
                 return;
             }
 
-            if (hit.collider != null) { //if something is clicked on layer clickable
+            if (hit.collider != null)
+            { //if something is clicked on layer clickable
                 Debug.Log(hit.collider.gameObject.tag);
-                
 
-                if (hit.collider.gameObject.tag == "Minigame"){ //if minigame
+
+                if (hit.collider.gameObject.tag == "Minigame")
+                { //if minigame
                     Debug.Log("Hit minigame surface");
                     return;
                 }
 
-                if(hit.collider.gameObject.tag == "Clicklink"){
+                if (hit.collider.gameObject.tag == "Clicklink")
+                {
                     hit.collider.gameObject.GetComponent<clickling>().Invoke();
                 }
-                
-                if(hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall"){ //if clicked object has tag "Clickable" or "Wall"
+
+                if (hit.collider.gameObject.tag == "Clickable" || hit.collider.gameObject.tag == "Wall")
+                { //if clicked object has tag "Clickable" or "Wall"
                     //"Clickable" *tag* is interactive objects, thats not totally clear
 
-                    if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>()){ 
+                    if (hit.collider.gameObject.GetComponent<InteractiveObject>() || hit.collider.gameObject.GetComponent<NPCscript>())
+                    {
                         //If it is an interactive object or NPC
                         clickedObject = hit.collider.gameObject; //set clicked object
 
-                        if(clickedObject.GetComponent<InteractiveObject>()){ //gets talk points (points in space that the player goes to to interact with object)
-                            if (clickedObject.GetComponent<InteractiveObject>().talkPoint != null){ //if it has a talk point
+                        if (clickedObject.GetComponent<InteractiveObject>())
+                        { //gets talk points (points in space that the player goes to to interact with object)
+                            if (clickedObject.GetComponent<InteractiveObject>().talkPoint != null)
+                            { //if it has a talk point
                                 main.control.targetPosition = clickedObject.GetComponent<InteractiveObject>().talkPoint.position;
-                            }else{
+                            }
+                            else
+                            {
                                 main.control.targetPosition = transform.position;
                             }
-                        }else{
-                            if (clickedObject.GetComponent<NPCscript>().talkPoint != null){ //if it has a talk point
+                        }
+                        else
+                        {
+                            if (clickedObject.GetComponent<NPCscript>().talkPoint != null)
+                            { //if it has a talk point
                                 main.control.targetPosition = clickedObject.GetComponent<NPCscript>().talkPoint.position;
-                            }else{
+                            }
+                            else
+                            {
                                 main.control.targetPosition = transform.position;
                             }
                         }
 
-                        if (main.d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){ //if item in hand from inventory
+                        if (main.d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0)
+                        { //if item in hand from inventory
                             //Start use script once movement complete
-                            StartCoroutine(main.control.MovePlayer(new string[] {main.control.targetPosition.x.ToString(),main.control.targetPosition.y.ToString(),main.control.targetPosition.z.ToString()},main.yarn.StartUseDialog));
-                    
-                        }else{//if no item in hand, set up wheel
+                            StartCoroutine(main.control.MovePlayer(new string[] { main.control.targetPosition.x.ToString(), main.control.targetPosition.y.ToString(), main.control.targetPosition.z.ToString() }, main.yarn.StartUseDialog));
+
+                        }
+                        else
+                        {//if no item in hand, set up wheel
                             opt.setPosition(UIPosition); //teleport wheel
-                            if(clickedObject.GetComponent<InteractiveObject>()){
+                            if (clickedObject.GetComponent<InteractiveObject>())
+                            {
                                 opt.setButtons(clickedObject.GetComponent<InteractiveObject>()); //init wheel for Object. NTS: Could make as one function using a generic?...
-                            }else{
+                            }
+                            else
+                            {
                                 opt.setButtons_NPC(clickedObject.GetComponent<NPCscript>()); //init wheel for NPC
                             }
                             opt.Show(); //show wheel
                         }
                     }
 
-                }else if (hit.collider.gameObject.tag == "Player" && main.d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0){  //if clicked self and something in hand
+                }
+                else if (hit.collider.gameObject.tag == "Player" && main.d.gameObject.GetComponent<Yarn.VariableStorage>().GetValue("$selectedInventory").AsNumber != 0)
+                {  //if clicked self and something in hand
                     main.d.dia.StartDialogue("player.use"); //start use dialogue. yes it's hardcoded but i guess it doesnt matter         
-                }else{
+                }
+                else
+                {
                     WrapUpMouseClick();
                 }
-            }else{
+            }
+            else
+            {
                 //mmm yes I know its the same code
                 WrapUpMouseClick();
             }
         }
     }
 
-    void WrapUpMouseClick(){ //find path when not interactive item clicked
-        main.d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory",0); //reset hand
-        if (opt.hidden && dropdown.hidden){
+    void WrapUpMouseClick()
+    { //find path when not interactive item clicked
+        main.d.gameObject.GetComponent<Yarn.VariableStorage>().SetValue("$selectedInventory", 0); //reset hand
+        if (opt.hidden && dropdown.hidden)
+        {
             main.control.targetPosition = Camera.main.ScreenToWorldPoint(main.control.mouseP); //set point where mouse clicked in world space
             main.control.GenPath(main.control.targetPosition); //generate path to mouse point if ground is clicked
-        }else{
+        }
+        else
+        {
             opt.Hide();
             dropdown.Cancel();
         }

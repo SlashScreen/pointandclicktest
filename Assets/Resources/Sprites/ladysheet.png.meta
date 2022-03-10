@@ -99,6 +99,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -108,8 +109,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -130,6 +131,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -746,6 +749,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ladysheet_21: -277028566690005397
+      ladysheet_13: -2900268179340659928
+      ladysheet_1: 1723505488852912906
+      ladysheet_14: 7456801989595140991
+      ladysheet_7: 6617592668849663623
+      ladysheet_0: 6463633533509059836
+      ladysheet_8: 5473266356300885015
+      ladysheet_18: 6824995582536245486
+      ladysheet_20: 2665984142623136140
+      ladysheet_24: -1151299936370565897
+      ladysheet_11: 5961210355801670588
+      ladysheet_15: 8880242168571793505
+      ladysheet_16: -7096804349326160798
+      ladysheet_4: -5800661285609465411
+      ladysheet_9: 4652709896518505407
+      ladysheet_6: 8003292132757265525
+      ladysheet_17: -3771676367813543419
+      ladysheet_23: -1830455691887056989
+      ladysheet_10: 7361710131745635002
+      ladysheet_19: 6907972708920151891
+      ladysheet_2: 6167723484926280724
+      ladysheet_5: -7852256311495953769
+      ladysheet_22: 571094193008733331
+      ladysheet_3: 7949751576189893498
+      ladysheet_12: 3542624359735107371
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

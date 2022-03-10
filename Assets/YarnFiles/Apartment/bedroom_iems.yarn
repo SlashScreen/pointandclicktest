@@ -35,7 +35,8 @@ it looks good enough as-is.
 title: poster.look
 ---
 <<SetSpeaker Zero>>
-it's my poster for Das Ding, a german horror movie from the 80s by a guy named Johannes Tischler. the poster is famous for being shitty in a beautiful way.
+it's my poster for Das Ding, a german horror movie from the 80s by a guy named Johannes Tischler.
+zero:the poster is famous for being shitty in a beautiful way.
 ===
 
 
@@ -97,7 +98,7 @@ title: computer.on
 ---
 <<SetSpeaker Zero>>
 <<Invoke computer>> //toggle on and off
-ah yes, my favorite YouShare let's play series. i watch this particular series every time i'm feeling depressed.
+ah yes, my favorite YouShare let's play series. i watch this particular one every time i'm feeling depressed.
 <<SetSilence True>>
 ...
 <<SetSilence False>>
@@ -128,7 +129,7 @@ title: turntable.browse
 title: bed.use
 ---
 zero:inanimate objects do not need to sleep.
-zero:and i... i am animate.
+zero:but i, however... i am animate.
 ===
 
 title: bed.look
@@ -141,7 +142,8 @@ forever.
 title: bed.lay
 ---
 <<SetSpeaker Zero>>
-it took this much effort to get out of it, laying back down would be like that greek guy. what was his name. sissyphus. siphilis. sisophus. sis. boulder hill guy.
+it took this much effort to get out of it, laying back down would be like that greek guy.
+zero:what was his name. sissyphus. siphilis. sisophus. sis. boulder hill guy.
 ===
 
 
@@ -155,7 +157,8 @@ this item does not have breasts.
 title: bra.look
 ---
 <<SetSpeaker Zero>>
-watch out boys. it's an article of clothing meant to contain breasts. titties, boobies, milkers, badonkadonk counterweights, bazongas, bablambobinos, boing boing, juggalo jiggalos,
+watch out boys. it's an article of clothing meant to contain breasts. titties, boobies, milkers,
+zero:badonkadonk counterweights, bazongas, bablambobinos, boing boing, juggalo jiggalos,
 pool floaters, baps, rockin cans, the San Onofre Nuclear Generating Station.
 wowie zowie. make a single file line please. no pushing.
 ===

@@ -87,6 +87,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -96,8 +97,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -118,6 +119,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -650,6 +653,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TALK_SW_0: 765265414467779464
+      TALK_SW_2: -2050973345828195659
+      TALK_SW_20: 5293846458805411833
+      TALK_SW_1: 9006947488550871895
+      TALK_SW_10: -3789349986414363730
+      TALK_SW_13: 6175238691773890393
+      TALK_SW_4: -4183173227275311034
+      TALK_SW_15: 3132742255878806254
+      TALK_SW_7: -2919473044932310209
+      TALK_SW_9: 4578095776182154958
+      TALK_SW_14: -968162894195903174
+      TALK_SW_3: 239300812483445490
+      TALK_SW_11: -6721395821128983440
+      TALK_SW_8: -5983413405917669752
+      TALK_SW_16: 7036897460139069856
+      TALK_SW_19: 7479046827606329738
+      TALK_SW_5: -2193362768768041655
+      TALK_SW_6: 6524915829345702155
+      TALK_SW_17: -1367192514508124029
+      TALK_SW_18: 8360059646174061431
+      TALK_SW_12: -5479958976757853888
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

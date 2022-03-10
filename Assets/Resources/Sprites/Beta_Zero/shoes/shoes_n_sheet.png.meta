@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -93,8 +94,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -115,6 +116,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -626,6 +629,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      shoes_n_sheet_11: 2291113808760774921
+      shoes_n_sheet_8: -2056485780262836092
+      shoes_n_sheet_12: -6750166868478230358
+      shoes_n_sheet_4: 8857826546943787352
+      shoes_n_sheet_10: 5612631535025585907
+      shoes_n_sheet_1: 1897416694730140457
+      shoes_n_sheet_7: -4334677522833373468
+      shoes_n_sheet_15: -8811226716497689141
+      shoes_n_sheet_18: 4529166574262929456
+      shoes_n_sheet_19: -5779010598629714968
+      shoes_n_sheet_14: 117644308504739600
+      shoes_n_sheet_6: -5945084225045319154
+      shoes_n_sheet_9: 3376354179810504028
+      shoes_n_sheet_0: 5537982644070762478
+      shoes_n_sheet_17: 6650483944041812105
+      shoes_n_sheet_2: 6645251135953013290
+      shoes_n_sheet_3: -3443201361716256136
+      shoes_n_sheet_16: -3202810076815213305
+      shoes_n_sheet_5: 2261731943272763660
+      shoes_n_sheet_13: 1272006554920853976
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

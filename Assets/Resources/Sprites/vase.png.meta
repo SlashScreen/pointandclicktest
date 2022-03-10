@@ -141,6 +141,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -150,8 +151,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -172,6 +173,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -1082,6 +1085,46 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      vase_35: 1368241178813229757
+      vase_13: 6676021780282570419
+      vase_9: -6735360278073876380
+      vase_27: -5849257923447035438
+      vase_37: 6205007837152394479
+      vase_2: -6651062394093151412
+      vase_15: -1750000647035408765
+      vase_3: -6139858391072322571
+      vase_0: 8537198873322406288
+      vase_23: 5031129288260634495
+      vase_16: 8424180690551530457
+      vase_20: -8730673377697524321
+      vase_31: -3340514572778038656
+      vase_26: -2520114502417802204
+      vase_5: -8327465948962527757
+      vase_1: -6597311703381937701
+      vase_25: -1532549790204146270
+      vase_8: -6041816537238662191
+      vase_22: -4978255710959585344
+      vase_14: -1747006949172143774
+      vase_29: 6658599451089657187
+      vase_34: -4582871902340079562
+      vase_24: -5112987243842185889
+      vase_32: 3548263316423271104
+      vase_19: -769269151671351389
+      vase_4: 8214925085778780480
+      vase_10: 2436498275187369058
+      vase_38: 7433328075280135891
+      vase_33: -1018564989312944466
+      vase_6: 5785997412534927939
+      vase_17: 5083429217065475542
+      vase_36: 6001383176724732345
+      vase_12: 2431117978926450386
+      vase_11: 6431391312131667031
+      vase_21: -2614076031995341650
+      vase_28: -6957342460961362317
+      vase_30: -1943105736767491723
+      vase_18: -3269101654740409001
+      vase_7: 4084916046347676706
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
